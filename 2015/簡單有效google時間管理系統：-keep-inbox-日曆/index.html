@@ -1,0 +1,516 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="daxi">
+  <meta name="keywords" content="">
+  
+  <title>[转]簡單有效Google時間管理系統： Keep+ Inbox+ 日曆 - 达夕博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiyt.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>达夕博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/banner1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="[转]簡單有效Google時間管理系統： Keep+ Inbox+ 日曆">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2015-12-27 06:18" pubdate>
+        2015年12月27日 早上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.6k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      16
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">[转]簡單有效Google時間管理系統： Keep+ Inbox+ 日曆</h1>
+            
+            <div class="markdown-body">
+              <p>前一陣子 Google 日曆 App 進行了一個小型但關鍵的更新，那就是在 Google 日曆中加入了待辦清單提醒功能：「<a target="_blank" rel="noopener" href="http://www.playpcesor.com/2015/12/google-calendar-app-reminder-to-do-list-7-tips.html">Google 日曆 App 全新待辦事項清單的 7 大特色解析</a>」，這看起來好像只是多了一個任務鬧鐘，但其實不然，這個小功能將給 Google 日曆帶來兩個關鍵改變：</p>
+<ul>
+<li>1. <strong>不再只是行事曆，也可以當待辦清單。</strong></li>
+<li>2. <strong>與 Google Keep 筆記、 Google Inbox 信箱同步整合。</strong></li>
+</ul>
+<p>而這樣一來，讓我最近開始嘗試利用 <a target="_blank" rel="noopener" href="http://www.playpcesor.com/2015/08/google-keep-10.html">Google Keep</a>、 <a target="_blank" rel="noopener" href="http://www.playpcesor.com/2014/10/google-inbox-gmail.html">Google Inbox</a>（ Gmail ）、 <a target="_blank" rel="noopener" href="http://www.playpcesor.com/2014/10/10-google-calendar-tips.html">Google 日曆</a>三大 Google 免費而實用的服務，<strong>串連起一套可以跨 Android、 iOS、網頁端的時間管理、任務管理系統</strong>。</p>
+<p>這個系統還滿符合 <a target="_blank" rel="noopener" href="http://www.playpcesor.com/2015/01/pomotodo--pomodoro-gtd.html">GTD</a> 的方法與精神，操作起來也很簡單便利，並且融合在我們日常的郵件、日曆工作流程中，兼顧了效率與好上手的優點。</p>
+<p>下面我就從一個實際的時間管理流程，來看看這套 Google 系統的幫助。</p>
+<h3 id="1-簡單實用的任務收集箱："><a href="#1-簡單實用的任務收集箱：" class="headerlink" title="1. 簡單實用的任務收集箱："></a>1. 簡單實用的任務收集箱：</h3><p>筆記收集就用 Google keep：<a target="_blank" rel="noopener" href="http://www.playpcesor.com/2015/08/google-keep-10.html">Google Keep 筆記任務更強的活用 10 招技巧心法教學</a></p>
+<p>郵件接收就用 Google Inbox：<a target="_blank" rel="noopener" href="http://www.playpcesor.com/2014/10/google-inbox-gmail.html">完全解密 Google Inbox ！十大功能改造Gmail實測教學</a></p>
+<p>時間管理的第一步，就是收集日常待辦的任務與瑣事，先把事情收集起來，我們才能一一進行排程與處理。</p>
+<p>而在這個 Google 時間管理系統中， Google Keep 就是用筆記來收集雜務， Google Inbox 則用 Gmail 郵件來收集別人交代的任務。</p>
+<p>跨平台、流暢、易用的特色，讓我們可以輕鬆的利用 Google Keep 去拍照、錄音、手寫、打字收集各種生活與工作上想到、看到的待辦任務。（教學：<a target="_blank" rel="noopener" href="http://www.playpcesor.com/2015/10/google-keep.html">Google Keep 再添手寫手繪筆記，讓你在照片畫註解</a>）</p>
+<p>而 Inbox 會快速幫郵件做摘要，還可以在郵件裡寫上「待辦行動」，讓每一個郵件任務化。（教學：<a target="_blank" rel="noopener" href="http://www.playpcesor.com/2015/12/google-inbox-trip-travel.html">不只收信！ Google Inbox 才是最佳旅遊行程規劃軟體</a>）</p>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/12/google-GTD-01.png"><img src="/2015/%E7%B0%A1%E5%96%AE%E6%9C%89%E6%95%88google%E6%99%82%E9%96%93%E7%AE%A1%E7%90%86%E7%B3%BB%E7%B5%B1%EF%BC%9A-keep-inbox-%E6%97%A5%E6%9B%86/google-GTD-01-1024x537.png" srcset="/img/loading.gif" lazyload alt="google GTD-01"></a></p>
+<h3 id="2-在收集箱裡過濾不重要任務、找出重要任務："><a href="#2-在收集箱裡過濾不重要任務、找出重要任務：" class="headerlink" title="2. 在收集箱裡過濾不重要任務、找出重要任務："></a>2. 在收集箱裡過濾不重要任務、找出重要任務：</h3><p>接著，時間管理的第二步就是在收集箱中分類重要、不重要的任務，從而找出我們真正要行動的焦點。</p>
+<p>在 Google Keep 裡，我們可以利用「標籤」、「顏色」等功能，快速把重要的任務標示出來。（教學：<a target="_blank" rel="noopener" href="http://www.playpcesor.com/2015/04/google-keep.html">如何活用 Google Keep 進行專案管理、重複記憶練習?</a>）</p>
+<p>而 Google Inbox 更聰明，他懂得自動分類郵件，凸顯重要信件，讓我們快速找出重要的任務。（教學：<a target="_blank" rel="noopener" href="http://www.playpcesor.com/2014/12/google-inbox-11-gmail.html">Google Inbox 11步完成 Gmail 時間管理！一個月心得</a>）</p>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/12/google-GTD-02.png"><img src="/2015/%E7%B0%A1%E5%96%AE%E6%9C%89%E6%95%88google%E6%99%82%E9%96%93%E7%AE%A1%E7%90%86%E7%B3%BB%E7%B5%B1%EF%BC%9A-keep-inbox-%E6%97%A5%E6%9B%86/google-GTD-02.png" srcset="/img/loading.gif" lazyload alt="google GTD-02"></a></p>
+<h3 id="3-把重要任務排程到每日、每週待辦清單："><a href="#3-把重要任務排程到每日、每週待辦清單：" class="headerlink" title="3. 把重要任務排程到每日、每週待辦清單："></a>3. 把重要任務排程到每日、每週待辦清單：</h3><p>每日清單建立在 Google日曆：<a target="_blank" rel="noopener" href="http://www.playpcesor.com/2014/11/google-calendar-app.html">全新 Google 日曆 App 將重新定義你的智慧型行事曆</a></p>
+<p>經過 Google Keep 與 Google Inbox 過濾出重要的任務後，我們可以分別在 Google Keep 或 Inbox 中幫筆記、郵件加上時間提醒，這時候就是把重要任務進行時間排程。</p>
+<p>（<strong>附註：</strong>要讓 Google Inbox 中延遲處理的郵件，依據延遲的時間出現在 Google 日曆 App ，那麼必須先在 Inbox 中用圖釘釘選這封郵件，然後輸入待辦事項，這樣後續設定時間，才會出現在日曆中）</p>
+<p>而且現在來自這兩個服務的任務排程會同步到 Google 日曆 App 中，於是我們可以統一在 Google 日曆 App 管理會議行程、待辦任務，日曆就能當作統一的時間管理中心。</p>
+<p>更進一步的，因為 Google 日曆還懂得「自動延後今天沒有完成的任務」，這樣一來就能利用 Google 日曆更輕鬆去建立每日待辦清單，甚至規劃每週待辦清單。</p>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/12/google-GTD-03.png"><img src="/2015/%E7%B0%A1%E5%96%AE%E6%9C%89%E6%95%88google%E6%99%82%E9%96%93%E7%AE%A1%E7%90%86%E7%B3%BB%E7%B5%B1%EF%BC%9A-keep-inbox-%E6%97%A5%E6%9B%86/google-GTD-03.png" srcset="/img/loading.gif" lazyload alt="google GTD-03"></a></p>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/12/google-GTD-04.png"><img src="/2015/%E7%B0%A1%E5%96%AE%E6%9C%89%E6%95%88google%E6%99%82%E9%96%93%E7%AE%A1%E7%90%86%E7%B3%BB%E7%B5%B1%EF%BC%9A-keep-inbox-%E6%97%A5%E6%9B%86/google-GTD-04.png" srcset="/img/loading.gif" lazyload alt="google GTD-04"></a></p>
+<h3 id="4-番茄鐘工作法："><a href="#4-番茄鐘工作法：" class="headerlink" title="4. 番茄鐘工作法："></a>4. 番茄鐘工作法：</h3><p>Google鬧鐘：<a target="_blank" rel="noopener" href="http://www.playpcesor.com/2015/06/google-clock-android-app.html">下載Google 獨家時鐘 App：極簡介面隨時間自動變色</a></p>
+<p>有了任務收集箱、可以過濾重要任務，又能把任務加入每日排程清單，這樣一個時間管理系統就已經完成了。</p>
+<p>而如果還可以補充什麼，大概就是補充在 Android 上的 Google 鬧鐘吧！</p>
+<p>因為這個「 Google 鬧鐘」可以預先建立不同的倒數計時任務，所以你可以用「<a target="_blank" rel="noopener" href="http://www.playpcesor.com/2015/01/pomodoro-time-manager-top-10-app.html">番茄鐘工作法</a>」的規則，建立 25 分鐘工作任務、 5 分鐘休息任務，用 Google 鬧鐘就能執行番茄鐘。</p>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/12/Google-Clock-07.png"><img src="/2015/%E7%B0%A1%E5%96%AE%E6%9C%89%E6%95%88google%E6%99%82%E9%96%93%E7%AE%A1%E7%90%86%E7%B3%BB%E7%B5%B1%EF%BC%9A-keep-inbox-%E6%97%A5%E6%9B%86/Google-Clock-07.png" srcset="/img/loading.gif" lazyload alt="Google Clock-07"></a></p>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/12/Google-Clock-08.png"><img src="/2015/%E7%B0%A1%E5%96%AE%E6%9C%89%E6%95%88google%E6%99%82%E9%96%93%E7%AE%A1%E7%90%86%E7%B3%BB%E7%B5%B1%EF%BC%9A-keep-inbox-%E6%97%A5%E6%9B%86/Google-Clock-08.png" srcset="/img/loading.gif" lazyload alt="Google Clock-08"></a></p>
+<h3 id="5-Google-時間管理系統的優點"><a href="#5-Google-時間管理系統的優點" class="headerlink" title="5. Google 時間管理系統的優點"></a>5. Google 時間管理系統的優點</h3><p>以上，就是我們現在可以透過串連 Google Keep 筆記、 Google Inbox 信箱、 Google 日曆三個服務，所建立起來的時間管理系統，它的優點包含：</p>
+<ul>
+<li>非常簡單易用，介面清爽，運作流暢。</li>
+<li>完全免費。</li>
+<li>最直覺，因為建立在原本的筆記、郵件、行事曆流程中，而不需額外使用其他軟體。</li>
+<li>跨平台雲端同步（目前唯一缺點是 Google 日曆待辦清單功能尚未支援網頁版，但即將會支援）。</li>
+</ul>
+<p>最好的時間管理系統，無非就是利用自己最熟悉的工具開始時間管理，例如我個人會直接使用我最熟悉的 Evernote 進行專案時間管理一樣（延伸閱讀：<a target="_blank" rel="noopener" href="http://www.playpcesor.com/2015/09/evernote_20.html">瑣碎任務的工作流重整：我如何用 Evernote 專案管理</a>）。</p>
+<p>而對於大家更熟悉的 Google 郵件系統、日曆系統、筆記服務，如果可以直接整合成時間管理系統，那麼應該會有所幫助，你也開始嘗試這個最新的 Google 任務管理系統了嗎？</p>
+<p>最後，至於現在我怎麼區分 Evernote 與 Google 系統上的時間管理呢？其實很好區分， Google 的時間管理偏向當日、當周的排程清單，而 Evernote 上則是整個專案進度的管理，先初步這樣解釋，後續有機會再用更深入文章與大家說明。</p>
+<p>声明：</p>
+<p>本文來自電腦玩物原創作者 esor huang（異塵行者），及附上原文連結：<a target="_blank" rel="noopener" href="http://www.playpcesor.com/2015/12/google-keep-inbox.html">簡單有效 Google 時間管理系統： Keep+ Inbox+ 日曆</a></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E6%95%B0%E5%AD%97%E5%8C%96%E5%B7%A5%E4%BD%9C/">数字化工作</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/google-keep/">google-keep</a>
+                    
+                      <a class="hover-with-bg" href="/tags/gmail/">gmail</a>
+                    
+                      <a class="hover-with-bg" href="/tags/google/">google</a>
+                    
+                      <a class="hover-with-bg" href="/tags/google-index/">google-index</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/">时间管理</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2015/%E5%A6%82%E4%BD%95%E5%9C%A8iphone%E7%9A%84safari%E4%B8%AD%E5%AF%BC%E5%85%A5%E5%85%B6%E4%BB%96%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E4%B9%A6%E7%AD%BE/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">如何在iPhone的Safari中导入其他浏览器的书签</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2015/windowsiphone%E7%94%A8%E6%88%B7%E7%9A%84%E6%8F%90%E9%86%92%E4%BA%8B%E9%A1%B9%E5%90%8C%E6%AD%A5%E7%AD%96%E7%95%A5%EF%BC%9A%E6%B4%BB%E7%94%A8iphone%E7%89%88%E6%BB%B4%E7%AD%94%E6%B8%85%E5%8D%95/">
+                        <span class="hidden-mobile">Windows+iPhone用户的提醒事项同步策略：活用iPhone版滴答清单</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"B2tecGOesiRBcoXldYV5Jk5A-9Nh9j0Va","appKey":"5tFdBthF0o282SCXuNVxbntd","placeholder":"说点什么","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false,"requiredFields":[]},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

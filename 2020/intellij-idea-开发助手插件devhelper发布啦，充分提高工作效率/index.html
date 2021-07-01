@@ -1,0 +1,492 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="daxi">
+  <meta name="keywords" content="">
+  
+  <title>IntelliJ IDEA 开发助手插件DevHelper发布啦，充分提高工作效率 - 达夕博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiyt.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>达夕博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/banner1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="IntelliJ IDEA 开发助手插件DevHelper发布啦，充分提高工作效率">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-11-15 15:23" pubdate>
+        2020年11月15日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      799 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      8
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">IntelliJ IDEA 开发助手插件DevHelper发布啦，充分提高工作效率</h1>
+            
+            <div class="markdown-body">
+              <p>DevHelper是一个能够提高效率的IntelliJ IDEA开发助手插件，使用该插件把开发过程中常用的开发工具直接集成到IDE中，使用起来既快捷又方便，能够大大提高工作效率。目前提供的功能如下，博主会及时更新和添加新的功能，敬请期待</p>
+<h3 id="1、生产密码"><a href="#1、生产密码" class="headerlink" title="1、生产密码"></a>1、生产密码</h3><p>可以指定大小写字母、数字、特殊符号任意组合，长度任意指定，点击按钮一键批量生成密码；</p>
+<p><a target="_blank" rel="noopener" href="https://www.daxiblog.com/intellij-idea-%e5%bc%80%e5%8f%91%e5%8a%a9%e6%89%8b%e6%8f%92%e4%bb%b6devhelper%e5%8f%91%e5%b8%83%e5%95%a6%ef%bc%8c%e5%85%85%e5%88%86%e6%8f%90%e9%ab%98%e5%b7%a5%e4%bd%9c%e6%95%88%e7%8e%87/%e7%94%9f%e6%88%90%e5%af%86%e7%a0%81/"><img src="/2020/intellij-idea-%E5%BC%80%E5%8F%91%E5%8A%A9%E6%89%8B%E6%8F%92%E4%BB%B6devhelper%E5%8F%91%E5%B8%83%E5%95%A6%EF%BC%8C%E5%85%85%E5%88%86%E6%8F%90%E9%AB%98%E5%B7%A5%E4%BD%9C%E6%95%88%E7%8E%87/%E7%94%9F%E6%88%90%E5%AF%86%E7%A0%81.jpg" srcset="/img/loading.gif" lazyload alt="IntelliJ IDEA 开发助手插件DevHelper发布啦，充分提高工作效率"></a></p>
+<h3 id="2、生成序列"><a href="#2、生成序列" class="headerlink" title="2、生成序列"></a>2、生成序列</h3><p>开发过程或者数据库操作过程中，经常需要填入序列，该功能可以根据起始值、步长、位数生成一系列序号，并可添加前后缀；</p>
+<p><a target="_blank" rel="noopener" href="https://www.daxiblog.com/intellij-idea-%e5%bc%80%e5%8f%91%e5%8a%a9%e6%89%8b%e6%8f%92%e4%bb%b6devhelper%e5%8f%91%e5%b8%83%e5%95%a6%ef%bc%8c%e5%85%85%e5%88%86%e6%8f%90%e9%ab%98%e5%b7%a5%e4%bd%9c%e6%95%88%e7%8e%87/%e7%94%9f%e6%88%90%e5%ba%8f%e5%88%97/"><img src="/2020/intellij-idea-%E5%BC%80%E5%8F%91%E5%8A%A9%E6%89%8B%E6%8F%92%E4%BB%B6devhelper%E5%8F%91%E5%B8%83%E5%95%A6%EF%BC%8C%E5%85%85%E5%88%86%E6%8F%90%E9%AB%98%E5%B7%A5%E4%BD%9C%E6%95%88%E7%8E%87/%E7%94%9F%E6%88%90%E5%BA%8F%E5%88%97.jpg" srcset="/img/loading.gif" lazyload></a></p>
+<h3 id="3、Base64编码和解码"><a href="#3、Base64编码和解码" class="headerlink" title="3、Base64编码和解码"></a>3、Base64编码和解码</h3><p>Base64是最常用的编码方式之一，在开发过程中一定会用到，该功能可以对内容进行Base64编码和解码，并可以指定编码格式，以及URL安全选项；</p>
+<p><a target="_blank" rel="noopener" href="https://www.daxiblog.com/intellij-idea-%e5%bc%80%e5%8f%91%e5%8a%a9%e6%89%8b%e6%8f%92%e4%bb%b6devhelper%e5%8f%91%e5%b8%83%e5%95%a6%ef%bc%8c%e5%85%85%e5%88%86%e6%8f%90%e9%ab%98%e5%b7%a5%e4%bd%9c%e6%95%88%e7%8e%87/base64/"><img src="/2020/intellij-idea-%E5%BC%80%E5%8F%91%E5%8A%A9%E6%89%8B%E6%8F%92%E4%BB%B6devhelper%E5%8F%91%E5%B8%83%E5%95%A6%EF%BC%8C%E5%85%85%E5%88%86%E6%8F%90%E9%AB%98%E5%B7%A5%E4%BD%9C%E6%95%88%E7%8E%87/base64.jpg" srcset="/img/loading.gif" lazyload></a></p>
+<p> </p>
+<h3 id="4、散列哈希加密"><a href="#4、散列哈希加密" class="headerlink" title="4、散列哈希加密"></a>4、散列哈希加密</h3><p>该功能支持MD5、SHA-1、SHA-224、SHA-256、SHA-384、SHA-512、HmacMD5等常见的散列哈希算法，可以选择不同的算法对内容进行不可逆加密</p>
+<p><a target="_blank" rel="noopener" href="https://www.daxiblog.com/intellij-idea-%e5%bc%80%e5%8f%91%e5%8a%a9%e6%89%8b%e6%8f%92%e4%bb%b6devhelper%e5%8f%91%e5%b8%83%e5%95%a6%ef%bc%8c%e5%85%85%e5%88%86%e6%8f%90%e9%ab%98%e5%b7%a5%e4%bd%9c%e6%95%88%e7%8e%87/hash/"><img src="/2020/intellij-idea-%E5%BC%80%E5%8F%91%E5%8A%A9%E6%89%8B%E6%8F%92%E4%BB%B6devhelper%E5%8F%91%E5%B8%83%E5%95%A6%EF%BC%8C%E5%85%85%E5%88%86%E6%8F%90%E9%AB%98%E5%B7%A5%E4%BD%9C%E6%95%88%E7%8E%87/hash.jpg" srcset="/img/loading.gif" lazyload></a></p>
+<h3 id="5、文本处理"><a href="#5、文本处理" class="headerlink" title="5、文本处理"></a>5、文本处理</h3><p>文本处理是开发过程中最常用到的功能，该功能提高了大量常用的文本操作，可以对行文本进行格式化(去除空白、空行、重复行)、行编辑(合并、拆分、命名转换等)、行排序(按照字母或数据升序降序)等。当然如果你正则表达式和文本编辑器本身用的很熟练的话，也可以自己完成这些操作。但是在这里效率也许会更高。</p>
+<p><a target="_blank" rel="noopener" href="https://www.daxiblog.com/intellij-idea-%e5%bc%80%e5%8f%91%e5%8a%a9%e6%89%8b%e6%8f%92%e4%bb%b6devhelper%e5%8f%91%e5%b8%83%e5%95%a6%ef%bc%8c%e5%85%85%e5%88%86%e6%8f%90%e9%ab%98%e5%b7%a5%e4%bd%9c%e6%95%88%e7%8e%87/test/"><img src="/2020/intellij-idea-%E5%BC%80%E5%8F%91%E5%8A%A9%E6%89%8B%E6%8F%92%E4%BB%B6devhelper%E5%8F%91%E5%B8%83%E5%95%A6%EF%BC%8C%E5%85%85%E5%88%86%E6%8F%90%E9%AB%98%E5%B7%A5%E4%BD%9C%E6%95%88%E7%8E%87/test.jpg" srcset="/img/loading.gif" lazyload></a></p>
+<h3 id="6、生产UUID"><a href="#6、生产UUID" class="headerlink" title="6、生产UUID"></a>6、生产UUID</h3><p>在数据库手工造数据、生产随机字符串亦或者是生产某个Key和Token的时候，经常会用到UUID，该功能批量生成大写/小写 UUID，并可以选择是否带有分隔符</p>
+<p><a target="_blank" rel="noopener" href="https://www.daxiblog.com/intellij-idea-%e5%bc%80%e5%8f%91%e5%8a%a9%e6%89%8b%e6%8f%92%e4%bb%b6devhelper%e5%8f%91%e5%b8%83%e5%95%a6%ef%bc%8c%e5%85%85%e5%88%86%e6%8f%90%e9%ab%98%e5%b7%a5%e4%bd%9c%e6%95%88%e7%8e%87/uuid/"><img src="/2020/intellij-idea-%E5%BC%80%E5%8F%91%E5%8A%A9%E6%89%8B%E6%8F%92%E4%BB%B6devhelper%E5%8F%91%E5%B8%83%E5%95%A6%EF%BC%8C%E5%85%85%E5%88%86%E6%8F%90%E9%AB%98%E5%B7%A5%E4%BD%9C%E6%95%88%E7%8E%87/uuid.jpg" srcset="/img/loading.gif" lazyload alt="生产UUID"></a></p>
+<h3 id="7、格式化"><a href="#7、格式化" class="headerlink" title="7、格式化"></a>7、格式化</h3><p>集成了常用的文本格式化功能，目前支持Json、xml、html的格式化</p>
+<p><a target="_blank" rel="noopener" href="https://www.daxiblog.com/intellij-idea-%e5%bc%80%e5%8f%91%e5%8a%a9%e6%89%8b%e6%8f%92%e4%bb%b6devhelper%e5%8f%91%e5%b8%83%e5%95%a6%ef%bc%8c%e5%85%85%e5%88%86%e6%8f%90%e9%ab%98%e5%b7%a5%e4%bd%9c%e6%95%88%e7%8e%87/format/"><img src="/2020/intellij-idea-%E5%BC%80%E5%8F%91%E5%8A%A9%E6%89%8B%E6%8F%92%E4%BB%B6devhelper%E5%8F%91%E5%B8%83%E5%95%A6%EF%BC%8C%E5%85%85%E5%88%86%E6%8F%90%E9%AB%98%E5%B7%A5%E4%BD%9C%E6%95%88%E7%8E%87/format.jpg" srcset="/img/loading.gif" lazyload></a></p>
+<h3 id="8、RSA非对称加解密"><a href="#8、RSA非对称加解密" class="headerlink" title="8、RSA非对称加解密"></a>8、RSA非对称加解密</h3><p>RSA非对称加解密在程序开发过程中也是经常用到的，但是在开发过程中，最重要的并不是如果实现RSA加解密，而是如何在多个终端不同语言（安卓、IOS、Java、Javascript等）下RSA算法统一。该功能提供了相对标准的是RSA加解密算法，并且和<a target="_blank" rel="noopener" href="http://tool.chacuo.net/cryptrsapubkey">该网站</a>能够互相加解密。目前该功能支持RSA的私钥/公钥分别进行加密或者解密，并且可以生成私钥和公钥对</p>
+<p><a target="_blank" rel="noopener" href="https://www.daxiblog.com/intellij-idea-%e5%bc%80%e5%8f%91%e5%8a%a9%e6%89%8b%e6%8f%92%e4%bb%b6devhelper%e5%8f%91%e5%b8%83%e5%95%a6%ef%bc%8c%e5%85%85%e5%88%86%e6%8f%90%e9%ab%98%e5%b7%a5%e4%bd%9c%e6%95%88%e7%8e%87/rsa/"><img src="/2020/intellij-idea-%E5%BC%80%E5%8F%91%E5%8A%A9%E6%89%8B%E6%8F%92%E4%BB%B6devhelper%E5%8F%91%E5%B8%83%E5%95%A6%EF%BC%8C%E5%85%85%E5%88%86%E6%8F%90%E9%AB%98%E5%B7%A5%E4%BD%9C%E6%95%88%E7%8E%87/rsa.jpg" srcset="/img/loading.gif" lazyload></a></p>
+<p>1、打开IntelliJ IDEA中：File-&gt;Settings-&gt;Plugins，然后搜索DevHelper即可安装。由于官网发布需要审核，所以版本会延时，可直接采用第二种方式，直接下载最新版安装。</p>
+<p>2、下载最新格式安装包，打开File-&gt;Settings-&gt;Plugins，然后选择 Install Plugin from Disk… ，然后选择下载好的安装包，即可完成安装。</p>
+<p>当前最新版本：<a target="_blank" rel="noopener" href="https://www.daxiblog.com/intellij-idea-%e5%bc%80%e5%8f%91%e5%8a%a9%e6%89%8b%e6%8f%92%e4%bb%b6devhelper%e5%8f%91%e5%b8%83%e5%95%a6%ef%bc%8c%e5%85%85%e5%88%86%e6%8f%90%e9%ab%98%e5%b7%a5%e4%bd%9c%e6%95%88%e7%8e%87/devhelper-1-0-1/">DevHelper-1.0.1</a></p>
+<p>该插件已发布到IntelliJ插件中心，插件首页为：<a target="_blank" rel="noopener" href="https://plugins.jetbrains.com/plugin/15322-devhelper">https://plugins.jetbrains.com/plugin/15322-devhelper</a></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%BC%80%E5%8F%91%E5%8A%A9%E6%89%8B/">开发助手</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%8F%92%E4%BB%B6/">插件</a>
+                    
+                      <a class="hover-with-bg" href="/tags/intellij-idea/">intellij-idea</a>
+                    
+                      <a class="hover-with-bg" href="/tags/devhelper/">devhelper</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/intellij-idea-%E5%BC%80%E5%8F%91%E5%8A%A9%E6%89%8B%E6%8F%92%E4%BB%B6devhelper-1-0-2%E7%89%88%E6%9C%AC%E5%8F%91%E5%B8%83/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">IntelliJ IDEA 开发助手插件DevHelper 1.0.2版本发布</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/%E5%85%A8%E8%83%BD%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7navicat-15-%E6%97%97%E8%88%B0%E7%89%88x64%E4%BD%8D%E5%AE%89%E8%A3%85%E6%BF%80%E6%B4%BB/">
+                        <span class="hidden-mobile">全能数据库管理工具Navicat 15 旗舰版x64位安装激活</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"B2tecGOesiRBcoXldYV5Jk5A-9Nh9j0Va","appKey":"5tFdBthF0o282SCXuNVxbntd","placeholder":"说点什么","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false,"requiredFields":[]},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

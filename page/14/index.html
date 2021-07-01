@@ -1,0 +1,953 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="daxi">
+  <meta name="keywords" content="">
+  
+  <title>达夕博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiyt.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 100vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>达夕博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/banner1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="热衷于分享IT技术/工作效率/优秀软件，申旦达夕，永无止境">
+              
+            </span>
+
+            
+          </div>
+
+          
+            <div class="scroll-down-bar">
+              <i class="iconfont icon-arrowdown"></i>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div class="py-5" id="board"
+          style=margin-top:0>
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2017/intellij-idea-%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%88%97%E8%A1%A8/" target="_self">
+          <img src="/2017/intellij-idea-%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%88%97%E8%A1%A8/%E9%94%AE%E7%9B%98-%E5%BF%AB%E6%8D%B7%E9%94%AE.png" srcset="/img/loading.gif" lazyload alt="IntelliJ Idea 常用快捷键列表">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2017/intellij-idea-%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%88%97%E8%A1%A8/" target="_self">
+          IntelliJ Idea 常用快捷键列表
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2017/intellij-idea-%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%88%97%E8%A1%A8/" target="_self">
+          
+          
+            
+          
+           
+
+从Eclipse切换到Idea不久，需要不断的熟悉下Idea的快捷键：
+Shift +Shift，查找一切 Ctrl+E，最近的文件 Ctrl+Shift+E，最近更改的文件 Shift+Click，可以关闭文件 Ctrl+，可以跑到大括号的开头与结尾 Ctrl+F12，可以显示当前文件的结构 Ctrl+F7，可以查询当前元素在当前文件中的引用，然后按 F3 可以选择 Ctrl+N，可以快速
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2017-04-28 05:31" pubdate>
+              2017-04-28
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/">快捷键</a>
+            
+              <a href="/tags/intellij-idea/">intellij-idea</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2017/workflow%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E6%8C%96%E6%8E%98%E6%AF%94%E8%A7%84%E5%88%99%E6%9B%B4%E9%87%8D%E8%A6%81/" target="_self">
+          <img src="/2017/workflow%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E6%8C%96%E6%8E%98%E6%AF%94%E8%A7%84%E5%88%99%E6%9B%B4%E9%87%8D%E8%A6%81/IMG_2194.jpg" srcset="/img/loading.gif" lazyload alt="workflow使用场景挖掘比规则更重要">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2017/workflow%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E6%8C%96%E6%8E%98%E6%AF%94%E8%A7%84%E5%88%99%E6%9B%B4%E9%87%8D%E8%A6%81/" target="_self">
+          workflow使用场景挖掘比规则更重要
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2017/workflow%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E6%8C%96%E6%8E%98%E6%AF%94%E8%A7%84%E5%88%99%E6%9B%B4%E9%87%8D%E8%A6%81/" target="_self">
+          
+          
+            
+          
+          
+这一段时间或者说前一段时间，程序化效率工具workflow全是iOS应用中最火的了。各个媒体，文章都在撰写或转载它的使用方法，而更多的是基于workflow制作出来的各种规则分享。我自己也使用了一段时间，大概有一个多月，这一个月下来，我发现自己有个最大的变化：
+那就是从寻找workflow规则转变为分析自己的日常手机使用习惯，从中提炼能够帮助我提高效率的场景，然后自己手动编写规则。所以我目前的建
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2017-04-21 03:08" pubdate>
+              2017-04-21
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2017/%E4%B8%83%E4%B8%AA%E4%BC%98%E7%A7%80%E7%9A%84%E5%9C%A8%E7%BA%BF%E9%85%8D%E8%89%B2%E5%B7%A5%E5%85%B7%E6%94%B6%E9%9B%86/" target="_self">
+          <img src="/2017/%E4%B8%83%E4%B8%AA%E4%BC%98%E7%A7%80%E7%9A%84%E5%9C%A8%E7%BA%BF%E9%85%8D%E8%89%B2%E5%B7%A5%E5%85%B7%E6%94%B6%E9%9B%86/peise01.png" srcset="/img/loading.gif" lazyload alt="七个优秀的在线配色工具收集">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2017/%E4%B8%83%E4%B8%AA%E4%BC%98%E7%A7%80%E7%9A%84%E5%9C%A8%E7%BA%BF%E9%85%8D%E8%89%B2%E5%B7%A5%E5%85%B7%E6%94%B6%E9%9B%86/" target="_self">
+          七个优秀的在线配色工具收集
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2017/%E4%B8%83%E4%B8%AA%E4%BC%98%E7%A7%80%E7%9A%84%E5%9C%A8%E7%BA%BF%E9%85%8D%E8%89%B2%E5%B7%A5%E5%85%B7%E6%94%B6%E9%9B%86/" target="_self">
+          
+          
+            
+          
+          虽然我不是专门的UI设计工作者，但是日常工作中也免不了涉及到UI、网页配色等相关工作。一个好的配色工具能够很好的帮助我很快的找到配色灵感，颜色搭配也很协调。所以我经常使用一些的在线的配色工具，今天把这些搜集到的优秀的配色工具整理出来，分享给大家。
+Material PaletteMaterial Palette 是一款提供 Material Design 配色的在线配色工具
+
+网址：https:/
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2017-03-27 01:17" pubdate>
+              2017-03-27
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E8%AE%BE%E8%AE%A1/">设计</a>
+            
+              <a href="/tags/%E9%85%8D%E8%89%B2/">配色</a>
+            
+              <a href="/tags/%E5%9C%A8%E7%BA%BF%E9%85%8D%E8%89%B2/">在线配色</a>
+            
+              <a href="/tags/%E9%A2%9C%E8%89%B2%E6%90%AD%E9%85%8D/">颜色搭配</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2017/jetbrains-intellij-idea%E5%90%84%E7%89%88%E6%9C%AC%E6%BF%80%E6%B4%BB%E6%96%B9%E6%B3%95/" target="_self">
+          <img src="/2017/jetbrains-intellij-idea%E5%90%84%E7%89%88%E6%9C%AC%E6%BF%80%E6%B4%BB%E6%96%B9%E6%B3%95/idea-active-00.png" srcset="/img/loading.gif" lazyload alt="JetBrains IntelliJ IDEA各版本激活方法">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2017/jetbrains-intellij-idea%E5%90%84%E7%89%88%E6%9C%AC%E6%BF%80%E6%B4%BB%E6%96%B9%E6%B3%95/" target="_self">
+          JetBrains IntelliJ IDEA各版本激活方法
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2017/jetbrains-intellij-idea%E5%90%84%E7%89%88%E6%9C%AC%E6%BF%80%E6%B4%BB%E6%96%B9%E6%B3%95/" target="_self">
+          
+          
+            
+          
+          
+前端时间由于工作项目需要，把用了多年了IDE更换成了JetBrains IntelliJ IDEA，期初上手并不习惯，但是用着用着就会发现确实很强大，不管是前端代码还是后端代码，都有很好的编程体验，IDEA的诸多优点我就不一一列举了。只不过IDEA是收费的，大家关心的自然是激活问题，所以这里把我在互联网上找到的IDEA的个个版本激活方法，分享如下：
+1、授权服务器激活方式安装好之后，在需要填写授
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2017-03-25 03:18" pubdate>
+              2017-03-25
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/">开发工具</a>
+            
+              <a href="/tags/ide/">ide</a>
+            
+              <a href="/tags/jetbrains-intellij-idea/">jetbrains-intellij-idea</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2017/office2013%E5%8D%87%E7%BA%A7%E5%88%B0office2016%E7%9A%84%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B%E5%88%86%E6%9E%90/" target="_self">
+          <img src="/2017/office2013%E5%8D%87%E7%BA%A7%E5%88%B0office2016%E7%9A%84%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B%E5%88%86%E6%9E%90/office2016-logo.jpg" srcset="/img/loading.gif" lazyload alt="Office2013升级到Office2016的安装过程分析（附激活）">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2017/office2013%E5%8D%87%E7%BA%A7%E5%88%B0office2016%E7%9A%84%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B%E5%88%86%E6%9E%90/" target="_self">
+          Office2013升级到Office2016的安装过程分析（附激活）
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2017/office2013%E5%8D%87%E7%BA%A7%E5%88%B0office2016%E7%9A%84%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B%E5%88%86%E6%9E%90/" target="_self">
+          
+          
+            
+          
+          
+虽然Office2016出来早在2015年9月就发布了，但是我的电脑上一直运行着Office 2013，使用一切正常所以也一直没有更新自己的Office到最新版。最近稍微有点儿时间，所以想把自己电脑上整体的Office软件做下升级，下面就把Office2016的安装、升级、激活过程和注意事项记录下来，分享给大家。
+1、Office 2016版本的选择Office 2016包含多个版本，功能上多半
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2017-03-07 14:33" pubdate>
+              2017-03-07
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%BF%80%E6%B4%BB/">激活</a>
+            
+              <a href="/tags/office/">office</a>
+            
+              <a href="/tags/office-2016/">office-2016</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2017/trello-%E5%9C%98%E9%9A%8A%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-trello%EF%BC%9F-8%E5%80%8B%E5%B0%88%E6%A1%88%E6%8E%92%E7%A8%8B%E5%8D%94%E4%BD%9C%E9%87%8D%E9%BB%9E%E6%8A%80%E5%B7%A7/" target="_self">
+          <img src="/2017/trello-%E5%9C%98%E9%9A%8A%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-trello%EF%BC%9F-8%E5%80%8B%E5%B0%88%E6%A1%88%E6%8E%92%E7%A8%8B%E5%8D%94%E4%BD%9C%E9%87%8D%E9%BB%9E%E6%8A%80%E5%B7%A7/trello%20use%20trello-01.png" srcset="/img/loading.gif" lazyload alt="Trello 團隊如何使用 Trello？ 8個專案排程協作重點技巧">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2017/trello-%E5%9C%98%E9%9A%8A%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-trello%EF%BC%9F-8%E5%80%8B%E5%B0%88%E6%A1%88%E6%8E%92%E7%A8%8B%E5%8D%94%E4%BD%9C%E9%87%8D%E9%BB%9E%E6%8A%80%E5%B7%A7/" target="_self">
+          Trello 團隊如何使用 Trello？ 8個專案排程協作重點技巧
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2017/trello-%E5%9C%98%E9%9A%8A%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-trello%EF%BC%9F-8%E5%80%8B%E5%B0%88%E6%A1%88%E6%8E%92%E7%A8%8B%E5%8D%94%E4%BD%9C%E9%87%8D%E9%BB%9E%E6%8A%80%E5%B7%A7/" target="_self">
+          
+          
+            
+          
+          我最近讀到兩篇文章，對如何使用 Trello 進行專案管理很有收穫：第一篇是 Zapier 團隊去採訪 Trello 團隊成員如何使用 Trello ：「How Trello Uses Trello to Collaborate, Plan, and Communicate as a Team」。第二篇則是 Trello 團隊自己整理了前一篇文章的精華，重新解釋自己使用 Trello 時的管理邏輯
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2017-02-20 00:20" pubdate>
+              2017-02-20
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E7%9C%8B%E6%9D%BF/">看板</a>
+            
+              <a href="/tags/%E5%8D%8F%E5%90%8C%E5%8A%9E%E5%85%AC/">协同办公</a>
+            
+              <a href="/tags/trello/">trello</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2017/svnsync%E6%96%B9%E5%BC%8F%E5%AE%9E%E7%8E%B0svn%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%8C%E6%9C%BA%E8%87%AA%E5%8A%A8%E5%A4%87%E4%BB%BD/" target="_self">
+          <img src="/2017/svnsync%E6%96%B9%E5%BC%8F%E5%AE%9E%E7%8E%B0svn%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%8C%E6%9C%BA%E8%87%AA%E5%8A%A8%E5%A4%87%E4%BB%BD/tortoisesvn.png" srcset="/img/loading.gif" lazyload alt="svnsync方式实现svn服务器双机自动备份">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2017/svnsync%E6%96%B9%E5%BC%8F%E5%AE%9E%E7%8E%B0svn%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%8C%E6%9C%BA%E8%87%AA%E5%8A%A8%E5%A4%87%E4%BB%BD/" target="_self">
+          svnsync方式实现svn服务器双机自动备份
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2017/svnsync%E6%96%B9%E5%BC%8F%E5%AE%9E%E7%8E%B0svn%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%8C%E6%9C%BA%E8%87%AA%E5%8A%A8%E5%A4%87%E4%BB%BD/" target="_self">
+          
+          
+            
+          
+          
+今天把项目用svn服务器进行了备份设置，关于svn服务器的备份方案主要有三种svnadmin dump、svnadmin hotcopy和svnsync，这次我选择svnsync这种方式，这样当主svn服务器发生故障时，可以立刻切换到备份服务器继续工作，实现实时双机备份和无缝切换。接下来就把svnsync的配置方法记录如下：
+1、在备份主机上，创建备份用svn库
+svnadmin create 
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2017-02-17 14:32" pubdate>
+              2017-02-17
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/svn/">svn</a>
+            
+              <a href="/tags/svnsync/">svnsync</a>
+            
+              <a href="/tags/svn%E5%A4%87%E4%BB%BD/">svn备份</a>
+            
+              <a href="/tags/%E5%8F%8C%E6%9C%BA%E5%A4%87%E4%BB%BD/">双机备份</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2017/jira%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%87%E4%BB%BD%EF%BC%8Cmysql%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/" target="_self">
+          <img src="/2017/jira%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%87%E4%BB%BD%EF%BC%8Cmysql%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/jira-mysql-sync.jpg" srcset="/img/loading.gif" lazyload alt="jira数据库备份，mysql主从复制配置方法">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2017/jira%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%87%E4%BB%BD%EF%BC%8Cmysql%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/" target="_self">
+          jira数据库备份，mysql主从复制配置方法
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2017/jira%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%87%E4%BB%BD%EF%BC%8Cmysql%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/" target="_self">
+          
+          
+            
+          
+          
+前一段时间安装好的Jira+Confluence环境，已经运行一段时间了，一切都很顺利。但是今天忽然想到Jira相关的备份方案还没有认真的考虑，于是参考官方文档把Jira的备份方案阅读了一遍，除了Jira系统设置里的默认的XML备份方案外，官方还强调需要自己对Jira数据库进行相应的备份策略。在安装Jira的时候，由于我选择时MySQL数据库，于是今天把MySQL的主从复制备份进行安装配置，在这
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2017-02-16 10:46" pubdate>
+              2017-02-16
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%8A%80%E6%9C%AF%E7%BC%96%E7%A8%8B/">技术编程</a>
+            
+              <a href="/categories/%E6%8A%80%E6%9C%AF%E7%BC%96%E7%A8%8B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6/">主从复制</a>
+            
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%90%8C%E6%AD%A5/">数据库同步</a>
+            
+              <a href="/tags/jira%E5%A4%87%E4%BB%BD/">jira备份</a>
+            
+              <a href="/tags/mysql/">mysql</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2017/jirajenkins%E9%9B%86%E6%88%90%EF%BC%8C%E5%AE%9E%E7%8E%B0%E4%BB%BB%E5%8A%A1%E7%8A%B6%E6%80%81%E6%94%B9%E5%8F%98%E8%87%AA%E5%8A%A8%E8%A7%A6%E5%8F%91%E5%A2%9E%E9%87%8F%E5%8F%91%E5%B8%83/" target="_self">
+          <img src="/2017/jirajenkins%E9%9B%86%E6%88%90%EF%BC%8C%E5%AE%9E%E7%8E%B0%E4%BB%BB%E5%8A%A1%E7%8A%B6%E6%80%81%E6%94%B9%E5%8F%98%E8%87%AA%E5%8A%A8%E8%A7%A6%E5%8F%91%E5%A2%9E%E9%87%8F%E5%8F%91%E5%B8%83/jira-Jenkins00.jpg" srcset="/img/loading.gif" lazyload alt="Jira+Jenkins集成，实现任务状态改变自动触发增量发布">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2017/jirajenkins%E9%9B%86%E6%88%90%EF%BC%8C%E5%AE%9E%E7%8E%B0%E4%BB%BB%E5%8A%A1%E7%8A%B6%E6%80%81%E6%94%B9%E5%8F%98%E8%87%AA%E5%8A%A8%E8%A7%A6%E5%8F%91%E5%A2%9E%E9%87%8F%E5%8F%91%E5%B8%83/" target="_self">
+          Jira+Jenkins集成，实现任务状态改变自动触发增量发布
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2017/jirajenkins%E9%9B%86%E6%88%90%EF%BC%8C%E5%AE%9E%E7%8E%B0%E4%BB%BB%E5%8A%A1%E7%8A%B6%E6%80%81%E6%94%B9%E5%8F%98%E8%87%AA%E5%8A%A8%E8%A7%A6%E5%8F%91%E5%A2%9E%E9%87%8F%E5%8F%91%E5%B8%83/" target="_self">
+          
+          
+            
+          
+          
+前几天把Jira、Confluence、Fisheye集成环境搭建好了，今天进一步把Jenkins和Jira做了一个集成，目的就是通过Jira通知Jenkins任务已经完成，可以发布了。然后Jenkins获取通知后自动抓取Jira任务单关联的代码清单，完成增量发布。在集成过程中确实有一些关键点有必要记录下来，分享给大家。
+1、首先是Jira任务单和代码的关联
+这一部分是通过Jira和Fishey
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2017-01-11 09:39" pubdate>
+              2017-01-11
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/jenkins/">jenkins</a>
+            
+              <a href="/tags/jira/">jira</a>
+            
+              <a href="/tags/%E5%A2%9E%E9%87%8F%E5%8F%91%E5%B8%83/">增量发布</a>
+            
+              <a href="/tags/%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90/">持续集成</a>
+            
+              <a href="/tags/%E8%87%AA%E5%8A%A8%E5%8F%91%E5%B8%83/">自动发布</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2017/jira%E9%9B%86%E6%88%90%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4%E6%B8%85%E5%8D%95/" target="_self">
+          <img src="/2017/jira%E9%9B%86%E6%88%90%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4%E6%B8%85%E5%8D%95/jira-Confluence-fecru.jpg" srcset="/img/loading.gif" lazyload alt="Jira+Confluence+Fisheye+Crucible安装步骤清单">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2017/jira%E9%9B%86%E6%88%90%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4%E6%B8%85%E5%8D%95/" target="_self">
+          Jira+Confluence+Fisheye+Crucible安装步骤清单
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2017/jira%E9%9B%86%E6%88%90%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4%E6%B8%85%E5%8D%95/" target="_self">
+          
+          
+            
+          
+          
+我在之前的这些文章中介绍了看板的一些理论和实践方法。Jira作为一个需求缺陷的项目管理工具，在敏捷开发和看板系统方面的功能也是非常的强大。于是最近自己也试着使用Jira以及Jira周边的各种插件系统，搭建了一个学习用的项目管理框架。其中包括：
+
+Jira用于需求缺陷管理
+Confluence作为知识库
+FishEye作为代码查看工具
+Crucible作为代码Review工具
+配合Jenkins作
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2017-01-05 09:11" pubdate>
+              2017-01-05
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/jira/">jira</a>
+            
+              <a href="/tags/%E6%95%8F%E6%8D%B7%E5%B7%A5%E5%85%B7/">敏捷工具</a>
+            
+              <a href="/tags/%E7%9C%8B%E6%9D%BF%E5%B7%A5%E5%85%B7/">看板工具</a>
+            
+              <a href="/tags/%E7%9F%A5%E8%AF%86%E5%BA%93/">知识库</a>
+            
+              <a href="/tags/confluence/">confluence</a>
+            
+              <a href="/tags/crucible/">crucible</a>
+            
+              <a href="/tags/fisheye/">fisheye</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <a class="extend prev" rel="prev" href="/page/13/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/#board">12</a><a class="page-number" href="/page/13/#board">13</a><span class="page-number current">14</span><a class="page-number" href="/page/15/#board">15</a><a class="page-number" href="/page/16/#board">16</a><span class="space">&hellip;</span><a class="page-number" href="/page/33/#board">33</a><a class="extend next" rel="next" href="/page/15/#board"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

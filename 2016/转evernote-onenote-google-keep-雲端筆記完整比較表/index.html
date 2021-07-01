@@ -1,0 +1,508 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="daxi">
+  <meta name="keywords" content="">
+  
+  <title>[转]Evernote, Onenote, Google keep 雲端筆記完整比較表 - 达夕博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiyt.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>达夕博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/banner1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="[转]Evernote, Onenote, Google keep 雲端筆記完整比較表">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2016-02-26 10:17" pubdate>
+        2016年2月26日 上午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.9k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      19
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">[转]Evernote, Onenote, Google keep 雲端筆記完整比較表</h1>
+            
+            <div class="markdown-body">
+              <p>很多<a target="_blank" rel="noopener" href="http://www.playpcesor.com/">電腦玩物</a>的讀者常常問我的一個問題就是：「 Evernote 和 Onenote 哪個好？」</p>
+<p>事實上這沒有誰比較好的問題，只有你適合、需要哪一種方法的問題，但要進行選擇，勢必要先了解兩大服務的全貌，比較兩者功能的細節，不過一般用戶應該也沒有時間同時對兩者做深入的使用與了解。</p>
+<p>所以看起來我寫這一篇比較也是勢在必行，只是我拖了一段時間，到現在才終於正式動手製作了兩者的比較表。</p>
+<p>那麼為什麼要加入 Google Keep 呢？在這個比較表中， Google Keep 是作為概括「一般筆記服務」的對照而存在，因為只要這樣一比較，就會發現 Evernote 和 Onenote 不是跟一般筆記服務同一個層級的工具，兩者的真正價值在於一個更大範圍、更長時間的知識管理需求。 廢話不多說，常看電腦玩物的朋友，應該都有看過我個別深入討論 Evernote 與 Onenote 的多篇文章，所以就讓我們直接從比較表開始看起。</p>
+<p>表格中，超連結指向了相關的教學文章可以參考，而米黃色框起來的部分，代表是屬於一個特別優異的特色。 <a target="_blank" rel="noopener" href="http://localhost/old/2016/02/compare-noteapp.png"><img src="/2016/%E8%BD%ACevernote-onenote-google-keep-%E9%9B%B2%E7%AB%AF%E7%AD%86%E8%A8%98%E5%AE%8C%E6%95%B4%E6%AF%94%E8%BC%83%E8%A1%A8/compare-noteapp-552x1024.png" srcset="/img/loading.gif" lazyload alt="Evernote, Onenote, Google keep 雲端筆記完整比較表"></a></p>
+<p>你可以參考這個比較表中，有沒有哪些功能與需求對你來說是最核心的，然後看看是哪個工具在這個需求上表現更好，那麼這時候你就知道應該選擇 Evernote 還是 Onenote 了。</p>
+<p>而簡單的看下來，也會發現 Onenote 在筆記編輯上表現出更多元強大的內容排版方式， Evernote 則在各種資料收集與搜尋上有優異的表現。</p>
+<p>所以是寫筆記對你來說更核心？還是收集、搜尋資料對你更核心呢？當然，我們都希望同時寫筆記、收集資料與搜尋資料庫，但無法魚與熊掌兼得下，就只好擇其一，然後接受他可能比較不完美那一面。</p>
+<h3 id="1-Onenote-眼到（排版）手到（繪圖）的筆記整理（分類）"><a href="#1-Onenote-眼到（排版）手到（繪圖）的筆記整理（分類）" class="headerlink" title="1. Onenote 眼到（排版）手到（繪圖）的筆記整理（分類）"></a>1. Onenote 眼到（排版）手到（繪圖）的筆記整理（分類）</h3><p>Onenote 是最像紙本筆記概念，可以眼到、手到、心到的筆記整理服務，這裡每個關鍵字都有其意義。</p>
+<p>眼到，就是 Onenote 可以隨著想要的方式自由排版，你希望筆記看起來是什麼樣子，在 Onenote 就能排出來（不過限於電腦版）。手到，就是 Onenote 提供了強大的繪圖與表格功能，可以做出多樣化的筆記。</p>
+<p>而 Onenote 的筆記分類也很嚴謹，有章、有節、有收納封存，也有樹狀筆記層次，讓我們可以像是紙本筆記，或是像是一本一本書那樣整理筆記資料。所以我最後的總結用途說， Onenote 很適合用來寫論文、做研究時的資料整理，那些需要很嚴謹結構的目錄分類的資料，可以在 Onenote 得到滿足。</p>
+<p>你可以在我的這篇文章看到 Onenote 最完整深入的功能與使用方法教學：「<a target="_blank" rel="noopener" href="http://www.playpcesor.com/2016/01/onenote-17.html">超深入剖析 OneNote 教學！筆記術專家必備17個功能</a>」。</p>
+<h3 id="2-Evernote-快速（展開）搜尋（回憶）的雲端知識庫（第二大腦）"><a href="#2-Evernote-快速（展開）搜尋（回憶）的雲端知識庫（第二大腦）" class="headerlink" title="2. Evernote 快速（展開）搜尋（回憶）的雲端知識庫（第二大腦）"></a>2. Evernote 快速（展開）搜尋（回憶）的雲端知識庫（第二大腦）</h3><p>相對起來， Evernote 是另外一種思維，他可以分類，但要我們打破傳統層層分類的概念，才能打造一個快速搜尋的雲端知識庫，這裡每個關鍵字也都有其意義。</p>
+<p>快速，體現在 Evernote 所有資料都儲存在同一個資料庫檔案（不像 Onenote 還是一個一個檔案的概念），所以不再需要整理檔案，也體現在 Evernote 的筆記展開在同一個資料庫中，不像 Onenote 分類在一本一本書裡，所以 Evernote 可以快速的取用、瀏覽所有筆記中的任何一則，並且在展開的畫面中更容易看到不同筆記之間的關係。</p>
+<p>搜尋， Evernote 的概念是我們甚至不用怎麼分類，只要搜尋時，找到的筆記自然形成一種當下需要的分類，而且 Evernote 的搜尋功能更快速更強大，還能搜尋到圖片上印刷體的中文關鍵字。</p>
+<p>第二大腦， Evernote 有強大的收集能力，除了照片、聲音的筆記外，還可以快速收集網頁、郵件、名片、紙張，在這一點上讓資料庫可以最大程度收集各種東西，並且搭配強大搜尋，於是一個第二大腦概念的資料庫就成形了。</p>
+<p>Evernote 很適合靈感創意工作者使用，也適合同時結合工作與生活的知識工作者使用，他的資料收集能力可以幫我們節省很多時間，建立一個個人知識庫可以讓我們少走冤枉路，而強大的搜尋和展開的筆記更是我們激發靈感所必須的。（參考：<a target="_blank" rel="noopener" href="http://www.playpcesor.com/2015/06/evernote-onenote-brain.html">跟過去的自己取經：用第二大腦高效率思考的系統方法</a>）</p>
+<p>加上 Evernote 具備時間排程功能，也可以從專案知識庫，轉化成專案管理工具來使用。（參考：<a target="_blank" rel="noopener" href="http://www.playpcesor.com/2015/09/evernote_20.html">瑣碎任務的工作流重整：我如何用 Evernote 專案管理</a>）</p>
+<p>你還可以在這裡找到我分享的：「<a target="_blank" rel="noopener" href="http://www.playpcesor.com/2015/09/evernote.html">免費下載！ Evernote 上手教學與範本一次學會筆記書</a>」。</p>
+<h3 id="3-Google-keep-概括那些不到資料庫層級的一般筆記"><a href="#3-Google-keep-概括那些不到資料庫層級的一般筆記" class="headerlink" title="3. Google keep 概括那些不到資料庫層級的一般筆記"></a>3. Google keep 概括那些不到資料庫層級的一般筆記</h3><p>比較之下，就可以發現對照組的 Google Keep 作為一般筆記服務，和資料庫服務的知識管理是兩個層級的需求。</p>
+<p>在一般筆記服務中，沒有收集不同檔案、資料的功能，缺乏資料重整需要的排版，沒有共用資料庫的概念，搜尋或分類這兩個知識管理功能可能都相對普通，所以最終他們不會很適合用來做長期、大量的知識管理。</p>
+<p>但當然用來做快速筆記或簡單任務管理，是可以滿足需求的，可以延伸參考：「<a target="_blank" rel="noopener" href="http://www.playpcesor.com/2015/08/google-keep-10.html">Google Keep 筆記任務更強的活用 10 招技巧心法教學</a>」。</p>
+<p>以上，就是我對 Onenote 與 Evernote 的比較，提供大家參考，也歡迎大家回饋討論，一起補足表格中可能還缺乏的部分。</p>
+<p>延伸閱讀：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="http://www.playpcesor.com/2014/05/write-everything-in-note.html">把這 10 件「不重要的事情」寫進筆記，讓人生更有動力</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.playpcesor.com/2016/01/blog-post.html">做好大人的學習筆記：如何開始建立你的技能系統？</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.playpcesor.com/2015/08/write-your-happy-notebook.html">讓自己開心的筆記術，今天開始寫你的快樂筆記本</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.playpcesor.com/2016/02/kkbox-spotify-apple-music.html">KKBOX, Spotify, Apple Music 音樂服務完整比較表格</a></li>
+</ul>
+<p>声明：本文转自<a target="_blank" rel="noopener" href="http://www.playpcesor.com/">电脑玩物</a>，原文：<a target="_blank" rel="noopener" href="http://www.playpcesor.com/2016/02/evernote-onenote-google-keep.html">Evernote, Onenote, Google keep雲端筆記完整比較表</a></p>
+<h3 id="大席推荐："><a href="#大席推荐：" class="headerlink" title="大席推荐："></a><strong>大席推荐：</strong></h3><p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2015/10/30/%e5%80%bc%e5%be%97%e7%8f%8d%e8%97%8f%ef%bc%9a%e5%8d%b0%e8%b1%a1%e7%ac%94%e8%ae%b0evernote%e4%b8%ad%e8%bf%9b%e8%a1%8c%e9%ab%98%e7%ba%a7%e6%90%9c%e7%b4%a2%e7%9a%84%e8%af%ad%e6%b3%95%e5%88%86%e4%ba%ab/">值得珍藏：印象笔记Evernote中进行高级搜索的语法分享</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2015/10/26/%e9%87%8d%e6%96%b0%e6%95%b4%e7%90%86%ef%bc%9a%e6%88%91%e7%9a%84%e5%8d%b0%e8%b1%a1%e7%ac%94%e8%ae%b0evernote%e7%9a%84%e5%88%86%e7%b1%bb%e6%96%b9%e6%b3%95%e5%92%8c%e6%a0%87%e7%ad%be%e4%bd%bf%e7%94%a8/">重新整理：我的印象笔记Evernote的分类方法和标签使用技巧</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2015/09/29/%e6%88%91%e7%9a%84%e5%8d%b0%e8%b1%a1%e7%ac%94%e8%ae%b0evernote%e4%b8%ad%e7%9a%84%e7%94%9f%e6%b4%bb%e6%b8%85%e5%8d%95%e5%92%8c%e5%b7%a5%e4%bd%9c%e6%b8%85%e5%8d%95/">我的印象笔记Evernote中的生活清单和工作清单</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2016/01/20/%e4%b8%aa%e4%ba%ba%e4%bf%a1%e6%81%af%e9%9b%86%e4%b8%ad%e7%ae%a1%e7%90%86%ef%bc%9a%e4%b8%80%e5%bc%a0%e5%9b%be%e7%9c%8b%e7%9c%8b%e6%88%91%e6%8a%8a%e5%93%aa%e4%ba%9b%e4%bf%a1%e6%81%af%e6%94%be%e5%85%a5/">个人信息集中管理：一张图看看我把哪些信息放入印象笔记</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2015/11/09/%e5%8d%b0%e8%b1%a1%e7%ac%94%e8%ae%b0%e6%96%b0%e5%a2%9e%e5%bf%ab%e6%8d%b7%e8%be%93%e5%85%a5%e8%af%ad%e6%b3%95%ef%bc%8c%e5%ae%9e%e4%be%8b%e6%bc%94%e7%a4%ba%e8%ae%a9%e5%86%99%e7%ac%94%e8%ae%b0%e6%9b%b4/">印象笔记新增快捷输入语法，实例演示让写笔记更高效</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2015/11/04/google-keep%e7%bb%98%e5%9b%be%e6%96%b0%e5%8a%9f%e8%83%bd%e4%ba%94%e4%b8%aa%e4%bd%bf%e7%94%a8%e6%8a%80%e5%b7%a7%e8%ae%a9%e7%ac%94%e8%ae%b0%e4%b8%ad%e6%89%8b%e5%86%99%e5%92%8c%e5%9b%be%e7%89%87/">Google Keep绘图新功能:五个使用技巧让笔记中手写和图片标注更加方便</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2015/10/19/%e6%88%91%e7%9a%84google-keep%e4%b8%83%e5%a4%a7%e5%8a%9f%e8%83%bd%e4%bd%bf%e7%94%a8%e6%8a%80%e5%b7%a7/">我的Google Keep七大功能使用技巧</a></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a>
+                    
+                      <a class="hover-with-bg" href="/tags/google-keep/">google-keep</a>
+                    
+                      <a class="hover-with-bg" href="/tags/evernote/">evernote</a>
+                    
+                      <a class="hover-with-bg" href="/tags/onenote/">onenote</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2016/%E5%BF%AB%E9%80%9F%E5%9C%A8%E6%8C%87%E5%AE%9A%E7%9B%AE%E5%BD%95%E4%B8%8B%E6%89%93%E5%BC%80windows%E5%91%BD%E4%BB%A4%E6%8F%90%E7%A4%BA%E7%AC%A6%E7%AA%97%E5%8F%A3%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">快速在指定目录下打开Windows命令提示符窗口的三种方法</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2016/%E7%BB%8F%E5%B8%B8%E5%90%AC%E5%88%B0%E6%9C%89%E4%BA%BA%E9%97%AE%E8%BF%99%E6%A0%B7%E7%9A%84%E9%97%AE%E9%A2%98%EF%BC%9A%E5%A6%82%E4%BD%95%E6%8A%8A%E4%B8%8B%E8%BD%BD%E5%A5%BD%E7%9A%84%E7%94%B5%E5%BD%B1/">
+                        <span class="hidden-mobile">经常听到有人问这样的问题：如何把下载好的电影放到iPhone上呢？</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"B2tecGOesiRBcoXldYV5Jk5A-9Nh9j0Va","appKey":"5tFdBthF0o282SCXuNVxbntd","placeholder":"说点什么","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false,"requiredFields":[]},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

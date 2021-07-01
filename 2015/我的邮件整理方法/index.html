@@ -1,0 +1,517 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="daxi">
+  <meta name="keywords" content="">
+  
+  <title>我的邮件整理方法 - 达夕博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiyt.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>达夕博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/banner1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="我的邮件整理方法">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2015-10-12 09:31" pubdate>
+        2015年10月12日 上午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.2k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      12
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">我的邮件整理方法</h1>
+            
+            <div class="markdown-body">
+              <p>我工作中一直使用Foxmail作为我的邮件客户端，每天都能收到上百封的工作邮件，包括公司的、部门的、项目的、还有一些自动发送的邮件，那么当我们每天早上打开邮件客户端，面对这一堆的邮件时，如果能够快速而又不遗漏的处理这些邮件呢？今天我想把我的邮件整理方法分享给大家，希望能提高处理邮件的效率，提高工作效率。主要内容包括：</p>
+<ul>
+<li>收件箱基于过滤器建立子目录，快速清理未阅读邮件</li>
+<li>善用邮件标签，是资源类邮件还是需要下一步行动？</li>
+<li>置顶邮件(加星)，重点关注</li>
+</ul>
+<p><strong>一、收件箱基于过滤器建立子目录，快速清理未阅读邮件</strong></p>
+<p>邮件过滤器的使用方法在这里我就不介绍了，我想分享的是：**<em>建立怎样的邮件过滤器，将邮件分类？</em>**</p>
+<p>每个人结合自己不同的情况，可能会建立不同的过滤器体系，下图就是我的邮件过滤器，主要是按照工作的组织机构来建立的，**<em>具体要细分到何种程度，是要结合每个目录的邮件量和重要程度一起考虑的</em>**。如下图：</p>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/10/0014.png"><img src="/2015/%E6%88%91%E7%9A%84%E9%82%AE%E4%BB%B6%E6%95%B4%E7%90%86%E6%96%B9%E6%B3%95/0014.png" srcset="/img/loading.gif" lazyload alt="0014"></a></p>
+<p>当收到邮件后，邮件就会按照这样的过滤器被过滤和处理，对于的不同的文件夹里的邮件：</p>
+<ul>
+<li>——主要存放公司的一些公告、政策、新闻，群发的一些邮件，对于这类邮件，我的处理原则是：快速浏览邮件标题+重要公告政策打上标签（标签的使用请看下文） </li>
+<li>——主要存放部门内部的公告、政策，处理方法同上。</li>
+<li>——这里是比较重要的项目上的邮件，对于这里的邮件，我的处理原则是 ：浏览邮件标题+快速浏览邮件正文的收件人+与自己相关的打上标签</li>
+<li>——这里存放的是项目中自动发送的邮件，可能每天固定一封，或者每小时都有，对于这里的邮件，我的处理原则是 ：知道发送的是什么样的自动邮件+直接标记为已阅读</li>
+<li>——这里存放的是我需要重点关注的邮件， 这里的邮件的收件人/抄送人里是有我的，对于这里的邮件，我的处理原则是 ：阅读标题和正文+判读是否需要有下一步行动(TODO)+是否是重要信息需要保存的+打上标签</li>
+</ul>
+<p>这样子我就可以快速的把全部邮件变为已阅读状态，接下来再根据标签和置顶邮件，详细阅读，并采取下一步行动。</p>
+<p><strong>二、善用邮件标签，是资源类邮件还是需要下一步行动？</strong></p>
+<p>在上一环节中，我们快速处理完了全部邮件(确切的说是快速的把全部邮件变为了已阅读状态)，并且有针对性的打上了标签，下图是我的标签使用：</p>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/10/0015.png"><img src="/2015/%E6%88%91%E7%9A%84%E9%82%AE%E4%BB%B6%E6%95%B4%E7%90%86%E6%96%B9%E6%B3%95/0015.png" srcset="/img/loading.gif" lazyload alt="0015"></a></p>
+<p>从标签的名字上，大家也都能知道标签的各自用途，这里我主要说一下TODO标签。</p>
+<p>TODO标签里的邮件其实就是我<strong>今天工作的待办清单</strong>了，这里的邮件，我分类两类：</p>
+<ul>
+<li>可以快速处理或者直接回复掉的邮件；</li>
+<li>需要我采取行动后，才能处理和完成的邮件；</li>
+</ul>
+<p>对于第一种，直接处理掉，并删除TODO标签；</p>
+<p>对于第二种，自己按照优先级，<strong>逐个/并行</strong>处理，直至完成所有邮件清单。</p>
+<p><strong>三、置顶邮件(加星)，重点关注</strong></p>
+<p>置顶/加星邮件，这个不管是在邮件客户端还是网页版的邮件系统里，大部分都有这个功能，我对改功能的使用方法是：_<strong>把近期关注的邮件作为置顶邮件</strong>_，这样做：</p>
+<ul>
+<li>可以快速的找到置顶邮件</li>
+<li>要周期性的清除掉过期的置顶邮件，确保置顶的邮件都是近期关注的邮件。</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/10/0016.png"><img src="/2015/%E6%88%91%E7%9A%84%E9%82%AE%E4%BB%B6%E6%95%B4%E7%90%86%E6%96%B9%E6%B3%95/0016.png" srcset="/img/loading.gif" lazyload alt="0016"></a></p>
+<p>※另外，这里有个常用文件夹，如果你在收件箱下面建立了很多个目录的话，可以通过右键文件夹，把常用的文件夹添加到这里。</p>
+<blockquote>
+<p>结束语：促使我写这篇文章的原因是，看到了几个同事打开自己的邮件客户端时，就只有一个收件箱，所有的邮件都混在一起，处理邮件的效率很低。其实过滤器、标签这些功能都是有各自的用途的，并不是摆设，我们要善于利用这些功能来帮助我们提高工作效率。</p>
+</blockquote>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E6%8F%90%E9%AB%98%E7%94%9F%E4%BA%A7%E5%8A%9B/">提高生产力</a>
+                    
+                      <a class="hover-with-bg" href="/categories/%E6%8F%90%E9%AB%98%E7%94%9F%E4%BA%A7%E5%8A%9B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E9%82%AE%E4%BB%B6/">邮件</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%94%B6%E4%BB%B6%E7%AE%B1/">收件箱</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%BD%AE%E9%A1%B6%E9%82%AE%E4%BB%B6/">置顶邮件</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E9%82%AE%E4%BB%B6%E6%A0%87%E7%AD%BE/">邮件标签</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E9%82%AE%E4%BB%B6%E8%BF%87%E6%BB%A4%E5%99%A8/">邮件过滤器</a>
+                    
+                      <a class="hover-with-bg" href="/tags/foxmail/">foxmail</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2015/windows-10%E4%B8%AD%E6%96%B0%E7%9A%84%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E6%96%B9%E5%BC%8F%EF%BC%9A%E5%BF%AB%E9%80%9F%E8%AE%BF%E9%97%AE%E3%80%81%E5%9B%BA%E5%AE%9A%E6%96%87%E4%BB%B6%E5%A4%B9%E3%80%81/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Windows 10中新的文件管理方式：快速访问、固定文件夹、文件过滤器和文件分组</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2015/%E6%88%91%E7%9A%84%E5%8D%B0%E8%B1%A1%E7%AC%94%E8%AE%B0evernote%E4%B8%AD%E7%9A%84%E7%94%9F%E6%B4%BB%E6%B8%85%E5%8D%95%E5%92%8C%E5%B7%A5%E4%BD%9C%E6%B8%85%E5%8D%95/">
+                        <span class="hidden-mobile">我的印象笔记Evernote中的生活清单和工作清单</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"B2tecGOesiRBcoXldYV5Jk5A-9Nh9j0Va","appKey":"5tFdBthF0o282SCXuNVxbntd","placeholder":"说点什么","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false,"requiredFields":[]},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

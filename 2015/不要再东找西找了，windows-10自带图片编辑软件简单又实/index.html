@@ -1,0 +1,512 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="daxi">
+  <meta name="keywords" content="">
+  
+  <title>不要再东找西找了，Windows 10自带图片编辑软件简单又实用 - 达夕博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiyt.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>达夕博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/banner1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="不要再东找西找了，Windows 10自带图片编辑软件简单又实用">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2015-11-23 06:56" pubdate>
+        2015年11月23日 早上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      805 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      8
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">不要再东找西找了，Windows 10自带图片编辑软件简单又实用</h1>
+            
+            <div class="markdown-body">
+              <p>        最近想把之前旅游的一些照片打印出来留作纪念，发现一些照片确实需要修正一下，有的曝光不足光线太暗，有的需要裁剪到合适的尺寸，有的照片有点儿倾斜，所以我准备自己动手做一些简单的处理工作。因为自己并不是专业的数码照片处理人员，所以类似PS、LR这样的软件，我根本不会用，于是我开始在网上搜寻各种轻量级的<strong>图片编辑</strong>软件，例如手机版的<strong>Snapseed</strong>、网页版的<strong>泼辣修图</strong>、国内的<strong>美图秀秀</strong>等，类似的软件很多，但是都不是很满足我的要求：</p>
+<ul>
+<li>轻量级的、免费的，具备基本修图功能即可；</li>
+<li>有PC版的，Snapseed确实不错，但是找不到PC版本；泼辣修图也不错，但是Windows版的是要收费的</li>
+<li>美图秀秀界面确实不喜欢</li>
+</ul>
+<p>后来，在使用Windows 10查看图片时，发现是可以编辑图片的，点击编辑按钮后，就打开了<strong>Windows 10的图片编辑</strong>功能了，使用后感觉能够很好的满足我的要求，下面我把我的使用感受分享给大家：</p>
+<p>打开Windows 10的图片编辑界面后，整个界面分为左中右三部分，分别是主功能项、图片、子功能项，顶部还有一个工具条用来保存图片以及和原始图片进行对比，主要功能包括：</p>
+<h2 id="1、Windows-10图片编辑的基本修图"><a href="#1、Windows-10图片编辑的基本修图" class="headerlink" title="1、Windows 10图片编辑的基本修图"></a><strong>1、Windows 10图片编辑的基本修图</strong></h2><p>点击左侧的基本修复，右侧就会列出来常用的图片修改选项：</p>
+<ul>
+<li>增强：自动修复图片</li>
+<li>旋转：调整整张图片的方向</li>
+<li>裁剪：调整图片大小</li>
+<li>拉直：用于摆正图片中的景物，缺失的部分会被自动填充</li>
+<li>红眼：去除红眼</li>
+<li>润饰：可以去掉图片中对于的人或物，经常使用</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/11/winxiutu1.png"><img src="/2015/%E4%B8%8D%E8%A6%81%E5%86%8D%E4%B8%9C%E6%89%BE%E8%A5%BF%E6%89%BE%E4%BA%86%EF%BC%8Cwindows-10%E8%87%AA%E5%B8%A6%E5%9B%BE%E7%89%87%E7%BC%96%E8%BE%91%E8%BD%AF%E4%BB%B6%E7%AE%80%E5%8D%95%E5%8F%88%E5%AE%9E/winxiutu1.png" srcset="/img/loading.gif" lazyload alt="图片编辑"></a></p>
+<h2 id="2、滤镜"><a href="#2、滤镜" class="headerlink" title="2、滤镜"></a><strong>2、滤镜</strong></h2><p>Windows 10 图片编辑工具自带了六种滤镜供大家选择，相比及Snapseed和泼辣修图都少了很多，只能说是有这个功能而且，并不强大</p>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/11/winxiutu2.png"><img src="/2015/%E4%B8%8D%E8%A6%81%E5%86%8D%E4%B8%9C%E6%89%BE%E8%A5%BF%E6%89%BE%E4%BA%86%EF%BC%8Cwindows-10%E8%87%AA%E5%B8%A6%E5%9B%BE%E7%89%87%E7%BC%96%E8%BE%91%E8%BD%AF%E4%BB%B6%E7%AE%80%E5%8D%95%E5%8F%88%E5%AE%9E/winxiutu2.png" srcset="/img/loading.gif" lazyload alt="winxiutu2"></a></p>
+<h2 id="3、光线"><a href="#3、光线" class="headerlink" title="3、光线"></a><strong>3、光线</strong></h2><p>Windows 10图片编辑中提供了一下四中光线调整功能，都可以通过滚动数据调整数值来实现，操作起来非常方便：</p>
+<ul>
+<li>亮度：调整图片的整体亮度，常用于曝光不足或曝光过度的情况下，调整亮度；</li>
+<li>对比度：图片的对比度调整；</li>
+<li>突出显示：用于调整图片中明亮部分的光线的强弱；</li>
+<li>阴影：用于调整图片中昏暗部分的光线的强弱；</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/11/winxiutu3.png"><img src="/2015/%E4%B8%8D%E8%A6%81%E5%86%8D%E4%B8%9C%E6%89%BE%E8%A5%BF%E6%89%BE%E4%BA%86%EF%BC%8Cwindows-10%E8%87%AA%E5%B8%A6%E5%9B%BE%E7%89%87%E7%BC%96%E8%BE%91%E8%BD%AF%E4%BB%B6%E7%AE%80%E5%8D%95%E5%8F%88%E5%AE%9E/winxiutu3.png" srcset="/img/loading.gif" lazyload alt="winxiutu3"></a></p>
+<h2 id="4、彩色"><a href="#4、彩色" class="headerlink" title="4、彩色"></a><strong>4、彩色</strong></h2><p>该功能用于调整图片中颜色的各种参数：包括色温、色调、饱和度、局部色彩增强，如下图所示：</p>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/11/winxiutu4.png"><img src="/2015/%E4%B8%8D%E8%A6%81%E5%86%8D%E4%B8%9C%E6%89%BE%E8%A5%BF%E6%89%BE%E4%BA%86%EF%BC%8Cwindows-10%E8%87%AA%E5%B8%A6%E5%9B%BE%E7%89%87%E7%BC%96%E8%BE%91%E8%BD%AF%E4%BB%B6%E7%AE%80%E5%8D%95%E5%8F%88%E5%AE%9E/winxiutu4.png" srcset="/img/loading.gif" lazyload alt="winxiutu4"></a></p>
+<h2 id="5、效果"><a href="#5、效果" class="headerlink" title="5、效果"></a><strong>5、效果</strong></h2><p>Windows 10的图片编辑中的包括两种效果功能：</p>
+<p>一个是晕影，用户将图片四角变成暗色来是主题更加突出；</p>
+<p>一个是选择性聚焦，将图片中的某个人或物变为焦点，模糊其余部分；</p>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/11/winxiutu5.png"><img src="/2015/%E4%B8%8D%E8%A6%81%E5%86%8D%E4%B8%9C%E6%89%BE%E8%A5%BF%E6%89%BE%E4%BA%86%EF%BC%8Cwindows-10%E8%87%AA%E5%B8%A6%E5%9B%BE%E7%89%87%E7%BC%96%E8%BE%91%E8%BD%AF%E4%BB%B6%E7%AE%80%E5%8D%95%E5%8F%88%E5%AE%9E/winxiutu5.png" srcset="/img/loading.gif" lazyload alt="winxiutu5"></a></p>
+<p>选择性聚焦效果：</p>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/11/winxiutu6.png"><img src="/2015/%E4%B8%8D%E8%A6%81%E5%86%8D%E4%B8%9C%E6%89%BE%E8%A5%BF%E6%89%BE%E4%BA%86%EF%BC%8Cwindows-10%E8%87%AA%E5%B8%A6%E5%9B%BE%E7%89%87%E7%BC%96%E8%BE%91%E8%BD%AF%E4%BB%B6%E7%AE%80%E5%8D%95%E5%8F%88%E5%AE%9E/winxiutu6.png" srcset="/img/loading.gif" lazyload alt="winxiutu6"></a></p>
+<p>晕影效果：</p>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/11/winxiutu7.png"><img src="/2015/%E4%B8%8D%E8%A6%81%E5%86%8D%E4%B8%9C%E6%89%BE%E8%A5%BF%E6%89%BE%E4%BA%86%EF%BC%8Cwindows-10%E8%87%AA%E5%B8%A6%E5%9B%BE%E7%89%87%E7%BC%96%E8%BE%91%E8%BD%AF%E4%BB%B6%E7%AE%80%E5%8D%95%E5%8F%88%E5%AE%9E/winxiutu7.png" srcset="/img/loading.gif" lazyload alt="winxiutu7"></a></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%9B%BE%E7%89%87%E7%BC%96%E8%BE%91/">图片编辑</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%9B%BE%E7%89%87%E8%B0%83%E6%95%B4/">图片调整</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%B3%BC%E8%BE%A3%E4%BF%AE%E5%9B%BE/">泼辣修图</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%85%A7%E7%89%87%E5%A4%84%E7%90%86/">照片处理</a>
+                    
+                      <a class="hover-with-bg" href="/tags/windows-10/">windows-10</a>
+                    
+                      <a class="hover-with-bg" href="/tags/snapseed/">snapseed</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2015/microsoft-powerpoint%E4%B8%AD%E4%BD%BF%E7%94%A8%E9%A2%9C%E8%89%B2%E5%8F%96%E8%89%B2%E5%99%A8/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Microsoft PowerPoint中使用颜色取色器</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2015/%E9%80%9A%E8%BF%87google-chrome%E5%90%AF%E5%8A%A8%E5%8F%82%E6%95%B0%E6%8A%8A%E7%94%A8%E6%88%B7%E6%95%B0%E6%8D%AE%E6%8C%87%E5%AE%9A%E5%88%B0%E5%8A%A0%E5%AF%86%E6%96%87%E4%BB%B6%E5%A4%B9/">
+                        <span class="hidden-mobile">通过Google Chrome启动参数把用户数据指定到加密文件夹</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"B2tecGOesiRBcoXldYV5Jk5A-9Nh9j0Va","appKey":"5tFdBthF0o282SCXuNVxbntd","placeholder":"说点什么","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false,"requiredFields":[]},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

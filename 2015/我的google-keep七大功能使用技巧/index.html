@@ -1,0 +1,522 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="daxi">
+  <meta name="keywords" content="">
+  
+  <title>我的Google Keep七大功能使用技巧 - 达夕博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiyt.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>达夕博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/banner1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="我的Google Keep七大功能使用技巧">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2015-10-19 05:32" pubdate>
+        2015年10月19日 凌晨
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      931 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      9
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">我的Google Keep七大功能使用技巧</h1>
+            
+            <div class="markdown-body">
+              <p>我又开始使用Google Keep了，第一次使用是听过Google Keep刚推出的时候，当时功能还不够完善，加之自己正在使用印象笔记整合自己的知识系统，所以没有去深入研究它，最近我的Chrome上装了Google Keep的插件，深入探索后，发现现在的Google Keep已经非常强大了，今天我就把我的使用经验分享给大家：</p>
+<p>延伸阅读：<a target="_blank" rel="noopener" href="http://www.daxiblog.com/2015/10/16/%e5%96%84%e7%94%a8%e4%ba%91%e7%ab%af%e7%ac%94%e8%ae%b0%ef%bc%8c%e6%9b%bf%e4%bb%a3windows%e8%ae%b0%e4%ba%8b%e6%9c%ac%e5%92%8c%e6%96%b0%e5%bb%ba%e4%b8%80%e4%b8%aaword%e5%81%9a%e6%97%a5%e5%b8%b8%e4%bf%a1/">善用云端笔记，替代Windows记事本和新建一个Word做日常信息记录</a></p>
+<h2 id="一、Google-keep中使用笔记颜色，区分优先级"><a href="#一、Google-keep中使用笔记颜色，区分优先级" class="headerlink" title="一、Google keep中使用笔记颜色，区分优先级"></a><strong>一、Google keep中使用笔记颜色，区分优先级</strong></h2><p>Google Keep的笔记颜色功能，不仅可以时应用本身看起来很漂亮，还可以通过颜色来区分一些笔记特性，例如我就是使用笔记颜色来区分笔记的优先级的，这样的好处是非常醒目，例如我使用：</p>
+<ul>
+<li>红色：表示最高优先级</li>
+<li>黄色：表示TODO事项，优先级中等</li>
+<li>灰色：表示优先级很低，将来可能会做的事</li>
+</ul>
+<h2 id="二、使用笔记标签，将笔记分类"><a href="#二、使用笔记标签，将笔记分类" class="headerlink" title="二、使用笔记标签，将笔记分类"></a><strong>二、使用笔记标签，将笔记分类</strong></h2><p>Google Keep也提供有标签功能，默认的是三个：、、，这三个对我来说已经够用了(我不想去过多的分类，我更愿意使用搜索)，大家也可以自己添加新的标签，来为笔记分类</p>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/09/0036.png"><img src="/2015/%E6%88%91%E7%9A%84google-keep%E4%B8%83%E5%A4%A7%E5%8A%9F%E8%83%BD%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/0036.png" srcset="/img/loading.gif" lazyload alt="google keep"></a></p>
+<h2 id="三、笔记添加清单项，开展清单工作法"><a href="#三、笔记添加清单项，开展清单工作法" class="headerlink" title="三、笔记添加清单项，开展清单工作法"></a><strong>三、笔记添加清单项，开展清单工作法</strong></h2><p><a target="_blank" rel="noopener" href="http://localhost/old/2015/09/0037.png"><img src="/2015/%E6%88%91%E7%9A%84google-keep%E4%B8%83%E5%A4%A7%E5%8A%9F%E8%83%BD%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/0037.png" srcset="/img/loading.gif" lazyload alt="0037"></a></p>
+<p>Google Keep笔记支持清单模式，点击更多-&gt;显示勾选框就可以打开清单模式，该模式下每行文本作为一个清单项，并且可以按住左侧的</p>
+<p>移动图标进行<strong>清单排序</strong>。这里请参考： <a target="_blank" rel="noopener" href="http://www.daxiblog.com/2015/10/19/%e6%88%91%e5%af%b9%e6%b8%85%e5%8d%95%e5%b7%a5%e4%bd%9c%e6%b3%95%e7%9a%84%e7%90%86%e8%a7%a3%ef%bc%9a%e9%ab%98%e6%95%88%e3%80%81%e6%8c%89%e6%97%b6%e3%80%81%e4%bf%9d%e8%b4%a8%e4%bf%9d%e9%87%8f%e7%9a%84/">我对清单工作法的理解：高效、按时、保质保量的完成工作</a></p>
+<p>另外，我们还可以为清单项的位置，进行设定，如下图：</p>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/09/0038.png"><img src="/2015/%E6%88%91%E7%9A%84google-keep%E4%B8%83%E5%A4%A7%E5%8A%9F%E8%83%BD%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/0038.png" srcset="/img/loading.gif" lazyload alt="0038"></a></p>
+<h2 id="四、设定提醒时间，实现手机版Google-Now和Chrome-Goole-Now的提醒功能"><a href="#四、设定提醒时间，实现手机版Google-Now和Chrome-Goole-Now的提醒功能" class="headerlink" title="四、设定提醒时间，实现手机版Google Now和Chrome Goole Now的提醒功能"></a><strong>四、设定提醒时间，实现手机版Google Now和Chrome Goole Now的提醒功能</strong></h2><p><a target="_blank" rel="noopener" href="http://localhost/old/2015/09/0039.png"><img src="/2015/%E6%88%91%E7%9A%84google-keep%E4%B8%83%E5%A4%A7%E5%8A%9F%E8%83%BD%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/0039.png" srcset="/img/loading.gif" lazyload alt="0039"></a></p>
+<p>在这个设置窗口我们可以看到三部分内容：</p>
+<ul>
+<li>常用的/推荐的提醒时间和地点(如果你在Google地图中，设定了家和单位的地址，这里就会显示出来)</li>
+<li>选择详细的日期和时间，并且可以设定是否重复提醒，以及提醒频率</li>
+<li>选择自定义的地点</li>
+</ul>
+<p><strong>桌面提醒效果：</strong></p>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/10/0045.png"><img src="/2015/%E6%88%91%E7%9A%84google-keep%E4%B8%83%E5%A4%A7%E5%8A%9F%E8%83%BD%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/0045.png" srcset="/img/loading.gif" lazyload alt="0045"></a></p>
+<p><strong>手机提醒效果：</strong></p>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/10/0046.png"><img src="/2015/%E6%88%91%E7%9A%84google-keep%E4%B8%83%E5%A4%A7%E5%8A%9F%E8%83%BD%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/0046-169x300.png" srcset="/img/loading.gif" lazyload alt="0046"></a></p>
+<p>Google的产品一向是这样，看似简单的页面，确包含了丰富的功能，而且也不会让软件看起来臃肿。</p>
+<h2 id="五、把灵感-提纲转换为Google文档，开始写作正式的文档"><a href="#五、把灵感-提纲转换为Google文档，开始写作正式的文档" class="headerlink" title="五、把灵感/提纲转换为Google文档，开始写作正式的文档"></a><strong>五、把灵感/提纲转换为Google文档，开始写作正式的文档</strong></h2><p><a target="_blank" rel="noopener" href="http://localhost/old/2015/09/0040.png"><img src="/2015/%E6%88%91%E7%9A%84google-keep%E4%B8%83%E5%A4%A7%E5%8A%9F%E8%83%BD%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/0040.png" srcset="/img/loading.gif" lazyload alt="0040"></a></p>
+<p>这个功能也是我喜欢的一个功能，我会把一些灵感、博客提纲等先记入Google Keep，当思考成熟后，准备正式写作时，我就会利用这个功能，把内容复制到我的Google文档，开始正式的文档编写，如下图：</p>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/09/0041.png"><img src="/2015/%E6%88%91%E7%9A%84google-keep%E4%B8%83%E5%A4%A7%E5%8A%9F%E8%83%BD%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/0041-1024x302.png" srcset="/img/loading.gif" lazyload alt="0041"></a></p>
+<h2 id="六、通过邮件分享笔记任务"><a href="#六、通过邮件分享笔记任务" class="headerlink" title="六、通过邮件分享笔记任务"></a><strong>六、通过邮件分享笔记任务</strong></h2><p><a target="_blank" rel="noopener" href="http://localhost/old/2015/09/0042.png"><img src="/2015/%E6%88%91%E7%9A%84google-keep%E4%B8%83%E5%A4%A7%E5%8A%9F%E8%83%BD%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/0042.png" srcset="/img/loading.gif" lazyload alt="0042"></a></p>
+<p>如果想和同时朋友共享一个笔记，我们可以点击共享按钮，然后如下图所示输入对方的邮件地址，就可以把笔记分享给对方，对方会收到一封分享邮件，然后就可以打开你分享的Keep笔记了。</p>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/09/0043.png"><img src="/2015/%E6%88%91%E7%9A%84google-keep%E4%B8%83%E5%A4%A7%E5%8A%9F%E8%83%BD%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/0043.png" srcset="/img/loading.gif" lazyload alt="0043"></a></p>
+<h2 id="七、强大的搜索选项"><a href="#七、强大的搜索选项" class="headerlink" title="七、强大的搜索选项"></a><strong>七、强大的搜索选项</strong></h2><p>搜索是Google的强项，如下图所示，Google Keep里提供的丰富了笔记搜索功能，如：</p>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/09/0044.png"><img src="/2015/%E6%88%91%E7%9A%84google-keep%E4%B8%83%E5%A4%A7%E5%8A%9F%E8%83%BD%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/0044.png" srcset="/img/loading.gif" lazyload alt="0044"></a></p>
+<ul>
+<li>搜索清单笔记</li>
+<li>搜索含有 录音笔机</li>
+<li>搜索含有图片的笔记</li>
+<li>搜索设置有提醒的笔记</li>
+<li>搜索共享笔记</li>
+<li>按照颜色过滤笔记</li>
+</ul>
+<p>而且这些搜索还能够组合使用，所以搜索功能也是非常的强大。</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E6%95%B0%E5%AD%97%E5%8C%96%E5%B7%A5%E4%BD%9C/">数字化工作</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E4%BA%91%E7%AB%AF%E7%AC%94%E8%AE%B0/">云端笔记</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E4%BC%98%E5%85%88%E7%BA%A7/">优先级</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%9C%B0%E7%82%B9%E6%8F%90%E9%86%92/">地点提醒</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%A0%87%E7%AD%BE%E5%88%86%E7%B1%BB/">标签分类</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%AC%94%E8%AE%B0%E5%88%86%E4%BA%AB/">笔记分享</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%AC%94%E8%AE%B0%E6%8F%90%E9%86%92/">笔记提醒</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%AC%94%E8%AE%B0%E6%B8%85%E5%8D%95/">笔记清单</a>
+                    
+                      <a class="hover-with-bg" href="/tags/google-keep/">google-keep</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2015/%E8%AE%B0%E5%BD%95%E6%88%91%E7%94%A8%E8%BF%87%E7%9A%84%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%8C%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">记录我用过的正则表达式，持续更新中...</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2015/%E6%88%91%E5%AF%B9%E6%B8%85%E5%8D%95%E5%B7%A5%E4%BD%9C%E6%B3%95%E7%9A%84%E7%90%86%E8%A7%A3%EF%BC%9A%E9%AB%98%E6%95%88%E3%80%81%E6%8C%89%E6%97%B6%E3%80%81%E4%BF%9D%E8%B4%A8%E4%BF%9D%E9%87%8F%E7%9A%84/">
+                        <span class="hidden-mobile">我对清单工作法的理解：高效、按时、保质保量的完成工作</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"B2tecGOesiRBcoXldYV5Jk5A-9Nh9j0Va","appKey":"5tFdBthF0o282SCXuNVxbntd","placeholder":"说点什么","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false,"requiredFields":[]},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

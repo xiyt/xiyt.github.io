@@ -1,0 +1,952 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="daxi">
+  <meta name="keywords" content="">
+  
+  <title>达夕博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiyt.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 100vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>达夕博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/banner1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="热衷于分享IT技术/工作效率/优秀软件，申旦达夕，永无止境">
+              
+            </span>
+
+            
+          </div>
+
+          
+            <div class="scroll-down-bar">
+              <i class="iconfont icon-arrowdown"></i>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div class="py-5" id="board"
+          style=margin-top:0>
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2019/mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E8%87%AA%E5%8A%A8%E5%A4%87%E4%BB%BD%E8%84%9A%E6%9C%AC/" target="_self">
+          <img src="/2019/mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E8%87%AA%E5%8A%A8%E5%A4%87%E4%BB%BD%E8%84%9A%E6%9C%AC/mysql-300x207.jpg" srcset="/img/loading.gif" lazyload alt="Mysql数据库自动备份脚本">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2019/mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E8%87%AA%E5%8A%A8%E5%A4%87%E4%BB%BD%E8%84%9A%E6%9C%AC/" target="_self">
+          Mysql数据库自动备份脚本
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2019/mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E8%87%AA%E5%8A%A8%E5%A4%87%E4%BB%BD%E8%84%9A%E6%9C%AC/" target="_self">
+          
+          
+            
+          
+          
+123456789101112131415161718#!/bin/bash# 数据库认证username=rootpassword=123456host=localhostdb_name=daxiblog# 备份路径backup_dir=/data/backup/mysql# 日期格式date=$(date +&quot;%Y%m%d&quot;)# Dump数据库到SQL文件mysqldum
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-01-29 14:50" pubdate>
+              2019-01-29
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%A4%87%E4%BB%BD/">备份</a>
+            
+              <a href="/tags/mysql/">mysql</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2019/beyond-compare-4%E6%BF%80%E6%B4%BB%E5%B7%A5%E5%85%B7/" target="_self">
+          <img src="/2019/beyond-compare-4%E6%BF%80%E6%B4%BB%E5%B7%A5%E5%85%B7/image.png" srcset="/img/loading.gif" lazyload alt="Beyond Compare 4激活工具">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2019/beyond-compare-4%E6%BF%80%E6%B4%BB%E5%B7%A5%E5%85%B7/" target="_self">
+          Beyond Compare 4激活工具
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2019/beyond-compare-4%E6%BF%80%E6%B4%BB%E5%B7%A5%E5%85%B7/" target="_self">
+          
+          
+            
+          
+          
+使用方法：1、将keygen.exe解压到Beyond Compare 4的安装根目录2、点击Path按钮，会替换到默认的BCompare.exe文件3、点击Generate按钮，生成注册注册码4、启动BCompare.exe，然后输入第三步中的注册码完成激活
+下载地址 提取码: ij21
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-01-28 09:12" pubdate>
+              2019-01-28
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%B3%A8%E5%86%8C%E6%9C%BA/">注册机</a>
+            
+              <a href="/tags/%E6%BF%80%E6%B4%BB/">激活</a>
+            
+              <a href="/tags/beyond-compare/">beyond-compare</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2019/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E9%9B%86%E5%90%88/" target="_self">
+          <img src="/2019/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E9%9B%86%E5%90%88/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1548687574&amp;di=4cf3633ea7e73bfb491dcf3ed0629984&amp;imgtype=jpg&amp;er=1&amp;src=http://dingyue.nosdn.127.net/iXMSff9YOaKMFY1WztUeqFt616FOe6fk1yROwIVX2frsJ1527143115132compressflag.jpg" srcset="/img/loading.gif" lazyload alt="渗透测试常用工具集合">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2019/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E9%9B%86%E5%90%88/" target="_self">
+          渗透测试常用工具集合
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2019/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E9%9B%86%E5%90%88/" target="_self">
+          
+          
+            
+          
+          1、Burp Suite Professional【抓包改包综合类软件】1234567891011121314151617Burp Suite Professional v2.0.11beta版本【目前最后一个支持破解注册机版本】https://share.weiyun.com/5l2zakk    Burp Suite Professional v2.0.11beta版本【目前最后一个支持破解注
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-01-21 15:01" pubdate>
+              2019-01-21
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%8A%93%E5%8C%85/">抓包</a>
+            
+              <a href="/tags/%E6%94%B9%E5%8C%85/">改包</a>
+            
+              <a href="/tags/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/">渗透测试</a>
+            
+              <a href="/tags/burp/">burp</a>
+            
+              <a href="/tags/kali-linux/">kali-linux</a>
+            
+              <a href="/tags/nmap/">nmap</a>
+            
+              <a href="/tags/sqlmap/">sqlmap</a>
+            
+              <a href="/tags/sql%E6%B3%A8%E5%85%A5/">sql注入</a>
+            
+              <a href="/tags/wireshark/">wireshark</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2019/%E4%BA%B2%E6%B5%8B%E6%9C%89%E6%95%88gitlab%E7%A6%81%E7%94%A8%E8%87%AA%E5%8A%A8nginx%E9%81%BF%E5%85%8D%E7%AB%AF%E5%8F%A3%E5%86%B2%E7%AA%81%EF%BC%8C%E4%BD%BF%E7%94%A8%E5%A4%96%E9%83%A8nginx%E4%BB%A3/" target="_self">
+          <img src="/2019/%E4%BA%B2%E6%B5%8B%E6%9C%89%E6%95%88gitlab%E7%A6%81%E7%94%A8%E8%87%AA%E5%8A%A8nginx%E9%81%BF%E5%85%8D%E7%AB%AF%E5%8F%A3%E5%86%B2%E7%AA%81%EF%BC%8C%E4%BD%BF%E7%94%A8%E5%A4%96%E9%83%A8nginx%E4%BB%A3/u=3433947533,2720975807&amp;fm=26&amp;gp=0.jpg" srcset="/img/loading.gif" lazyload alt="[亲测有效]GitLab禁用自动Nginx避免端口冲突，使用外部Nginx代理">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2019/%E4%BA%B2%E6%B5%8B%E6%9C%89%E6%95%88gitlab%E7%A6%81%E7%94%A8%E8%87%AA%E5%8A%A8nginx%E9%81%BF%E5%85%8D%E7%AB%AF%E5%8F%A3%E5%86%B2%E7%AA%81%EF%BC%8C%E4%BD%BF%E7%94%A8%E5%A4%96%E9%83%A8nginx%E4%BB%A3/" target="_self">
+          [亲测有效]GitLab禁用自动Nginx避免端口冲突，使用外部Nginx代理
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2019/%E4%BA%B2%E6%B5%8B%E6%9C%89%E6%95%88gitlab%E7%A6%81%E7%94%A8%E8%87%AA%E5%8A%A8nginx%E9%81%BF%E5%85%8D%E7%AB%AF%E5%8F%A3%E5%86%B2%E7%AA%81%EF%BC%8C%E4%BD%BF%E7%94%A8%E5%A4%96%E9%83%A8nginx%E4%BB%A3/" target="_self">
+          
+          
+            
+          
+          
+虽然GitLab内置了Nginx，开箱即用，但是也会发现自带的Nginx默认端口是80，往往会和服务器上的其他Nginx端口冲突，另外为了节省资源，单独起个Nginx也不合算，还是充分利用服务器上统一的Nginx比较好，接下来展示一下如何配置：
+1、GitLab配置GitLab的配置都集中在/etc/gitlab/gitlab.rb文件，所以相关配置主要在这个文件中进行：
+# 禁用内置NGngi
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-01-18 01:20" pubdate>
+              2019-01-18
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/gitlab/">gitlab</a>
+            
+              <a href="/tags/nginx/">nginx</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2019/gitlab-pages%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8C%EF%BC%8C%E4%B8%80%E7%9B%B4%E5%A4%84%E4%BA%8Epending%E7%8A%B6%E6%80%81%E7%9A%84%E5%8E%9F%E5%9B%A0/" target="_self">
+          <img src="/2019/gitlab-pages%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8C%EF%BC%8C%E4%B8%80%E7%9B%B4%E5%A4%84%E4%BA%8Epending%E7%8A%B6%E6%80%81%E7%9A%84%E5%8E%9F%E5%9B%A0/gitrunner-edit.png" srcset="/img/loading.gif" lazyload alt="gitlab pages无法运行，一直处于Pending状态的原因">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2019/gitlab-pages%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8C%EF%BC%8C%E4%B8%80%E7%9B%B4%E5%A4%84%E4%BA%8Epending%E7%8A%B6%E6%80%81%E7%9A%84%E5%8E%9F%E5%9B%A0/" target="_self">
+          gitlab pages无法运行，一直处于Pending状态的原因
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2019/gitlab-pages%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8C%EF%BC%8C%E4%B8%80%E7%9B%B4%E5%A4%84%E4%BA%8Epending%E7%8A%B6%E6%80%81%E7%9A%84%E5%8E%9F%E5%9B%A0/" target="_self">
+          
+          
+            
+          
+          在gitlab中启动pages服务并配置好gitlab runner之后，push代码后，虽然触发了自动CI，但是一直处于Pending状态，
+错误信息是：This job is stuck, because you don’t have any active runners that can run this job
+这是由于在注册gitlab runner完成后，有一个配置项需要修改，就是是否
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-01-15 01:31" pubdate>
+              2019-01-15
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/gitlab/">gitlab</a>
+            
+              <a href="/tags/pages/">pages</a>
+            
+              <a href="/tags/runner/">runner</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2019/spring-bean%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/" target="_self">
+          <img src="/2019/spring-bean%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/image-1.png" srcset="/img/loading.gif" lazyload alt="Spring Bean的生命周期">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2019/spring-bean%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/" target="_self">
+          Spring Bean的生命周期
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2019/spring-bean%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/" target="_self">
+          
+          
+            
+          
+          Spring作为当前Java最流行、最强大的轻量级框架，受到了程序员的热烈欢迎。准确的了解Spring Bean的生命周期是非常必要的。我们通常使用ApplicationContext作为Spring容器。这里，我们讲的也是 ApplicationContext中Bean的生命周期。而实际上BeanFactory也是差不多的，只不过处理器需要手动注册。
+一、生命周期流程图：
+　　Spring Be
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-01-13 14:41" pubdate>
+              2019-01-13
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%8A%80%E6%9C%AF%E7%BC%96%E7%A8%8B/">技术编程</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/">生命周期</a>
+            
+              <a href="/tags/spring/">spring</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/intellij-idea-2018-3-1%E6%9C%80%E6%96%B0%E7%89%88%E6%BF%80%E6%B4%BB%E6%96%B9%E6%B3%95/" target="_self">
+          <img src="/2018/intellij-idea-2018-3-1%E6%9C%80%E6%96%B0%E7%89%88%E6%BF%80%E6%B4%BB%E6%96%B9%E6%B3%95/image.png" srcset="/img/loading.gif" lazyload alt="IntelliJ IDEA 2018.3.1最新版激活方法">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/intellij-idea-2018-3-1%E6%9C%80%E6%96%B0%E7%89%88%E6%BF%80%E6%B4%BB%E6%96%B9%E6%B3%95/" target="_self">
+          IntelliJ IDEA 2018.3.1最新版激活方法
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/intellij-idea-2018-3-1%E6%9C%80%E6%96%B0%E7%89%88%E6%BF%80%E6%B4%BB%E6%96%B9%E6%B3%95/" target="_self">
+          
+          
+            
+          
+          
+通过破解补丁无需使用注册码进行激活的步骤：
+1、下载补丁：百度网盘 密码: eytn
+2、修改配置文件：idea64.exe.vmoptions，这个要根据自己系统来，我使用的是64位
+在该文件末尾加上下面一句：
+-javaagent:E:/JetbrainsIdesCrack-3.4-release-enc.jar
+3、如果之前使用类似的jar方式激活过，那么打开idea后，可能已经直接激活使
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-12-23 14:42" pubdate>
+              2018-12-23
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%BF%80%E6%B4%BB/">激活</a>
+            
+              <a href="/tags/intellij-idea/">intellij-idea</a>
+            
+              <a href="/tags/2018-3-1/">2018-3-1</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/%E4%B8%89%E5%BC%A0%E5%9B%BE%E7%9C%8B%E6%B8%85js%E4%B8%AD%E4%B8%8D%E5%90%8Cfor%E5%BE%AA%E7%8E%AF%E7%9A%84%E5%B7%AE%E5%88%AB/" target="_self">
+          <img src="/2018/%E4%B8%89%E5%BC%A0%E5%9B%BE%E7%9C%8B%E6%B8%85js%E4%B8%AD%E4%B8%8D%E5%90%8Cfor%E5%BE%AA%E7%8E%AF%E7%9A%84%E5%B7%AE%E5%88%AB/image.png" srcset="/img/loading.gif" lazyload alt="三张图看清JS中不同for循环的差别">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/%E4%B8%89%E5%BC%A0%E5%9B%BE%E7%9C%8B%E6%B8%85js%E4%B8%AD%E4%B8%8D%E5%90%8Cfor%E5%BE%AA%E7%8E%AF%E7%9A%84%E5%B7%AE%E5%88%AB/" target="_self">
+          三张图看清JS中不同for循环的差别
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/%E4%B8%89%E5%BC%A0%E5%9B%BE%E7%9C%8B%E6%B8%85js%E4%B8%AD%E4%B8%8D%E5%90%8Cfor%E5%BE%AA%E7%8E%AF%E7%9A%84%E5%B7%AE%E5%88%AB/" target="_self">
+          
+          
+            
+          
+          1、ES6里引入了一种新的循环方法，它就是for-of循环，它既比传统的for循环简洁，同时弥补了forEach和for-in循环的短板，它可以使用break和continue语句，但是return语句会报错。可以用它来遍历数组、字符串、Map、Set等，另外结合对象的方法Object.keys()，就可以用来遍历对象的属性了。
+
+2、传统的forEach循环中，可以使用return，跳过一些元素
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-12-22 06:37" pubdate>
+              2018-12-22
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%8A%80%E6%9C%AF%E7%BC%96%E7%A8%8B/">技术编程</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/javascript/">javascript</a>
+            
+              <a href="/tags/es6/">es6</a>
+            
+              <a href="/tags/for%E5%BE%AA%E7%8E%AF/">for循环</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/redis%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7redisdesktopmanager-0-9-9-%E5%AE%89%E8%A3%85%E5%8C%85%E4%B8%8B%E8%BD%BD/" target="_self">
+          <img src="/2018/redis%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7redisdesktopmanager-0-9-9-%E5%AE%89%E8%A3%85%E5%8C%85%E4%B8%8B%E8%BD%BD/rdm.png" srcset="/img/loading.gif" lazyload alt="Redis管理工具RedisDesktopManager 0.9.9 安装包下载">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/redis%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7redisdesktopmanager-0-9-9-%E5%AE%89%E8%A3%85%E5%8C%85%E4%B8%8B%E8%BD%BD/" target="_self">
+          Redis管理工具RedisDesktopManager 0.9.9 安装包下载
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/redis%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7redisdesktopmanager-0-9-9-%E5%AE%89%E8%A3%85%E5%8C%85%E4%B8%8B%E8%BD%BD/" target="_self">
+          
+          
+            
+          
+          
+Redis Desktop Manager（RedisDesktopManager，RDM）是一个快速、简单、支持跨平台的 Redis 桌面管理工具，基于 Qt 5 开发，支持通过 SSH Tunnel 连接。
+需要注意的是，官方不面向非订阅用户提供二进制安装包，因此普通用户需要自行使用源码进行编译。
+下载地址：https://redisdesktop.com/download
+这里提供热心网友
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-12-13 13:22" pubdate>
+              2018-12-13
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/redis/">redis</a>
+            
+              <a href="/tags/redis%E8%BF%9E%E6%8E%A5%E5%B7%A5%E5%85%B7/">redis连接工具</a>
+            
+              <a href="/tags/redisdesktopmanager/">redisdesktopmanager</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/idea%E6%8F%92%E4%BB%B6redis%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7iedis-2-56%E4%B8%8B%E8%BD%BD/" target="_self">
+          <img src="/2018/idea%E6%8F%92%E4%BB%B6redis%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7iedis-2-56%E4%B8%8B%E8%BD%BD/screenshot_16396.png" srcset="/img/loading.gif" lazyload alt="Idea插件Redis管理工具Iedis-2.56下载">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/idea%E6%8F%92%E4%BB%B6redis%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7iedis-2-56%E4%B8%8B%E8%BD%BD/" target="_self">
+          Idea插件Redis管理工具Iedis-2.56下载
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/idea%E6%8F%92%E4%BB%B6redis%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7iedis-2-56%E4%B8%8B%E8%BD%BD/" target="_self">
+          
+          
+            
+          
+          
+我之前使用的是Idea2018.2.1，安装的Iedis版本是2.43，可以正常是使用。
+今天把Idea升级到了最新版，结果2.43的Iedis不能使用了，只能兼容Iedis3.0版本，但是该版本还没有出破解版。不过在搜寻过程中，找到了Iedis2.56的资源，虽然最新版的Idea还是不能使用，但是那些不是最新版Idea的朋友可能需要，所以这里分享出来，供大家使用。
+链接: 网盘 提取码: z4
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-12-08 02:36" pubdate>
+              2018-12-08
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/intellij-idea/">intellij-idea</a>
+            
+              <a href="/tags/iedis/">iedis</a>
+            
+              <a href="/tags/redis/">redis</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <a class="extend prev" rel="prev" href="/page/4/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/#board">3</a><a class="page-number" href="/page/4/#board">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/#board">6</a><a class="page-number" href="/page/7/#board">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/33/#board">33</a><a class="extend next" rel="next" href="/page/6/#board"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

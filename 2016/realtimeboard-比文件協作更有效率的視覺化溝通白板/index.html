@@ -1,0 +1,519 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="daxi">
+  <meta name="keywords" content="">
+  
+  <title>RealtimeBoard 比文件協作更有效率的視覺化溝通白板 - 达夕博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiyt.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>达夕博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/banner1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="RealtimeBoard 比文件協作更有效率的視覺化溝通白板">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2016-06-14 01:20" pubdate>
+        2016年6月14日 凌晨
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.5k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      15
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">RealtimeBoard 比文件協作更有效率的視覺化溝通白板</h1>
+            
+            <div class="markdown-body">
+              <p><img src="/2016/realtimeboard-%E6%AF%94%E6%96%87%E4%BB%B6%E5%8D%94%E4%BD%9C%E6%9B%B4%E6%9C%89%E6%95%88%E7%8E%87%E7%9A%84%E8%A6%96%E8%A6%BA%E5%8C%96%E6%BA%9D%E9%80%9A%E7%99%BD%E6%9D%BF/Realtimeboard-00.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>在線上開會時，如果覺得像是 <a target="_blank" rel="noopener" href="http://www.playpcesor.com/2015/06/quip-google-docs.html">Quip</a> 這樣的文件協同合作工具太單調，一些需要想像力的討論難以在上面進行；又或是 <a target="_blank" rel="noopener" href="http://www.playpcesor.com/2015/06/trello.html">Trello</a> 這樣的便利貼看板雖直覺，還是無法完成更有創造性的圖像討論。這時候，我們需要的可能就是一塊可以自由揮灑的線上合作白板，例如我之前推薦過的「<a target="_blank" rel="noopener" href="http://www.playpcesor.com/2015/05/conceptboard.html">取代會議室大白板！ Conceptboard 讓設計溝通更簡單</a>」。</p>
+<p>而<strong>今天要推薦的「 RealtimeBoard 」，同樣是一個視覺化的協同合作白板，但是在功能上更豐富</strong>，可以插入更多類型檔案圖表，有更多編輯、討論工具，速度更流暢，從而幫我們在「討論設計」、「規劃進度」、「腦力激盪」時可以有更充滿創意和直覺的溝通方式。</p>
+<p>並且「 RealtimeBoard 」強大之餘，免費帳戶也提供了最多三個看板額度，每個看板可以邀請三位協作者，對小型團隊間的討論或許就能滿足需求，例如我用來跟設計師溝通海報設計、我也可以跟作者針對新書做腦力激盪。</p>
+<p>進入「 <a target="_blank" rel="noopener" href="https://realtimeboard.com/">RealtimeBoard</a> 」網站，使用 Google 帳戶註冊新帳號，就能開始使用。</p>
+<p>「 RealtimeBoard 」這樣一塊大白板可以應用來做什麼呢？</p>
+<p>因為她可以重新組織各種雲端服務的圖片、影片、文件資料，經由視覺化的重新編排，用來「製作教學看板」、「<a target="_blank" rel="noopener" href="http://www.playpcesor.com/2015/02/drawio.html">討論流程圖</a>」、「<a target="_blank" rel="noopener" href="http://www.playpcesor.com/2015/05/10-design-online-tool.html">修改設計圖</a>」都很有幫助。</p>
+<p><img src="/2016/realtimeboard-%E6%AF%94%E6%96%87%E4%BB%B6%E5%8D%94%E4%BD%9C%E6%9B%B4%E6%9C%89%E6%95%88%E7%8E%87%E7%9A%84%E8%A6%96%E8%A6%BA%E5%8C%96%E6%BA%9D%E9%80%9A%E7%99%BD%E6%9D%BF/RealtimeBoard-01.png" srcset="/img/loading.gif" lazyload></p>
+<p>或者利用「 RealtimeBoard 」的筆記、面板、討論串等功能，要在這塊白板上直接進行「<a target="_blank" rel="noopener" href="http://www.playpcesor.com/2015/06/project-manager-best-13-tools.html">專案進度討論</a>」，或舉行「<a target="_blank" rel="noopener" href="http://www.playpcesor.com/2015/05/sketchboard.html">腦力激盪會議</a>」，也不是難事。</p>
+<p><img src="/2016/realtimeboard-%E6%AF%94%E6%96%87%E4%BB%B6%E5%8D%94%E4%BD%9C%E6%9B%B4%E6%9C%89%E6%95%88%E7%8E%87%E7%9A%84%E8%A6%96%E8%A6%BA%E5%8C%96%E6%BA%9D%E9%80%9A%E7%99%BD%E6%9D%BF/RealtimeBoard-02.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="1-插入各種雲端服務的影音資料"><a href="#1-插入各種雲端服務的影音資料" class="headerlink" title="1. 插入各種雲端服務的影音資料"></a>1. 插入各種雲端服務的影音資料</h3><p>下面就讓我挑選「 RealtimeBoard 」上幾個關鍵的編輯、討論、設計功能，讓大家一起想想看這些功能可以做出那些妙用。</p>
+<p>首先「 RealtimeBoard 」可以快速插入來自 Google Drive 的檔案，或是插入 YouTube 的影片，當然也可以上傳自己的檔案，或是從線上圖庫中插入圖片。</p>
+<p>如果是其他雲端服務的檔案，可以插入該檔案的線上網址連結，就能顯示在「 RealtimeBoard 」白板中。</p>
+<p><img src="/2016/realtimeboard-%E6%AF%94%E6%96%87%E4%BB%B6%E5%8D%94%E4%BD%9C%E6%9B%B4%E6%9C%89%E6%95%88%E7%8E%87%E7%9A%84%E8%A6%96%E8%A6%BA%E5%8C%96%E6%BA%9D%E9%80%9A%E7%99%BD%E6%9D%BF/RealtimeBoard-03.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="2-插入圖表、圖庫、模板"><a href="#2-插入圖表、圖庫、模板" class="headerlink" title="2. 插入圖表、圖庫、模板"></a>2. 插入圖表、圖庫、模板</h3><p>更棒的是，「 RealtimeBoard 」內建了很多圖表圖庫素材，讓我們可以在白板中快速畫出統計圖表，或是插入像是網頁模板、手機模板，直接就能在「 RealtimeBoard 」白板上畫出簡單設計，跟團隊進行討論。</p>
+<p><img src="/2016/realtimeboard-%E6%AF%94%E6%96%87%E4%BB%B6%E5%8D%94%E4%BD%9C%E6%9B%B4%E6%9C%89%E6%95%88%E7%8E%87%E7%9A%84%E8%A6%96%E8%A6%BA%E5%8C%96%E6%BA%9D%E9%80%9A%E7%99%BD%E6%9D%BF/RealtimeBoard-04.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="3-新增各種筆記"><a href="#3-新增各種筆記" class="headerlink" title="3. 新增各種筆記"></a>3. 新增各種筆記</h3><p>「 RealtimeBoard 」除了可以讓我們在白板任何地方插入文字外，也提供便利貼筆記的功能，就像在真實世界的看板上黏貼便利貼一樣。</p>
+<p><img src="/2016/realtimeboard-%E6%AF%94%E6%96%87%E4%BB%B6%E5%8D%94%E4%BD%9C%E6%9B%B4%E6%9C%89%E6%95%88%E7%8E%87%E7%9A%84%E8%A6%96%E8%A6%BA%E5%8C%96%E6%BA%9D%E9%80%9A%E7%99%BD%E6%9D%BF/RealtimeBoard-05.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="4-在圖片、文件上畫註解"><a href="#4-在圖片、文件上畫註解" class="headerlink" title="4. 在圖片、文件上畫註解"></a>4. 在圖片、文件上畫註解</h3><p>而插入「 RealtimeBoard 」白板上的圖片、文件，除了可以直接在白板上預覽內容外，還能利用繪圖功能，在這些圖片與文件上隨意畫上註解。</p>
+<p><img src="/2016/realtimeboard-%E6%AF%94%E6%96%87%E4%BB%B6%E5%8D%94%E4%BD%9C%E6%9B%B4%E6%9C%89%E6%95%88%E7%8E%87%E7%9A%84%E8%A6%96%E8%A6%BA%E5%8C%96%E6%BA%9D%E9%80%9A%E7%99%BD%E6%9D%BF/RealtimeBoard-06.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="5-連結多個物件，繪製流程圖"><a href="#5-連結多個物件，繪製流程圖" class="headerlink" title="5. 連結多個物件，繪製流程圖"></a>5. 連結多個物件，繪製流程圖</h3><p>甚至「 RealtimeBoard 」本身就能繪製<a target="_blank" rel="noopener" href="http://www.playpcesor.com/2015/06/mind-map-app-android-ios.html">心智圖</a>、流程圖，利用「 RealtimeBoard 」內建的線條工具，可以連結白板上的不同物件，連出各種箭頭線條。</p>
+<p><img src="/2016/realtimeboard-%E6%AF%94%E6%96%87%E4%BB%B6%E5%8D%94%E4%BD%9C%E6%9B%B4%E6%9C%89%E6%95%88%E7%8E%87%E7%9A%84%E8%A6%96%E8%A6%BA%E5%8C%96%E6%BA%9D%E9%80%9A%E7%99%BD%E6%9D%BF/RealtimeBoard-07.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="6-選擇多個物件、建立群組"><a href="#6-選擇多個物件、建立群組" class="headerlink" title="6. 選擇多個物件、建立群組"></a>6. 選擇多個物件、建立群組</h3><p>當「 RealtimeBoard 」上的物件多了，如果想要組合相關物件，可以按住［ Shift ］後多選物件，接著在功能選單裡選擇［ group ］，就可以把這些物件組成一個群組，以後可以一起放大縮小或移動位置。</p>
+<p><img src="/2016/realtimeboard-%E6%AF%94%E6%96%87%E4%BB%B6%E5%8D%94%E4%BD%9C%E6%9B%B4%E6%9C%89%E6%95%88%E7%8E%87%E7%9A%84%E8%A6%96%E8%A6%BA%E5%8C%96%E6%BA%9D%E9%80%9A%E7%99%BD%E6%9D%BF/RealtimeBoard-08.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="7-所有編輯自動儲存"><a href="#7-所有編輯自動儲存" class="headerlink" title="7. 所有編輯自動儲存"></a>7. 所有編輯自動儲存</h3><p>「 RealtimeBoard 」可以隨時進行各種新增、刪除與修改，而所有編輯內容都即時線上儲存。</p>
+<h3 id="8-多人協同合作"><a href="#8-多人協同合作" class="headerlink" title="8. 多人協同合作"></a>8. 多人協同合作</h3><p>利用右上方的分享按鈕，我們就可以把目前的「 RealtimeBoard 」看板分享給合作者，到時候多人可以同一時間一起編輯這塊白板，多人協同合作時的速度也很順暢。</p>
+<p><img src="/2016/realtimeboard-%E6%AF%94%E6%96%87%E4%BB%B6%E5%8D%94%E4%BD%9C%E6%9B%B4%E6%9C%89%E6%95%88%E7%8E%87%E7%9A%84%E8%A6%96%E8%A6%BA%E5%8C%96%E6%BA%9D%E9%80%9A%E7%99%BD%E6%9D%BF/RealtimeBoard-09.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="9-線上即時討論串"><a href="#9-線上即時討論串" class="headerlink" title="9. 線上即時討論串"></a>9. 線上即時討論串</h3><p>當多人合作時，除了各自進行即時編輯，也可以在任何物件上插入「討論串」。</p>
+<p><img src="/2016/realtimeboard-%E6%AF%94%E6%96%87%E4%BB%B6%E5%8D%94%E4%BD%9C%E6%9B%B4%E6%9C%89%E6%95%88%E7%8E%87%E7%9A%84%E8%A6%96%E8%A6%BA%E5%8C%96%E6%BA%9D%E9%80%9A%E7%99%BD%E6%9D%BF/RealtimeBoard-10.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="10-重新組織看板"><a href="#10-重新組織看板" class="headerlink" title="10. 重新組織看板"></a>10. 重新組織看板</h3><p>最後白板愈來愈多物件，顯得有點雜亂時，除了可以隨時重新移動位置整理，還可以利用「 Frames 」功能，畫出相關重點區域，註明這個區域資料的用途。</p>
+<p><img src="/2016/realtimeboard-%E6%AF%94%E6%96%87%E4%BB%B6%E5%8D%94%E4%BD%9C%E6%9B%B4%E6%9C%89%E6%95%88%E7%8E%87%E7%9A%84%E8%A6%96%E8%A6%BA%E5%8C%96%E6%BA%9D%E9%80%9A%E7%99%BD%E6%9D%BF/RealtimeBoard-11.png" srcset="/img/loading.gif" lazyload></p>
+<p>這個功能尤其在多人協同合作時，可以幫助夥伴快速找到重點資料的位置，也讓整個白板更有條理。</p>
+<p><img src="/2016/realtimeboard-%E6%AF%94%E6%96%87%E4%BB%B6%E5%8D%94%E4%BD%9C%E6%9B%B4%E6%9C%89%E6%95%88%E7%8E%87%E7%9A%84%E8%A6%96%E8%A6%BA%E5%8C%96%E6%BA%9D%E9%80%9A%E7%99%BD%E6%9D%BF/RealtimeBoard-12.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="11-放大縮小看板視野"><a href="#11-放大縮小看板視野" class="headerlink" title="11. 放大縮小看板視野"></a>11. 放大縮小看板視野</h3><p>最後，如果看板的資料很多也不用擔心，因為「 RealtimeBoard 」可以輕鬆的進行放大與縮小，幫助我們隨時找到重要資料，並放大到其位置查看與編輯。</p>
+<p>如果你下次要跟夥伴進行頭腦風暴，或是要討論某些設計稿，或是要一起規劃流程進度，試試看更有效率的視覺化溝通方法，這時「 RealtimeBoard 」是個不錯的選擇。</p>
+<p>延伸閱讀相關文章：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="http://www.playpcesor.com/2011/04/cacoo.html">Cacoo 線上中文免費畫流程圖軟體，即時協同設計多種企劃草圖</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.playpcesor.com/2014/11/google-keep.html">即時多人編輯筆記！ Google Keep 共用協作驚喜推出</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.playpcesor.com/2015/12/google-photos-shared.html">Google 共用相簿超完美教學：活動相簿協同合作攻略</a></li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://realtimeboard.com/">「 RealtimeBoard 」網站</a></p>
+<p>轉貼本文時禁止修改，禁止商業使用，並且必須註明來自電腦玩物原創作者 esor huang（異塵行者），及附上原文連結：<a target="_blank" rel="noopener" href="http://www.playpcesor.com/2016/06/realtimeboard.html">RealtimeBoard 比文件協作更有效率的視覺化溝通白板</a></p>
+<p><img src="/2016/realtimeboard-%E6%AF%94%E6%96%87%E4%BB%B6%E5%8D%94%E4%BD%9C%E6%9B%B4%E6%9C%89%E6%95%88%E7%8E%87%E7%9A%84%E8%A6%96%E8%A6%BA%E5%8C%96%E6%BA%9D%E9%80%9A%E7%99%BD%E6%9D%BF/RealtimeBoard-13.png" srcset="/img/loading.gif" lazyload></p>
+<p>声明：本文來自電腦玩物原創作者 esor huang（異塵行者），原文連結：<a target="_blank" rel="noopener" href="http://www.playpcesor.com/2016/06/realtimeboard.html">RealtimeBoard 比文件協作更有效率的視覺化溝通白板</a></p>
+<p><strong>推荐阅读</strong></p>
+<p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2015/11/03/%e8%91%97%e5%90%8d%e7%9c%8b%e6%9d%bf%e4%bb%bb%e5%8a%a1%e7%ae%a1%e7%90%86%e5%b7%a5%e5%85%b7%e6%8e%a8%e8%8d%90%ef%bc%9a%e4%bd%bf%e7%94%a8trello%e5%bc%80%e5%b1%95kanban%e5%b7%a5%e4%bd%9c%e6%b3%95/">著名看板任务管理工具推荐：使用Trello开展KANBAN工作法</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2015/11/16/%e4%bd%bf%e7%94%a8%e5%9b%bd%e4%ba%a7%e4%bc%98%e7%a7%80%e7%9a%84%e6%95%8f%e6%8d%b7%e5%9b%a2%e9%98%9f%e5%8d%8f%e4%bd%9c%e5%b7%a5%e5%85%b7leangoo%e5%bc%80%e5%b1%95scrum%e7%9c%8b%e6%9d%bf%e5%b7%a5/">使用国产优秀的敏捷团队协作工具LEANGOO开展SCRUM看板工作</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2015/11/01/%e9%9a%be%e5%be%97%e7%9a%84%e5%9b%bd%e4%ba%a7%e4%bc%98%e7%a7%80%e6%b8%85%e5%8d%95%e5%b7%a5%e5%85%b7%e6%8e%a8%e8%8d%90%ef%bc%9a%e6%bb%b4%e7%ad%94%e6%b8%85%e5%8d%95ticktick/">难得的国产优秀清单工具推荐：滴答清单(TickTick)</a></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%8D%8F%E5%90%8C%E5%B7%A5%E4%BD%9C/">协同工作</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%9C%A8%E7%BA%BF%E7%99%BD%E6%9D%BF/">在线白板</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%9C%8B%E6%9D%BF/">看板</a>
+                    
+                      <a class="hover-with-bg" href="/tags/realtimeboard/">realtimeboard</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2016/%E5%BC%80%E5%8F%91%E5%8A%A9%E6%89%8B%EF%BC%9A%E4%BD%BF%E7%94%A8excel%E6%89%93%E9%80%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%BC%80%E5%8F%91%E5%B0%8F%E5%B7%A5%E5%85%B7/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">开发助手：使用Excel打造自己的开发小工具</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2016/%E5%A6%82%E4%BD%95%E4%B9%A6%E5%86%99%E9%AB%98%E6%95%88%E7%9A%84%E5%B7%A5%E4%BD%9C%E9%82%AE%E4%BB%B6%EF%BC%9A%E7%BB%99%E4%BD%A0%E5%8D%81%E6%9D%A1%E5%BB%BA%E8%AE%AE/">
+                        <span class="hidden-mobile">如何书写高效的工作邮件：给你十条建议</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"B2tecGOesiRBcoXldYV5Jk5A-9Nh9j0Va","appKey":"5tFdBthF0o282SCXuNVxbntd","placeholder":"说点什么","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false,"requiredFields":[]},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

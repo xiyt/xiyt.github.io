@@ -1,0 +1,500 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="daxi">
+  <meta name="keywords" content="">
+  
+  <title>GitNote 基于 Git 的跨平台笔记软件 - 达夕博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiyt.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>达夕博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/banner1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="GitNote 基于 Git 的跨平台笔记软件">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2019-02-19 08:49" pubdate>
+        2019年2月19日 早上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      821 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      8
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">GitNote 基于 Git 的跨平台笔记软件</h1>
+            
+            <div class="markdown-body">
+              <h2 id="为什么"><a href="#为什么" class="headerlink" title="为什么"></a>为什么</h2><p>自从工作之后,我开始进行笔记记录,这是一个很棒的习惯.我曾经使用过 EDiary Evernote Onenote Wiz 麦库等,都是一些不错的笔记软件,但是都有一些各式各样的问题,不能满足我的使用.</p>
+<p>2013 年,我用 java 编写了第一款笔记软件 jnote,支持 markdown 和富文本编辑器,但是没有云同步功能.<br>2016 年,我用 electron 和 JavaScript 编写了一个 markdown 编辑器 ndpeditor,不是笔记软件.<br>2017 年,我用 electron 和 JavaScript 编写了基于 git 的 GitNote 笔记软件,这个采用一个 React开发的版本,这是一个没有发布的版本.<br>2018 年,我用 Vue重构了 GitNote,更强大的 GitNote.</p>
+<h2 id="git-同步"><a href="#git-同步" class="headerlink" title="git 同步"></a>git 同步</h2><p>git 是一个很棒的工具,GitNote 支持 git 的全部特性,并且不依赖本地 Git 环境. 你可以使用任何支持 Git 的仓库.</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/">https://github.com/</a> 免费版支持无限私有仓库<br><a target="_blank" rel="noopener" href="https://bitbucket.com/">https://BitBucket.com/</a> 免费版支持私有仓库<br><a target="_blank" rel="noopener" href="https://gitlab.com/">https://gitlab.com/</a> 免费版支持私有仓库<br><a target="_blank" rel="noopener" href="https://gitee.com/">https://gitee.com/</a> 免费版支持私有仓库(推荐)<br><a target="_blank" rel="noopener" href="https://coding.net/">https://coding.net/</a> 免费版支持私有仓库<br>还有很多</p>
+<p><img src="/2019/gitnote-%E5%9F%BA%E4%BA%8E-git-%E7%9A%84%E8%B7%A8%E5%B9%B3%E5%8F%B0%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/gitnote.png" srcset="/img/loading.gif" lazyload alt="IMG_256"></p>
+<p>GitNote 是一款基于 Git 的跨平台笔记软件,内置 git 支持,无须本地有任何 git 环境,拥有 git 的全部特性,可以任意的恢复笔记版本记录,依托 github 的免费不限量私人仓库,你的笔记没有空间的限制,你的数据完全属于你自己.</p>
+<h2 id="Todo"><a href="#Todo" class="headerlink" title="Todo"></a>Todo</h2><p>轻量级的 todo 管理,在笔记中快速便捷创建 Todo ,没有复杂管理流程,只需要关注完成和未完成.用极简的方式来管理自己的 todo.</p>
+<p><img src="/2019/gitnote-%E5%9F%BA%E4%BA%8E-git-%E7%9A%84%E8%B7%A8%E5%B9%B3%E5%8F%B0%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/todo.png" srcset="/img/loading.gif" lazyload></p>
+<h2 id="富文本编辑器"><a href="#富文本编辑器" class="headerlink" title="富文本编辑器"></a>富文本编辑器</h2><p>富文本编辑器,不仅支持各种复杂的文字编辑,还支持快捷键、公式、语法高亮、Todo、图片粘贴,等等功能.</p>
+<p><img src="/2019/gitnote-%E5%9F%BA%E4%BA%8E-git-%E7%9A%84%E8%B7%A8%E5%B9%B3%E5%8F%B0%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/html.png" srcset="/img/loading.gif" lazyload alt="IMG_258"></p>
+<h2 id="MARKDOWN"><a href="#MARKDOWN" class="headerlink" title="MARKDOWN"></a>MARKDOWN</h2><p>不仅是一款漂亮的 markdown 的编辑器,而且还支持编写幻灯片功能,方便你进行幻灯片演讲.</p>
+<p><img src="/2019/gitnote-%E5%9F%BA%E4%BA%8E-git-%E7%9A%84%E8%B7%A8%E5%B9%B3%E5%8F%B0%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/markdown.png" srcset="/img/loading.gif" lazyload alt="IMG_259"></p>
+<h2 id="附件"><a href="#附件" class="headerlink" title="附件"></a>附件</h2><p>不仅仅支持各种各样的文件作为附件,还能自动识别图片,将图片插入到笔记中.</p>
+<p><img src="/2019/gitnote-%E5%9F%BA%E4%BA%8E-git-%E7%9A%84%E8%B7%A8%E5%B9%B3%E5%8F%B0%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/attachment.png" srcset="/img/loading.gif" lazyload alt="IMG_260"></p>
+<h2 id="跨平台"><a href="#跨平台" class="headerlink" title="跨平台"></a>跨平台</h2><p>Mac windows Linux 全平台支持,未来也会对移动端进行支持.</p>
+<p><img src="/2019/gitnote-%E5%9F%BA%E4%BA%8E-git-%E7%9A%84%E8%B7%A8%E5%B9%B3%E5%8F%B0%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/os.png" srcset="/img/loading.gif" lazyload alt="IMG_261"></p>
+<h2 id="收藏"><a href="#收藏" class="headerlink" title="收藏"></a>收藏</h2><p>通过浏览器插件,可以收集网络上面的任何内容,自动同步到你的笔记仓库中.</p>
+<p><img src="/2019/gitnote-%E5%9F%BA%E4%BA%8E-git-%E7%9A%84%E8%B7%A8%E5%B9%B3%E5%8F%B0%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/collection.png" srcset="/img/loading.gif" lazyload alt="IMG_262"></p>
+<h2 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h2><p>提供强大丰富的扩展 API,可以自由的定制功能扩展插件,可以为提供思维脑图,番茄工作法,图床等等功能</p>
+<p><img src="/2019/gitnote-%E5%9F%BA%E4%BA%8E-git-%E7%9A%84%E8%B7%A8%E5%B9%B3%E5%8F%B0%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/extension.png" srcset="/img/loading.gif" lazyload alt="IMG_263"></p>
+<h2 id="特色插件"><a href="#特色插件" class="headerlink" title="特色插件"></a>特色插件</h2><h3 id="思维脑图"><a href="#思维脑图" class="headerlink" title="思维脑图"></a>思维脑图</h3><p>支持思维脑图,帮助我们用形象化的方式,科学的处理事情,比如记录和激发创意,并且支持多种导出方式.</p>
+<p><img src="/2019/gitnote-%E5%9F%BA%E4%BA%8E-git-%E7%9A%84%E8%B7%A8%E5%B9%B3%E5%8F%B0%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/kityminder.png" srcset="/img/loading.gif" lazyload alt="IMG_264"></p>
+<h3 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h3><p>支持制作流程图，流程图，组织结构图，UML，ER 和网络拓扑图等,并且支持多种导出方式.</p>
+<p><img src="/2019/gitnote-%E5%9F%BA%E4%BA%8E-git-%E7%9A%84%E8%B7%A8%E5%B9%B3%E5%8F%B0%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/grapheditor.png" srcset="/img/loading.gif" lazyload alt="IMG_265"></p>
+<h3 id="演示文稿"><a href="#演示文稿" class="headerlink" title="演示文稿"></a>演示文稿</h3><p>使用 markdown 可以很容易的创建出 web 版的演示文档,并支持导出.</p>
+<p><img src="/2019/gitnote-%E5%9F%BA%E4%BA%8E-git-%E7%9A%84%E8%B7%A8%E5%B9%B3%E5%8F%B0%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/revealjs.png" srcset="/img/loading.gif" lazyload alt="IMG_266"></p>
+<h3 id="多图床"><a href="#多图床" class="headerlink" title="多图床"></a>多图床</h3><p>支持多个图床平台上传,自动插入到笔记中,提供 API 可以自由定制自己的图床.</p>
+<p><img src="/2019/gitnote-%E5%9F%BA%E4%BA%8E-git-%E7%9A%84%E8%B7%A8%E5%B9%B3%E5%8F%B0%E7%AC%94%E8%AE%B0%E8%BD%AF%E4%BB%B6/upload.png" srcset="/img/loading.gif" lazyload alt="IMG_267"></p>
+<p>官网地址:<br><a target="_blank" rel="noopener" href="https://gitnoteapp.com/">https://gitnoteapp.com/</a></p>
+<p>下载地址:<br><a target="_blank" rel="noopener" href="https://gitnoteapp.com/zh/#download">https://gitnoteapp.com/zh/#download</a></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a>
+                    
+                      <a class="hover-with-bg" href="/tags/git/">git</a>
+                    
+                      <a class="hover-with-bg" href="/tags/github/">github</a>
+                    
+                      <a class="hover-with-bg" href="/tags/gitnote/">gitnote</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2019/teamviewer-14%E6%97%A0%E9%99%90%E8%87%AA%E5%8A%A8%E6%94%B9id-%E8%A7%A3%E5%86%B3%E5%95%86%E4%B8%9A%E7%A6%81%E7%94%A8%E9%97%AE%E9%A2%98/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">TeamViewer 14无限自动改ID 解决商业禁用问题</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2019/%E5%A6%82%E4%BD%95%E5%88%B6%E4%BD%9C%E4%B8%80%E4%BB%BD%E8%A1%8C%E4%B9%8B%E6%9C%89%E6%95%88%E7%9A%84sprint%E6%91%98%E8%A6%81%E6%96%87%E6%A1%A3%EF%BC%9F/">
+                        <span class="hidden-mobile">如何制作一份行之有效的Sprint摘要文档？</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"B2tecGOesiRBcoXldYV5Jk5A-9Nh9j0Va","appKey":"5tFdBthF0o282SCXuNVxbntd","placeholder":"说点什么","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false,"requiredFields":[]},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

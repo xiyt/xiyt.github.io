@@ -1,0 +1,490 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="daxi">
+  <meta name="keywords" content="">
+  
+  <title>只为简单和高效：我在滴答清单使用上的四点改变 - 达夕博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiyt.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>达夕博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/banner1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="只为简单和高效：我在滴答清单使用上的四点改变">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2016-05-21 09:18" pubdate>
+        2016年5月21日 上午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      886 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      9
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">只为简单和高效：我在滴答清单使用上的四点改变</h1>
+            
+            <div class="markdown-body">
+              <p><a target="_blank" rel="noopener" href="http://localhost/old/2016/05/quicktime.png"><img src="/2016/%E5%8F%AA%E4%B8%BA%E7%AE%80%E5%8D%95%E5%92%8C%E9%AB%98%E6%95%88%EF%BC%9A%E6%88%91%E5%9C%A8%E6%BB%B4%E7%AD%94%E6%B8%85%E5%8D%95%E4%BD%BF%E7%94%A8%E4%B8%8A%E7%9A%84%E5%9B%9B%E7%82%B9%E6%94%B9%E5%8F%98/quicktime.png" srcset="/img/loading.gif" lazyload alt="quicktime"></a></p>
+<p>我在我的博客里多次介绍过<a target="_blank" rel="noopener" href="http://www.daxiblog.com/?s=%E6%BB%B4%E7%AD%94%E6%B8%85%E5%8D%95">滴答清单</a>这个国内优秀的ToDo工具，目前它也是我主要的提醒事项和备忘录工具。所以在我的iPhone、安卓手机、Chrome中都安装进行了安装。在这个智能手机成为主导的时代，PC端软件往往弱化了很多，大家都愿意使用手机、浏览器插件或者直接使用Web的方式访问这些跨平台的应用。然而PC端软件也是有它的很多优点的，它能够和操作系统很好的结合，例如你可以使用全局快捷键、可以随电脑启动、可以添加到Windows任务计划中。今天我就在我的电脑上安装了滴答清单的Windows版本，试用之后，我觉得我应该将我的滴答清单使用方法上做一些改变，首先来看看我的需求：</p>
+<ul>
+<li>大部分情况下我根本不会也不需要去认真的设定某个任务的提醒时间；</li>
+<li>把提醒或者备忘进行分类是比较困难，这是工作相关的？家庭相关的？还是个人备忘？</li>
+<li>我只想现在快速记录下来，将来找得到它</li>
+</ul>
+<p>基于以上这几点原因，根据我的需要，我做了下面的改变：</p>
+<h3 id="1、删除自定义清单和标签"><a href="#1、删除自定义清单和标签" class="headerlink" title="1、删除自定义清单和标签"></a><strong>1、删除自定义清单和标签</strong></h3><p>之前我在滴答清单里创建了很多自定义清单和标签，例如工作清单、家庭清单、私人清单、博客清单，同时也建立了类似于重要、紧急这样的标签，现在把把自定义清单和标签都删除掉了，只保留了滴答清单自带的几个智能清单，这对我来说是足够用的。这样每次我添加任务时就不需要考虑到底应该放到哪个清单里了，只要<strong>扔进去就行</strong>了。</p>
+<p><img src="/2016/%E5%8F%AA%E4%B8%BA%E7%AE%80%E5%8D%95%E5%92%8C%E9%AB%98%E6%95%88%EF%BC%9A%E6%88%91%E5%9C%A8%E6%BB%B4%E7%AD%94%E6%B8%85%E5%8D%95%E4%BD%BF%E7%94%A8%E4%B8%8A%E7%9A%84%E5%9B%9B%E7%82%B9%E6%94%B9%E5%8F%98/didachange.png" srcset="/img/loading.gif" lazyload alt="只为简单和高效：我在滴答清单使用上的两点改变"></p>
+<h3 id="2、把滴答清单当成清单、备忘的搜集器，用周期性回顾替代提醒功能"><a href="#2、把滴答清单当成清单、备忘的搜集器，用周期性回顾替代提醒功能" class="headerlink" title="2、把滴答清单当成清单、备忘的搜集器，用周期性回顾替代提醒功能"></a><strong>2、把滴答清单当成清单、备忘的搜集器，用周期性回顾替代提醒功能</strong></h3><p>滴答清单的任务提醒功能，甚至和日历的结合做的都很不错，你可以使用这些功能来进行时间管理和任务规划。而对于我来说，我需要的只是记录和将来需要的时候查看。所以我基本上很少设定清单的提醒时间，因为在添加任务的时候同时再去设定提醒是一件很繁琐的事。我会使用<strong>周期性回顾</strong>的方式来查看我的滴答清单，例如每天上班的9点前，我会打开滴答清单，看有没有需要今天关注的任务，从而保证记录的东西不会石沉大海。</p>
+<h3 id="3、任务收集：在Windows端随手快速添加任务"><a href="#3、任务收集：在Windows端随手快速添加任务" class="headerlink" title="3、任务收集：在Windows端随手快速添加任务"></a><strong>3、任务收集：在Windows端随手快速添加任务</strong></h3><p>安装好滴答清单的Windows版本后，打开设置-&gt;选项，如下如设定快速添加任务的快捷键</p>
+<p><img src="/2016/%E5%8F%AA%E4%B8%BA%E7%AE%80%E5%8D%95%E5%92%8C%E9%AB%98%E6%95%88%EF%BC%9A%E6%88%91%E5%9C%A8%E6%BB%B4%E7%AD%94%E6%B8%85%E5%8D%95%E4%BD%BF%E7%94%A8%E4%B8%8A%E7%9A%84%E5%9B%9B%E7%82%B9%E6%94%B9%E5%8F%98/didachange2.png" srcset="/img/loading.gif" lazyload></p>
+<p>然后在<strong>任何时候按下Ctrl+Shift+A</strong>，就可以快速添加备忘到滴答清单</p>
+<p><img src="/2016/%E5%8F%AA%E4%B8%BA%E7%AE%80%E5%8D%95%E5%92%8C%E9%AB%98%E6%95%88%EF%BC%9A%E6%88%91%E5%9C%A8%E6%BB%B4%E7%AD%94%E6%B8%85%E5%8D%95%E4%BD%BF%E7%94%A8%E4%B8%8A%E7%9A%84%E5%9B%9B%E7%82%B9%E6%94%B9%E5%8F%98/didachange3.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="4、任务收集：微信中快速添加到滴答清单"><a href="#4、任务收集：微信中快速添加到滴答清单" class="headerlink" title="4、任务收集：微信中快速添加到滴答清单"></a><strong>4、任务收集：微信中快速添加到滴答清单</strong></h3><p>在微信中关注滴答清单的微信公众号：<strong>didalist</strong>，然后你就可以将微信里看到的各种消息、资源快速的添加到滴答清单里，如下图：</p>
+<p><img src="/2016/%E5%8F%AA%E4%B8%BA%E7%AE%80%E5%8D%95%E5%92%8C%E9%AB%98%E6%95%88%EF%BC%9A%E6%88%91%E5%9C%A8%E6%BB%B4%E7%AD%94%E6%B8%85%E5%8D%95%E4%BD%BF%E7%94%A8%E4%B8%8A%E7%9A%84%E5%9B%9B%E7%82%B9%E6%94%B9%E5%8F%98/didachange4.png" srcset="/img/loading.gif" lazyload></p>
+<p> </p>
+<h3 id="推荐阅读："><a href="#推荐阅读：" class="headerlink" title="推荐阅读："></a><strong>推荐阅读：</strong></h3><p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2015/12/25/windowsiphone%e7%94%a8%e6%88%b7%e7%9a%84%e6%8f%90%e9%86%92%e4%ba%8b%e9%a1%b9%e5%90%8c%e6%ad%a5%e7%ad%96%e7%95%a5%ef%bc%9a%e6%b4%bb%e7%94%a8iphone%e7%89%88%e6%bb%b4%e7%ad%94%e6%b8%85%e5%8d%95/">Windows+iPhone用户的提醒事项同步策略：活用iPhone版滴答清单</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2015/11/01/%e9%9a%be%e5%be%97%e7%9a%84%e5%9b%bd%e4%ba%a7%e4%bc%98%e7%a7%80%e6%b8%85%e5%8d%95%e5%b7%a5%e5%85%b7%e6%8e%a8%e8%8d%90%ef%bc%9a%e6%bb%b4%e7%ad%94%e6%b8%85%e5%8d%95ticktick/">难得的国产优秀清单工具推荐：滴答清单(TickTick)</a></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E6%8F%90%E9%AB%98%E7%94%9F%E4%BA%A7%E5%8A%9B/">提高生产力</a>
+                    
+                      <a class="hover-with-bg" href="/categories/%E6%8F%90%E9%AB%98%E7%94%9F%E4%BA%A7%E5%8A%9B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%BB%B4%E7%AD%94%E6%B8%85%E5%8D%95/">滴答清单</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86/">任务管理</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%AE%80%E5%8D%95%E5%92%8C%E9%AB%98%E6%95%88/">简单和高效</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2016/%E5%88%A9%E7%94%A8google-drive%E6%89%93%E9%80%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%93%E5%B1%9E%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">利用Google Drive打造自己的专属音乐播放器</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2016/google-spaces%EF%BC%9A%E6%AC%A2%E8%BF%8E%E5%8A%A0%E5%85%A5%E5%A4%A7%E5%B8%AD%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%88%86%E4%BA%AB%E8%AE%A8%E8%AE%BA%E7%BE%A4/">
+                        <span class="hidden-mobile">Google Spaces：欢迎加入大席的博客分享讨论群</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"B2tecGOesiRBcoXldYV5Jk5A-9Nh9j0Va","appKey":"5tFdBthF0o282SCXuNVxbntd","placeholder":"说点什么","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false,"requiredFields":[]},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

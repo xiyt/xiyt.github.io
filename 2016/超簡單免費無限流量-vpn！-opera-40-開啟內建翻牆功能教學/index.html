@@ -1,0 +1,499 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="daxi">
+  <meta name="keywords" content="">
+  
+  <title>超簡單免費無限流量 VPN！ Opera 40 開啟內建翻牆功能教學|电脑玩物 - 达夕博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiyt.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>达夕博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/banner1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="超簡單免費無限流量 VPN！ Opera 40 開啟內建翻牆功能教學|电脑玩物">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2016-09-22 02:28" pubdate>
+        2016年9月22日 凌晨
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      891 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      9
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">超簡單免費無限流量 VPN！ Opera 40 開啟內建翻牆功能教學|电脑玩物</h1>
+            
+            <div class="markdown-body">
+              <blockquote>
+<p>引言：之前我介绍过手机端的Opera支持免费VPN使用：<a target="_blank" rel="noopener" href="http://www.daxiblog.com/2016/05/10/%e5%bc%ba%e7%83%88%e6%8e%a8%e8%8d%90opera%e6%8f%90%e4%be%9b%e5%85%8d%e8%b4%b9vpn%e5%ba%94%e7%94%a8/">Opera提供免费VPN应用：Opera VPN</a>，今天看到电脑玩物介绍PC端的Opera也支持免费VPN了，推荐给大家！</p>
+</blockquote>
+<p>今年（2016）上半年， <strong><a target="_blank" rel="noopener" href="http://www.playpcesor.com/2009/09/opera-10.html">Opera</a> 開始在其「開發者版本」的桌面瀏覽器中內建 VPN 服務，提供可能是目前「最簡單易用」的免費無限流量翻牆功能</strong>。後來這樣的免費無限流量 VPN 也陸續在 Opera 的 App 版推出，而現在（2016/9/21）終於在 Opera 40 正式桌面版瀏覽器中（ Windows 與 Mac ），對所有用戶開放了這個免費無限流量的 VPN 服務。</p>
+<p>透過 Opera 40 瀏覽器內建的免費無限流量 VPN ，我們可以翻過特定地區對網路的限制，也保護你在網路上的私密狀態，重要的是他開啟超簡單，也不需註冊登入等繁瑣步驟。</p>
+<p>Opera 40 內建的 VPN 是來自其子公司 SurfEasy 的服務，在 SurfEasy 上完整的 VPN 方案需要付費使用，但在 Opera 中，則可以免費無限流量使用，其中的限制可能是 Opera 內建 VPN 目前只提供五個節點：美國、加拿大、德國、荷蘭與新加坡。</p>
+<p>至於大家另外一個可能的疑慮，是之前傳出 Opera 將被中國企業聯盟（崑崙萬維、奇虎 360、金磚絲路基金）收購的新聞，後來原始的 12 億美元收購案破局，目前情況是中資聯盟又提出了新的 6 億美元收購案，並且確實包含 Opera 瀏覽器部門的收購計畫，這個案子正在進行中。</p>
+<p>Opera 早已開始的內建 VPN 計畫應該和收購案無關，是之前就進行中的計畫，但未來如果被收購後會不會有什麼影響與變動，則可待之後的觀察。</p>
+<p>1. 要開啟 Opera VPN 功能非常簡單，而且以後要切換開關也很容易。</p>
+<p>首先當然就是安裝 <a target="_blank" rel="noopener" href="http://www.opera.com/zh-tw/computer">Opera 40 穩定版桌面瀏覽器</a>。</p>
+<p><img src="/2016/%E8%B6%85%E7%B0%A1%E5%96%AE%E5%85%8D%E8%B2%BB%E7%84%A1%E9%99%90%E6%B5%81%E9%87%8F-vpn%EF%BC%81-opera-40-%E9%96%8B%E5%95%9F%E5%85%A7%E5%BB%BA%E7%BF%BB%E7%89%86%E5%8A%9F%E8%83%BD%E6%95%99%E5%AD%B8/Opera%2040%20VPN-01.png" srcset="/img/loading.gif" lazyload alt="超簡單免費無限流量 VPN！ Opera 40 開啟內建翻牆功能教學"></p>
+<p>2. 然後在左上方的［選單］裡選擇［設定］。 <img src="/2016/%E8%B6%85%E7%B0%A1%E5%96%AE%E5%85%8D%E8%B2%BB%E7%84%A1%E9%99%90%E6%B5%81%E9%87%8F-vpn%EF%BC%81-opera-40-%E9%96%8B%E5%95%9F%E5%85%A7%E5%BB%BA%E7%BF%BB%E7%89%86%E5%8A%9F%E8%83%BD%E6%95%99%E5%AD%B8/Opera%2040%20VPN-021.png" srcset="/img/loading.gif" lazyload></p>
+<p>3. 進入設定後，切換到［隱私安全］頁面，勾選［啟用 VPN ］選項即可。</p>
+<p><img src="/2016/%E8%B6%85%E7%B0%A1%E5%96%AE%E5%85%8D%E8%B2%BB%E7%84%A1%E9%99%90%E6%B5%81%E9%87%8F-vpn%EF%BC%81-opera-40-%E9%96%8B%E5%95%9F%E5%85%A7%E5%BB%BA%E7%BF%BB%E7%89%86%E5%8A%9F%E8%83%BD%E6%95%99%E5%AD%B8/Opera%2040%20VPN-03.png" srcset="/img/loading.gif" lazyload></p>
+<p>4. 之後在網址列的最前端，就會看到 VPN 的切換圖示，藍色表示正在開啟 VPN 功能，點擊圖示，可以看到目前使用的傳輸量。</p>
+<p><img src="/2016/%E8%B6%85%E7%B0%A1%E5%96%AE%E5%85%8D%E8%B2%BB%E7%84%A1%E9%99%90%E6%B5%81%E9%87%8F-vpn%EF%BC%81-opera-40-%E9%96%8B%E5%95%9F%E5%85%A7%E5%BB%BA%E7%BF%BB%E7%89%86%E5%8A%9F%E8%83%BD%E6%95%99%E5%AD%B8/Opera%2040%20VPN-04.png" srcset="/img/loading.gif" lazyload></p>
+<p>5. 下方的虛擬 IP 位置預設為［最佳位置］，你也可以手動調整成你想要的 VPN 節點。</p>
+<p><img src="/2016/%E8%B6%85%E7%B0%A1%E5%96%AE%E5%85%8D%E8%B2%BB%E7%84%A1%E9%99%90%E6%B5%81%E9%87%8F-vpn%EF%BC%81-opera-40-%E9%96%8B%E5%95%9F%E5%85%A7%E5%BB%BA%E7%BF%BB%E7%89%86%E5%8A%9F%E8%83%BD%E6%95%99%E5%AD%B8/Opera%2040%20VPN-05.png" srcset="/img/loading.gif" lazyload></p>
+<p>6. 最後，當你覺得不需要用到 VPN 時，也能隨時在 VPN 圖示選單裡切換到［關閉］，這時候圖示變成灰色，表示沒有使用 VPN 功能，以後需要時再到這裡開啟即可。</p>
+<p>Opera 40 內建的 VPN 設定簡單、開關容易、速度流暢，而且免費、無限流量、不需註冊，可以說是目前最簡單易用的 VPN 之一，有需要的朋友可以試試看。</p>
+<p>延伸閱讀相關文章：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="http://www.playpcesor.com/2015/08/youtube-opera-max.html">讓 YouTube 流量省大半： Opera Max 幫手機省錢加速</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.playpcesor.com/2015/04/opera-mini-android-9.html">下載全新 Opera Mini 為 Android 量身打造 9 大特性</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.playpcesor.com/2015/01/vivaldi-opera.html">獻給最專業用戶的瀏覽器： Vivaldi 來自 Opera 創辦人</a></li>
+</ul>
+<p><img src="/2016/%E8%B6%85%E7%B0%A1%E5%96%AE%E5%85%8D%E8%B2%BB%E7%84%A1%E9%99%90%E6%B5%81%E9%87%8F-vpn%EF%BC%81-opera-40-%E9%96%8B%E5%95%9F%E5%85%A7%E5%BB%BA%E7%BF%BB%E7%89%86%E5%8A%9F%E8%83%BD%E6%95%99%E5%AD%B8/Opera%2040%20VPN-06.png" srcset="/img/loading.gif" lazyload></p>
+<p>本文转自電腦玩物原創作者 esor huang（異塵行者），原文連結：<a target="_blank" rel="noopener" href="http://www.playpcesor.com/2016/09/vpn-opera-40.html">超簡單免費無限流量 VPN！ Opera 40 開啟內建翻牆功能教學</a></p>
+<p> </p>
+<p><strong>推荐阅读</strong>：</p>
+<p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2016/05/10/%e5%bc%ba%e7%83%88%e6%8e%a8%e8%8d%90opera%e6%8f%90%e4%be%9b%e5%85%8d%e8%b4%b9vpn%e5%ba%94%e7%94%a8/">Opera提供免费VPN应用：Opera VPN</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2016/04/17/%e8%ae%b0%e5%bd%95centos6%e4%b8%ad%e5%ae%89%e8%a3%85shadowsocks%e5%92%8cpptp-vpn/">CentOS6中安装Shadowsocks和pptp VPN</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2016/05/05/iphone%e4%b8%ad%e4%bd%bf%e7%94%a8shadowrocket%e5%85%a8%e5%b1%80%e7%a7%91%e5%ad%a6%e4%b8%8a%e7%bd%91/">iPhone中使用Shadowrocket全局科学上网</a></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/vpn/">vpn</a>
+                    
+                      <a class="hover-with-bg" href="/tags/opera/">opera</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2016/%E8%A7%A3%E5%86%B3%E7%94%B5%E8%84%91%E7%AB%AF%E7%89%88google-drive%E6%97%A0%E6%B3%95%E8%BF%9E%E6%8E%A5%E7%9A%84%E9%97%AE%E9%A2%98/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">解决电脑端版Google Drive无法连接的问题</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2016/%E6%96%B0%E7%89%88google-chrome%E5%85%A8%E9%9D%A2%E5%BC%80%E5%90%AFmaterial-design/">
+                        <span class="hidden-mobile">新版Google Chrome全面开启Material Design</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"B2tecGOesiRBcoXldYV5Jk5A-9Nh9j0Va","appKey":"5tFdBthF0o282SCXuNVxbntd","placeholder":"说点什么","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false,"requiredFields":[]},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

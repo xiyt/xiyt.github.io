@@ -1,0 +1,965 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="daxi">
+  <meta name="keywords" content="">
+  
+  <title>达夕博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiyt.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 100vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>达夕博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/banner1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="热衷于分享IT技术/工作效率/优秀软件，申旦达夕，永无止境">
+              
+            </span>
+
+            
+          </div>
+
+          
+            <div class="scroll-down-bar">
+              <i class="iconfont icon-arrowdown"></i>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div class="py-5" id="board"
+          style=margin-top:0>
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2017/%E5%9B%BE%E6%96%87%E5%B9%B6%E8%8C%82%E6%95%99%E4%BD%A0%E4%BB%8Egoogle%E4%BA%91%E7%9B%98%E5%8D%87%E7%BA%A7%E5%88%B0google%E5%A4%87%E4%BB%BD%E5%92%8C%E5%90%8C%E6%AD%A5/" target="_self">
+          <img src="/2017/%E5%9B%BE%E6%96%87%E5%B9%B6%E8%8C%82%E6%95%99%E4%BD%A0%E4%BB%8Egoogle%E4%BA%91%E7%9B%98%E5%8D%87%E7%BA%A7%E5%88%B0google%E5%A4%87%E4%BB%BD%E5%92%8C%E5%90%8C%E6%AD%A5/google-sync-01.jpg" srcset="/img/loading.gif" lazyload alt="图文并茂教你从Google云盘升级到Google备份和同步">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2017/%E5%9B%BE%E6%96%87%E5%B9%B6%E8%8C%82%E6%95%99%E4%BD%A0%E4%BB%8Egoogle%E4%BA%91%E7%9B%98%E5%8D%87%E7%BA%A7%E5%88%B0google%E5%A4%87%E4%BB%BD%E5%92%8C%E5%90%8C%E6%AD%A5/" target="_self">
+          图文并茂教你从Google云盘升级到Google备份和同步
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2017/%E5%9B%BE%E6%96%87%E5%B9%B6%E8%8C%82%E6%95%99%E4%BD%A0%E4%BB%8Egoogle%E4%BA%91%E7%9B%98%E5%8D%87%E7%BA%A7%E5%88%B0google%E5%A4%87%E4%BB%BD%E5%92%8C%E5%90%8C%E6%AD%A5/" target="_self">
+          
+          
+            
+          
+          到目前为止我一直使用Dropbox+Google云盘的方式同步自己的文件。大家可以在这里找到相应的设置方法。这种方式我使用着一直很稳定。而今天Google推出了全新的同步备份工具，名字叫做：Backup and Sync from Google，这是我安装完成后，开始菜单中显示的名字。从名字可以看出，这个工具兼具了备份和同步的双重功能。备份和同步的差别大家应该比较清楚了吧，例如国内之前的金山快盘就
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2017-07-14 01:21" pubdate>
+              2017-07-14
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/google-drive/">google-drive</a>
+            
+              <a href="/tags/google%E4%BA%91%E7%9B%98/">google云盘</a>
+            
+              <a href="/tags/google%E5%A4%87%E4%BB%BD/">google备份</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2017/iphone%E4%B8%AD%E7%BA%AF%E5%87%80%E6%97%A0%E5%B9%BF%E5%91%8A%E5%8F%AF%E4%B8%8B%E8%BD%BD%E8%A7%86%E9%A2%91%E7%9A%84%E4%BC%98%E7%A7%80%E6%B5%8F%E8%A7%88%E5%99%A8-aloha-%E6%8E%A8%E8%8D%90/" target="_self">
+          <img src="/2017/iphone%E4%B8%AD%E7%BA%AF%E5%87%80%E6%97%A0%E5%B9%BF%E5%91%8A%E5%8F%AF%E4%B8%8B%E8%BD%BD%E8%A7%86%E9%A2%91%E7%9A%84%E4%BC%98%E7%A7%80%E6%B5%8F%E8%A7%88%E5%99%A8-aloha-%E6%8E%A8%E8%8D%90/aloha-logo.jpg" srcset="/img/loading.gif" lazyload alt="iPhone中纯净无广告可下载视频的优秀浏览器 Aloha 推荐">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2017/iphone%E4%B8%AD%E7%BA%AF%E5%87%80%E6%97%A0%E5%B9%BF%E5%91%8A%E5%8F%AF%E4%B8%8B%E8%BD%BD%E8%A7%86%E9%A2%91%E7%9A%84%E4%BC%98%E7%A7%80%E6%B5%8F%E8%A7%88%E5%99%A8-aloha-%E6%8E%A8%E8%8D%90/" target="_self">
+          iPhone中纯净无广告可下载视频的优秀浏览器 Aloha 推荐
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2017/iphone%E4%B8%AD%E7%BA%AF%E5%87%80%E6%97%A0%E5%B9%BF%E5%91%8A%E5%8F%AF%E4%B8%8B%E8%BD%BD%E8%A7%86%E9%A2%91%E7%9A%84%E4%BC%98%E7%A7%80%E6%B5%8F%E8%A7%88%E5%99%A8-aloha-%E6%8E%A8%E8%8D%90/" target="_self">
+          
+          
+            
+          
+          
+现在的浏览器，不管是电脑端还是手机端，可谓是多种多样，鱼龙混杂，想要找到一个体验佳，性能好，功能恰，无广告的浏览器确实不容易。所以在iOS端，我一直使用原生的safari作为默认浏览器。但是，我经常会在线播放一些视频，而safari并没有下载在线视频的功能。经过一番搜寻，我终于找到了一款不仅具有以上特质，而且能够缓存在线视频，并提供简易的免费VPN功能的iPhone浏览器：Aloha
+1、清爽纯
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2017-07-13 01:34" pubdate>
+              2017-07-13
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%99%BA%E8%83%BD%E6%89%8B%E6%9C%BA/">智能手机</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%89%8B%E6%9C%BA%E6%B5%8F%E8%A7%88%E5%99%A8/">手机浏览器</a>
+            
+              <a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/">浏览器</a>
+            
+              <a href="/tags/%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD/">视频下载</a>
+            
+              <a href="/tags/vpn/">vpn</a>
+            
+              <a href="/tags/aloha/">aloha</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2017/%E4%B8%89%E4%B8%AA%E5%AF%86%E7%A0%81%E8%AE%BE%E5%AE%9A%E6%8A%80%E5%B7%A7%EF%BC%8C%E8%AE%A9%E4%BD%A0%E8%BF%9C%E7%A6%BB%E5%AF%86%E7%A0%81%E6%B3%84%E9%9C%B2/" target="_self">
+          <img src="/2017/%E4%B8%89%E4%B8%AA%E5%AF%86%E7%A0%81%E8%AE%BE%E5%AE%9A%E6%8A%80%E5%B7%A7%EF%BC%8C%E8%AE%A9%E4%BD%A0%E8%BF%9C%E7%A6%BB%E5%AF%86%E7%A0%81%E6%B3%84%E9%9C%B2/password-397653_640.jpg" srcset="/img/loading.gif" lazyload alt="三个密码设定技巧，让你远离密码泄露">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2017/%E4%B8%89%E4%B8%AA%E5%AF%86%E7%A0%81%E8%AE%BE%E5%AE%9A%E6%8A%80%E5%B7%A7%EF%BC%8C%E8%AE%A9%E4%BD%A0%E8%BF%9C%E7%A6%BB%E5%AF%86%E7%A0%81%E6%B3%84%E9%9C%B2/" target="_self">
+          三个密码设定技巧，让你远离密码泄露
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2017/%E4%B8%89%E4%B8%AA%E5%AF%86%E7%A0%81%E8%AE%BE%E5%AE%9A%E6%8A%80%E5%B7%A7%EF%BC%8C%E8%AE%A9%E4%BD%A0%E8%BF%9C%E7%A6%BB%E5%AF%86%E7%A0%81%E6%B3%84%E9%9C%B2/" target="_self">
+          
+          
+            
+          
+          
+第一类
+谐音混合型
+
+可以利用数字的谐音或相似的字符来设计密码。例如生日为“19950824”则可以设置为“199wo82s”。
+
+第二类
+造句型
+
+使用一句容易记住的句子。例如“吃葡萄不吐葡萄皮”则可以设置为“cptbtptp”。
+
+第三类
+6歩密码设置法
+
+第一步：密码不要过短，最好大于8位数
+第二步：使用一句话的缩写作为基础密****码
+例如“还要辣油啊”的缩写是“hylya”
+第三步：加
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2017-07-05 00:50" pubdate>
+              2017-07-05
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E4%BA%92%E8%81%94%E7%BD%91/">互联网</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%AF%86%E7%A0%81/">密码</a>
+            
+              <a href="/tags/%E5%AE%89%E5%85%A8/">安全</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2017/%E7%BB%88%E4%BA%8E%E8%BF%98%E6%98%AFpushbullet%E8%A7%A3%E5%86%B3%E4%BA%86%E9%97%AE%E9%A2%98%EF%BC%8C%E8%BF%9E%E6%8E%A5%E7%94%B5%E8%84%91%E5%92%8C%E6%89%8B%E6%9C%BA%E7%9A%84%E6%A1%A5%E6%A2%81/" target="_self">
+          <img src="/2017/%E7%BB%88%E4%BA%8E%E8%BF%98%E6%98%AFpushbullet%E8%A7%A3%E5%86%B3%E4%BA%86%E9%97%AE%E9%A2%98%EF%BC%8C%E8%BF%9E%E6%8E%A5%E7%94%B5%E8%84%91%E5%92%8C%E6%89%8B%E6%9C%BA%E7%9A%84%E6%A1%A5%E6%A2%81/pushbullet01.PNG" srcset="/img/loading.gif" lazyload alt="终于还是Pushbullet解决了问题，连接电脑和手机的桥梁">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2017/%E7%BB%88%E4%BA%8E%E8%BF%98%E6%98%AFpushbullet%E8%A7%A3%E5%86%B3%E4%BA%86%E9%97%AE%E9%A2%98%EF%BC%8C%E8%BF%9E%E6%8E%A5%E7%94%B5%E8%84%91%E5%92%8C%E6%89%8B%E6%9C%BA%E7%9A%84%E6%A1%A5%E6%A2%81/" target="_self">
+          终于还是Pushbullet解决了问题，连接电脑和手机的桥梁
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2017/%E7%BB%88%E4%BA%8E%E8%BF%98%E6%98%AFpushbullet%E8%A7%A3%E5%86%B3%E4%BA%86%E9%97%AE%E9%A2%98%EF%BC%8C%E8%BF%9E%E6%8E%A5%E7%94%B5%E8%84%91%E5%92%8C%E6%89%8B%E6%9C%BA%E7%9A%84%E6%A1%A5%E6%A2%81/" target="_self">
+          
+          
+            
+          
+          如何轻松的将资源在手机和电脑间传递，共享，实现电脑端和手机端的工作延续，可能每个人都有自己的办法。有的是用同步工具，例如Dropbox、Google drive等，有的使用笔记类例如印象笔记、有道笔记，有的使用清单同步同步，例如滴答清单、wunderlist等。我也经常使用这些软件，虽然也能解决我的一些问题，但是最近我还是开始使用老牌的Pushbullet了。
+起因是我手机端使用Safari作为浏
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2017-06-27 01:13" pubdate>
+              2017-06-27
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%8E%A8%E9%80%81/">推送</a>
+            
+              <a href="/tags/%E7%94%B5%E8%84%91%E6%89%8B%E6%9C%BA%E5%90%8C%E6%AD%A5/">电脑手机同步</a>
+            
+              <a href="/tags/google-chrome/">google-chrome</a>
+            
+              <a href="/tags/pushbullet/">pushbullet</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2017/%E3%80%90%E6%9C%80%E6%96%B0%E3%80%91intellij-idea-2017-%E5%85%8D%E8%B4%B9%E6%BF%80%E6%B4%BB%E6%96%B9%E6%B3%95/" target="_self">
+          【最新】IntelliJ Idea 2017 免费激活方法
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2017/%E3%80%90%E6%9C%80%E6%96%B0%E3%80%91intellij-idea-2017-%E5%85%8D%E8%B4%B9%E6%BF%80%E6%B4%BB%E6%96%B9%E6%B3%95/" target="_self">
+          
+          
+            
+          
+          一、激活服务器方式1. 到网站 http://idea.lanyus.com/ 获取注册码。
+2.填入下面的license server:
+http://intellij.mandroid.cn/ http://idea.imsxm.com/ http://idea.iteblog.com/key.php
+以上方法验证均可以
+ 
+二、PJ补丁永久激活1、下载 http://idea.lanyus.
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2017-06-11 00:58" pubdate>
+              2017-06-11
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%B3%A8%E5%86%8C/">注册</a>
+            
+              <a href="/tags/intellij-idea/">intellij-idea</a>
+            
+              <a href="/tags/key/">key</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2017/todoist-%E5%92%8C-google-%E6%97%A5%E6%9B%86%E5%8F%AF%E4%BB%A5%E5%8D%B3%E6%99%82%E9%9B%99%E5%90%91%E5%90%8C%E6%AD%A5%E4%BB%BB%E5%8B%99%E4%BA%86%EF%BC%81/" target="_self">
+          <img src="/2017/todoist-%E5%92%8C-google-%E6%97%A5%E6%9B%86%E5%8F%AF%E4%BB%A5%E5%8D%B3%E6%99%82%E9%9B%99%E5%90%91%E5%90%8C%E6%AD%A5%E4%BB%BB%E5%8B%99%E4%BA%86%EF%BC%81/todoist%252Bgoogle%252Bcalendar-00.png" srcset="/img/loading.gif" lazyload alt="Todoist 和 Google 日曆可以即時雙向同步任務了！">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2017/todoist-%E5%92%8C-google-%E6%97%A5%E6%9B%86%E5%8F%AF%E4%BB%A5%E5%8D%B3%E6%99%82%E9%9B%99%E5%90%91%E5%90%8C%E6%AD%A5%E4%BB%BB%E5%8B%99%E4%BA%86%EF%BC%81/" target="_self">
+          Todoist 和 Google 日曆可以即時雙向同步任務了！
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2017/todoist-%E5%92%8C-google-%E6%97%A5%E6%9B%86%E5%8F%AF%E4%BB%A5%E5%8D%B3%E6%99%82%E9%9B%99%E5%90%91%E5%90%8C%E6%AD%A5%E4%BB%BB%E5%8B%99%E4%BA%86%EF%BC%81/" target="_self">
+          
+          
+            
+          
+          
+我之前寫了「 20 種待辦清單 App 軟體推薦：評論不同需求時間管理利器」一文後，就常常收到讀者來信詢問我：
+
+「有沒有待辦清單可以和行事曆完美整合的工具推薦？」
+
+我推測可能有兩種需求，第一種是希望任務不只可以用清單排序的方式條列，也可以「在行事曆那樣的格式上規劃時間」，安排每一天足夠完成重要任務的時段。
+第二種是平常行程會放在 Google 日曆，而任務寫在待辦清單，如果可以統一管理，或許
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2017-05-18 16:13" pubdate>
+              2017-05-18
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%97%A5%E5%8E%86%E5%90%8C%E6%AD%A5/">日历同步</a>
+            
+              <a href="/tags/%E5%BE%85%E5%8A%9E%E6%B8%85%E5%8D%95/">待办清单</a>
+            
+              <a href="/tags/google/">google</a>
+            
+              <a href="/tags/todoist/">todoist</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2017/jira%E4%B8%AD%E9%80%9A%E8%BF%87%E9%82%AE%E4%BB%B6%E8%87%AA%E5%8A%A8%E5%AE%9A%E6%97%B6%E5%8F%91%E9%80%81%E5%BB%B6%E6%9C%9F%E4%BB%BB%E5%8A%A1%E5%88%97%E8%A1%A8/" target="_self">
+          <img src="/2017/jira%E4%B8%AD%E9%80%9A%E8%BF%87%E9%82%AE%E4%BB%B6%E8%87%AA%E5%8A%A8%E5%AE%9A%E6%97%B6%E5%8F%91%E9%80%81%E5%BB%B6%E6%9C%9F%E4%BB%BB%E5%8A%A1%E5%88%97%E8%A1%A8/order-filter.jpg" srcset="/img/loading.gif" lazyload alt="Jira中通过邮件自动定时发送延期任务列表">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2017/jira%E4%B8%AD%E9%80%9A%E8%BF%87%E9%82%AE%E4%BB%B6%E8%87%AA%E5%8A%A8%E5%AE%9A%E6%97%B6%E5%8F%91%E9%80%81%E5%BB%B6%E6%9C%9F%E4%BB%BB%E5%8A%A1%E5%88%97%E8%A1%A8/" target="_self">
+          Jira中通过邮件自动定时发送延期任务列表
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2017/jira%E4%B8%AD%E9%80%9A%E8%BF%87%E9%82%AE%E4%BB%B6%E8%87%AA%E5%8A%A8%E5%AE%9A%E6%97%B6%E5%8F%91%E9%80%81%E5%BB%B6%E6%9C%9F%E4%BB%BB%E5%8A%A1%E5%88%97%E8%A1%A8/" target="_self">
+          
+          
+            
+          
+          Jira中可以通过订阅过滤器的方式，实现定时自动发送问题列表。具体使用方法是这样的：
+1、编写过滤器查询那些你想要自动发送的问题列表；虽然jira自带的JQL已经非常强大了，但是对于一些更加高级的查询，推荐安装ScriptRunner插件来实现。 可以参考这里：Jira 6.x版本插件通用破解方法
+2、订阅过滤器找到创建好的过滤器，然后点击图中的订阅链接，就会看到如下界面，这里可以设定收件人、邮件
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2017-05-11 05:03" pubdate>
+              2017-05-11
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/jira/">jira</a>
+            
+              <a href="/tags/%E8%87%AA%E5%8A%A8%E5%8F%91%E9%80%81/">自动发送</a>
+            
+              <a href="/tags/%E8%BF%87%E6%BB%A4%E5%99%A8%E8%AE%A2%E9%98%85/">过滤器订阅</a>
+            
+              <a href="/tags/%E9%82%AE%E4%BB%B6%E8%AE%A2%E9%98%85/">邮件订阅</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2017/jira-6-x%E7%89%88%E6%9C%AC%E6%8F%92%E4%BB%B6%E9%80%9A%E7%94%A8%E7%A0%B4%E8%A7%A3%E6%96%B9%E6%B3%95/" target="_self">
+          <img src="/2017/jira-6-x%E7%89%88%E6%9C%AC%E6%8F%92%E4%BB%B6%E9%80%9A%E7%94%A8%E7%A0%B4%E8%A7%A3%E6%96%B9%E6%B3%95/jira%E6%8F%92%E4%BB%B6%E7%A0%B4%E8%A7%A301.png" srcset="/img/loading.gif" lazyload alt="Jira 6.x版本插件通用破解方法">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2017/jira-6-x%E7%89%88%E6%9C%AC%E6%8F%92%E4%BB%B6%E9%80%9A%E7%94%A8%E7%A0%B4%E8%A7%A3%E6%96%B9%E6%B3%95/" target="_self">
+          Jira 6.x版本插件通用破解方法
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2017/jira-6-x%E7%89%88%E6%9C%AC%E6%8F%92%E4%BB%B6%E9%80%9A%E7%94%A8%E7%A0%B4%E8%A7%A3%E6%96%B9%E6%B3%95/" target="_self">
+          
+          
+            
+          
+          1、申请atlassian账号
+在这个网址：https://my.atlassian.com
+申请好账号，用来生产试用授权码。
+2、安装插件的试用版
+这时候会让你输入第一步中的atlassian账号，并生成一个试用的授权码。
+按照说明填写试用授权码，即可完成试用版本的安装。
+3、编写破解授权码
+红色字体部分包括方括号是需要修改，参考截图中的信息，这里是以ScriptRunner为例的：
+
+
+.ac
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2017-05-10 07:14" pubdate>
+              2017-05-10
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/jira/">jira</a>
+            
+              <a href="/tags/jira%E7%A0%B4%E8%A7%A3/">jira破解</a>
+            
+              <a href="/tags/%E6%8F%92%E4%BB%B6%E7%A0%B4%E8%A7%A3/">插件破解</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2017/%E6%9B%B4%E8%81%AA%E6%98%8E%E7%9A%84%E5%85%8D%E8%B4%B9%E5%9B%BE%E7%89%87%E7%B4%A0%E6%9D%90%E6%90%9C%E7%B4%A0%E5%BC%95%E6%93%8E-everypixel-%E7%94%A8-ai-%E6%8E%92%E9%99%A4%E4%BF%97%E6%B0%94%E7%85%A7/" target="_self">
+          <img src="/2017/%E6%9B%B4%E8%81%AA%E6%98%8E%E7%9A%84%E5%85%8D%E8%B4%B9%E5%9B%BE%E7%89%87%E7%B4%A0%E6%9D%90%E6%90%9C%E7%B4%A0%E5%BC%95%E6%93%8E-everypixel-%E7%94%A8-ai-%E6%8E%92%E9%99%A4%E4%BF%97%E6%B0%94%E7%85%A7/everypixel-00.png" srcset="/img/loading.gif" lazyload alt="更聪明的免费图片素材搜素引擎 Everypixel 用 AI 排除俗气照片">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2017/%E6%9B%B4%E8%81%AA%E6%98%8E%E7%9A%84%E5%85%8D%E8%B4%B9%E5%9B%BE%E7%89%87%E7%B4%A0%E6%9D%90%E6%90%9C%E7%B4%A0%E5%BC%95%E6%93%8E-everypixel-%E7%94%A8-ai-%E6%8E%92%E9%99%A4%E4%BF%97%E6%B0%94%E7%85%A7/" target="_self">
+          更聪明的免费图片素材搜素引擎 Everypixel 用 AI 排除俗气照片
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2017/%E6%9B%B4%E8%81%AA%E6%98%8E%E7%9A%84%E5%85%8D%E8%B4%B9%E5%9B%BE%E7%89%87%E7%B4%A0%E6%9D%90%E6%90%9C%E7%B4%A0%E5%BC%95%E6%93%8E-everypixel-%E7%94%A8-ai-%E6%8E%92%E9%99%A4%E4%BF%97%E6%B0%94%E7%85%A7/" target="_self">
+          
+          
+            
+          
+           之前在找圖片素材時，或許使用一些知名的免費圖庫，例如很龐大的「就缺一張好照片？你會優先推薦的免費圖庫：Pixabay」，但裡面的圖片相對品質參差不齊。或者我們只好到一些特殊精選的免費圖庫去找照片素材，例如：「這11個免費圖庫不再千篇一律！下載攝影師私房照片」，但相對花時間。
+有時候煩惱找不到好看的圖片素材，有時候花很多時間找不到適合我特殊需求的照片，這兩個問題，就是今天要介紹的這個最新「智慧型」
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2017-05-03 01:07" pubdate>
+              2017-05-03
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%9B%BE%E7%89%87%E7%B4%A0%E6%9D%90/">图片素材</a>
+            
+              <a href="/tags/%E5%9B%BE%E7%89%87%E6%90%9C%E7%B4%A2/">图片搜索</a>
+            
+              <a href="/tags/%E5%85%8D%E8%B4%B9%E5%9B%BE%E7%89%87/">免费图片</a>
+            
+              <a href="/tags/everypixel/">everypixel</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2017/google%E8%89%B2%E5%BD%A9%E8%AE%BE%E8%AE%A1%E9%80%9F%E6%9F%A5%E8%A1%A8%EF%BC%8C%E6%94%AF%E6%8C%81%E5%85%A8%E5%B1%8F%E9%A2%84%E8%A7%88%E9%A2%9C%E8%89%B2/" target="_self">
+          Google色彩设计速查表，支持全屏预览颜色
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2017/google%E8%89%B2%E5%BD%A9%E8%AE%BE%E8%AE%A1%E9%80%9F%E6%9F%A5%E8%A1%A8%EF%BC%8C%E6%94%AF%E6%8C%81%E5%85%A8%E5%B1%8F%E9%A2%84%E8%A7%88%E9%A2%9C%E8%89%B2/" target="_self">
+          
+          
+            
+          
+          
+本文源自Google的色彩设计速查表，大席的博客进行了加工，点击颜色值，可以满屏查看对应的颜色。
+
+function showColorView(color) {$("#viewColorDiv").css("background-color", color);$("#viewColorDiv").show();}function hideColorView() {$("#viewColorDi
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2017-05-02 01:04" pubdate>
+              2017-05-02
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E8%AE%BE%E8%AE%A1/">设计</a>
+            
+              <a href="/tags/%E9%85%8D%E8%89%B2/">配色</a>
+            
+              <a href="/tags/google/">google</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <a class="extend prev" rel="prev" href="/page/12/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/#board">11</a><a class="page-number" href="/page/12/#board">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/#board">14</a><a class="page-number" href="/page/15/#board">15</a><span class="space">&hellip;</span><a class="page-number" href="/page/33/#board">33</a><a class="extend next" rel="next" href="/page/14/#board"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

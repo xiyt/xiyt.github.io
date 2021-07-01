@@ -1,0 +1,480 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="daxi">
+  <meta name="keywords" content="">
+  
+  <title>IntelliJ Idea 2019.1.3永久激活方式，JAR文件分享 - 达夕博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiyt.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>达夕博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/banner1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="IntelliJ Idea 2019.1.3永久激活方式，JAR文件分享">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2019-07-22 02:45" pubdate>
+        2019年7月22日 凌晨
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      324 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      3
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">IntelliJ Idea 2019.1.3永久激活方式，JAR文件分享</h1>
+            
+            <div class="markdown-body">
+              <p><img src="data:image/jpeg;base64,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" srcset="/img/loading.gif" lazyload alt="IntelliJ Idea 2019.1.3永久激活方式，JAR文件分享"></p>
+<p>使用方法: 1、先下载压缩包解压后得到jetbrains-agent.jar，把它放到你认为合适的文件夹内。</p>
+<p>2、修改IntelliJ Idea安装目录bin文件夹里的idea64.exe.vmoptions文件，如果是32位系统，就对应的是idea.exe.vmoptions文件。在该文件末端添加一行：</p>
+<p>-javaagent:E:/Program Files/ideaIU/jetbrains-agent.jar</p>
+<p>注意路径要根据实际情况填写。另外如果你之前已经添加过-javaagent这个参数了，就把后面的jar路径改为最新的就行了。保证该文件中只能有一个-javaagent</p>
+<p>3、启动IntelliJ Idea，打开注册窗口： 支持两种注册方式：License server 和 Activation code: 1). 选择License server方式，地址填入：<a target="_blank" rel="noopener" href="http://jetbrains-license-server/">http://jetbrains-license-server</a> （应该会自动填上） 或者点击按钮：”Discover Server”来自动填充地址。 2). 选择Activation code方式离线激活，请使用：ACTIVATION_CODE.txt 内的注册码激活 如果激活窗口一直弹出（error 1653219），请去hosts文件里移除jetbrains相关的项目</p>
+<p>这个最新的jar包在Idea 2019.1.3版本测试通过。</p>
+<p><a target="_blank" rel="noopener" href="https://www.daxiblog.com/intellij-idea-2019-1-3%e6%b0%b8%e4%b9%85%e6%bf%80%e6%b4%bb%e6%96%b9%e5%bc%8f%ef%bc%8cjar%e6%96%87%e4%bb%b6%e5%88%86%e4%ba%ab/jetbrains-agent-v2-1-1-%e6%94%af%e6%8c%81idea%e7%89%88%e6%9c%ac%e4%b8%ba-2019-1-3/">jetbrains-agent-v2.1.1-支持idea版本为-2019.1.3</a></p>
+<p> </p>
+<blockquote>
+<p>以上资源来源于网络，且只做个人学习研究之用，不得用于商业用途！推荐到<a target="_blank" rel="noopener" href="https://www.jetbrains.com/idea/download/">官网购买</a>正式版本。</p>
+</blockquote>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%BF%80%E6%B4%BB/">激活</a>
+                    
+                      <a class="hover-with-bg" href="/tags/intellij-idea/">intellij-idea</a>
+                    
+                      <a class="hover-with-bg" href="/tags/2019-1-3/">2019-1-3</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2019/eva-colors-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9A%84%E9%85%8D%E8%89%B2%E5%B7%A5%E5%85%B7%EF%BC%8C%E6%89%BE%E5%87%BA%E5%8F%AF%E6%90%AD%E9%85%8D%E4%B8%BB%E5%93%81%E7%89%8C%E4%BD%BF%E7%94%A8%E7%9A%84/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Eva Colors 深度学习的配色工具，找出可搭配主品牌使用的颜色</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2019/%E4%BD%BF%E7%94%A8gphotos-sync%E5%A4%87%E4%BB%BDgoogle-%E7%9B%B8%E5%86%8C/">
+                        <span class="hidden-mobile">使用gphotos-sync备份Google 相册</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"B2tecGOesiRBcoXldYV5Jk5A-9Nh9j0Va","appKey":"5tFdBthF0o282SCXuNVxbntd","placeholder":"说点什么","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false,"requiredFields":[]},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

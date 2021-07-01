@@ -1,0 +1,953 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="daxi">
+  <meta name="keywords" content="">
+  
+  <title>达夕博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiyt.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 100vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>达夕博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/banner1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="热衷于分享IT技术/工作效率/优秀软件，申旦达夕，永无止境">
+              
+            </span>
+
+            
+          </div>
+
+          
+            <div class="scroll-down-bar">
+              <i class="iconfont icon-arrowdown"></i>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div class="py-5" id="board"
+          style=margin-top:0>
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/%E5%88%A9%E7%94%A8google-drive%E6%89%93%E9%80%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%93%E5%B1%9E%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/" target="_self">
+          <img src="/2016/%E5%88%A9%E7%94%A8google-drive%E6%89%93%E9%80%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%93%E5%B1%9E%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/googledrive-player.png" srcset="/img/loading.gif" lazyload alt="利用Google Drive打造自己的专属音乐播放器">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/%E5%88%A9%E7%94%A8google-drive%E6%89%93%E9%80%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%93%E5%B1%9E%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/" target="_self">
+          利用Google Drive打造自己的专属音乐播放器
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/%E5%88%A9%E7%94%A8google-drive%E6%89%93%E9%80%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%93%E5%B1%9E%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/" target="_self">
+          
+          
+            
+          
+          
+现在随着各个音乐服务平台逐渐开始收费，例如网易云音乐、虾米音乐、QQ音乐等都推出了各种收费政策，或是会员包月、或者积分兑换，总归像几年前那样的网络音乐免费午餐离我们越来越远了。辛辛苦苦搜集和下载下来的自己喜欢的音乐，也都需要我们及时的备份和存储起来了。大家应该比较清楚，大席的云存储主要使用的是Google Drive和Dropbox，采用双重同步的方式，同事也起到了互为备份的功能。
+当我把音乐全
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-05-22 05:02" pubdate>
+              2016-05-22
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/">音乐播放器</a>
+            
+              <a href="/tags/drivetunes/">drivetunes</a>
+            
+              <a href="/tags/google-drive/">google-drive</a>
+            
+              <a href="/tags/music-player/">music-player</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/%E5%8F%AA%E4%B8%BA%E7%AE%80%E5%8D%95%E5%92%8C%E9%AB%98%E6%95%88%EF%BC%9A%E6%88%91%E5%9C%A8%E6%BB%B4%E7%AD%94%E6%B8%85%E5%8D%95%E4%BD%BF%E7%94%A8%E4%B8%8A%E7%9A%84%E5%9B%9B%E7%82%B9%E6%94%B9%E5%8F%98/" target="_self">
+          <img src="/2016/%E5%8F%AA%E4%B8%BA%E7%AE%80%E5%8D%95%E5%92%8C%E9%AB%98%E6%95%88%EF%BC%9A%E6%88%91%E5%9C%A8%E6%BB%B4%E7%AD%94%E6%B8%85%E5%8D%95%E4%BD%BF%E7%94%A8%E4%B8%8A%E7%9A%84%E5%9B%9B%E7%82%B9%E6%94%B9%E5%8F%98/quicktime.png" srcset="/img/loading.gif" lazyload alt="只为简单和高效：我在滴答清单使用上的四点改变">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/%E5%8F%AA%E4%B8%BA%E7%AE%80%E5%8D%95%E5%92%8C%E9%AB%98%E6%95%88%EF%BC%9A%E6%88%91%E5%9C%A8%E6%BB%B4%E7%AD%94%E6%B8%85%E5%8D%95%E4%BD%BF%E7%94%A8%E4%B8%8A%E7%9A%84%E5%9B%9B%E7%82%B9%E6%94%B9%E5%8F%98/" target="_self">
+          只为简单和高效：我在滴答清单使用上的四点改变
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/%E5%8F%AA%E4%B8%BA%E7%AE%80%E5%8D%95%E5%92%8C%E9%AB%98%E6%95%88%EF%BC%9A%E6%88%91%E5%9C%A8%E6%BB%B4%E7%AD%94%E6%B8%85%E5%8D%95%E4%BD%BF%E7%94%A8%E4%B8%8A%E7%9A%84%E5%9B%9B%E7%82%B9%E6%94%B9%E5%8F%98/" target="_self">
+          
+          
+            
+          
+          
+我在我的博客里多次介绍过滴答清单这个国内优秀的ToDo工具，目前它也是我主要的提醒事项和备忘录工具。所以在我的iPhone、安卓手机、Chrome中都安装进行了安装。在这个智能手机成为主导的时代，PC端软件往往弱化了很多，大家都愿意使用手机、浏览器插件或者直接使用Web的方式访问这些跨平台的应用。然而PC端软件也是有它的很多优点的，它能够和操作系统很好的结合，例如你可以使用全局快捷键、可以随电脑
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-05-21 09:18" pubdate>
+              2016-05-21
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%8F%90%E9%AB%98%E7%94%9F%E4%BA%A7%E5%8A%9B/">提高生产力</a>
+            
+              <a href="/categories/%E6%8F%90%E9%AB%98%E7%94%9F%E4%BA%A7%E5%8A%9B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%BB%B4%E7%AD%94%E6%B8%85%E5%8D%95/">滴答清单</a>
+            
+              <a href="/tags/%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86/">任务管理</a>
+            
+              <a href="/tags/%E7%AE%80%E5%8D%95%E5%92%8C%E9%AB%98%E6%95%88/">简单和高效</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/google-spaces%EF%BC%9A%E6%AC%A2%E8%BF%8E%E5%8A%A0%E5%85%A5%E5%A4%A7%E5%B8%AD%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%88%86%E4%BA%AB%E8%AE%A8%E8%AE%BA%E7%BE%A4/" target="_self">
+          <img src="/2016/google-spaces%EF%BC%9A%E6%AC%A2%E8%BF%8E%E5%8A%A0%E5%85%A5%E5%A4%A7%E5%B8%AD%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%88%86%E4%BA%AB%E8%AE%A8%E8%AE%BA%E7%BE%A4/googlespaces.png" srcset="/img/loading.gif" lazyload alt="Google Spaces：欢迎加入大席的博客分享讨论群">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/google-spaces%EF%BC%9A%E6%AC%A2%E8%BF%8E%E5%8A%A0%E5%85%A5%E5%A4%A7%E5%B8%AD%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%88%86%E4%BA%AB%E8%AE%A8%E8%AE%BA%E7%BE%A4/" target="_self">
+          Google Spaces：欢迎加入大席的博客分享讨论群
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/google-spaces%EF%BC%9A%E6%AC%A2%E8%BF%8E%E5%8A%A0%E5%85%A5%E5%A4%A7%E5%B8%AD%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%88%86%E4%BA%AB%E8%AE%A8%E8%AE%BA%E7%BE%A4/" target="_self">
+          
+          
+            
+          
+          
+利用Google新品Spaces建立了本博客的分享讨论交流群。我觉得Google Spaces相比于Google+，主要有一下一些特点：
+
+让大家更加专注的讨论某个话题
+更加及时的沟通，像IM一样
+快速搜索以前的话题
+只需要一个链接就可以加入讨论
+
+这里不做更加详细的介绍了，点击一下链接试用一下是最好的。
+加入：大席的博客分享讨论群
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-05-20 03:24" pubdate>
+              2016-05-20
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/google-spaces/">google-spaces</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/%E5%AE%83%E8%AE%A9%E4%BD%A0%E6%9B%B4%E5%8A%A0%E8%81%AA%E6%98%8E%E7%9A%84%E9%A9%BE%E8%BD%A6%EF%BC%9A%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE%E8%B7%AF%E5%86%B5%E9%9B%B7%E8%BE%BE%EF%BC%8C%E5%AF%BC%E8%88%AA/" target="_self">
+          <img src="/2016/%E5%AE%83%E8%AE%A9%E4%BD%A0%E6%9B%B4%E5%8A%A0%E8%81%AA%E6%98%8E%E7%9A%84%E9%A9%BE%E8%BD%A6%EF%BC%9A%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE%E8%B7%AF%E5%86%B5%E9%9B%B7%E8%BE%BE%EF%BC%8C%E5%AF%BC%E8%88%AA/lukuang1.png" srcset="/img/loading.gif" lazyload alt="它让你更加聪明的驾车：百度地图路况雷达，导航中随时切换路线，避免拥堵。">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/%E5%AE%83%E8%AE%A9%E4%BD%A0%E6%9B%B4%E5%8A%A0%E8%81%AA%E6%98%8E%E7%9A%84%E9%A9%BE%E8%BD%A6%EF%BC%9A%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE%E8%B7%AF%E5%86%B5%E9%9B%B7%E8%BE%BE%EF%BC%8C%E5%AF%BC%E8%88%AA/" target="_self">
+          它让你更加聪明的驾车：百度地图路况雷达，导航中随时切换路线，避免拥堵。
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/%E5%AE%83%E8%AE%A9%E4%BD%A0%E6%9B%B4%E5%8A%A0%E8%81%AA%E6%98%8E%E7%9A%84%E9%A9%BE%E8%BD%A6%EF%BC%9A%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE%E8%B7%AF%E5%86%B5%E9%9B%B7%E8%BE%BE%EF%BC%8C%E5%AF%BC%E8%88%AA/" target="_self">
+          
+          
+            
+          
+          新版的百度地图中，把解决和避让拥堵做到了大幅提升，并且将传统的导航分为两种模式：
+
+专业导航模式
+路况雷达模式
+
+我觉得这个变化体验应该是非常好的，想一下我们在平时市内驾驶时，对道路都是比较熟悉的，这时候更加关注的是我目前规划的路线中路况，什么时候会出现拥堵。这时候其实不需要开启专业导航模式，不需要提示我什么时候该直行了，什么时候我该右转了。只需要打开路况雷达模式就可以实时了解沿途的路况情况，并给
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-05-20 02:46" pubdate>
+              2016-05-20
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE/">百度地图</a>
+            
+              <a href="/tags/%E7%99%BE%E5%BA%A6%E5%AF%BC%E8%88%AA/">百度导航</a>
+            
+              <a href="/tags/%E8%B7%AF%E5%86%B5%E9%9B%B7%E8%BE%BE/">路况雷达</a>
+            
+              <a href="/tags/%E9%81%BF%E5%85%8D%E6%8B%A5%E5%A0%B5/">避免拥堵</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/%E4%BD%BF%E7%94%A8outlook-google-calendar-sync%E5%AE%9E%E7%8E%B0outlook%E5%92%8Cgoogle%E6%97%A5%E5%8E%86%E5%8F%8C%E5%90%91%E5%90%8C%E6%AD%A5/" target="_self">
+          <img src="/2016/%E4%BD%BF%E7%94%A8outlook-google-calendar-sync%E5%AE%9E%E7%8E%B0outlook%E5%92%8Cgoogle%E6%97%A5%E5%8E%86%E5%8F%8C%E5%90%91%E5%90%8C%E6%AD%A5/outlooksync.png" srcset="/img/loading.gif" lazyload alt="使用Outlook Google Calendar Sync实现Outlook和Google日历双向同步">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/%E4%BD%BF%E7%94%A8outlook-google-calendar-sync%E5%AE%9E%E7%8E%B0outlook%E5%92%8Cgoogle%E6%97%A5%E5%8E%86%E5%8F%8C%E5%90%91%E5%90%8C%E6%AD%A5/" target="_self">
+          使用Outlook Google Calendar Sync实现Outlook和Google日历双向同步
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/%E4%BD%BF%E7%94%A8outlook-google-calendar-sync%E5%AE%9E%E7%8E%B0outlook%E5%92%8Cgoogle%E6%97%A5%E5%8E%86%E5%8F%8C%E5%90%91%E5%90%8C%E6%AD%A5/" target="_self">
+          
+          
+            
+          
+          
+我平时主要Google日历、Gmail作为日常日历邮件工具使用。但是在Windows的办公电脑中，我的邮件客户端使用的是Outlook，因为它和Windows系统、Microsoft Office结合的很好。而且其中的自定义可保存的搜索功能，在某种程度上比邮件规则更加简单方便，请参看Outlook2013中三个有助于提高工作效率的使用技巧。现在就存在一个问题：如何把工作中的Outlook日历和生
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-05-18 03:57" pubdate>
+              2016-05-18
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%97%A5%E5%8E%86%E5%90%8C%E6%AD%A5/">日历同步</a>
+            
+              <a href="/tags/google%E6%97%A5%E5%8E%86/">google日历</a>
+            
+              <a href="/tags/outlook-google-calendar-sync/">outlook-google-calendar-sync</a>
+            
+              <a href="/tags/outlook%E6%97%A5%E5%8E%86/">outlook日历</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/%E8%AE%A9%E6%9F%A5%E6%89%BE%E7%85%A7%E7%89%87%E6%9B%B4%E5%8A%A0%E5%BF%AB%E6%8D%B7%EF%BC%9A%E5%96%84%E7%94%A8google%E7%9B%B8%E5%86%8C%E7%9A%84%E4%BA%BA%E5%83%8F%E6%90%9C%E7%B4%A2/" target="_self">
+          <img src="/2016/%E8%AE%A9%E6%9F%A5%E6%89%BE%E7%85%A7%E7%89%87%E6%9B%B4%E5%8A%A0%E5%BF%AB%E6%8D%B7%EF%BC%9A%E5%96%84%E7%94%A8google%E7%9B%B8%E5%86%8C%E7%9A%84%E4%BA%BA%E5%83%8F%E6%90%9C%E7%B4%A2/googlephoto1.png" srcset="/img/loading.gif" lazyload alt="让查找照片更加快捷：善用Google相册的人像搜索">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/%E8%AE%A9%E6%9F%A5%E6%89%BE%E7%85%A7%E7%89%87%E6%9B%B4%E5%8A%A0%E5%BF%AB%E6%8D%B7%EF%BC%9A%E5%96%84%E7%94%A8google%E7%9B%B8%E5%86%8C%E7%9A%84%E4%BA%BA%E5%83%8F%E6%90%9C%E7%B4%A2/" target="_self">
+          让查找照片更加快捷：善用Google相册的人像搜索
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/%E8%AE%A9%E6%9F%A5%E6%89%BE%E7%85%A7%E7%89%87%E6%9B%B4%E5%8A%A0%E5%BF%AB%E6%8D%B7%EF%BC%9A%E5%96%84%E7%94%A8google%E7%9B%B8%E5%86%8C%E7%9A%84%E4%BA%BA%E5%83%8F%E6%90%9C%E7%B4%A2/" target="_self">
+          
+          
+            
+          
+          即使在iPhone中，我也使用Google相册作为我的相册工具，把照片同步到iCloud的同时也同步到我的Google相册。在Google相册中常用的智能助理、故事相册、重温这一天等功能都非常方便的让我们记录每次活动或旅游的照片。而唯独人像搜索这个功能，一直知道它的存在却不曾好好使用，今天打开Google相册后，点开搜索框，看到Google相册提供的人像推荐，我不仅使用的起来，感觉非常好用，下面就
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-05-16 09:01" pubdate>
+              2016-05-16
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%A4%B4%E5%83%8F%E8%AF%86%E5%88%AB/">头像识别</a>
+            
+              <a href="/tags/%E7%85%A7%E7%89%87%E6%90%9C%E7%B4%A2/">照片搜索</a>
+            
+              <a href="/tags/google%E7%9B%B8%E5%86%8C/">google相册</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/%E5%AE%9E%E6%97%B6%E6%96%87%E4%BB%B6%E5%88%86%E4%BA%AB%E7%BD%91%E7%AB%99dewdrop%EF%BC%9A%E6%97%A0%E9%9C%80%E6%B3%A8%E5%86%8C%E3%80%81%E6%97%A0%E9%9C%80%E4%BB%BB%E4%BD%95%E6%8F%92%E4%BB%B6%E5%92%8C/" target="_self">
+          <img src="/2016/%E5%AE%9E%E6%97%B6%E6%96%87%E4%BB%B6%E5%88%86%E4%BA%AB%E7%BD%91%E7%AB%99dewdrop%EF%BC%9A%E6%97%A0%E9%9C%80%E6%B3%A8%E5%86%8C%E3%80%81%E6%97%A0%E9%9C%80%E4%BB%BB%E4%BD%95%E6%8F%92%E4%BB%B6%E5%92%8C/dewdrop-1024x481.png" srcset="/img/loading.gif" lazyload alt="实时文件分享网站DewDrop：无需注册、无需任何插件和客户端、用完即删">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/%E5%AE%9E%E6%97%B6%E6%96%87%E4%BB%B6%E5%88%86%E4%BA%AB%E7%BD%91%E7%AB%99dewdrop%EF%BC%9A%E6%97%A0%E9%9C%80%E6%B3%A8%E5%86%8C%E3%80%81%E6%97%A0%E9%9C%80%E4%BB%BB%E4%BD%95%E6%8F%92%E4%BB%B6%E5%92%8C/" target="_self">
+          实时文件分享网站DewDrop：无需注册、无需任何插件和客户端、用完即删
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/%E5%AE%9E%E6%97%B6%E6%96%87%E4%BB%B6%E5%88%86%E4%BA%AB%E7%BD%91%E7%AB%99dewdrop%EF%BC%9A%E6%97%A0%E9%9C%80%E6%B3%A8%E5%86%8C%E3%80%81%E6%97%A0%E9%9C%80%E4%BB%BB%E4%BD%95%E6%8F%92%E4%BB%B6%E5%92%8C/" target="_self">
+          
+          
+            
+          
+          当我们想把一个文件分享给同事或者朋友，方法有很多，例如传统的方法有U盘和邮件，比较普遍的方法有即时通讯工具、网盘，然而这些方法有一个共同的缺点：在实施分享文件之前你都要先做一个“准备工作”，你要找到U盘，你要打开邮件，你要打开你的QQ（对方也得有），或者你要登录你的网盘，然后才是上传或是发送来分享文。而今天分享的DewDrop却非常简单，你不需要事前准备这些工作，直接上传你的文件，然后发送链接分享
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-05-14 15:05" pubdate>
+              2016-05-14
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%8D%B3%E6%97%B6%E5%88%86%E4%BA%AB/">即时分享</a>
+            
+              <a href="/tags/%E6%96%87%E4%BB%B6%E5%88%86%E4%BA%AB/">文件分享</a>
+            
+              <a href="/tags/dewdrop/">dewdrop</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/%E4%B8%8D%E9%80%8A%E4%BA%8Edropbox%E7%9A%84%E5%9B%BD%E5%A4%96%E4%BC%98%E7%A7%80%E7%BD%91%E7%9B%98pcloud%E6%8E%A8%E8%8D%90%EF%BC%9A%E5%85%AD%E5%A4%A7%E5%AE%9E%E7%94%A8%E5%8A%9F%E8%83%BD%E4%BB%8B/" target="_self">
+          <img src="/2016/%E4%B8%8D%E9%80%8A%E4%BA%8Edropbox%E7%9A%84%E5%9B%BD%E5%A4%96%E4%BC%98%E7%A7%80%E7%BD%91%E7%9B%98pcloud%E6%8E%A8%E8%8D%90%EF%BC%9A%E5%85%AD%E5%A4%A7%E5%AE%9E%E7%94%A8%E5%8A%9F%E8%83%BD%E4%BB%8B/pcloud.jpg" srcset="/img/loading.gif" lazyload alt="不逊于Dropbox的国外优秀网盘pCloud推荐：六大实用功能介绍，国内可轻松访问">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/%E4%B8%8D%E9%80%8A%E4%BA%8Edropbox%E7%9A%84%E5%9B%BD%E5%A4%96%E4%BC%98%E7%A7%80%E7%BD%91%E7%9B%98pcloud%E6%8E%A8%E8%8D%90%EF%BC%9A%E5%85%AD%E5%A4%A7%E5%AE%9E%E7%94%A8%E5%8A%9F%E8%83%BD%E4%BB%8B/" target="_self">
+          不逊于Dropbox的国外优秀网盘pCloud推荐：六大实用功能介绍，国内可轻松访问
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/%E4%B8%8D%E9%80%8A%E4%BA%8Edropbox%E7%9A%84%E5%9B%BD%E5%A4%96%E4%BC%98%E7%A7%80%E7%BD%91%E7%9B%98pcloud%E6%8E%A8%E8%8D%90%EF%BC%9A%E5%85%AD%E5%A4%A7%E5%AE%9E%E7%94%A8%E5%8A%9F%E8%83%BD%E4%BB%8B/" target="_self">
+          
+          
+            
+          
+          
+今天介绍一款国外的、国内可轻松访问的、不逊于Dropbox和Google Drive的、功能丰富的优秀网盘同步盘工具，那就是**pCloud**。接下来我从几个方面介绍一下这款网盘服务的实用功能：
+1、先说说访问速度尽管pCloud是国外的一个网盘，但是在国内可以轻松的、快速的访问，这一点确实令人惊讶。我用的是电信网络，下面看我截图中的上传速度，能保持在800-900K/s，效果非常好。
+
+2、
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-05-13 02:37" pubdate>
+              2016-05-13
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E4%B8%8A%E4%BC%A0%E9%93%BE%E6%8E%A5/">上传链接</a>
+            
+              <a href="/tags/%E5%90%8C%E6%AD%A5%E7%9B%98/">同步盘</a>
+            
+              <a href="/tags/%E5%9B%BD%E5%A4%96%E7%BD%91%E7%9B%98/">国外网盘</a>
+            
+              <a href="/tags/pcloud/">pcloud</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/%E8%AE%A9%E4%BD%A0%E7%9C%8B%E5%95%A5%E4%BD%A0%E7%9C%8B%E5%95%A5%EF%BC%9A%E4%BD%BF%E7%94%A8%E8%BF%99%E4%B8%AA%E5%8A%9F%E8%83%BD%E5%88%AB%E4%BA%BA%E5%86%8D%E4%B9%9F%E5%88%AB%E6%83%B3%E4%B9%B1%E7%BF%BB/" target="_self">
+          <img src="/2016/%E8%AE%A9%E4%BD%A0%E7%9C%8B%E5%95%A5%E4%BD%A0%E7%9C%8B%E5%95%A5%EF%BC%9A%E4%BD%BF%E7%94%A8%E8%BF%99%E4%B8%AA%E5%8A%9F%E8%83%BD%E5%88%AB%E4%BA%BA%E5%86%8D%E4%B9%9F%E5%88%AB%E6%83%B3%E4%B9%B1%E7%BF%BB/yindao.png" srcset="/img/loading.gif" lazyload alt="让你看啥你看啥：使用这个功能别人再也别想乱翻你的手机">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/%E8%AE%A9%E4%BD%A0%E7%9C%8B%E5%95%A5%E4%BD%A0%E7%9C%8B%E5%95%A5%EF%BC%9A%E4%BD%BF%E7%94%A8%E8%BF%99%E4%B8%AA%E5%8A%9F%E8%83%BD%E5%88%AB%E4%BA%BA%E5%86%8D%E4%B9%9F%E5%88%AB%E6%83%B3%E4%B9%B1%E7%BF%BB/" target="_self">
+          让你看啥你看啥：使用这个功能别人再也别想乱翻你的手机
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/%E8%AE%A9%E4%BD%A0%E7%9C%8B%E5%95%A5%E4%BD%A0%E7%9C%8B%E5%95%A5%EF%BC%9A%E4%BD%BF%E7%94%A8%E8%BF%99%E4%B8%AA%E5%8A%9F%E8%83%BD%E5%88%AB%E4%BA%BA%E5%86%8D%E4%B9%9F%E5%88%AB%E6%83%B3%E4%B9%B1%E7%BF%BB/" target="_self">
+          
+          
+            
+          
+          
+由于各种原因，自己的手机难免会到别人的手里，或是临时借用，或是看照片，或是使用某个应用，但是都会面临一个问题，如何能防止别人乱翻你的手机呢？下面我就分享一个iPhone中的一个方法：
+要解决的问题：
+当同事想看我的某张照片时，又不想让他在相册里座翻右翻；
+当朋友需要使用我手机上的某个应用时，又不想让他打开其他的应用；
+当小朋友想玩我手机上的游戏时，又不想让他乱碰其他应用和设置；
+
+解决方案原理：
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-05-11 03:13" pubdate>
+              2016-05-11
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%99%BA%E8%83%BD%E6%89%8B%E6%9C%BA/">智能手机</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%BC%95%E5%AF%BC%E5%BC%8F%E8%AE%BF%E9%97%AE/">引导式访问</a>
+            
+              <a href="/tags/%E8%AE%BF%E9%97%AE%E9%99%90%E5%88%B6/">访问限制</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/%E5%BC%BA%E7%83%88%E6%8E%A8%E8%8D%90opera%E6%8F%90%E4%BE%9B%E5%85%8D%E8%B4%B9vpn%E5%BA%94%E7%94%A8/" target="_self">
+          <img src="/2016/%E5%BC%BA%E7%83%88%E6%8E%A8%E8%8D%90opera%E6%8F%90%E4%BE%9B%E5%85%8D%E8%B4%B9vpn%E5%BA%94%E7%94%A8/opera-vpn-ios-landscape.jpg" srcset="/img/loading.gif" lazyload alt="[强烈推荐]Opera提供免费VPN应用：Opera VPN">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/%E5%BC%BA%E7%83%88%E6%8E%A8%E8%8D%90opera%E6%8F%90%E4%BE%9B%E5%85%8D%E8%B4%B9vpn%E5%BA%94%E7%94%A8/" target="_self">
+          [强烈推荐]Opera提供免费VPN应用：Opera VPN
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/%E5%BC%BA%E7%83%88%E6%8E%A8%E8%8D%90opera%E6%8F%90%E4%BE%9B%E5%85%8D%E8%B4%B9vpn%E5%BA%94%E7%94%A8/" target="_self">
+          
+          
+            
+          
+          
+今天看到消息，大名鼎鼎的浏览器厂商Opera为广大苹果用户提供了一款免费的VPN应用，方便大家在手机端通过VPN访问更加安全和无广告的纯净网络。我第一时间进行了下载和安装，在这里分享一下使用经验。
+你需要的仅仅是一个美国地区的Apple ID，因为Opera VPN并没有在国内市场发布。 美国地区的Apple ID的获取方法其实也很简单，直接注册一个新的Apple ID，注册时地区选择美国，信用
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-05-10 08:26" pubdate>
+              2016-05-10
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/opera-vpn/">opera-vpn</a>
+            
+              <a href="/tags/%E5%85%8D%E8%B4%B9vpn/">免费vpn</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <a class="extend prev" rel="prev" href="/page/22/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/21/#board">21</a><a class="page-number" href="/page/22/#board">22</a><span class="page-number current">23</span><a class="page-number" href="/page/24/#board">24</a><a class="page-number" href="/page/25/#board">25</a><span class="space">&hellip;</span><a class="page-number" href="/page/33/#board">33</a><a class="extend next" rel="next" href="/page/24/#board"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

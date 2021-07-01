@@ -1,0 +1,959 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="daxi">
+  <meta name="keywords" content="">
+  
+  <title>达夕博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiyt.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 100vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>达夕博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/banner1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="热衷于分享IT技术/工作效率/优秀软件，申旦达夕，永无止境">
+              
+            </span>
+
+            
+          </div>
+
+          
+            <div class="scroll-down-bar">
+              <i class="iconfont icon-arrowdown"></i>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div class="py-5" id="board"
+          style=margin-top:0>
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/%E4%B8%8B%E8%BD%BDjira6-3-6%E5%AE%98%E6%96%B9linux%E5%8E%9F%E7%89%88%EF%BC%8C%E6%94%BE%E5%9C%A8%E8%BF%99%E9%87%8C%E6%96%B9%E4%BE%BF%E5%A4%A7%E5%AE%B6%E4%B8%8B%E8%BD%BD%E4%BD%BF%E7%94%A8/" target="_self">
+          <img src="/2016/%E4%B8%8B%E8%BD%BDjira6-3-6%E5%AE%98%E6%96%B9linux%E5%8E%9F%E7%89%88%EF%BC%8C%E6%94%BE%E5%9C%A8%E8%BF%99%E9%87%8C%E6%96%B9%E4%BE%BF%E5%A4%A7%E5%AE%B6%E4%B8%8B%E8%BD%BD%E4%BD%BF%E7%94%A8/jira-install.jpg" srcset="/img/loading.gif" lazyload alt="[下载]Jira6.3.6官方Linux原版，放在这里方便大家下载使用">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/%E4%B8%8B%E8%BD%BDjira6-3-6%E5%AE%98%E6%96%B9linux%E5%8E%9F%E7%89%88%EF%BC%8C%E6%94%BE%E5%9C%A8%E8%BF%99%E9%87%8C%E6%96%B9%E4%BE%BF%E5%A4%A7%E5%AE%B6%E4%B8%8B%E8%BD%BD%E4%BD%BF%E7%94%A8/" target="_self">
+          [下载]Jira6.3.6官方Linux原版，放在这里方便大家下载使用
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/%E4%B8%8B%E8%BD%BDjira6-3-6%E5%AE%98%E6%96%B9linux%E5%8E%9F%E7%89%88%EF%BC%8C%E6%94%BE%E5%9C%A8%E8%BF%99%E9%87%8C%E6%96%B9%E4%BE%BF%E5%A4%A7%E5%AE%B6%E4%B8%8B%E8%BD%BD%E4%BD%BF%E7%94%A8/" target="_self">
+          
+          
+            
+          
+          最近在搭建Jira环境，看了不少网上的教程，转来转去的文章还真是多，单是Linux版本的atlassian-jira-6.3.6.tar.gz下载地址就全都是一样的，有的给的是一个失效的百度网盘地址，有的给的是一个官方的地址，但是官方网站访问过慢，基本下载不了。这里我通过VPN下载到了这个文件，并放在了这里，方便需要的朋友下载安装。这里就不在赘述安装和授权方式了，大家可以查看网上的文章，或者留言给
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-12-22 01:36" pubdate>
+              2016-12-22
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/jira/">jira</a>
+            
+              <a href="/tags/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/">敏捷开发</a>
+            
+              <a href="/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/">项目管理</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/%E7%B2%BE%E9%80%89%E4%B8%83%E6%AC%BE%E5%9B%BD%E5%86%85%E5%A4%96%E8%91%97%E5%90%8D%E7%9A%84%E5%9C%A8%E7%BA%BF%E4%BD%9C%E5%9B%BE%E5%B7%A5%E5%85%B7/" target="_self">
+          <img src="/2016/%E7%B2%BE%E9%80%89%E4%B8%83%E6%AC%BE%E5%9B%BD%E5%86%85%E5%A4%96%E8%91%97%E5%90%8D%E7%9A%84%E5%9C%A8%E7%BA%BF%E4%BD%9C%E5%9B%BE%E5%B7%A5%E5%85%B7/online-char-01.jpg" srcset="/img/loading.gif" lazyload alt="精选七款国内外著名的在线作图工具">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/%E7%B2%BE%E9%80%89%E4%B8%83%E6%AC%BE%E5%9B%BD%E5%86%85%E5%A4%96%E8%91%97%E5%90%8D%E7%9A%84%E5%9C%A8%E7%BA%BF%E4%BD%9C%E5%9B%BE%E5%B7%A5%E5%85%B7/" target="_self">
+          精选七款国内外著名的在线作图工具
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/%E7%B2%BE%E9%80%89%E4%B8%83%E6%AC%BE%E5%9B%BD%E5%86%85%E5%A4%96%E8%91%97%E5%90%8D%E7%9A%84%E5%9C%A8%E7%BA%BF%E4%BD%9C%E5%9B%BE%E5%B7%A5%E5%85%B7/" target="_self">
+          
+          
+            
+          
+          最近想在团队里使用在线作图工具，使用的在线工具的原因是，一来免得大家再安装本地软件，二来在线工具在多人共享，团队协作方面的优势更大，再者就是只要有网络，就可以随时查看在线图标。于是搜索了一下国内外的各种在线作图工具，有国内的，国外的，也有收费的，半收费的，完全免费的。这里分享给大家，需要的朋友可以结合自己的情况，选择相应的在线作图工具。
+
+姓名：Lucidchart
+地域：国外
+网址：https:
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-12-14 02:11" pubdate>
+              2016-12-14
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/">思维导图</a>
+            
+              <a href="/tags/%E5%9C%A8%E7%BA%BF%E4%B9%A6%E7%AD%BE/">在线书签</a>
+            
+              <a href="/tags/%E5%9C%A8%E7%BA%BF%E5%9B%BE%E8%A1%A8/">在线图表</a>
+            
+              <a href="/tags/%E7%99%BE%E5%BA%A6%E8%84%91%E5%9B%BE/">百度脑图</a>
+            
+              <a href="/tags/processon/">processon</a>
+            
+              <a href="/tags/cacoo/">cacoo</a>
+            
+              <a href="/tags/coggle/">coggle</a>
+            
+              <a href="/tags/creately/">creately</a>
+            
+              <a href="/tags/lucidchart/">lucidchart</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/%E5%9B%BE%E7%89%87%E6%95%99%E7%A8%8B-%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%A5%97%E9%A4%90%E6%B4%BB%E5%8A%A8-%E5%8F%AF%E5%85%8D%E8%B4%B9%E4%BD%BF%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8/" target="_self">
+          <img src="/2016/%E5%9B%BE%E7%89%87%E6%95%99%E7%A8%8B-%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%A5%97%E9%A4%90%E6%B4%BB%E5%8A%A8-%E5%8F%AF%E5%85%8D%E8%B4%B9%E4%BD%BF%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8/aliyun-free-01.jpg" srcset="/img/loading.gif" lazyload alt="[图片教程] 阿里云免费套餐活动 可免费使用服务器半年">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/%E5%9B%BE%E7%89%87%E6%95%99%E7%A8%8B-%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%A5%97%E9%A4%90%E6%B4%BB%E5%8A%A8-%E5%8F%AF%E5%85%8D%E8%B4%B9%E4%BD%BF%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8/" target="_self">
+          [图片教程] 阿里云免费套餐活动 可免费使用服务器半年
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/%E5%9B%BE%E7%89%87%E6%95%99%E7%A8%8B-%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9%E5%A5%97%E9%A4%90%E6%B4%BB%E5%8A%A8-%E5%8F%AF%E5%85%8D%E8%B4%B9%E4%BD%BF%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8/" target="_self">
+          
+          
+            
+          
+          
+这几天除了京东旗下的京东云免费为用户提供1个月的服务器使用外，阿里云也为新用户上线了给力的活动。
+京东云那边说实话还是比较坑爹的，每天发放的代金券就那么丢丢的名额导致不少用户压根领不到代金券。
+阿里云这边活动相对来说更好一些，基本上你只需要获得邀请码或者花费5块钱就可以获得半年的服务器。
+活动规则如下：
+1、必须是新注册的用户且必须通过实名认证，个人可以直接绑定支付宝进行实名认证；
+2、对于企业
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-12-09 00:56" pubdate>
+              2016-12-09
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E4%BA%92%E8%81%94%E7%BD%91/">互联网</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%85%8D%E8%B4%B9%E4%BA%91%E4%B8%BB%E6%9C%BA/">免费云主机</a>
+            
+              <a href="/tags/%E9%98%BF%E9%87%8C%E4%BA%91/">阿里云</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/%E8%87%AA%E5%8A%A8%E5%A4%87%E4%BB%BDgoogle-chrome%E4%B9%A6%E7%AD%BE%E6%95%B0%E6%8D%AE%EF%BC%8C%E5%B9%B6%E6%89%93%E9%80%A0%E4%B8%93%E5%B1%9E%E5%9C%A8%E7%BA%BF%E4%B9%A6%E7%AD%BE%E7%BD%91%E9%A1%B5/" target="_self">
+          <img src="/2016/%E8%87%AA%E5%8A%A8%E5%A4%87%E4%BB%BDgoogle-chrome%E4%B9%A6%E7%AD%BE%E6%95%B0%E6%8D%AE%EF%BC%8C%E5%B9%B6%E6%89%93%E9%80%A0%E4%B8%93%E5%B1%9E%E5%9C%A8%E7%BA%BF%E4%B9%A6%E7%AD%BE%E7%BD%91%E9%A1%B5/auto-bookmarks-01.jpg" srcset="/img/loading.gif" lazyload alt="[技术贴]自动备份Google Chrome书签数据，并打造专属在线书签网页">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/%E8%87%AA%E5%8A%A8%E5%A4%87%E4%BB%BDgoogle-chrome%E4%B9%A6%E7%AD%BE%E6%95%B0%E6%8D%AE%EF%BC%8C%E5%B9%B6%E6%89%93%E9%80%A0%E4%B8%93%E5%B1%9E%E5%9C%A8%E7%BA%BF%E4%B9%A6%E7%AD%BE%E7%BD%91%E9%A1%B5/" target="_self">
+          [技术贴]自动备份Google Chrome书签数据，并打造专属在线书签网页
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/%E8%87%AA%E5%8A%A8%E5%A4%87%E4%BB%BDgoogle-chrome%E4%B9%A6%E7%AD%BE%E6%95%B0%E6%8D%AE%EF%BC%8C%E5%B9%B6%E6%89%93%E9%80%A0%E4%B8%93%E5%B1%9E%E5%9C%A8%E7%BA%BF%E4%B9%A6%E7%AD%BE%E7%BD%91%E9%A1%B5/" target="_self">
+          
+          
+            
+          
+          说到Google Chrome的书签备份，大家可能觉得Chrome的书签本身就已经同步到Google服务器了，还备份什么呢。这里说的备份是想把Chrome的书签数据导出，然后使用在下列场景：
+
+新安装好Google Chrome后如果无法翻墙，直接导入备份的书签数据
+将书签数据导入到其他浏览器
+通过书签数据自动备份，制作一个可更新的在线书签
+
+通常我们备份Google Chrome书签，可能都是通
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-12-08 05:38" pubdate>
+              2016-12-08
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%8A%80%E6%9C%AF%E7%BC%96%E7%A8%8B/">技术编程</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E4%B9%A6%E7%AD%BE%E5%90%8C%E6%AD%A5/">书签同步</a>
+            
+              <a href="/tags/%E5%9C%A8%E7%BA%BF%E4%B9%A6%E7%AD%BE/">在线书签</a>
+            
+              <a href="/tags/google-chrome/">google-chrome</a>
+            
+              <a href="/tags/bookmarks/">bookmarks</a>
+            
+              <a href="/tags/%E4%B9%A6%E7%AD%BE%E5%A4%87%E4%BB%BD/">书签备份</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/%E6%9C%80%E6%96%B0aws%E5%85%8D%E8%B4%B9%E4%B8%80%E5%B9%B4%E4%BA%91%E6%9C%8D%E5%8A%A1%E7%94%B3%E8%AF%B7%E7%BB%86%E8%8A%82%E5%88%86%E4%BA%AB%E5%8F%8A%E9%85%8D%E7%BD%AEshadowsocks%E6%9C%8D%E5%8A%A1/" target="_self">
+          <img src="/2016/%E6%9C%80%E6%96%B0aws%E5%85%8D%E8%B4%B9%E4%B8%80%E5%B9%B4%E4%BA%91%E6%9C%8D%E5%8A%A1%E7%94%B3%E8%AF%B7%E7%BB%86%E8%8A%82%E5%88%86%E4%BA%AB%E5%8F%8A%E9%85%8D%E7%BD%AEshadowsocks%E6%9C%8D%E5%8A%A1/aws-free-01.jpg" srcset="/img/loading.gif" lazyload alt="[最新]AWS免费一年云服务申请细节分享及配置Shadowsocks服务">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/%E6%9C%80%E6%96%B0aws%E5%85%8D%E8%B4%B9%E4%B8%80%E5%B9%B4%E4%BA%91%E6%9C%8D%E5%8A%A1%E7%94%B3%E8%AF%B7%E7%BB%86%E8%8A%82%E5%88%86%E4%BA%AB%E5%8F%8A%E9%85%8D%E7%BD%AEshadowsocks%E6%9C%8D%E5%8A%A1/" target="_self">
+          [最新]AWS免费一年云服务申请细节分享及配置Shadowsocks服务
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/%E6%9C%80%E6%96%B0aws%E5%85%8D%E8%B4%B9%E4%B8%80%E5%B9%B4%E4%BA%91%E6%9C%8D%E5%8A%A1%E7%94%B3%E8%AF%B7%E7%BB%86%E8%8A%82%E5%88%86%E4%BA%AB%E5%8F%8A%E9%85%8D%E7%BD%AEshadowsocks%E6%9C%8D%E5%8A%A1/" target="_self">
+          
+          
+            
+          
+          AWS对新用户提供免费一年的云主机服务，相比大家早就听说过了。大家可以利用这个免费服务不管是自己搭建学习平台，还是搭建诸如Shadowsocks的工具类服务，都是一个很不错的选择。由于我之前已经在使用Vultr了，所以AWS这个免费资格一直没有使用，知道最近Vultr即将到期，我才在最近成功注册了AWS的免费服务 ，并配置好了Shadowsocks。下面我就把我的注册细节分享给大家。这个流程还是比
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-12-07 09:26" pubdate>
+              2016-12-07
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/shadowsocks/">shadowsocks</a>
+            
+              <a href="/tags/aws/">aws</a>
+            
+              <a href="/tags/%E4%BA%9A%E9%A9%AC%E9%80%8A%E4%BA%91/">亚马逊云</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/%E4%BF%9D%E6%8A%A4%E4%BD%A0%E7%BD%91%E7%BB%9C%E9%9A%90%E7%A7%81%E5%AE%89%E5%85%A8%E7%9A%84%E4%B8%83%E5%A4%A7%E6%AD%A5%E9%AA%A4/" target="_self">
+          <img src="/2016/%E4%BF%9D%E6%8A%A4%E4%BD%A0%E7%BD%91%E7%BB%9C%E9%9A%90%E7%A7%81%E5%AE%89%E5%85%A8%E7%9A%84%E4%B8%83%E5%A4%A7%E6%AD%A5%E9%AA%A4/4801_1.jpg" srcset="/img/loading.gif" lazyload alt="保护你网络隐私安全的七大步骤">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/%E4%BF%9D%E6%8A%A4%E4%BD%A0%E7%BD%91%E7%BB%9C%E9%9A%90%E7%A7%81%E5%AE%89%E5%85%A8%E7%9A%84%E4%B8%83%E5%A4%A7%E6%AD%A5%E9%AA%A4/" target="_self">
+          保护你网络隐私安全的七大步骤
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/%E4%BF%9D%E6%8A%A4%E4%BD%A0%E7%BD%91%E7%BB%9C%E9%9A%90%E7%A7%81%E5%AE%89%E5%85%A8%E7%9A%84%E4%B8%83%E5%A4%A7%E6%AD%A5%E9%AA%A4/" target="_self">
+          
+          
+            
+          
+          据纽约时报报道，现在比过去任何时候都更需要搞清楚如何保护你的个人信息。大规模的黑客袭击似乎比以前更加频繁了。调查人员相信，一系列绝密国家安全机构黑客工具在今年夏天被提供给了网上的竞拍者。他们中有许多人对美国国家安全局(NSA)和其他政府机构不断扩大的监控感到担忧，开始采取措施，保障自身的通信安全。
+学习编程的开源社区自由编程营(Free Code Camp)创始人昆西·拉森(Quincy Lars
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-12-05 08:11" pubdate>
+              2016-12-05
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E4%BA%92%E8%81%94%E7%BD%91/">互联网</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%AE%89%E5%85%A8/">安全</a>
+            
+              <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">网络安全</a>
+            
+              <a href="/tags/%E9%9A%90%E7%A7%81/">隐私</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/waifu2x%E5%9C%A8%E7%BA%BF%E5%9B%BE%E7%89%87%E6%94%BE%E5%A4%A7%E5%B7%A5%E5%85%B7/" target="_self">
+          <img src="/2016/waifu2x%E5%9C%A8%E7%BA%BF%E5%9B%BE%E7%89%87%E6%94%BE%E5%A4%A7%E5%B7%A5%E5%85%B7/waifu2x-01.jpg" srcset="/img/loading.gif" lazyload alt="把这个网址收藏起来以备不时之需：waifu2x在线图片放大工具">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/waifu2x%E5%9C%A8%E7%BA%BF%E5%9B%BE%E7%89%87%E6%94%BE%E5%A4%A7%E5%B7%A5%E5%85%B7/" target="_self">
+          把这个网址收藏起来以备不时之需：waifu2x在线图片放大工具
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/waifu2x%E5%9C%A8%E7%BA%BF%E5%9B%BE%E7%89%87%E6%94%BE%E5%A4%A7%E5%B7%A5%E5%85%B7/" target="_self">
+          
+          
+            
+          
+          前几天我家人在网上找到一张数据表格类的图片，也是作为某个报告里的数据素材的。能够找到这样的素材本身是很欣喜的事情，但是后来发现这张图片尺寸过小，内容看的不是很清楚。通过手动放大图片尺寸后，图片变得更加模糊了。于是想让我找找有没有什么工具可以把这张小的图片进行“无损”放大。
+“无损”放大，对这里我使用的引号，因为绝对的无损放大是不可能的，只能说在我们人眼能够接受的一个范围内，进行图片的放大。通过在网
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-12-01 01:22" pubdate>
+              2016-12-01
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/waifu2x/">waifu2x</a>
+            
+              <a href="/tags/%E5%9B%BE%E7%89%87%E6%94%BE%E5%A4%A7/">图片放大</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/google-chrome%E7%BE%8E%E5%8C%96%E6%89%A9%E5%B1%95unsplash-instant%EF%BC%8C%E6%89%93%E9%80%A0%E8%B5%8F%E5%BF%83%E6%82%A6%E7%9B%AE%E7%9A%84%E6%A0%87%E7%AD%BE%E9%A1%B5%E8%83%8C%E6%99%AF/" target="_self">
+          <img src="/2016/google-chrome%E7%BE%8E%E5%8C%96%E6%89%A9%E5%B1%95unsplash-instant%EF%BC%8C%E6%89%93%E9%80%A0%E8%B5%8F%E5%BF%83%E6%82%A6%E7%9B%AE%E7%9A%84%E6%A0%87%E7%AD%BE%E9%A1%B5%E8%83%8C%E6%99%AF/unsplashins-01.png" srcset="/img/loading.gif" lazyload alt="Google Chrome美化扩展Unsplash Instant，打造赏心悦目的标签页背景">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/google-chrome%E7%BE%8E%E5%8C%96%E6%89%A9%E5%B1%95unsplash-instant%EF%BC%8C%E6%89%93%E9%80%A0%E8%B5%8F%E5%BF%83%E6%82%A6%E7%9B%AE%E7%9A%84%E6%A0%87%E7%AD%BE%E9%A1%B5%E8%83%8C%E6%99%AF/" target="_self">
+          Google Chrome美化扩展Unsplash Instant，打造赏心悦目的标签页背景
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/google-chrome%E7%BE%8E%E5%8C%96%E6%89%A9%E5%B1%95unsplash-instant%EF%BC%8C%E6%89%93%E9%80%A0%E8%B5%8F%E5%BF%83%E6%82%A6%E7%9B%AE%E7%9A%84%E6%A0%87%E7%AD%BE%E9%A1%B5%E8%83%8C%E6%99%AF/" target="_self">
+          
+          
+            
+          
+          我本人其实对桌面美化、系统美化、浏览器皮肤这类软件或扩展并不是很感兴趣，相比于那些修改个字体，修改个皮肤颜色之类的美化，我更喜欢应用本身原生的设计。但是不得不说也确实有一些非常不错的美化软件，在不影响应用的原生设计之外，只是通过一些简单的点缀式的美化，就可以让你在软件使用过程中有一些欣喜。
+Unsplash Instant就是这样一个Google Chrome美化扩展应用，她本身并不改变Chrom
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-11-30 01:23" pubdate>
+              2016-11-30
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%A0%87%E7%AD%BE%E9%A1%B5%E8%83%8C%E6%99%AF/">标签页背景</a>
+            
+              <a href="/tags/google-chrome/">google-chrome</a>
+            
+              <a href="/tags/google-chrome%E7%BE%8E%E5%8C%96/">google-chrome美化</a>
+            
+              <a href="/tags/unsplash-instant/">unsplash-instant</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/%E5%9B%BD%E5%86%85%E6%95%8F%E6%8D%B7%E7%9C%8B%E6%9D%BF%E5%B7%A5%E5%85%B7leangoo%E8%BF%8E%E6%9D%A5%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E6%9D%BF%EF%BC%8C%E6%B7%BB%E5%8A%A0%E5%A4%8D%E5%88%B6%E6%B3%B3/" target="_self">
+          <img src="/2016/%E5%9B%BD%E5%86%85%E6%95%8F%E6%8D%B7%E7%9C%8B%E6%9D%BF%E5%B7%A5%E5%85%B7leangoo%E8%BF%8E%E6%9D%A5%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E6%9D%BF%EF%BC%8C%E6%B7%BB%E5%8A%A0%E5%A4%8D%E5%88%B6%E6%B3%B3/leangoo-v54-02.png" srcset="/img/loading.gif" lazyload alt="国内敏捷看板工具Leangoo迎来自定义模板，添加复制泳道等多项功能">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/%E5%9B%BD%E5%86%85%E6%95%8F%E6%8D%B7%E7%9C%8B%E6%9D%BF%E5%B7%A5%E5%85%B7leangoo%E8%BF%8E%E6%9D%A5%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E6%9D%BF%EF%BC%8C%E6%B7%BB%E5%8A%A0%E5%A4%8D%E5%88%B6%E6%B3%B3/" target="_self">
+          国内敏捷看板工具Leangoo迎来自定义模板，添加复制泳道等多项功能
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/%E5%9B%BD%E5%86%85%E6%95%8F%E6%8D%B7%E7%9C%8B%E6%9D%BF%E5%B7%A5%E5%85%B7leangoo%E8%BF%8E%E6%9D%A5%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E6%9D%BF%EF%BC%8C%E6%B7%BB%E5%8A%A0%E5%A4%8D%E5%88%B6%E6%B3%B3/" target="_self">
+          
+          
+            
+          
+          Leangoo这个敏捷看板工具在我之前的这篇较早的文章里做过介绍，是国内为数不多的在线敏捷看板管理工具。而最近Leangoo推出了V5.4.0版本，该版本增加了一系列好用的便捷的功能，包括看板的创建，泳道变得更加灵活，以及任务卡片的移动等。下面我就向大家介绍一下这些新功能在我们使用Leangoo的时候能带给我们什么样的帮助。
+1、通过模板创建看板现在Leangoo中创建看板不需要从头开始了，在创建
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-11-29 02:27" pubdate>
+              2016-11-29
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E7%9C%8B%E6%9D%BF%E5%B7%A5%E5%85%B7/">看板工具</a>
+            
+              <a href="/tags/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/">敏捷开发</a>
+            
+              <a href="/tags/leangoo/">leangoo</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/%E7%9C%8B%E6%9D%BF%E6%96%B9%E6%B3%95%E7%B3%BB%E5%88%974%EF%BC%9A%E7%AE%A1%E7%90%86%E6%B5%81%E5%8A%A8%E5%8E%9F%E5%88%99/" target="_self">
+          <img src="/2016/%E7%9C%8B%E6%9D%BF%E6%96%B9%E6%B3%95%E7%B3%BB%E5%88%974%EF%BC%9A%E7%AE%A1%E7%90%86%E6%B5%81%E5%8A%A8%E5%8E%9F%E5%88%99/kankan4-01.png" srcset="/img/loading.gif" lazyload alt="看板方法系列4：管理流动原则">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/%E7%9C%8B%E6%9D%BF%E6%96%B9%E6%B3%95%E7%B3%BB%E5%88%974%EF%BC%9A%E7%AE%A1%E7%90%86%E6%B5%81%E5%8A%A8%E5%8E%9F%E5%88%99/" target="_self">
+          看板方法系列4：管理流动原则
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/%E7%9C%8B%E6%9D%BF%E6%96%B9%E6%B3%95%E7%B3%BB%E5%88%974%EF%BC%9A%E7%AE%A1%E7%90%86%E6%B5%81%E5%8A%A8%E5%8E%9F%E5%88%99/" target="_self">
+          
+          
+            
+          
+          通过之前看板方法系列文章，我你的看板墙应该已经建立起来了，并且任务卡片都已经编写完成，贴到了看板上的相应位置。但这不是我们的目标，这只是开始看板的基础，我们的目标的让任务快速的通过看板上的各个流程环节，最终完成它！这就是看板的管理流动原则，任务卡在看板上的流动是需要管理的，而不是让它们都堆积在看板上。下面就分享一下如何来管理任务的流动，有哪些方法和措施。
+
+1、限制在制品
+限制在制品是看板的原则也
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-11-18 05:36" pubdate>
+              2016-11-18
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%8F%90%E9%AB%98%E7%94%9F%E4%BA%A7%E5%8A%9B/">提高生产力</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/">敏捷开发</a>
+            
+              <a href="/tags/%E7%9C%8B%E6%9D%BF%E6%96%B9%E6%B3%95/">看板方法</a>
+            
+              <a href="/tags/%E7%AE%A1%E7%90%86%E6%B5%81%E5%8A%A8/">管理流动</a>
+            
+              <a href="/tags/kanban/">kanban</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <a class="extend prev" rel="prev" href="/page/14/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/#board">13</a><a class="page-number" href="/page/14/#board">14</a><span class="page-number current">15</span><a class="page-number" href="/page/16/#board">16</a><a class="page-number" href="/page/17/#board">17</a><span class="space">&hellip;</span><a class="page-number" href="/page/33/#board">33</a><a class="extend next" rel="next" href="/page/16/#board"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

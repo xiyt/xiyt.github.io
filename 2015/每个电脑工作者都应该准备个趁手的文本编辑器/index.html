@@ -1,0 +1,515 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="daxi">
+  <meta name="keywords" content="">
+  
+  <title>每个电脑工作者都应该准备个趁手的文本编辑器 - 达夕博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiyt.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>达夕博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/banner1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="每个电脑工作者都应该准备个趁手的文本编辑器">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2015-10-20 04:46" pubdate>
+        2015年10月20日 凌晨
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.1k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      10
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">每个电脑工作者都应该准备个趁手的文本编辑器</h1>
+            
+            <div class="markdown-body">
+              <p>        文本编辑器对于一个程序开发人员来说应该是一个常用工具了，它不但可以有效的帮助我们处理各种文本、代码、日志等，而且如果再结合上正则表达式的话，很多工作能达到事半功倍的效果。</p>
+<p>        今天我就是想把文本编辑器这类软件介绍给更多的在电脑前工作的人们。如果你是一个需要经常在电脑前处理各种信息、数据、文本的电脑工作者，那么我相信文本编辑器对你的工作一定是有好处的，接下来就让我来分享一下文本编辑器的用途：</p>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/10/0048.png"><img src="/2015/%E6%AF%8F%E4%B8%AA%E7%94%B5%E8%84%91%E5%B7%A5%E4%BD%9C%E8%80%85%E9%83%BD%E5%BA%94%E8%AF%A5%E5%87%86%E5%A4%87%E4%B8%AA%E8%B6%81%E6%89%8B%E7%9A%84%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/0048.png" srcset="/img/loading.gif" lazyload alt="文本编辑器"></a></p>
+<h2 id="一、巧用文本编辑器清楚文本格式"><a href="#一、巧用文本编辑器清楚文本格式" class="headerlink" title="一、巧用文本编辑器清楚文本格式"></a><strong>一、巧用文本编辑器清楚文本格式</strong></h2><p>例如WORD里有一篇格式丰富的文章，如果想把它转换成无格式的文本，直接全部复制WORD里的内容，黏贴到文本编辑器中就可以了。</p>
+<h2 id="二、热备份功能，随时记录，信息不易丢失"><a href="#二、热备份功能，随时记录，信息不易丢失" class="headerlink" title="二、热备份功能，随时记录，信息不易丢失"></a><strong>二、热备份功能，随时记录，信息不易丢失</strong></h2><p>现在的大部分文本编辑器都已经具备了该功能了，你只需要新建一个标签，然后记录信息就行了，连保存键都不需要点击，它会自动备份输入的文本，下次打开时还能保留上次的标签页和输入的内容</p>
+<h2 id="三、强大的查找替换功能"><a href="#三、强大的查找替换功能" class="headerlink" title="三、强大的查找替换功能"></a><strong>三、强大的查找替换功能</strong></h2><p>在处理大量文本时，查找替换是我们用的最多的操作了，文本编辑器在这方面也是个能手，我罗列了一下这些功能：</p>
+<ul>
+<li>文件内查找</li>
+<li>选择的内容内查找</li>
+<li>文件夹内查找</li>
+<li>多个文件类批量替换</li>
+</ul>
+<h2 id="四、和正则表达式的结合使用"><a href="#四、和正则表达式的结合使用" class="headerlink" title="四、和正则表达式的结合使用"></a><strong>四、和正则表达式的结合使用</strong></h2><p>正则表达式除了在代码编程里使用之外，在文字处理方面也是非常强大了，大部分的文本编辑器都支持正则表达式的使用，在对文本进行查找、替换、格式化等方面，能大大提高我们的工作效率</p>
+<h2 id="五、切换不同的编码方式，防止文本乱码"><a href="#五、切换不同的编码方式，防止文本乱码" class="headerlink" title="五、切换不同的编码方式，防止文本乱码"></a><strong>五、切换不同的编码方式，防止文本乱码</strong></h2><p>一般的文本编辑器都以支持多种编码方式查看文本文档，如果你发现打开的文档出现了乱码，可以试着修改编码方式，例如使用UTF-8、GBK等方式查看。</p>
+<h2 id="六、快速的文本转换"><a href="#六、快速的文本转换" class="headerlink" title="六、快速的文本转换"></a><strong>六、快速的文本转换</strong></h2><ul>
+<li>大小写转换</li>
+<li>全角半角转换</li>
+</ul>
+<h2 id="七、行操作：排序、去重、合并"><a href="#七、行操作：排序、去重、合并" class="headerlink" title="七、行操作：排序、去重、合并"></a><strong>七、行操作：排序、去重、合并</strong></h2><p>文本编辑器对行的操作是很方便的，这里列举一个实际的例子：</p>
+<p>例如现在有几十个联系人的邮箱地址列表，现在需要给他们发邮件，我的操作是：</p>
+<p><strong>全选</strong></p>
+<p><strong>↓↓</strong></p>
+<p><strong>排序</strong></p>
+<p><strong>↓↓</strong></p>
+<p><strong>去除重复项</strong></p>
+<p><strong>↓↓</strong></p>
+<p><strong>使用列编辑或正则表达式为行尾添加;(发送邮件时，多个联系人用;分割)</strong></p>
+<p><strong>↓↓</strong></p>
+<p><strong>合并行</strong></p>
+<p><strong>↓↓</strong></p>
+<p><strong>复制到收件人栏里</strong></p>
+<h2 id="八、非常实用的列编辑功能"><a href="#八、非常实用的列编辑功能" class="headerlink" title="八、非常实用的列编辑功能"></a><strong>八、非常实用的列编辑功能</strong></h2><p>最后说一个我最常用的功能，列编辑，这个我稍微介绍一下，我们普通的通过鼠标选择文本的时候，都是按照行来选择的，选择的范围区域是从上到下，而列编辑是按照列来选择的，选择的范围是从左到右，这样方便我们对一列进行修改删除等操作。</p>
+<h2 id="九、自定义快捷键"><a href="#九、自定义快捷键" class="headerlink" title="九、自定义快捷键"></a><strong>九、自定义快捷键</strong></h2><p>以上的绝大部分功能，我们在使用的时候都不需要使用鼠标去点击，都可以按照个人习惯定义成快捷键，一个组合键就是就可以完成，方便快捷，提高我们的效率。</p>
+<blockquote>
+<p>结束语：工欲善其事必先利其器</p>
+<p>今天介绍的这篇文章主要是想让那些还不曾使用过文本编辑器的朋友，能够多一个提高我们效率的工具，当我们在处理文本、写作、统计信息等的时候，可是借助文本编辑器快速的批量的帮助我们完成一些工作。我在接下来的文章里也会介绍两款我最常用的文本编辑器Notepad++和Sublime Text，请大家关注。</p>
+</blockquote>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E6%8F%90%E9%AB%98%E7%94%9F%E4%BA%A7%E5%8A%9B/">提高生产力</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/">文本编辑器</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/">效率工具</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%88%97%E7%BC%96%E8%BE%91/">列编辑</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">正则表达式</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%96%87%E6%9C%AC%E5%A4%84%E7%90%86/">文本处理</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%96%87%E6%A1%A3%E5%A4%84%E7%90%86/">文档处理</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%9F%A5%E6%89%BE%E6%9B%BF%E6%8D%A2/">查找替换</a>
+                    
+                      <a class="hover-with-bg" href="/tags/notepad/">notepad</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2015/%E4%BD%BF%E7%94%A8%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8notepad%E8%BF%9B%E8%A1%8C%E9%AB%98%E6%95%88%E5%B7%A5%E4%BD%9C%E5%AE%9E%E4%BE%8B%E6%BC%94%E7%A4%BA/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">使用文本编辑器Notepad++进行高效工作实例演示</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2015/%E8%AE%B0%E5%BD%95%E6%88%91%E7%94%A8%E8%BF%87%E7%9A%84%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%EF%BC%8C%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0%E4%B8%AD/">
+                        <span class="hidden-mobile">记录我用过的正则表达式，持续更新中...</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"B2tecGOesiRBcoXldYV5Jk5A-9Nh9j0Va","appKey":"5tFdBthF0o282SCXuNVxbntd","placeholder":"说点什么","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false,"requiredFields":[]},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

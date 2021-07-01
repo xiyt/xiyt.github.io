@@ -1,0 +1,693 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="daxi">
+  <meta name="keywords" content="">
+  
+  <title>通用的Java RSA加密工具类，可在线验证通过 - 达夕博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiyt.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>达夕博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/banner1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="通用的Java RSA加密工具类，可在线验证通过">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2018-05-26 15:14" pubdate>
+        2018年5月26日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.3k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      20
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">通用的Java RSA加密工具类，可在线验证通过</h1>
+            
+            <div class="markdown-body">
+              <p><img src="/2018/%E9%80%9A%E7%94%A8%E7%9A%84java-rsa%E5%8A%A0%E5%AF%86%E5%B7%A5%E5%85%B7%E7%B1%BB%EF%BC%8C%E5%8F%AF%E5%9C%A8%E7%BA%BF%E9%AA%8C%E8%AF%81%E9%80%9A%E8%BF%87/201805262312_33.jpg" srcset="/img/loading.gif" lazyload alt="通用的Java RSA加密工具类，可在线验证通过"></p>
+<p>网上Java版本的RSA加密工具类有很多，但是大部分缺少测试代码，或者是没有说明使用时的注意事项。导致加密方和解密方，在联调时会有不少问题。今天分享的这个版本的RSA加密工具类，特点如下：</p>
+<p>1、虽不是我原创编写，但是是我搜集到后，整理测试完成后的版本。使用该工具类的加解密可以在这个<a target="_blank" rel="noopener" href="http://tool.chacuo.net/cryptrsaprikey">在线网站</a>进行测试通过；</p>
+<p>2、main方法中提供了生产密钥的代码，可以作为密钥生产工具；</p>
+<p>3、main方法中注释掉的是加密解密的样例代码，可以参考；</p>
+<p>4、工具类另外提供了使用RSA进行数字签名方法，需要时可以使用；</p>
+<p> </p>
+<p>/**<br> * RSA加密工具类<br> * 使用PKCS1_PADDING填充，密钥长度1024<br> * 加解密结果在这里测试通过：<a target="_blank" rel="noopener" href="http://tool.chacuo.net/cryptrsaprikey">http://tool.chacuo.net/cryptrsaprikey</a><br> * 注意加密内容的编码要一致，统一UTF-8比较好<br> * @author daxi<br> */<br>public class RSAUtil {<br>    public static final String KEY_ALGORTHM=”RSA”;<br>    public static final String SIGNATURE_ALGORITHM=”MD5withRSA”;</p>
+<pre><code>public static final String PUBLIC\_KEY = &quot;RSAPublicKey&quot;;//公钥
+public static final String PRIVATE\_KEY = &quot;RSAPrivateKey&quot;;//私钥
+
+/\*\*
+ \* 初始化密钥
+ \* RSA加密解密的实现，需要有一对公私密钥，公私密钥的初始化如下
+ \* 非对称加密一般都用于加密对称加密算法的密钥，而不是直接加密内容
+ \* @return
+ \* @throws Exception
+ \*/
+public static Map&lt;String,Object&gt; initKey()throws Exception&#123;
+    KeyPairGenerator keyPairGenerator = KeyPairGenerator.getInstance(KEY\_ALGORTHM);
+    keyPairGenerator.initialize(1024);
+    KeyPair keyPair = keyPairGenerator.generateKeyPair();
+
+    //公钥
+    RSAPublicKey publicKey = (RSAPublicKey) keyPair.getPublic();
+    //私钥
+    RSAPrivateKey privateKey =  (RSAPrivateKey) keyPair.getPrivate();
+
+    Map&lt;String,Object&gt; keyMap = new HashMap&lt;String, Object&gt;(2);
+    keyMap.put(PUBLIC\_KEY, publicKey);
+    keyMap.put(PRIVATE\_KEY, privateKey);
+
+    return keyMap;
+&#125;
+
+/\*\*
+ \* 取得公钥，并转化为String类型
+ \* @param keyMap
+ \* @return
+ \* @throws Exception
+ \*/
+public static String getPublicKey(Map&lt;String, Object&gt; keyMap)throws Exception&#123;
+    Key key = (Key) keyMap.get(PUBLIC\_KEY);
+    return Coder.encryptBASE64(key.getEncoded());
+&#125;
+
+/\*\*
+ \* 取得私钥，并转化为String类型
+ \* @param keyMap
+ \* @return
+ \* @throws Exception
+ \*/
+public static String getPrivateKey(Map&lt;String, Object&gt; keyMap) throws Exception&#123;
+    Key key = (Key) keyMap.get(PRIVATE\_KEY);
+    return Coder.encryptBASE64(key.getEncoded());
+&#125;
+
+/\*\*
+ \* 用私钥加密
+ \* @param data    加密数据
+ \* @param key    密钥
+ \* @return
+ \* @throws Exception
+ \*/
+public static byte encryptByPrivateKey(byte data,String key)throws Exception&#123;
+    //解密密钥
+    byte keyBytes = Coder.decryptBASE64(key);
+    //取私钥
+    PKCS8EncodedKeySpec pkcs8EncodedKeySpec = new PKCS8EncodedKeySpec(keyBytes);
+    KeyFactory keyFactory = KeyFactory.getInstance(KEY\_ALGORTHM);
+    Key privateKey = keyFactory.generatePrivate(pkcs8EncodedKeySpec);
+
+    //对数据加密
+    Cipher cipher = Cipher.getInstance(keyFactory.getAlgorithm());
+    cipher.init(Cipher.ENCRYPT\_MODE, privateKey);
+
+    return cipher.doFinal(data);
+&#125;
+
+/\*\*
+ \* 用私钥解密 \* @param data     加密数据
+ \* @param key    密钥
+ \* @return
+ \* @throws Exception
+ \*/
+public static byte decryptByPrivateKey(byte data,String key)throws Exception&#123;
+    //对私钥解密
+    byte keyBytes = Coder.decryptBASE64(key);
+
+    PKCS8EncodedKeySpec pkcs8EncodedKeySpec = new PKCS8EncodedKeySpec(keyBytes);
+    KeyFactory keyFactory = KeyFactory.getInstance(KEY\_ALGORTHM);
+    Key privateKey = keyFactory.generatePrivate(pkcs8EncodedKeySpec);
+    //对数据解密
+    Cipher cipher = Cipher.getInstance(keyFactory.getAlgorithm());
+    cipher.init(Cipher.DECRYPT\_MODE, privateKey);
+
+    return cipher.doFinal(data);
+&#125;
+
+/\*\*
+ \* 用公钥加密
+ \* @param data    加密数据
+ \* @param key    密钥
+ \* @return
+ \* @throws Exception
+ \*/
+public static byte encryptByPublicKey(byte data,String key)throws Exception&#123;
+    //对公钥解密
+    byte keyBytes = Coder.decryptBASE64(key);
+    //取公钥
+    X509EncodedKeySpec x509EncodedKeySpec = new X509EncodedKeySpec(keyBytes);
+    KeyFactory keyFactory = KeyFactory.getInstance(KEY\_ALGORTHM);
+    Key publicKey = keyFactory.generatePublic(x509EncodedKeySpec);
+
+    //对数据解密
+    Cipher cipher = Cipher.getInstance(keyFactory.getAlgorithm());
+    cipher.init(Cipher.ENCRYPT\_MODE, publicKey);
+
+    return cipher.doFinal(data);
+&#125;
+
+/\*\*
+ \* 用公钥解密
+ \* @param data    加密数据
+ \* @param key    密钥
+ \* @return
+ \* @throws Exception
+ \*/
+public static byte decryptByPublicKey(byte data,String key)throws Exception&#123;
+    //对私钥解密
+    byte keyBytes = Coder.decryptBASE64(key);
+    X509EncodedKeySpec x509EncodedKeySpec = new X509EncodedKeySpec(keyBytes);
+    KeyFactory keyFactory = KeyFactory.getInstance(KEY\_ALGORTHM);
+    Key publicKey = keyFactory.generatePublic(x509EncodedKeySpec);
+
+    //对数据解密
+    Cipher cipher = Cipher.getInstance(keyFactory.getAlgorithm());
+    cipher.init(Cipher.DECRYPT\_MODE, publicKey);
+
+    return cipher.doFinal(data);
+&#125;
+
+/\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
+ \* 通过RSA加密解密算法，我们可以实现数字签名的功能。我们可以用私钥对信息生
+ \* 成数字签名，再用公钥来校验数字签名，当然也可以反过来公钥签名，私钥校验。
+ \* \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*/
+
+/\*\*
+ \*    用私钥对信息生成数字签名
+ \* @param data    //加密数据
+ \* @param privateKey    //私钥
+ \* @return
+ \* @throws Exception
+ \*/
+public static String sign(byte data,String privateKey)throws Exception&#123;
+    //解密私钥
+    byte keyBytes = Coder.decryptBASE64(privateKey);
+    //构造PKCS8EncodedKeySpec对象
+    PKCS8EncodedKeySpec pkcs8EncodedKeySpec = new PKCS8EncodedKeySpec(keyBytes);
+    //指定加密算法
+    KeyFactory keyFactory = KeyFactory.getInstance(KEY\_ALGORTHM);
+    //取私钥匙对象
+    PrivateKey privateKey2 = keyFactory.generatePrivate(pkcs8EncodedKeySpec);
+    //用私钥对信息生成数字签名
+    Signature signature = Signature.getInstance(SIGNATURE\_ALGORITHM);
+    signature.initSign(privateKey2);
+    signature.update(data);
+
+    return Coder.encryptBASE64(signature.sign());
+&#125;
+
+/\*\*
+ \* 校验数字签名
+ \* @param data    加密数据
+ \* @param publicKey    公钥
+ \* @param sign    数字签名
+ \* @return
+ \* @throws Exception
+ \*/
+public static boolean verify(byte data,String publicKey,String sign)throws Exception&#123;
+    //解密公钥
+    byte keyBytes = Coder.decryptBASE64(publicKey);
+    //构造X509EncodedKeySpec对象
+    X509EncodedKeySpec x509EncodedKeySpec = new X509EncodedKeySpec(keyBytes);
+    //指定加密算法
+    KeyFactory keyFactory = KeyFactory.getInstance(KEY\_ALGORTHM);
+    //取公钥匙对象
+    PublicKey publicKey2 = keyFactory.generatePublic(x509EncodedKeySpec);
+
+    Signature signature = Signature.getInstance(SIGNATURE\_ALGORITHM);
+    signature.initVerify(publicKey2);
+    signature.update(data);
+    //验证签名是否正常
+    return signature.verify(Coder.decryptBASE64(sign));
+
+&#125;
+
+public static void main(String args) throws Exception &#123;
+    // 生产密钥
+    Map&lt;String, Object&gt; keys = RSAUtil.initKey();
+
+    // 打印私钥
+    System.out.println(&quot;↓↓↓↓↓the following is private key↓↓↓↓↓&quot;);
+    System.out.println(&quot;-----BEGIN PRIVATE KEY-----&quot;);
+    System.out.println(RSAUtil.getPrivateKey(keys));
+    System.out.println(&quot;-----END PRIVATE KEY-----&quot;);
+    System.out.println(&quot;↑↑↑↑↑the above is private key↑↑↑↑↑&quot;);
+
+    System.out.println();
+
+    // 打印公钥
+    System.out.println(&quot;↓↓↓↓↓the following is public key↓↓↓↓↓&quot;);
+    System.out.println(&quot;-----BEGIN PUBLIC KEY-----&quot;);
+    System.out.println(RSAUtil.getPublicKey(keys));
+    System.out.println(&quot;-----END PUBLIC KEY-----&quot;);
+    System.out.println(&quot;↑↑↑↑↑the above is public key↑↑↑↑↑&quot;);
+
+    // 加密样例：
+</code></pre>
+<p>//        File file1 = new File(“E:\\pub-key.txt”);<br>//        String pub = IOUtils.toString(new FileInputStream(file1));<br>//        pub = pub.replace(“—–BEGIN PUBLIC KEY—–” + IOUtils.LINE_SEPARATOR, “”).replace(“—–END PUBLIC KEY—–”, “”);<br>//        byte helloE = RSAUtil.encryptByPublicKey(“hello”.getBytes(“UTF-8”), pub);<br>//        String helloBase64 = Coder.encryptBASE64(helloE);<br>//        System.out.println(helloBase64);</p>
+<p>//        // 解密样例<br>//        String naughty = “DuuB+ZcqSMTL2PVzOIaHtLDQ5t0r+S2twsAdNt7GNjD1AGVPpiiQz/fVfVJa9+j3IeWzAKTZ/cRyLTH8Wv5JTD6PTMWwiBvg+eGoQZzTi/b34U/Aiv/DovIzm8uMTM2iWk1Vz7KUJK0NMnlKIiviJneCyUVCMFLwT2OPH1QBxq4=”;<br>//        byte naughtyBase64 = Coder.decryptBASE64(naughty);<br>//        File file = new File(“E:\\pri-key.txt”);<br>//        String priKey = IOUtils.toString(new FileInputStream(file));<br>//        priKey = priKey.replace(“—–BEGIN PRIVATE KEY—–” + IOUtils.LINE_SEPARATOR, “”).replace(“—–END PRIVATE KEY—–”, “”);<br>//        String decryptedNaughty = new String(RSAUtil.decryptByPrivateKey(naughtyBase64, priKey));<br>//        System.out.println(decryptedNaughty);<br>    }<br>}</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E6%8A%80%E6%9C%AF%E7%BC%96%E7%A8%8B/">技术编程</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%8A%A0%E5%AF%86/">加密</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%B7%A5%E5%85%B7%E7%B1%BB/">工具类</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E8%A7%A3%E5%AF%86/">解密</a>
+                    
+                      <a class="hover-with-bg" href="/tags/java/">java</a>
+                    
+                      <a class="hover-with-bg" href="/tags/rsa/">rsa</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2018/%E8%91%97%E5%90%8D%E6%96%87%E4%BB%B6%E5%A4%B9%E5%8A%A0%E5%AF%86%E5%B7%A5%E5%85%B7folder-lock-v7-7-6%E4%B8%8B%E8%BD%BD%E5%90%AB%E6%B3%A8%E5%86%8C%E6%9C%BA/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">著名文件夹加密工具Folder Lock v7.7.6下载含注册机</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2018/%E7%83%AD%E5%90%AF%E5%8A%A8%E6%8F%92%E4%BB%B6jrebel%E6%BF%80%E6%B4%BB%E6%9C%8D%E5%8A%A1/">
+                        <span class="hidden-mobile">热启动插件JRebel激活服务</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"B2tecGOesiRBcoXldYV5Jk5A-9Nh9j0Va","appKey":"5tFdBthF0o282SCXuNVxbntd","placeholder":"说点什么","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false,"requiredFields":[]},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

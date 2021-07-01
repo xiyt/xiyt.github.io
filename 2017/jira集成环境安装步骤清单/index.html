@@ -1,0 +1,517 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="daxi">
+  <meta name="keywords" content="">
+  
+  <title>Jira+Confluence+Fisheye+Crucible安装步骤清单 - 达夕博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiyt.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>达夕博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/banner1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="Jira+Confluence+Fisheye+Crucible安装步骤清单">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2017-01-05 09:11" pubdate>
+        2017年1月5日 上午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      901 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      11
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Jira+Confluence+Fisheye+Crucible安装步骤清单</h1>
+            
+            <div class="markdown-body">
+              <p><img src="/2017/jira%E9%9B%86%E6%88%90%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4%E6%B8%85%E5%8D%95/jira-Confluence-fecru.jpg" srcset="/img/loading.gif" lazyload alt="Jira+Confluence+Fisheye+Crucible安装步骤清单"></p>
+<p>我在之前的<a target="_blank" rel="noopener" href="http://www.daxiblog.com/?s=%E7%9C%8B%E6%9D%BF">这些文章</a>中介绍了看板的一些理论和实践方法。Jira作为一个需求缺陷的项目管理工具，在敏捷开发和看板系统方面的功能也是非常的强大。于是最近自己也试着使用Jira以及Jira周边的各种插件系统，搭建了一个学习用的项目管理框架。其中包括：</p>
+<ul>
+<li>Jira用于需求缺陷管理</li>
+<li>Confluence作为知识库</li>
+<li>FishEye作为代码查看工具</li>
+<li>Crucible作为代码Review工具</li>
+<li>配合Jenkins作为自动化构建工具</li>
+</ul>
+<p>今天我把自己的安装步骤清单整理一下，分享给大家的同时也作为备忘记录下来。这里只是一个安装清单，具体的每一步的详细操作，大家可以自行搜索或者直接留言给我。另外，我的安装环境是Centos 7 + JDK 1.7 + MySQL5.6</p>
+<p><strong>1、Jira安装</strong></p>
+<p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2016/12/22/%E4%B8%8B%E8%BD%BDjira6-3-6%E5%AE%98%E6%96%B9linux%E5%8E%9F%E7%89%88%EF%BC%8C%E6%94%BE%E5%9C%A8%E8%BF%99%E9%87%8C%E6%96%B9%E4%BE%BF%E5%A4%A7%E5%AE%B6%E4%B8%8B%E8%BD%BD%E4%BD%BF%E7%94%A8/">Jira6.3.6官方Linux原版，放在这里方便大家下载使用</a></p>
+<p>解压Jira到某个目录：tar -zxvf atlassian-jira-6.3.6.tar.gz</p>
+<p>配置jira_home，文件路径：/home/jira/atlassian-jira-6.3.6-standalone/atlassian-jira/WEB-INF/classes/jira-application.properties</p>
+<p>MySQL中创建UTF8编码的jira数据库</p>
+<p>将MySQL的jar包mysql-connector-java-5.1.25-bin.jar放到/home/jira/atlassian-jira-6.3.6-standalone/atlassian-jira/WEB-INF/lib目录下</p>
+<p>下载语言包：<a target="_blank" rel="noopener" href="https://translations.atlassian.com/">https://translations.atlassian.com/</a>，然后放到/home/jira/atlassian-jira-6.3.6-standalone/atlassian-jira/WEB-INF/lib目录下。或者，下载好语言包后，在Jira的插件管理页面上传语言包插件</p>
+<p>启动Jira：/home/jira/atlassian-jira-6.3.6-standalone/bin/start-jira.sh</p>
+<p>输入你申请的Lecense即可，方法大家可以自己搜索。我选择的是试用。</p>
+<p><strong>2、Confluence的安装</strong></p>
+<p>Confluence的<a target="_blank" rel="noopener" href="https://www.atlassian.com/software/confluence/download-archives">下载地址</a>，我选择的是atlassian-confluence-5.7.6.tar.gz版本，5.8以后的版本要求jdk1.8。</p>
+<p>解压缩：tar -zxvf atlassian-confluence-5.7.6.tar.gz</p>
+<p>修改Confluence的home路径：confluence/WEB-INF/classes/confluence-init.properties</p>
+<p>上传mysql的驱动jar到这个目录：atlassian-confluence-5.7.6/confluence/WEB-INF/lib</p>
+<p>创建UTF8编码的数据库：create database confluence character set UTF8;</p>
+<p>启动Confluence：atlassian-confluence-5.7.6/bin/start-confluence.sh</p>
+<p>选择安装Confluence并输入Lecense，方法大家可以自己搜索。我选择的是试用。</p>
+<p>按照默认选项下一步，在选择数据库时，选择使用Mysql，并选择jdbc方式，填写你的数据库信息</p>
+<p>如果你的Jira已经安装好了，这时候最好直接连接到Jira，完成两者的集成</p>
+<p><strong>3、FishEye+Crucible集成安装</strong></p>
+<p>版本选择：crucible-3.8.1.zip，这是包含FishEye和Crucible的整合版本，不需要分开安装Fisheye和Crucible了。下载地址：<a target="_blank" rel="noopener" href="https://www.atlassian.com/software/crucible/download-archives">https://www.atlassian.com/software/crucible/download-archives</a></p>
+<p>解压安装：unzip crucible-3.8.1.zip</p>
+<p>创建Crucible的数据库，默认Crucible使用内置数据库，可以在安装好之后，切换到我们自己的Mysql数据库：create database fecru381 CHARACTER SET utf8 COLLATE utf8_bin;</p>
+<p>通过fecru-3.8.1/bin/start.sh启动</p>
+<p>crucible的破解方法，大家自行搜索，我暂时用的试用版</p>
+<p><strong>4、集成</strong></p>
+<p>Jira、Confluence、FishEye/Crucible的集成是通过应用程序链接实现的</p>
+<p>建议先安装好Jira，然后在安装后两个的过程中会提示连接到Jira，直接集成即可</p>
+<p>如果在安装过程没有选择连接到Jira，那就通过系统设置里的应用程序链接关联吧</p>
+<p>另外：后续会添加这套系统和Jenkins的集成方法，敬请关注！</p>
+<p>大家在安装方面或者破解资源方面有任何问题，都可以给我留言！</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/jira/">jira</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%95%8F%E6%8D%B7%E5%B7%A5%E5%85%B7/">敏捷工具</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%9C%8B%E6%9D%BF%E5%B7%A5%E5%85%B7/">看板工具</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%9F%A5%E8%AF%86%E5%BA%93/">知识库</a>
+                    
+                      <a class="hover-with-bg" href="/tags/confluence/">confluence</a>
+                    
+                      <a class="hover-with-bg" href="/tags/crucible/">crucible</a>
+                    
+                      <a class="hover-with-bg" href="/tags/fisheye/">fisheye</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2017/jirajenkins%E9%9B%86%E6%88%90%EF%BC%8C%E5%AE%9E%E7%8E%B0%E4%BB%BB%E5%8A%A1%E7%8A%B6%E6%80%81%E6%94%B9%E5%8F%98%E8%87%AA%E5%8A%A8%E8%A7%A6%E5%8F%91%E5%A2%9E%E9%87%8F%E5%8F%91%E5%B8%83/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Jira+Jenkins集成，实现任务状态改变自动触发增量发布</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2016/%E4%B8%8B%E8%BD%BDjira6-3-6%E5%AE%98%E6%96%B9linux%E5%8E%9F%E7%89%88%EF%BC%8C%E6%94%BE%E5%9C%A8%E8%BF%99%E9%87%8C%E6%96%B9%E4%BE%BF%E5%A4%A7%E5%AE%B6%E4%B8%8B%E8%BD%BD%E4%BD%BF%E7%94%A8/">
+                        <span class="hidden-mobile">[下载]Jira6.3.6官方Linux原版，放在这里方便大家下载使用</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"B2tecGOesiRBcoXldYV5Jk5A-9Nh9j0Va","appKey":"5tFdBthF0o282SCXuNVxbntd","placeholder":"说点什么","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false,"requiredFields":[]},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

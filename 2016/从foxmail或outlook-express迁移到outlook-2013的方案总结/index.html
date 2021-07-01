@@ -1,0 +1,490 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="daxi">
+  <meta name="keywords" content="">
+  
+  <title>从Foxmail或Outlook Express迁移到Outlook 2013的方案总结 - 达夕博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiyt.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>达夕博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/banner1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="从Foxmail或Outlook Express迁移到Outlook 2013的方案总结">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2016-04-22 02:23" pubdate>
+        2016年4月22日 凌晨
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      480 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      5
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">从Foxmail或Outlook Express迁移到Outlook 2013的方案总结</h1>
+            
+            <div class="markdown-body">
+              <p>昨天我把邮件客户端从Foxmail改为了Outlook 2013，其中必然涉及到邮件数据的迁移问题，通过昨天的研究和网络的搜寻，我顺利的完成了数据的迁移。今天就把从Foxmail或Outlook Express迁移到Outlook 2013的方案总结一下，分享给大家。</p>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2016/04/changeemail.png"><img src="/2016/%E4%BB%8Efoxmail%E6%88%96outlook-express%E8%BF%81%E7%A7%BB%E5%88%B0outlook-2013%E7%9A%84%E6%96%B9%E6%A1%88%E6%80%BB%E7%BB%93/changeemail.png" srcset="/img/loading.gif" lazyload alt="changeemail"></a></p>
+<h3 id="一、现在用的是Outlook-Express，需要再同一台电脑上换成Outlook-2013"><a href="#一、现在用的是Outlook-Express，需要再同一台电脑上换成Outlook-2013" class="headerlink" title="一、现在用的是Outlook Express，需要再同一台电脑上换成Outlook 2013"></a><strong>一、现在用的是Outlook Express，需要再同一台电脑上换成Outlook 2013</strong></h3><p>这种情况最简单方便了，在同一台电脑上安装好Outlook 2013后，直接在Outlook Express里点击文件-&gt;导出-&gt;邮件，就会提示导出到Microsoft Outlook的提示框，按照提示操作即可。如下图：</p>
+<p><img src="/2016/%E4%BB%8Efoxmail%E6%88%96outlook-express%E8%BF%81%E7%A7%BB%E5%88%B0outlook-2013%E7%9A%84%E6%96%B9%E6%A1%88%E6%80%BB%E7%BB%93/changeemail01.png" srcset="/img/loading.gif" lazyload alt="从Foxmail或Outlook Express迁移到Outlook 2013的方案总结"></p>
+<h3 id="二、现在用的是Outlook-Express，需要在另一台脑上换成Outlook-2013"><a href="#二、现在用的是Outlook-Express，需要在另一台脑上换成Outlook-2013" class="headerlink" title="二、现在用的是Outlook Express，需要在另一台脑上换成Outlook 2013"></a><strong>二、现在用的是Outlook Express，需要在另一台脑上换成Outlook 2013</strong></h3><p>1、首先找到Outlook Express的数据文件，如下图，找到数据 存储位置：</p>
+<p><img src="/2016/%E4%BB%8Efoxmail%E6%88%96outlook-express%E8%BF%81%E7%A7%BB%E5%88%B0outlook-2013%E7%9A%84%E6%96%B9%E6%A1%88%E6%80%BB%E7%BB%93/changeemail02.png" srcset="/img/loading.gif" lazyload></p>
+<p>可以看到Outlook Express的数据是以dbx的格式存放的，并且按照邮箱里的文件夹分开存放的：</p>
+<p><img src="/2016/%E4%BB%8Efoxmail%E6%88%96outlook-express%E8%BF%81%E7%A7%BB%E5%88%B0outlook-2013%E7%9A%84%E6%96%B9%E6%A1%88%E6%80%BB%E7%BB%93/changeemail03.png" srcset="/img/loading.gif" lazyload></p>
+<p>2、将dbx文件复制到你的目标电脑上，通过一个工具软件：SysTools DBX to PST Converter进行转换</p>
+<p>这里提供一个下载链接(已注册)：<a target="_blank" rel="noopener" href="http://pan.baidu.com/s/1kV6emyV">http://pan.baidu.com/s/1kV6emyV</a></p>
+<p>操作方法如下图所示：</p>
+<p><img src="/2016/%E4%BB%8Efoxmail%E6%88%96outlook-express%E8%BF%81%E7%A7%BB%E5%88%B0outlook-2013%E7%9A%84%E6%96%B9%E6%A1%88%E6%80%BB%E7%BB%93/changeemail04.png" srcset="/img/loading.gif" lazyload></p>
+<p>3、成功导出pst文件后，在Outlook 2013通过打开PST文件功能就可以顺利把邮件导入到Outlook 2013中，如下图：</p>
+<p><img src="/2016/%E4%BB%8Efoxmail%E6%88%96outlook-express%E8%BF%81%E7%A7%BB%E5%88%B0outlook-2013%E7%9A%84%E6%96%B9%E6%A1%88%E6%80%BB%E7%BB%93/changeemail05.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="三、现在使用的是Foxmail客户端"><a href="#三、现在使用的是Foxmail客户端" class="headerlink" title="三、现在使用的是Foxmail客户端"></a><strong>三、现在使用的是Foxmail客户端</strong></h3><p>1、如果你使用的是Foxmail客户端， 首先要导出数据为eml格式，把想要导出的邮件全部导出到一个文件夹；</p>
+<p><img src="/2016/%E4%BB%8Efoxmail%E6%88%96outlook-express%E8%BF%81%E7%A7%BB%E5%88%B0outlook-2013%E7%9A%84%E6%96%B9%E6%A1%88%E6%80%BB%E7%BB%93/changeemail06.png" srcset="/img/loading.gif" lazyload></p>
+<p>2、通过Outlook Express作为媒介，把eml格式的邮件导入到Outlook Express中，然后通过上面的一和二步骤完成即可。把eml导入到Outlook Express很简单：直接把eml文件拖到Outlook Express的邮件窗口就可以了。</p>
+<p><strong>推荐阅读：</strong></p>
+<p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2015/10/12/%e6%88%91%e7%9a%84%e9%82%ae%e4%bb%b6%e6%95%b4%e7%90%86%e6%96%b9%e6%b3%95/">我的邮件整理方法</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2015/11/02/outlook2013%e4%b8%ad%e4%b8%89%e4%b8%aa%e6%9c%89%e5%8a%a9%e4%ba%8e%e6%8f%90%e9%ab%98%e5%b7%a5%e4%bd%9c%e6%95%88%e7%8e%87%e7%9a%84%e4%bd%bf%e7%94%a8%e6%8a%80%e5%b7%a7/">Outlook2013中三个有助于提高工作效率的使用技巧</a></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E9%82%AE%E4%BB%B6%E8%BF%81%E7%A7%BB/">邮件迁移</a>
+                    
+                      <a class="hover-with-bg" href="/tags/outlook/">outlook</a>
+                    
+                      <a class="hover-with-bg" href="/tags/foxmail/">foxmail</a>
+                    
+                      <a class="hover-with-bg" href="/tags/outlook-express/">outlook-express</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2016/%E5%A4%A7%E5%B8%AD%E6%90%9C%E7%9B%98-%E5%9B%BD%E5%86%85%E7%BD%91%E7%9B%98%E8%B5%84%E6%BA%90%E6%90%9C%E7%B4%A2/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">大席搜盘 - 国内网盘资源搜索</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2016/%E8%BD%AC%E7%B5%82%E6%96%BC%E6%9B%B4%E6%96%B0%EF%BC%81-google-drive-%E5%8F%AF%E4%BB%A5%E9%81%B8%E6%93%87%E6%80%A7%E5%90%8C%E6%AD%A5%E5%AD%90%E8%B3%87%E6%96%99%E5%A4%BE%E4%BA%86/">
+                        <span class="hidden-mobile">[转]終於更新！ Google Drive 可以選擇性同步子資料夾了</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"B2tecGOesiRBcoXldYV5Jk5A-9Nh9j0Va","appKey":"5tFdBthF0o282SCXuNVxbntd","placeholder":"说点什么","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false,"requiredFields":[]},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

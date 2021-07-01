@@ -1,0 +1,966 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="daxi">
+  <meta name="keywords" content="">
+  
+  <title>达夕博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiyt.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 100vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>达夕博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/banner1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="热衷于分享IT技术/工作效率/优秀软件，申旦达夕，永无止境">
+              
+            </span>
+
+            
+          </div>
+
+          
+            <div class="scroll-down-bar">
+              <i class="iconfont icon-arrowdown"></i>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div class="py-5" id="board"
+          style=margin-top:0>
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/%E5%BF%AB%E9%80%9F%E5%9C%A8%E6%8C%87%E5%AE%9A%E7%9B%AE%E5%BD%95%E4%B8%8B%E6%89%93%E5%BC%80windows%E5%91%BD%E4%BB%A4%E6%8F%90%E7%A4%BA%E7%AC%A6%E7%AA%97%E5%8F%A3%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9/" target="_self">
+          <img src="/2016/%E5%BF%AB%E9%80%9F%E5%9C%A8%E6%8C%87%E5%AE%9A%E7%9B%AE%E5%BD%95%E4%B8%8B%E6%89%93%E5%BC%80windows%E5%91%BD%E4%BB%A4%E6%8F%90%E7%A4%BA%E7%AC%A6%E7%AA%97%E5%8F%A3%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9/cmd1.png" srcset="/img/loading.gif" lazyload alt="快速在指定目录下打开Windows命令提示符窗口的三种方法">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/%E5%BF%AB%E9%80%9F%E5%9C%A8%E6%8C%87%E5%AE%9A%E7%9B%AE%E5%BD%95%E4%B8%8B%E6%89%93%E5%BC%80windows%E5%91%BD%E4%BB%A4%E6%8F%90%E7%A4%BA%E7%AC%A6%E7%AA%97%E5%8F%A3%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9/" target="_self">
+          快速在指定目录下打开Windows命令提示符窗口的三种方法
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/%E5%BF%AB%E9%80%9F%E5%9C%A8%E6%8C%87%E5%AE%9A%E7%9B%AE%E5%BD%95%E4%B8%8B%E6%89%93%E5%BC%80windows%E5%91%BD%E4%BB%A4%E6%8F%90%E7%A4%BA%E7%AC%A6%E7%AA%97%E5%8F%A3%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%96%B9/" target="_self">
+          
+          
+            
+          
+          由于工作需要我经常需要在某个目录下，打开Windows的命令提示符，有时候还需要以管理员身份打开。今天介绍两种快速在指定目录打开Windows的命令提示符窗口的方法：
+1、Shift+文件夹右键菜单在目标文件夹上右键点击鼠标， 在右键菜单中选择****即可，如下图：
+
+ 
+2、打开资源管理器，进入到目标目录，然后点击左上角的文件选择，在弹出的窗口中选择****这时候可以选择：
+打开命令提示符
+以管
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-02-29 02:35" pubdate>
+              2016-02-29
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%8F%90%E9%AB%98%E7%94%9F%E4%BA%A7%E5%8A%9B/">提高生产力</a>
+            
+              <a href="/categories/%E6%8F%90%E9%AB%98%E7%94%9F%E4%BA%A7%E5%8A%9B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8/">快速启动</a>
+            
+              <a href="/tags/%E5%91%BD%E4%BB%A4%E6%8F%90%E7%A4%BA%E7%AC%A6/">命令提示符</a>
+            
+              <a href="/tags/windows/">windows</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/%E8%BD%ACevernote-onenote-google-keep-%E9%9B%B2%E7%AB%AF%E7%AD%86%E8%A8%98%E5%AE%8C%E6%95%B4%E6%AF%94%E8%BC%83%E8%A1%A8/" target="_self">
+          <img src="/2016/%E8%BD%ACevernote-onenote-google-keep-%E9%9B%B2%E7%AB%AF%E7%AD%86%E8%A8%98%E5%AE%8C%E6%95%B4%E6%AF%94%E8%BC%83%E8%A1%A8/compare-noteapp-552x1024.png" srcset="/img/loading.gif" lazyload alt="[转]Evernote, Onenote, Google keep 雲端筆記完整比較表">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/%E8%BD%ACevernote-onenote-google-keep-%E9%9B%B2%E7%AB%AF%E7%AD%86%E8%A8%98%E5%AE%8C%E6%95%B4%E6%AF%94%E8%BC%83%E8%A1%A8/" target="_self">
+          [转]Evernote, Onenote, Google keep 雲端筆記完整比較表
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/%E8%BD%ACevernote-onenote-google-keep-%E9%9B%B2%E7%AB%AF%E7%AD%86%E8%A8%98%E5%AE%8C%E6%95%B4%E6%AF%94%E8%BC%83%E8%A1%A8/" target="_self">
+          
+          
+            
+          
+          很多電腦玩物的讀者常常問我的一個問題就是：「 Evernote 和 Onenote 哪個好？」
+事實上這沒有誰比較好的問題，只有你適合、需要哪一種方法的問題，但要進行選擇，勢必要先了解兩大服務的全貌，比較兩者功能的細節，不過一般用戶應該也沒有時間同時對兩者做深入的使用與了解。
+所以看起來我寫這一篇比較也是勢在必行，只是我拖了一段時間，到現在才終於正式動手製作了兩者的比較表。
+那麼為什麼要加入 Go
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-02-26 10:17" pubdate>
+              2016-02-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a>
+            
+              <a href="/tags/google-keep/">google-keep</a>
+            
+              <a href="/tags/evernote/">evernote</a>
+            
+              <a href="/tags/onenote/">onenote</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/%E7%BB%8F%E5%B8%B8%E5%90%AC%E5%88%B0%E6%9C%89%E4%BA%BA%E9%97%AE%E8%BF%99%E6%A0%B7%E7%9A%84%E9%97%AE%E9%A2%98%EF%BC%9A%E5%A6%82%E4%BD%95%E6%8A%8A%E4%B8%8B%E8%BD%BD%E5%A5%BD%E7%9A%84%E7%94%B5%E5%BD%B1/" target="_self">
+          <img src="/2016/%E7%BB%8F%E5%B8%B8%E5%90%AC%E5%88%B0%E6%9C%89%E4%BA%BA%E9%97%AE%E8%BF%99%E6%A0%B7%E7%9A%84%E9%97%AE%E9%A2%98%EF%BC%9A%E5%A6%82%E4%BD%95%E6%8A%8A%E4%B8%8B%E8%BD%BD%E5%A5%BD%E7%9A%84%E7%94%B5%E5%BD%B1/desk-iphone.jpg" srcset="/img/loading.gif" lazyload alt="经常听到有人问这样的问题：如何把下载好的电影放到iPhone上呢？">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/%E7%BB%8F%E5%B8%B8%E5%90%AC%E5%88%B0%E6%9C%89%E4%BA%BA%E9%97%AE%E8%BF%99%E6%A0%B7%E7%9A%84%E9%97%AE%E9%A2%98%EF%BC%9A%E5%A6%82%E4%BD%95%E6%8A%8A%E4%B8%8B%E8%BD%BD%E5%A5%BD%E7%9A%84%E7%94%B5%E5%BD%B1/" target="_self">
+          经常听到有人问这样的问题：如何把下载好的电影放到iPhone上呢？
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/%E7%BB%8F%E5%B8%B8%E5%90%AC%E5%88%B0%E6%9C%89%E4%BA%BA%E9%97%AE%E8%BF%99%E6%A0%B7%E7%9A%84%E9%97%AE%E9%A2%98%EF%BC%9A%E5%A6%82%E4%BD%95%E6%8A%8A%E4%B8%8B%E8%BD%BD%E5%A5%BD%E7%9A%84%E7%94%B5%E5%BD%B1/" target="_self">
+          
+          
+            
+          
+          
+今天又听到同事再问怎么把下载好的电影放到我的iPhone手机上？其实这里有很多种方法来完成这个工作，今天我就把我所知道的方法整理一下记录到这里，同时也为同样有这个疑问的朋友提供一个参考。下面我使用清单列表的方式在描述：
+
+最传统的最官方的方法：电脑上安装**iTunes**，使用数据线通过iTunes把视频导入到iPhone；
+第三方”助手类”软件：电脑上安装**PP助手**等类似应用，使用数据
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-02-23 14:17" pubdate>
+              2016-02-23
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93/">文件传输</a>
+            
+              <a href="/tags/iphone/">iphone</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/%E6%91%98%E8%87%AA%E7%9F%A5%E4%B9%8E%E7%9A%84%E4%BA%94%E5%BC%A0%E5%9B%BE%E8%AE%A9%E4%BD%A0%E7%9C%8B%E6%B8%85%E6%A5%9Aapple-pay%E5%88%B0%E5%BA%95%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F/" target="_self">
+          <img src="/2016/%E6%91%98%E8%87%AA%E7%9F%A5%E4%B9%8E%E7%9A%84%E4%BA%94%E5%BC%A0%E5%9B%BE%E8%AE%A9%E4%BD%A0%E7%9C%8B%E6%B8%85%E6%A5%9Aapple-pay%E5%88%B0%E5%BA%95%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F/applepay01.jpg" srcset="/img/loading.gif" lazyload alt="摘自知乎的五张图让你看清楚Apple Pay到底是什么？">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/%E6%91%98%E8%87%AA%E7%9F%A5%E4%B9%8E%E7%9A%84%E4%BA%94%E5%BC%A0%E5%9B%BE%E8%AE%A9%E4%BD%A0%E7%9C%8B%E6%B8%85%E6%A5%9Aapple-pay%E5%88%B0%E5%BA%95%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F/" target="_self">
+          摘自知乎的五张图让你看清楚Apple Pay到底是什么？
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/%E6%91%98%E8%87%AA%E7%9F%A5%E4%B9%8E%E7%9A%84%E4%BA%94%E5%BC%A0%E5%9B%BE%E8%AE%A9%E4%BD%A0%E7%9C%8B%E6%B8%85%E6%A5%9Aapple-pay%E5%88%B0%E5%BA%95%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F/" target="_self">
+          
+          
+            
+          
+          图一：了解传统信用卡支付流程 图二：了解支付宝类支付流程
+图三：了解iPhone如何替代信用卡
+图四：了解Apple Pay线下支付流程
+图五：了解Apple Pay和支付宝、微信的差别
+ 
+原文链接：Apple Pay 究竟是什么？
+延伸阅读：
+手机丢失后，怎么保证这些应用的安全？支付宝、淘宝、网银、微信….
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-02-19 11:37" pubdate>
+              2016-02-19
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E4%BA%92%E8%81%94%E7%BD%91/">互联网</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%94%AF%E4%BB%98%E5%AE%9D/">支付宝</a>
+            
+              <a href="/tags/%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98/">微信支付</a>
+            
+              <a href="/tags/%E7%A7%BB%E5%8A%A8%E6%94%AF%E4%BB%98/">移动支付</a>
+            
+              <a href="/tags/apple-pay/">apple-pay</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/%E5%88%A9%E7%94%A8google%E8%A1%A8%E5%8D%95%E5%92%8Cgoogle%E8%A1%A8%E6%A0%BC%E5%AE%9A%E5%88%B6%E5%8D%95%E9%A1%B5%E9%9D%A2%E5%BA%94%E7%94%A8/" target="_self">
+          <img src="/2016/%E5%88%A9%E7%94%A8google%E8%A1%A8%E5%8D%95%E5%92%8Cgoogle%E8%A1%A8%E6%A0%BC%E5%AE%9A%E5%88%B6%E5%8D%95%E9%A1%B5%E9%9D%A2%E5%BA%94%E7%94%A8/googletable01.png" srcset="/img/loading.gif" lazyload alt="利用Google表单和Google表格定制单页面应用">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/%E5%88%A9%E7%94%A8google%E8%A1%A8%E5%8D%95%E5%92%8Cgoogle%E8%A1%A8%E6%A0%BC%E5%AE%9A%E5%88%B6%E5%8D%95%E9%A1%B5%E9%9D%A2%E5%BA%94%E7%94%A8/" target="_self">
+          利用Google表单和Google表格定制单页面应用
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/%E5%88%A9%E7%94%A8google%E8%A1%A8%E5%8D%95%E5%92%8Cgoogle%E8%A1%A8%E6%A0%BC%E5%AE%9A%E5%88%B6%E5%8D%95%E9%A1%B5%E9%9D%A2%E5%BA%94%E7%94%A8/" target="_self">
+          
+          
+            
+          
+          今天介绍给大家是如何利用Google的在线表单和表格服务，制作单页面功能性的网页。例如可以制作一个个人记账页面，当需要记账的时候，直接打开这个网页，或者在手机端访问这个网页，就可以轻松的添加记账信息。你也可以制作一个备忘录，通过定制的页面来添加备忘信息。下面先看一下我制作的记账页面的效果图：
+记账本页面：
+
+数据保存在这里：
+
+ 
+
+接下来，就按照下面的步骤来制作一个你自己的页面吧
+1、打开Goo
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-02-18 12:28" pubdate>
+              2016-02-18
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%8D%95%E7%BD%91%E9%A1%B5%E5%BA%94%E7%94%A8/">单网页应用</a>
+            
+              <a href="/tags/google%E8%A1%A8%E5%8D%95/">google表单</a>
+            
+              <a href="/tags/google%E8%A1%A8%E6%A0%BC/">google表格</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/%E6%89%8B%E6%9C%BA%E4%B8%A2%E5%A4%B1%E5%90%8E%EF%BC%8C%E6%80%8E%E4%B9%88%E4%BF%9D%E8%AF%81%E8%BF%99%E4%BA%9B%E5%BA%94%E7%94%A8%E7%9A%84%E5%AE%89%E5%85%A8/" target="_self">
+          <img src="/2016/%E6%89%8B%E6%9C%BA%E4%B8%A2%E5%A4%B1%E5%90%8E%EF%BC%8C%E6%80%8E%E4%B9%88%E4%BF%9D%E8%AF%81%E8%BF%99%E4%BA%9B%E5%BA%94%E7%94%A8%E7%9A%84%E5%AE%89%E5%85%A8/appsec1.png" srcset="/img/loading.gif" lazyload alt="手机丢失后，怎么保证这些应用的安全？支付宝、淘宝、网银、微信....">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/%E6%89%8B%E6%9C%BA%E4%B8%A2%E5%A4%B1%E5%90%8E%EF%BC%8C%E6%80%8E%E4%B9%88%E4%BF%9D%E8%AF%81%E8%BF%99%E4%BA%9B%E5%BA%94%E7%94%A8%E7%9A%84%E5%AE%89%E5%85%A8/" target="_self">
+          手机丢失后，怎么保证这些应用的安全？支付宝、淘宝、网银、微信....
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/%E6%89%8B%E6%9C%BA%E4%B8%A2%E5%A4%B1%E5%90%8E%EF%BC%8C%E6%80%8E%E4%B9%88%E4%BF%9D%E8%AF%81%E8%BF%99%E4%BA%9B%E5%BA%94%E7%94%A8%E7%9A%84%E5%AE%89%E5%85%A8/" target="_self">
+          
+          
+            
+          
+          手机银行、支付宝、淘宝、微信等，这些安全性要求很高的APP，我想在每个人的手机里都或多或少的安装有，这些优秀的应用给我们的生活带来了很大的方便，但是一旦我们的手机丢失或者被盗后，这些应用就成了我们财物、个人信息等重要信息泄露的一个出口，如何在手机丢失后保障这些APP的账户安全呢，下面我就分别介绍一下如何冻结这些应用对的账号：
+一、支付宝安全网址：https://110.alipay.com/saf
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-02-16 07:06" pubdate>
+              2016-02-16
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%99%BA%E8%83%BD%E6%89%8B%E6%9C%BA/">智能手机</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/">信息安全</a>
+            
+              <a href="/tags/%E5%BE%AE%E4%BF%A1/">微信</a>
+            
+              <a href="/tags/%E6%89%8B%E6%9C%BA%E5%AE%89%E5%85%A8/">手机安全</a>
+            
+              <a href="/tags/%E6%89%8B%E6%9C%BA%E9%93%B6%E8%A1%8C/">手机银行</a>
+            
+              <a href="/tags/%E6%8C%82%E5%A4%B1/">挂失</a>
+            
+              <a href="/tags/%E6%94%AF%E4%BB%98%E5%AE%9D/">支付宝</a>
+            
+              <a href="/tags/qq/">qq</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/%E6%89%A7%E8%A1%8Cgoogle%E8%B4%A6%E6%88%B7%E5%AE%89%E5%85%A8%E6%A3%80%E6%9F%A5%EF%BC%8C%E9%80%81%E4%BD%A02g%E4%BA%91%E7%AB%AF%E7%A1%AC%E7%9B%98%E7%A9%BA%E9%97%B4/" target="_self">
+          <img src="/2016/%E6%89%A7%E8%A1%8Cgoogle%E8%B4%A6%E6%88%B7%E5%AE%89%E5%85%A8%E6%A3%80%E6%9F%A5%EF%BC%8C%E9%80%81%E4%BD%A02g%E4%BA%91%E7%AB%AF%E7%A1%AC%E7%9B%98%E7%A9%BA%E9%97%B4/googledrive.png" srcset="/img/loading.gif" lazyload alt="执行Google账户安全检查，送你2G云端硬盘空间">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/%E6%89%A7%E8%A1%8Cgoogle%E8%B4%A6%E6%88%B7%E5%AE%89%E5%85%A8%E6%A3%80%E6%9F%A5%EF%BC%8C%E9%80%81%E4%BD%A02g%E4%BA%91%E7%AB%AF%E7%A1%AC%E7%9B%98%E7%A9%BA%E9%97%B4/" target="_self">
+          执行Google账户安全检查，送你2G云端硬盘空间
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/%E6%89%A7%E8%A1%8Cgoogle%E8%B4%A6%E6%88%B7%E5%AE%89%E5%85%A8%E6%A3%80%E6%9F%A5%EF%BC%8C%E9%80%81%E4%BD%A02g%E4%BA%91%E7%AB%AF%E7%A1%AC%E7%9B%98%E7%A9%BA%E9%97%B4/" target="_self">
+          
+          
+            
+          
+          今天也是在电脑玩物看到Google的这个消息的，只要按照步骤检查你的Google账户的安全性，就可以获得2G额外的Google云端硬盘空间。只需三步：
+
+打开Google账户安全检查页面：https://security.google.com/settings/security/secureaccount
+按照提示完成账户安全检查
+获得2G云端硬盘空间，如下图我已经从15G变为了17G
+
+
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-02-11 11:35" pubdate>
+              2016-02-11
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E4%BA%91%E7%AB%AF%E7%A1%AC%E7%9B%98/">云端硬盘</a>
+            
+              <a href="/tags/%E8%B4%A6%E6%88%B7%E5%AE%89%E5%85%A8/">账户安全</a>
+            
+              <a href="/tags/google/">google</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/google-chrome%E6%96%B0%E5%8A%9F%E8%83%BD%EF%BC%9A%E8%A7%A6%E6%91%B8%E6%90%9C%E7%B4%A2%EF%BC%8C%E6%97%A0%E9%9C%80%E7%A6%BB%E5%BC%80%E6%89%80%E5%9C%A8%E9%A1%B5%E9%9D%A2%EF%BC%8C%E5%8D%B3%E5%8F%AF/" target="_self">
+          <img src="/2016/google-chrome%E6%96%B0%E5%8A%9F%E8%83%BD%EF%BC%9A%E8%A7%A6%E6%91%B8%E6%90%9C%E7%B4%A2%EF%BC%8C%E6%97%A0%E9%9C%80%E7%A6%BB%E5%BC%80%E6%89%80%E5%9C%A8%E9%A1%B5%E9%9D%A2%EF%BC%8C%E5%8D%B3%E5%8F%AF/googletipsearch1.png" srcset="/img/loading.gif" lazyload alt="Google chrome新功能：触摸搜索，无需离开所在页面，即可了解网站上的主题">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/google-chrome%E6%96%B0%E5%8A%9F%E8%83%BD%EF%BC%9A%E8%A7%A6%E6%91%B8%E6%90%9C%E7%B4%A2%EF%BC%8C%E6%97%A0%E9%9C%80%E7%A6%BB%E5%BC%80%E6%89%80%E5%9C%A8%E9%A1%B5%E9%9D%A2%EF%BC%8C%E5%8D%B3%E5%8F%AF/" target="_self">
+          Google chrome新功能：触摸搜索，无需离开所在页面，即可了解网站上的主题
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/google-chrome%E6%96%B0%E5%8A%9F%E8%83%BD%EF%BC%9A%E8%A7%A6%E6%91%B8%E6%90%9C%E7%B4%A2%EF%BC%8C%E6%97%A0%E9%9C%80%E7%A6%BB%E5%BC%80%E6%89%80%E5%9C%A8%E9%A1%B5%E9%9D%A2%EF%BC%8C%E5%8D%B3%E5%8F%AF/" target="_self">
+          
+          
+            
+          
+          今天打开Google chrome发现了一个新功能，当点击网页上的到单词，在chrome的底部就会显示该词语的搜索结果。Google把这个功能叫做：触摸搜索。在iPhone的Safari中，使用3D Touch长按链接后，就会弹出一个窗口，来浏览链接内容，而不必离开当前页面。Google Chrome的触摸搜索和Safari的这个功能有点类似，在接下来我就来详细介绍一下这个功能！
+一、点击想要搜索
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-02-02 01:52" pubdate>
+              2016-02-02
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E8%A7%A6%E6%91%B8%E6%90%9C%E7%B4%A2/">触摸搜索</a>
+            
+              <a href="/tags/google-chrome/">google-chrome</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/%E8%BD%AC%E6%9C%80%E9%A0%86%E6%89%8B%E5%B7%A5%E7%A8%8B%E8%A8%88%E7%AE%97%E6%A9%9F-app-%E5%83%8F%E5%9C%A8%E7%B4%99%E4%B8%8A%E7%9B%B4%E8%A6%BA%E8%BC%B8%E5%85%A5%E6%95%B8%E5%AD%B8%E5%85%AC%E5%BC%8F/" target="_self">
+          <img src="/2016/%E8%BD%AC%E6%9C%80%E9%A0%86%E6%89%8B%E5%B7%A5%E7%A8%8B%E8%A8%88%E7%AE%97%E6%A9%9F-app-%E5%83%8F%E5%9C%A8%E7%B4%99%E4%B8%8A%E7%9B%B4%E8%A6%BA%E8%BC%B8%E5%85%A5%E6%95%B8%E5%AD%B8%E5%85%AC%E5%BC%8F/cal01.png" srcset="/img/loading.gif" lazyload alt="[转]最順手工程計算機 App 像在紙上直覺輸入數學公式">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/%E8%BD%AC%E6%9C%80%E9%A0%86%E6%89%8B%E5%B7%A5%E7%A8%8B%E8%A8%88%E7%AE%97%E6%A9%9F-app-%E5%83%8F%E5%9C%A8%E7%B4%99%E4%B8%8A%E7%9B%B4%E8%A6%BA%E8%BC%B8%E5%85%A5%E6%95%B8%E5%AD%B8%E5%85%AC%E5%BC%8F/" target="_self">
+          [转]最順手工程計算機 App 像在紙上直覺輸入數學公式
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/%E8%BD%AC%E6%9C%80%E9%A0%86%E6%89%8B%E5%B7%A5%E7%A8%8B%E8%A8%88%E7%AE%97%E6%A9%9F-app-%E5%83%8F%E5%9C%A8%E7%B4%99%E4%B8%8A%E7%9B%B4%E8%A6%BA%E8%BC%B8%E5%85%A5%E6%95%B8%E5%AD%B8%E5%85%AC%E5%BC%8F/" target="_self">
+          
+          
+            
+          
+          最近聊到如何在「 Google Docs 寫數學公式」的方法，剛好就有讀者留言推薦了一款他說是：「用過的最好的 Android 計算機 App……就像書上印的公式那樣輸入數學公式」，這引起了我的興趣，於是去測試了一下，也想推薦給電腦玩物的讀者。
+這款 App 叫做「 Natural Scientific Calculator 」，從名稱就可以看出他號稱是「可以最自然輸入公式」的工程計算機，為什麼這
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-01-29 07:30" pubdate>
+              2016-01-29
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E8%AE%A1%E7%AE%97%E5%99%A8/">计算器</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%BF%85%E5%A4%87%E6%89%8B%E6%9C%BA%E7%AB%AFsvn%E5%92%8C%E4%BB%A3%E7%A0%81%E6%9F%A5%E7%9C%8B%E5%99%A8/" target="_self">
+          <img src="/2016/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%BF%85%E5%A4%87%E6%89%8B%E6%9C%BA%E7%AB%AFsvn%E5%92%8C%E4%BB%A3%E7%A0%81%E6%9F%A5%E7%9C%8B%E5%99%A8/shoujisvn1.png" srcset="/img/loading.gif" lazyload alt="[程序员必备]手机端SVN和代码查看器">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%BF%85%E5%A4%87%E6%89%8B%E6%9C%BA%E7%AB%AFsvn%E5%92%8C%E4%BB%A3%E7%A0%81%E6%9F%A5%E7%9C%8B%E5%99%A8/" target="_self">
+          [程序员必备]手机端SVN和代码查看器
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%BF%85%E5%A4%87%E6%89%8B%E6%9C%BA%E7%AB%AFsvn%E5%92%8C%E4%BB%A3%E7%A0%81%E6%9F%A5%E7%9C%8B%E5%99%A8/" target="_self">
+          
+          
+            
+          
+          由于各种原因偶尔需要随身查看一下项目代码，于是我有了这个想法：我有个旧的大屏安卓手机，能否利用充分利用旧物，来实现这个需求呢。通过在各个APP网站查找，我找到的解决方案，下面就分下一下我如何在手机端搭建SVN客户端，并查看和编辑源代码。
+一、手机端SVN客户端：OASVN这款应用可以想在电脑端一样从SVN服务器下载代码到你的手机里。主要功能如下：
+1、创建仓库链接
+和电脑端操作SVN类似，输入仓库
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-01-28 08:10" pubdate>
+              2016-01-28
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E4%BB%A3%E7%A0%81%E6%9F%A5%E7%9C%8B%E5%99%A8/">代码查看器</a>
+            
+              <a href="/tags/%E6%89%8B%E6%9C%BA%E7%AB%AFsvn/">手机端svn</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <a class="extend prev" rel="prev" href="/page/26/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/25/#board">25</a><a class="page-number" href="/page/26/#board">26</a><span class="page-number current">27</span><a class="page-number" href="/page/28/#board">28</a><a class="page-number" href="/page/29/#board">29</a><span class="space">&hellip;</span><a class="page-number" href="/page/33/#board">33</a><a class="extend next" rel="next" href="/page/28/#board"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

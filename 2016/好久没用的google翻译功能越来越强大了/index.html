@@ -1,0 +1,485 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="daxi">
+  <meta name="keywords" content="">
+  
+  <title>好久没用的Google翻译功能越来越强大了 - 达夕博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiyt.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>达夕博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/banner1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="好久没用的Google翻译功能越来越强大了">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2016-09-26 06:19" pubdate>
+        2016年9月26日 早上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      638 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      6
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">好久没用的Google翻译功能越来越强大了</h1>
+            
+            <div class="markdown-body">
+              <p><img src="/2016/%E5%A5%BD%E4%B9%85%E6%B2%A1%E7%94%A8%E7%9A%84google%E7%BF%BB%E8%AF%91%E5%8A%9F%E8%83%BD%E8%B6%8A%E6%9D%A5%E8%B6%8A%E5%BC%BA%E5%A4%A7%E4%BA%86/googletranslate-logo.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>最近一直使用有道翻译来解决日常工作或生活中的生词问题，有道翻译的词汇量、桌面应用、手机APP都还不错，不过感觉功能越来越多，显得臃肿了。今天再次打开久别的Google翻译后，发现Google翻译确实发生时了一些变化，生词本功能更加好用了，贴心的在线输入法，还有文档返回功能，都表明Google翻译确实是一款强大的翻译工具。下面我就介绍一下这些优秀的功能：</p>
+<h3 id="1、生词本按照翻译语言维度进行过滤"><a href="#1、生词本按照翻译语言维度进行过滤" class="headerlink" title="1、生词本按照翻译语言维度进行过滤"></a><strong>1、生词本按照翻译语言维度进行过滤</strong></h3><p>现在Google翻译的生词本中可以按照源语言-&gt;目标语言的维度进行过滤搜索，这样我们能够很方便的过滤出最近关注的语言的生词。比如我现在正在学习日语，我就可以之过滤中日-日中的单词，进行学习和回顾。点击一条记录后，就会显示这条单词，双语解释。</p>
+<p><img src="/2016/%E5%A5%BD%E4%B9%85%E6%B2%A1%E7%94%A8%E7%9A%84google%E7%BF%BB%E8%AF%91%E5%8A%9F%E8%83%BD%E8%B6%8A%E6%9D%A5%E8%B6%8A%E5%BC%BA%E5%A4%A7%E4%BA%86/googletran01.png" srcset="/img/loading.gif" lazyload alt="好久没用的Google翻译功能越来越强大了"></p>
+<h3 id="2、生词本导出词典到Google表格"><a href="#2、生词本导出词典到Google表格" class="headerlink" title="2、生词本导出词典到Google表格"></a><strong>2、生词本导出词典到Google表格</strong></h3><p>Google翻译生词本现在支持将数据导出到Google表格，而且可以根据搜索结果导出，例如我们只选择了中英翻译的单词，就只会导出这些单词。使用这个功能我们可以把单词导出到Excel后，进行打印、分享、下载等操作，非常方便。</p>
+<p><img src="/2016/%E5%A5%BD%E4%B9%85%E6%B2%A1%E7%94%A8%E7%9A%84google%E7%BF%BB%E8%AF%91%E5%8A%9F%E8%83%BD%E8%B6%8A%E6%9D%A5%E8%B6%8A%E5%BC%BA%E5%A4%A7%E4%BA%86/googletran02.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="/2016/%E5%A5%BD%E4%B9%85%E6%B2%A1%E7%94%A8%E7%9A%84google%E7%BF%BB%E8%AF%91%E5%8A%9F%E8%83%BD%E8%B6%8A%E6%9D%A5%E8%B6%8A%E5%BC%BA%E5%A4%A7%E4%BA%86/googletran03.png" srcset="/img/loading.gif" lazyload>  <img src="/2016/%E5%A5%BD%E4%B9%85%E6%B2%A1%E7%94%A8%E7%9A%84google%E7%BF%BB%E8%AF%91%E5%8A%9F%E8%83%BD%E8%B6%8A%E6%9D%A5%E8%B6%8A%E5%BC%BA%E5%A4%A7%E4%BA%86/googletran04.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="3、强大的谷歌文档翻译"><a href="#3、强大的谷歌文档翻译" class="headerlink" title="3、强大的谷歌文档翻译"></a><strong>3、强大的谷歌文档翻译</strong></h3><p>Google翻译不仅能够返回单词、语句和网站，而且现在也可以支持文档的翻译了，比如我有一个中文的Excel，想把他翻译为英语，直接上传Excel文档，然后选择好源语言和目标语言，点击翻译即可。我试了一下，效果还不错，请看下图：</p>
+<p><img src="/2016/%E5%A5%BD%E4%B9%85%E6%B2%A1%E7%94%A8%E7%9A%84google%E7%BF%BB%E8%AF%91%E5%8A%9F%E8%83%BD%E8%B6%8A%E6%9D%A5%E8%B6%8A%E5%BC%BA%E5%A4%A7%E4%BA%86/googletran05.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="/2016/%E5%A5%BD%E4%B9%85%E6%B2%A1%E7%94%A8%E7%9A%84google%E7%BF%BB%E8%AF%91%E5%8A%9F%E8%83%BD%E8%B6%8A%E6%9D%A5%E8%B6%8A%E5%BC%BA%E5%A4%A7%E4%BA%86/googletran06.png" srcset="/img/loading.gif" lazyload></p>
+<p> </p>
+<p><img src="/2016/%E5%A5%BD%E4%B9%85%E6%B2%A1%E7%94%A8%E7%9A%84google%E7%BF%BB%E8%AF%91%E5%8A%9F%E8%83%BD%E8%B6%8A%E6%9D%A5%E8%B6%8A%E5%BC%BA%E5%A4%A7%E4%BA%86/googletran07.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="4、多语言输入法工具"><a href="#4、多语言输入法工具" class="headerlink" title="4、多语言输入法工具"></a><strong>4、多语言输入法工具</strong></h3><p>这个对于一款翻译工具来说，是非常有用的，我不在需要安装各种输入法来输入想翻译的词句，直接使用在线的这款多语言输入法就可以了。在<a target="_blank" rel="noopener" href="http://www.daxiblog.com/2016/09/25/gmail%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%E4%B8%89%E5%88%99/">上一篇文章</a>中也提到了在Gmail中也是有这款Google 在线多语言输入法的。这里不做详细说明了。</p>
+<p><strong>推荐阅读：</strong></p>
+<p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2016/09/13/google-keep%e6%96%b0%e6%8a%80%e5%b7%a7%e4%b8%a4%e5%88%99/">Google Keep新技巧两则</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2016/09/25/gmail%e4%bd%bf%e7%94%a8%e6%8a%80%e5%b7%a7%e4%b8%89%e5%88%99/">Gmail使用技巧三则</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2016/09/23/%e8%a7%a3%e5%86%b3%e7%94%b5%e8%84%91%e7%ab%af%e7%89%88google-drive%e6%97%a0%e6%b3%95%e8%bf%9e%e6%8e%a5%e7%9a%84%e9%97%ae%e9%a2%98/">解决电脑端版Google Drive无法连接的问题</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2016/05/26/%e5%8f%af%e4%bb%a5%e5%92%8cgoogle-drive%e6%90%ad%e9%85%8d%e4%bd%bf%e7%94%a8%e4%b8%89%e6%ac%bemarkdown%e5%9c%a8%e7%ba%bf%e5%b7%a5%e5%85%b7%e6%8e%a8%e8%8d%90/">可以和Google Drive搭配使用三款Markdown在线工具推荐</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2016/05/16/%e8%ae%a9%e6%9f%a5%e6%89%be%e7%85%a7%e7%89%87%e6%9b%b4%e5%8a%a0%e5%bf%ab%e6%8d%b7%ef%bc%9a%e5%96%84%e7%94%a8google%e7%9b%b8%e5%86%8c%e7%9a%84%e4%ba%ba%e5%83%8f%e6%90%9c%e7%b4%a2/">让查找照片更加快捷：善用Google相册的人像搜索</a></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%96%87%E6%A1%A3%E8%AE%BF%E9%97%AE/">文档访问</a>
+                    
+                      <a class="hover-with-bg" href="/tags/google%E7%BF%BB%E8%AF%91%E7%94%9F%E8%AF%8D%E6%9C%AC/">google翻译生词本</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2016/%E5%9F%BA%E4%BA%8Ewindows10%E7%9A%84%E6%A1%8C%E9%9D%A2%E6%95%B4%E7%90%86%E6%9C%AF%EF%BC%8C%E5%91%8A%E5%88%AB%E4%B9%B1%E7%B3%9F%E7%B3%9F%E7%9A%84%E6%A1%8C%E9%9D%A2/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">基于Windows10的桌面整理术，告别乱糟糟的桌面</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2016/gmail%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%E4%B8%89%E5%88%99/">
+                        <span class="hidden-mobile">Gmail使用技巧三则</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"B2tecGOesiRBcoXldYV5Jk5A-9Nh9j0Va","appKey":"5tFdBthF0o282SCXuNVxbntd","placeholder":"说点什么","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false,"requiredFields":[]},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

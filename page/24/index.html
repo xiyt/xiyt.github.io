@@ -1,0 +1,966 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="daxi">
+  <meta name="keywords" content="">
+  
+  <title>达夕博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiyt.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 100vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>达夕博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/banner1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="热衷于分享IT技术/工作效率/优秀软件，申旦达夕，永无止境">
+              
+            </span>
+
+            
+          </div>
+
+          
+            <div class="scroll-down-bar">
+              <i class="iconfont icon-arrowdown"></i>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div class="py-5" id="board"
+          style=margin-top:0>
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/%E5%9B%BD%E5%86%85%E4%BC%98%E7%A7%80%E7%9A%84%E5%90%8C%E6%AD%A5%E4%BA%91%E7%9B%98%EF%BC%9A%E5%9D%9A%E6%9E%9C%E4%BA%91%E4%BA%94%E5%A4%A7%E7%89%B9%E8%89%B2%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/" target="_self">
+          <img src="/2016/%E5%9B%BD%E5%86%85%E4%BC%98%E7%A7%80%E7%9A%84%E5%90%8C%E6%AD%A5%E4%BA%91%E7%9B%98%EF%BC%9A%E5%9D%9A%E6%9E%9C%E4%BA%91%E4%BA%94%E5%A4%A7%E7%89%B9%E8%89%B2%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/jianguoyun.jpg" srcset="/img/loading.gif" lazyload alt="国内优秀的同步云盘：坚果云五大特色使用体验">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/%E5%9B%BD%E5%86%85%E4%BC%98%E7%A7%80%E7%9A%84%E5%90%8C%E6%AD%A5%E4%BA%91%E7%9B%98%EF%BC%9A%E5%9D%9A%E6%9E%9C%E4%BA%91%E4%BA%94%E5%A4%A7%E7%89%B9%E8%89%B2%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/" target="_self">
+          国内优秀的同步云盘：坚果云五大特色使用体验
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/%E5%9B%BD%E5%86%85%E4%BC%98%E7%A7%80%E7%9A%84%E5%90%8C%E6%AD%A5%E4%BA%91%E7%9B%98%EF%BC%9A%E5%9D%9A%E6%9E%9C%E4%BA%91%E4%BA%94%E5%A4%A7%E7%89%B9%E8%89%B2%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C/" target="_self">
+          
+          
+            
+          
+          
+之前介绍过金山快盘即将停止服务的消息。其实不仅金山快盘，像新浪微盘、百度云盘等也都纷纷限制和取消了实时同步的功能。后来我在这篇文章里介绍了替代方案，不过后来又网友建议我试试坚果云，今天就把使用体验以及坚果云的独特之处分享一下：
+1、选择性同步这个算是同步类软件的标配了现在，坚果云也同样支持，在设置页面我们可以方便的选择需要同步到本地的文件夹，并且支持子文件的选择。如下图所示：
+
+2、同步多个文件
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-05-09 11:18" pubdate>
+              2016-05-09
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%90%8C%E6%AD%A5%E7%9B%98/">同步盘</a>
+            
+              <a href="/tags/%E4%BA%91%E5%90%8C%E6%AD%A5/">云同步</a>
+            
+              <a href="/tags/%E4%BA%91%E7%AB%AF%E7%A1%AC%E7%9B%98/">云端硬盘</a>
+            
+              <a href="/tags/%E5%9D%9A%E6%9E%9C%E4%BA%91/">坚果云</a>
+            
+              <a href="/tags/%E5%A4%9A%E4%BA%BA%E5%8D%8F%E4%BD%9C/">多人协作</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/%E9%80%89%E6%8B%A9%E4%BD%A0%E6%9C%80%E9%80%82%E5%90%88%E7%9A%84%EF%BC%9A%E5%9C%A8%E7%94%B5%E8%84%91%E7%AB%AF%E8%BF%9B%E8%A1%8C%E5%9B%BE%E7%89%87%E6%A0%87%E6%B3%A8%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%92%8C/" target="_self">
+          <img src="/2016/%E9%80%89%E6%8B%A9%E4%BD%A0%E6%9C%80%E9%80%82%E5%90%88%E7%9A%84%EF%BC%9A%E5%9C%A8%E7%94%B5%E8%84%91%E7%AB%AF%E8%BF%9B%E8%A1%8C%E5%9B%BE%E7%89%87%E6%A0%87%E6%B3%A8%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%92%8C/biaozhu1.png" srcset="/img/loading.gif" lazyload alt="选择你最适合的：在电脑端进行图片标注的软件和方法总结">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/%E9%80%89%E6%8B%A9%E4%BD%A0%E6%9C%80%E9%80%82%E5%90%88%E7%9A%84%EF%BC%9A%E5%9C%A8%E7%94%B5%E8%84%91%E7%AB%AF%E8%BF%9B%E8%A1%8C%E5%9B%BE%E7%89%87%E6%A0%87%E6%B3%A8%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%92%8C/" target="_self">
+          选择你最适合的：在电脑端进行图片标注的软件和方法总结
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/%E9%80%89%E6%8B%A9%E4%BD%A0%E6%9C%80%E9%80%82%E5%90%88%E7%9A%84%EF%BC%9A%E5%9C%A8%E7%94%B5%E8%84%91%E7%AB%AF%E8%BF%9B%E8%A1%8C%E5%9B%BE%E7%89%87%E6%A0%87%E6%B3%A8%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%92%8C/" target="_self">
+          
+          
+            
+          
+          这两天看到很多文章都在介绍Annotable这个手机上的图片标注软件，这让我想起了在电脑端有哪些图片标注的方法和软件呢。我相信大家多少都会遇到需要进行图片标注的情况，无论是屏幕截、拍摄的照片还是图例说明等，为了更好的说明图片中包含的信息，图片标注是必不可少的。但是选择哪种图片标注工具或者方法更加方便和快捷呢？今天我就总结一下在电脑端进行图片标注的几种方法，根据情况选择适合自己的才是最好的：
+1、Q
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-05-07 14:19" pubdate>
+              2016-05-07
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%9B%BE%E7%89%87%E6%A0%87%E6%B3%A8/">图片标注</a>
+            
+              <a href="/tags/%E5%9C%88%E7%82%B9/">圈点</a>
+            
+              <a href="/tags/%E6%88%AA%E5%9B%BE%E6%8F%92%E4%BB%B6/">截图插件</a>
+            
+              <a href="/tags/%E9%A9%AC%E5%85%8B%E9%B3%97/">马克鳗</a>
+            
+              <a href="/tags/annotable/">annotable</a>
+            
+              <a href="/tags/iphotodraw/">iphotodraw</a>
+            
+              <a href="/tags/qq%E6%88%AA%E5%9B%BE/">qq截图</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/%E5%8A%9E%E5%85%AC%E7%94%B5%E8%84%91%E4%B8%AD%E7%A7%81%E4%BA%BA%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4%E7%9A%84%E5%90%AF%E5%8A%A8%E8%84%9A%E6%9C%AC/" target="_self">
+          <img src="/2016/%E5%8A%9E%E5%85%AC%E7%94%B5%E8%84%91%E4%B8%AD%E7%A7%81%E4%BA%BA%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4%E7%9A%84%E5%90%AF%E5%8A%A8%E8%84%9A%E6%9C%AC/private.jpg" srcset="/img/loading.gif" lazyload alt="办公电脑中私人工作空间的启动脚本">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/%E5%8A%9E%E5%85%AC%E7%94%B5%E8%84%91%E4%B8%AD%E7%A7%81%E4%BA%BA%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4%E7%9A%84%E5%90%AF%E5%8A%A8%E8%84%9A%E6%9C%AC/" target="_self">
+          办公电脑中私人工作空间的启动脚本
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/%E5%8A%9E%E5%85%AC%E7%94%B5%E8%84%91%E4%B8%AD%E7%A7%81%E4%BA%BA%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4%E7%9A%84%E5%90%AF%E5%8A%A8%E8%84%9A%E6%9C%AC/" target="_self">
+          
+          
+            
+          
+          
+在我的办公电脑中，我专门创建了一个加密的VHD虚拟硬盘，大约有30G的容量，里面存放的是我的私人工作软件和数据，其中包括：
+
+印象笔记的数据文件；
+Chrome的登录用户数据；
+Dropbox和Google Drive的同步数据；
+必备的免安装程序，如Everything、Sublime Text；
+
+把这些放到虚拟硬盘中的好处是：
+
+可以加密，进行数据保护；
+当更换电脑时，直接把虚拟硬盘文件搬
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-05-06 15:41" pubdate>
+              2016-05-06
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%8A%A0%E5%AF%86/">加密</a>
+            
+              <a href="/tags/%E8%99%9A%E6%8B%9F%E7%A1%AC%E7%9B%98/">虚拟硬盘</a>
+            
+              <a href="/tags/%E7%A7%81%E4%BA%BA%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4/">私人工作空间</a>
+            
+              <a href="/tags/%E8%87%AA%E5%8A%A8%E5%90%AF%E5%8A%A8/">自动启动</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/iphone%E4%B8%AD%E4%BD%BF%E7%94%A8shadowrocket%E5%85%A8%E5%B1%80%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" target="_self">
+          <img src="/2016/iphone%E4%B8%AD%E4%BD%BF%E7%94%A8shadowrocket%E5%85%A8%E5%B1%80%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/fq.png" srcset="/img/loading.gif" lazyload alt="iPhone中使用Shadowrocket全局科学上网">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/iphone%E4%B8%AD%E4%BD%BF%E7%94%A8shadowrocket%E5%85%A8%E5%B1%80%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" target="_self">
+          iPhone中使用Shadowrocket全局科学上网
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/iphone%E4%B8%AD%E4%BD%BF%E7%94%A8shadowrocket%E5%85%A8%E5%B1%80%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" target="_self">
+          
+          
+            
+          
+          
+之前介绍过一款Surge软件，在iPhone中实现全局科学上网，但是Surge的价格不菲，虽然通过PP助手也可以安装使用(参看：iPhone中Surge上网应用PP正版下载+使用教程)，但是手机重启后，必须使用PP助手再次激活，不太方便。今天推荐的Shadowrocket可以功能和Surge类似，而且配置更加简单。更加重要的是在苹果AppStore中只需要6元人民币便可直接下载安装。下面我做一下
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-05-05 06:37" pubdate>
+              2016-05-05
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/">科学上网</a>
+            
+              <a href="/tags/surge/">surge</a>
+            
+              <a href="/tags/shadowrocket/">shadowrocket</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/%E8%AE%A9google-drive%E5%92%8Cdropbox%E5%90%8C%E6%AD%A5%E5%90%8C%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%B9/" target="_self">
+          <img src="/2016/%E8%AE%A9google-drive%E5%92%8Cdropbox%E5%90%8C%E6%AD%A5%E5%90%8C%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%B9/googledriveanddropbox.png" srcset="/img/loading.gif" lazyload alt="让Google Drive和Dropbox同步同一个文件夹">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/%E8%AE%A9google-drive%E5%92%8Cdropbox%E5%90%8C%E6%AD%A5%E5%90%8C%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%B9/" target="_self">
+          让Google Drive和Dropbox同步同一个文件夹
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/%E8%AE%A9google-drive%E5%92%8Cdropbox%E5%90%8C%E6%AD%A5%E5%90%8C%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%B9/" target="_self">
+          
+          
+            
+          
+          
+随着国内网盘服务的不断出现关闭的现象越来越多（金山快盘停止服务，数据转移方案和备选网盘推荐），我决定把文件全部整理到国外网盘中。在国外网盘中Google drive和Dropbox无疑是两大领导者，下面我简单列举了各自的特点：
+Google Drive：
+
+丰富的扩展功能；
+优秀的在线文档编辑查看功能；
+视频、图片等多媒体的编辑播放插件；
+存储空间较大；
+
+Dropbox：
+
+优秀的实时同步功能
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-05-04 02:55" pubdate>
+              2016-05-04
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%90%8C%E6%AD%A5/">同步</a>
+            
+              <a href="/tags/dropbox/">dropbox</a>
+            
+              <a href="/tags/google-drive/">google-drive</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/%E9%87%91%E5%B1%B1%E5%BF%AB%E7%9B%98%E5%81%9C%E6%AD%A2%E6%9C%8D%E5%8A%A1%EF%BC%8C%E6%95%B0%E6%8D%AE%E8%BD%AC%E7%A7%BB%E6%96%B9%E6%A1%88%E5%92%8C%E5%A4%87%E9%80%89%E7%BD%91%E7%9B%98%E6%8E%A8%E8%8D%90/" target="_self">
+          <img src="/2016/%E9%87%91%E5%B1%B1%E5%BF%AB%E7%9B%98%E5%81%9C%E6%AD%A2%E6%9C%8D%E5%8A%A1%EF%BC%8C%E6%95%B0%E6%8D%AE%E8%BD%AC%E7%A7%BB%E6%96%B9%E6%A1%88%E5%92%8C%E5%A4%87%E9%80%89%E7%BD%91%E7%9B%98%E6%8E%A8%E8%8D%90/kuaipanstop6.png" srcset="/img/loading.gif" lazyload alt="金山快盘停止服务，数据转移方案和备选网盘推荐">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/%E9%87%91%E5%B1%B1%E5%BF%AB%E7%9B%98%E5%81%9C%E6%AD%A2%E6%9C%8D%E5%8A%A1%EF%BC%8C%E6%95%B0%E6%8D%AE%E8%BD%AC%E7%A7%BB%E6%96%B9%E6%A1%88%E5%92%8C%E5%A4%87%E9%80%89%E7%BD%91%E7%9B%98%E6%8E%A8%E8%8D%90/" target="_self">
+          金山快盘停止服务，数据转移方案和备选网盘推荐
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/%E9%87%91%E5%B1%B1%E5%BF%AB%E7%9B%98%E5%81%9C%E6%AD%A2%E6%9C%8D%E5%8A%A1%EF%BC%8C%E6%95%B0%E6%8D%AE%E8%BD%AC%E7%A7%BB%E6%96%B9%E6%A1%88%E5%92%8C%E5%A4%87%E9%80%89%E7%BD%91%E7%9B%98%E6%8E%A8%E8%8D%90/" target="_self">
+          
+          
+            
+          
+          
+今天看到金山快盘即将停止服务的通知，感慨又一个国内网盘服务的关闭。我是在很早之前就使用金山快盘的，当时的网盘服务中，在数据同步、冲突处理等方面，快盘做的还是非常不错的。我也把大量的数据同步到了快盘了。不过后来发现稳定性反面不是很好，我现在切换到了Dropbox和Google Drive，尽管需要FQ，但是稳定性好多了。今天看到这个消息，确实挺遗憾的，但是国内网盘所面临的数据审核要求和缺乏好的盈利
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-04-28 03:16" pubdate>
+              2016-04-28
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E7%BD%91%E7%9B%98/">网盘</a>
+            
+              <a href="/tags/%E5%90%8C%E6%AD%A5%E7%9B%98/">同步盘</a>
+            
+              <a href="/tags/%E7%99%BE%E5%BA%A6%E4%BA%91%E7%9B%98/">百度云盘</a>
+            
+              <a href="/tags/dropbox/">dropbox</a>
+            
+              <a href="/tags/google-drive/">google-drive</a>
+            
+              <a href="/tags/onedrive/">onedrive</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/%E5%88%86%E4%BA%AB%E5%8D%B0%E8%B1%A1%E7%AC%94%E8%AE%B0-windows-v6-%E7%89%88%EF%BD%9C1-%E6%AC%A1%E5%A4%A7%E6%9B%B4%E6%96%B0%EF%BC%8C-10-%E5%A4%A7%E6%96%B0%E5%8A%9F%E8%83%BD%EF%BC%81/" target="_self">
+          [分享]印象笔记 Windows V6 版｜1 次大更新， 10 大新功能！
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/%E5%88%86%E4%BA%AB%E5%8D%B0%E8%B1%A1%E7%AC%94%E8%AE%B0-windows-v6-%E7%89%88%EF%BD%9C1-%E6%AC%A1%E5%A4%A7%E6%9B%B4%E6%96%B0%EF%BC%8C-10-%E5%A4%A7%E6%96%B0%E5%8A%9F%E8%83%BD%EF%BC%81/" target="_self">
+          
+          
+            
+          
+          Windows 版攻城狮酝酿已久的大更新终于来啦！全新印象笔记 Windows 第 6 版，更简洁、更清晰、更流畅，对印象笔记的核心功能进行了大幅提升：导航栏、归类整理及搜索、笔记编辑和笔记浏览器都有更新，为你带来 10 大新功能，马上更新试试看吧！
+
+更简洁的导航栏我们希望通过此次更新为 Windows 用户提供一个自然且熟悉的使用体验：首先从最常用的左侧导航栏入手，努力打造更流畅的工作流程，让
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-04-25 08:13" pubdate>
+              2016-04-25
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%8D%B0%E8%B1%A1%E7%AC%94%E8%AE%B0/">印象笔记</a>
+            
+              <a href="/tags/evernote/">evernote</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/%E5%A4%A7%E5%B8%AD%E6%90%9C%E7%9B%98-%E5%9B%BD%E5%86%85%E7%BD%91%E7%9B%98%E8%B5%84%E6%BA%90%E6%90%9C%E7%B4%A2/" target="_self">
+          <img src="/2016/%E5%A4%A7%E5%B8%AD%E6%90%9C%E7%9B%98-%E5%9B%BD%E5%86%85%E7%BD%91%E7%9B%98%E8%B5%84%E6%BA%90%E6%90%9C%E7%B4%A2/daxisearchpan-1024x632.png" srcset="/img/loading.gif" lazyload alt="大席搜盘 - 国内网盘资源搜索">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/%E5%A4%A7%E5%B8%AD%E6%90%9C%E7%9B%98-%E5%9B%BD%E5%86%85%E7%BD%91%E7%9B%98%E8%B5%84%E6%BA%90%E6%90%9C%E7%B4%A2/" target="_self">
+          大席搜盘 - 国内网盘资源搜索
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/%E5%A4%A7%E5%B8%AD%E6%90%9C%E7%9B%98-%E5%9B%BD%E5%86%85%E7%BD%91%E7%9B%98%E8%B5%84%E6%BA%90%E6%90%9C%E7%B4%A2/" target="_self">
+          
+          
+            
+          
+          之前介绍过利用Google的自定义搜索功能，对特定网站进行自定义的功能，文章见这里。今天我把国内的各个网盘资源整合到一起创建了一个国内网盘资源搜索的Google自定义搜索，在这里公开给大家使用。支持的网站资源我会定期更新和维护，由于该工具使用的Google的服务，所以如果你还没有成功FQ，那就暂时无法使用了。搜索效果如下： 
+另外大家如果有什么好的网络资源，可以和我留言，我会根据情况整合到搜索资源
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-04-23 13:54" pubdate>
+              2016-04-23
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%9B%BD%E5%86%85%E7%BD%91%E7%9B%98%E6%90%9C%E7%B4%A2/">国内网盘搜索</a>
+            
+              <a href="/tags/%E5%A4%A7%E5%B8%AD%E6%90%9C%E7%9B%98/">大席搜盘</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/%E4%BB%8Efoxmail%E6%88%96outlook-express%E8%BF%81%E7%A7%BB%E5%88%B0outlook-2013%E7%9A%84%E6%96%B9%E6%A1%88%E6%80%BB%E7%BB%93/" target="_self">
+          <img src="/2016/%E4%BB%8Efoxmail%E6%88%96outlook-express%E8%BF%81%E7%A7%BB%E5%88%B0outlook-2013%E7%9A%84%E6%96%B9%E6%A1%88%E6%80%BB%E7%BB%93/changeemail.png" srcset="/img/loading.gif" lazyload alt="从Foxmail或Outlook Express迁移到Outlook 2013的方案总结">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/%E4%BB%8Efoxmail%E6%88%96outlook-express%E8%BF%81%E7%A7%BB%E5%88%B0outlook-2013%E7%9A%84%E6%96%B9%E6%A1%88%E6%80%BB%E7%BB%93/" target="_self">
+          从Foxmail或Outlook Express迁移到Outlook 2013的方案总结
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/%E4%BB%8Efoxmail%E6%88%96outlook-express%E8%BF%81%E7%A7%BB%E5%88%B0outlook-2013%E7%9A%84%E6%96%B9%E6%A1%88%E6%80%BB%E7%BB%93/" target="_self">
+          
+          
+            
+          
+          昨天我把邮件客户端从Foxmail改为了Outlook 2013，其中必然涉及到邮件数据的迁移问题，通过昨天的研究和网络的搜寻，我顺利的完成了数据的迁移。今天就把从Foxmail或Outlook Express迁移到Outlook 2013的方案总结一下，分享给大家。
+
+一、现在用的是Outlook Express，需要再同一台电脑上换成Outlook 2013这种情况最简单方便了，在同一台电脑上
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-04-22 02:23" pubdate>
+              2016-04-22
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E9%82%AE%E4%BB%B6%E8%BF%81%E7%A7%BB/">邮件迁移</a>
+            
+              <a href="/tags/outlook/">outlook</a>
+            
+              <a href="/tags/foxmail/">foxmail</a>
+            
+              <a href="/tags/outlook-express/">outlook-express</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/%E8%BD%AC%E7%B5%82%E6%96%BC%E6%9B%B4%E6%96%B0%EF%BC%81-google-drive-%E5%8F%AF%E4%BB%A5%E9%81%B8%E6%93%87%E6%80%A7%E5%90%8C%E6%AD%A5%E5%AD%90%E8%B3%87%E6%96%99%E5%A4%BE%E4%BA%86/" target="_self">
+          <img src="/2016/%E8%BD%AC%E7%B5%82%E6%96%BC%E6%9B%B4%E6%96%B0%EF%BC%81-google-drive-%E5%8F%AF%E4%BB%A5%E9%81%B8%E6%93%87%E6%80%A7%E5%90%8C%E6%AD%A5%E5%AD%90%E8%B3%87%E6%96%99%E5%A4%BE%E4%BA%86/google%20drive%20sync-01.png" srcset="/img/loading.gif" lazyload alt="[转]終於更新！ Google Drive 可以選擇性同步子資料夾了">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/%E8%BD%AC%E7%B5%82%E6%96%BC%E6%9B%B4%E6%96%B0%EF%BC%81-google-drive-%E5%8F%AF%E4%BB%A5%E9%81%B8%E6%93%87%E6%80%A7%E5%90%8C%E6%AD%A5%E5%AD%90%E8%B3%87%E6%96%99%E5%A4%BE%E4%BA%86/" target="_self">
+          [转]終於更新！ Google Drive 可以選擇性同步子資料夾了
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/%E8%BD%AC%E7%B5%82%E6%96%BC%E6%9B%B4%E6%96%B0%EF%BC%81-google-drive-%E5%8F%AF%E4%BB%A5%E9%81%B8%E6%93%87%E6%80%A7%E5%90%8C%E6%AD%A5%E5%AD%90%E8%B3%87%E6%96%99%E5%A4%BE%E4%BA%86/" target="_self">
+          
+          
+            
+          
+          一個很有趣的現象是，一兩年前開始，我的 Google 雲端硬碟線上空間，已經大於我的 Macbook 筆電的空間，甚至大於我桌機電腦硬碟的空間（我很少更換電腦硬體，所以硬碟大小還是幾年前的幾百 GB 規格而已）。
+於是當 1TB 空間的 Google Drive 與幾百 GB 的電腦進行檔案同步時，我勢必要「選擇性的同步」，讓備份用的檔案留在雲端，讓最近需要的檔案下載到電腦。
+或者有時候公司、家裡
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-04-20 04:51" pubdate>
+              2016-04-20
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E4%BA%91%E7%AB%AF%E7%A1%AC%E7%9B%98/">云端硬盘</a>
+            
+              <a href="/tags/google-drive/">google-drive</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <a class="extend prev" rel="prev" href="/page/23/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/#board">22</a><a class="page-number" href="/page/23/#board">23</a><span class="page-number current">24</span><a class="page-number" href="/page/25/#board">25</a><a class="page-number" href="/page/26/#board">26</a><span class="space">&hellip;</span><a class="page-number" href="/page/33/#board">33</a><a class="extend next" rel="next" href="/page/25/#board"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

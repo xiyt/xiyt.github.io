@@ -1,0 +1,532 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="daxi">
+  <meta name="keywords" content="">
+  
+  <title>Office2013升级到Office2016的安装过程分析（附激活） - 达夕博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiyt.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>达夕博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/banner1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="Office2013升级到Office2016的安装过程分析（附激活）">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2017-03-07 14:33" pubdate>
+        2017年3月7日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      892 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      11
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Office2013升级到Office2016的安装过程分析（附激活）</h1>
+            
+            <div class="markdown-body">
+              <p><img src="/2017/office2013%E5%8D%87%E7%BA%A7%E5%88%B0office2016%E7%9A%84%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B%E5%88%86%E6%9E%90/office2016-logo.jpg" srcset="/img/loading.gif" lazyload alt="Office2013升级到Office2016的安装过程分析（附激活）"></p>
+<p>虽然Office2016出来早在2015年9月就发布了，但是我的电脑上一直运行着Office 2013，使用一切正常所以也一直没有更新自己的Office到最新版。最近稍微有点儿时间，所以想把自己电脑上整体的Office软件做下升级，下面就把Office2016的安装、升级、激活过程和注意事项记录下来，分享给大家。</p>
+<h3 id="1、Office-2016版本的选择"><a href="#1、Office-2016版本的选择" class="headerlink" title="1、Office 2016版本的选择"></a><strong>1、Office 2016版本的选择</strong></h3><p>Office 2016包含多个版本，功能上多半肯定选择的是专业版，授权方式上又分为个人零售版和VOL批量授权版。这里我选择了VOL批量授权版。除了在授权激活上相对容易一些外，在安装方式上也有所不同，这次安装过程中，我所碰到的区别是：</p>
+<ul>
+<li>Office2016 个人零售版只能全量安装，无法选择部分安装；无法选择安装目录，点击安装后，就直接进入到安装进度页面，没有任何选项；VOL版是可以选择性安装并且可以指定安装目录的；</li>
+<li>Office2016个人零售版和我当前的Office2013是完全不相干的，两者可以共存；但是VOL版提示需要先卸载旧版；</li>
+</ul>
+<p>既然是升级的话，一般不会保留旧版Office，而且除了三剑客，相比大部分人也不会选择全量安装。所以建议选择VOL版；</p>
+<h3 id="2、Office2016-下载"><a href="#2、Office2016-下载" class="headerlink" title="2、Office2016 下载"></a><strong>2、Office2016 下载</strong></h3><p>Office 2016 专业增强版简体中文64位百度网盘：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1dFrEf4H">https://pan.baidu.com/s/1dFrEf4H</a> 密码：d8jz</p>
+<p>其他版本有需要的可以在下面下载：（以下均是 VL 版）</p>
+<hr>
+<p>版本：Office 2016 Pro Plus  64 位</p>
+<p>文件名：SW_DVD5_Office_Professional_Plus_2016_64Bit_ChnSimp_MLF_X20-42426.ISO</p>
+<p>文件大小： 1123452928 字节</p>
+<p>MD5: 60DC8B1892F611E41140DD3631F39793</p>
+<p>SHA1: AEB58DE1BC97685F8BC6BFB0A614A8EF6903E318</p>
+<p>CRC32: 8D8AC6D1</p>
+<p>下载地址：<a href="ed2k://|file|SW_DVD5_Office_Professional_Plus_2016_64Bit_ChnSimp_MLF_X20-42426.ISO|1123452928|31087A00FF67D4F5B4CBF4AA07C3433B|/">ed2k://|file|SW_DVD5_Office_Professional_Plus_2016_64Bit_ChnSimp_MLF_X20-42426.ISO|1123452928|31087A00FF67D4F5B4CBF4AA07C3433B|/</a></p>
+<hr>
+<p>版本：Office 2016 Pro Plus 32 位</p>
+<p>文件名：SW_DVD5_Office_Professional_Plus_2016_W32_ChnSimp_MLF_X20-41351.ISO</p>
+<p>文件大小：986441728 字节</p>
+<p>MD5: 49D97BD1B4DFEAAA6B45E3DD3803DAC1</p>
+<p>SHA1: 0218F50774AAB63AF7755B0986CDB9972B853E44</p>
+<p>CRC32: FF96B0B5</p>
+<p>下载地址：<a href="ed2k://|file|SW_DVD5_Office_Professional_Plus_2016_W32_ChnSimp_MLF_X20-41351.ISO|986441728|2DE74581C10096137481873B3AD57D43|/">ed2k://|file|SW_DVD5_Office_Professional_Plus_2016_W32_ChnSimp_MLF_X20-41351.ISO|986441728|2DE74581C10096137481873B3AD57D43|/</a></p>
+<hr>
+<p>版本：Office 2016 Project 专业版 64 位版</p>
+<p>文件名：SW_DVD5_Project_Pro_2016_64Bit_ChnSimp_MLF_X20-42676.ISO</p>
+<p>文件大小：647157760 字节</p>
+<p>MD5: B872E55B8F4A8791D65BCF1DB46D1DCB</p>
+<p>SHA1: 3C180FDAF91DBD0CB767BD040B42B0599FC53438</p>
+<p>CRC32: 6AB6A570</p>
+<p>下载地址：<a href="ed2k://|file|SW_DVD5_Project_Pro_2016_64Bit_ChnSimp_MLF_X20-42676.ISO|647157760|0BBBF20CA3A5F61A819586ADCE6E4DCB|/">ed2k://|file|SW_DVD5_Project_Pro_2016_64Bit_ChnSimp_MLF_X20-42676.ISO|647157760|0BBBF20CA3A5F61A819586ADCE6E4DCB|/</a></p>
+<hr>
+<p>版本：Office 2016 Project 专业版 32 位版</p>
+<p>文件名：SW_DVD5_Visio_Pro_2016_64Bit_ChnSimp_MLF_X20-42759.ISO</p>
+<p>文件大小：714913792 字节</p>
+<p>MD5: 93BEB874F5A5870D5854519856047103</p>
+<p>SHA1: 71E082174812F748AB1A70CA33E6004E1E1AACA8</p>
+<p>CRC32: F813794B</p>
+<p>下载地址：<a href="ed2k://|file|SW_DVD5_Project_Pro_2016_W32_ChnSimp_MLF_X20-41511.ISO|555210752|CA3BD5F8C7B3E263105B041DDD4104AB|/">ed2k://|file|SW_DVD5_Project_Pro_2016_W32_ChnSimp_MLF_X20-41511.ISO|555210752|CA3BD5F8C7B3E263105B041DDD4104AB|/</a></p>
+<hr>
+<p>版本：Office 2016 Visio 专业版 64 位版</p>
+<p>文件名：SW_DVD5_Visio_Pro_2016_64Bit_ChnSimp_MLF_X20-42759.ISO</p>
+<p>文件大小：714913792 字节</p>
+<p>MD5: 93BEB874F5A5870D5854519856047103</p>
+<p>SHA1: 71E082174812F748AB1A70CA33E6004E1E1AACA8</p>
+<p>CRC32: F813794B</p>
+<p>下载地址：<a href="ed2k://|file|SW_DVD5_Visio_Pro_2016_64Bit_ChnSimp_MLF_X20-42759.ISO|714913792|FC930AB97B366B3595FC2F28ABAC2A6F|/">ed2k://|file|SW_DVD5_Visio_Pro_2016_64Bit_ChnSimp_MLF_X20-42759.ISO|714913792|FC930AB97B366B3595FC2F28ABAC2A6F|/</a></p>
+<hr>
+<p>版本：Office 2016 Visio 专业版 32 位版</p>
+<p>文件名：SW_DVD5_Visio_Pro_2016_W32_ChnSimp_MLF_X20-41580.ISO</p>
+<p>文件大小：609447936 字节</p>
+<p>MD5: 96E008B110F308F1E424D11964D82CE0</p>
+<p>SHA1: 780046411EB18874AA2DA7E4A11322557EB00D92</p>
+<p>CRC32: 42E1653D</p>
+<p>下载地址：<a href="ed2k://|file|SW_DVD5_Visio_Pro_2016_W32_ChnSimp_MLF_X20-41580.ISO|609447936|91EB248558F236AA66D234EA03FAD9A9|/">ed2k://|file|SW_DVD5_Visio_Pro_2016_W32_ChnSimp_MLF_X20-41580.ISO|609447936|91EB248558F236AA66D234EA03FAD9A9|/</a></p>
+<h3 id="3、安装密钥"><a href="#3、安装密钥" class="headerlink" title="3、安装密钥"></a><strong>3、安装密钥</strong></h3><p>Office Professional Plus 2016：XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99 Office Standard 2016：JNRGM-WHDWX-FJJG3-K47QV-DRTFM Project Professional 2016：YG9NW-3K39V-2T3HJ-93F3Q-G83KT Project Standard 2016：GNFHQ-F6YQM-KQDGJ-327XX-KQBVC Visio Professional 2016：PD3PC-RHNGV-FXJ29-8JK7D-RJRJK Visio Standard 2016：7WHWM-4T7MP-G96JF-G33KR-W8GF4 Access 2016：GNH9Y-D2J4T-FJHGG-QRVH7-QPFDW Excel 2016：9C2PK-NWTVB-JMPW8-BFT28-7FTBF OneNote 2016：DR92N-9HTF2-97XKM-XW2WJ-XW3J6 Outlook 2016：R69KK-NTPKF-7M3Q4-QYBHW-6MT9B PowerPoint 2016：J7MQP-HNJ4Y-WJ7YM-PFYGF-BY6C6 Publisher 2016：F47MM-N3XJP-TQXJ9-BP99D-8K837 SKype for Business 2016：869NQ-FJ69K-466HW-QYCP2-DDBV6 Word 2016：WXY84-JN2Q9-RBCCQ-3Q3J3-3PFJ6</p>
+<p><img src="/2017/office2013%E5%8D%87%E7%BA%A7%E5%88%B0office2016%E7%9A%84%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B%E5%88%86%E6%9E%90/office2016-02.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="4、激活工具和方法"><a href="#4、激活工具和方法" class="headerlink" title="4、激活工具和方法"></a><strong>4、激活工具和方法</strong></h3><p>这次的激活工具使用的是KMSpico，下载地址：</p>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/KMSpico.zip">http://localhost/old/KMSpico.zip</a></p>
+<p>安装完成后，就会自动激活Office，如果没有，可以点击开始菜单启动KMSpico，然后点击红色按钮，静等激活。此激活为180天循环无限激活。每到180天后，就会自动续期激活。目前还没有找到一次性永久激活的方法，有相关方法的朋友，也请留言分享一下。</p>
+<p><img src="/2017/office2013%E5%8D%87%E7%BA%A7%E5%88%B0office2016%E7%9A%84%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B%E5%88%86%E6%9E%90/office2016-01.png" srcset="/img/loading.gif" lazyload></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%BF%80%E6%B4%BB/">激活</a>
+                    
+                      <a class="hover-with-bg" href="/tags/office/">office</a>
+                    
+                      <a class="hover-with-bg" href="/tags/office-2016/">office-2016</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2017/jetbrains-intellij-idea%E5%90%84%E7%89%88%E6%9C%AC%E6%BF%80%E6%B4%BB%E6%96%B9%E6%B3%95/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">JetBrains IntelliJ IDEA各版本激活方法</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2017/trello-%E5%9C%98%E9%9A%8A%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-trello%EF%BC%9F-8%E5%80%8B%E5%B0%88%E6%A1%88%E6%8E%92%E7%A8%8B%E5%8D%94%E4%BD%9C%E9%87%8D%E9%BB%9E%E6%8A%80%E5%B7%A7/">
+                        <span class="hidden-mobile">Trello 團隊如何使用 Trello？ 8個專案排程協作重點技巧</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"B2tecGOesiRBcoXldYV5Jk5A-9Nh9j0Va","appKey":"5tFdBthF0o282SCXuNVxbntd","placeholder":"说点什么","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false,"requiredFields":[]},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

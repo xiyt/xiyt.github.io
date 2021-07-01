@@ -1,0 +1,518 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="daxi">
+  <meta name="keywords" content="">
+  
+  <title>看板方法系列3：限制在制品原则 - 达夕博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiyt.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>达夕博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/banner1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="看板方法系列3：限制在制品原则">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2016-11-16 08:58" pubdate>
+        2016年11月16日 早上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.5k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      14
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">看板方法系列3：限制在制品原则</h1>
+            
+            <div class="markdown-body">
+              <p>今天介绍一下在看板方法中的限制在制品原则，这是看板的核心机制。</p>
+<p><strong>1、什么是在制品</strong></p>
+<p>在软件过程中，那些已经开始，但是还没有交付，没有产生客户价值的那些工作项，例如已经开发的需求分析、正在研发的功能、等待测试的任务、未发布的功能、待修复的缺陷等等。这些都是看板上的在制品。</p>
+<p><strong>2、为什么限制在制品</strong></p>
+<p>看法方法中强调限制在制品，因为过多的在制品会产生很多不利的影响，例如：</p>
+<ul>
+<li>过多的在制品任务就会带来过多的工作上下文的切换，在多个工作间切换就会产生浪费</li>
+<li>过多的在制品就会造成任务的延迟，延迟就会带来额外的工作，例如一个工作早在一个月前就已经开发一半了，但是由于阻塞，没有及时处理，现在又回过头来继续开发时，你会发现你不得不重新编写代码和设计</li>
+<li>质量下降，同时进行太多的任务，就会造成质量的下降，增加缺陷数量，从而进一步降低效率</li>
+<li>缺乏动力，任务多了，总是堆在哪里，这样就减慢了你去解决问题和阻塞的动力了</li>
+</ul>
+<p>我们可以借助利特尔法则在更加具体看下限制在制品能够带来的效率变化，利特尔法则使用下面的公式计算工作效率和周期：</p>
+<blockquote>
+<p>周期=在制品数量/吞吐量</p>
+</blockquote>
+<p>例如一个团队每个月可以完成的12个任务，那么吞吐量就是12，如果我们在制品数量是12那么可以得到：</p>
+<blockquote>
+<p>周期=12个在制品/吞吐量12=1个月</p>
+</blockquote>
+<p>而如果我们减少在制品，例如6个并行任务，那么：</p>
+<blockquote>
+<p>周期=6个在制品/吞吐量12=0.5个月</p>
+</blockquote>
+<p>可以看到通过降低在制品数量，就能很快的缩短交付周期，加快交付节奏。</p>
+<p><strong>3、如何限制在制品</strong></p>
+<p>限制在制品通常有两种做法：基于列设定在制品和按人员限制在制品</p>
+<p>基于列设定在制品我们通常是在列的上方写上这一列所能容纳的最大任务量，如下图</p>
+<p><img src="/2016/%E7%9C%8B%E6%9D%BF%E6%96%B9%E6%B3%95%E7%B3%BB%E5%88%973%EF%BC%9A%E9%99%90%E5%88%B6%E5%9C%A8%E5%88%B6%E5%93%81%E5%8E%9F%E5%88%99/kankan3-01.png" srcset="/img/loading.gif" lazyload></p>
+<p>在这看板中，我们可以看到测试阶段已经有三个正在进行的任务和一个带测试的任务，出现了挤压现象，所以我们限制了开发阶段的最大任务项是3，那么当开发阶段的任务达到3之后，就不能再添加开发任务了，从而使得测试列不会再被拉入新的任务。那么如果这时候开发阶段人员出现了空闲，应该做什么呢？</p>
+<ul>
+<li>如果开发团队里别的人需要帮助，那么空闲的开发人员应该给予帮助</li>
+<li>如果开发者是个全职能人员，那么他应该去帮助测试人员，尽快完成测试任务</li>
+<li>另外偿还技术债务也是应该做的，例如项目框架的优化和升级、更加严格的测试代码、技术学习等</li>
+</ul>
+<p>按照人员限制在制品的做法，通常要求人员都是全职能的人员，不会按照工作流分为不同的角色，这种限制在制品我们通常是为每个人准备一定数量的头像，例如每人3个，当领取一个任务后，就把头像贴到任务卡片上，头像如果用完了，就不能再开展新的任务了，这时候最重要的就是尽快解决掉未完成的任务。如下图：</p>
+<p><img src="/2016/%E7%9C%8B%E6%9D%BF%E6%96%B9%E6%B3%95%E7%B3%BB%E5%88%973%EF%BC%9A%E9%99%90%E5%88%B6%E5%9C%A8%E5%88%B6%E5%93%81%E5%8E%9F%E5%88%99/kankan3-02.png" srcset="/img/loading.gif" lazyload></p>
+<p>可以看到小李和小王还可以再开展新的任务，但是小张由于三个头像都已经用完了，所以他的当务之急就是尽快完成手上的任务。</p>
+<p><strong>4、限制在制品的具体做法</strong></p>
+<p>通常我们都是采用基于列的在制品限制，那么到底哪些列是需要限制在制品的？具体应该把数值设定为多少呢？可以告诉大家这没有一个统一的标准，要看具体情况。要通过对看板流转情况的一个动态观察，发现影响看板的瓶颈，从而通过限制在制品解决和避免瓶颈。例如上面的例子，通过观察我们发现测试节点总是出现任务的挤压，这时候测试就成了整个看板的瓶颈，那么有可能我们需要增加测试人员，或者是限制测试任务的输入。所以我们应该在开发阶段限制在制品，那么到底限制为多少呢？这里没有固定的数字，看板开始的前期这个数字应该是经常变动的。一个比较快的确定一个限制数字的做法是：</p>
+<blockquote>
+<p>如果某列经常同时有4—5个工作在做，你最初可以将在制品数量限定在8—10个，然后规律性的以20%的幅度将其递减，然后达到一个相对稳定的值。这也是持续改进的开始。</p>
+</blockquote>
+<p>总归应该遵循两点：</p>
+<ul>
+<li>要很容易的快速找到一个数字，不要因为这个花费太多的时间，上面的这个方法就可以借鉴</li>
+<li>现在在制品的数值，是个持续调整的过程</li>
+</ul>
+<p>好了，看板的在制品限制就说到这里把，下一节主要说说看板中管理流动的原则！</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E6%8F%90%E9%AB%98%E7%94%9F%E4%BA%A7%E5%8A%9B/">提高生产力</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/">敏捷开发</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%9C%8B%E6%9D%BF%E6%96%B9%E6%B3%95/">看板方法</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E9%99%90%E5%88%B6%E5%9C%A8%E5%88%B6%E5%93%81/">限制在制品</a>
+                    
+                      <a class="hover-with-bg" href="/tags/kanban/">kanban</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2016/%E6%96%B0%E7%89%88google-photo%E6%9B%B4%E5%8A%A0%E5%BC%BA%E5%A4%A7%E7%9A%84%E5%9B%BE%E7%89%87%E7%BC%96%E8%BE%91%E5%8A%9F%E8%83%BD/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">新版Google Photo更加强大的图片编辑功能</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2016/icons8-%E9%92%88%E5%AF%B9apple-google%E4%B8%8E%E5%BE%AE%E8%BD%AF%E9%A3%8E%E6%A0%BC%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%A4%A7%E9%87%8F%E6%89%81%E5%B9%B3%E5%9B%BE%E6%A0%87%E4%B8%8B%E8%BD%BD/">
+                        <span class="hidden-mobile">icons8 针对Apple Google与微软风格设计的大量扁平图标下载</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"B2tecGOesiRBcoXldYV5Jk5A-9Nh9j0Va","appKey":"5tFdBthF0o282SCXuNVxbntd","placeholder":"说点什么","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false,"requiredFields":[]},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

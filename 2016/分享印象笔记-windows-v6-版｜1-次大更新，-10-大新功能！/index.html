@@ -1,0 +1,503 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="daxi">
+  <meta name="keywords" content="">
+  
+  <title>[分享]印象笔记 Windows V6 版｜1 次大更新， 10 大新功能！ - 达夕博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiyt.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>达夕博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/banner1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="[分享]印象笔记 Windows V6 版｜1 次大更新， 10 大新功能！">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2016-04-25 08:13" pubdate>
+        2016年4月25日 早上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.3k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      13
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">[分享]印象笔记 Windows V6 版｜1 次大更新， 10 大新功能！</h1>
+            
+            <div class="markdown-body">
+              <p>Windows 版攻城狮酝酿已久的大更新终于来啦！全新印象笔记 Windows 第 6 版，<strong>更简洁、更清晰、更流畅</strong>，对印象笔记的核心功能进行了大幅提升：导航栏、归类整理及搜索、笔记编辑和笔记浏览器都有更新，为你带来 <strong>10 大新功能</strong>，马上更新试试看吧！</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/SMUbjiabyicnHe1RrBhCGPT152R07Ual79icfzbgXynY60vx479xOLZEZnUqUvagYWxqmo5ia2gF4WtH1oX2bQsfiaQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1" srcset="/img/loading.gif" lazyload></p>
+<h3 id="更简洁的导航栏"><a href="#更简洁的导航栏" class="headerlink" title="更简洁的导航栏"></a><strong>更简洁的导航栏</strong></h3><p>我们希望通过此次更新为 Windows 用户提供一个自然且熟悉的使用体验：首先从最常用的左侧导航栏入手，努力打造更流畅的工作流程，让你能够更方便快速的找到并管理所有资料。</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz/SMUbjiabyicnHe1RrBhCGPT152R07Ual79ITicSR2CSCnfLicE6kia0w67Ro73tXQBBY26nd7Oj2G5cVMFwbGqIE9Og/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1" srcset="/img/loading.gif" lazyload> <strong>导航栏更新功能：</strong></p>
+<p><strong>1、</strong>点击“笔记本”按钮即可在笔记列表中显示所有笔记。展开“笔记本”板块即可显示所有笔记本组以及未归类到笔记本组中的笔记本。</p>
+<p><strong>2、</strong>直接拖拽笔记本即可加入或移出某个笔记本组，移动归类更便捷。</p>
+<p><strong>3、</strong>“废纸篓”也有了专属位置，可以轻松查看已删除的笔记。</p>
+<p><strong>“简洁版”侧边栏</strong></p>
+<p>新版本可以给左侧边栏“瘦身”啦－特别适合在需要清空干扰、专注工作时使用哦！</p>
+<p>按 F10 或在菜单栏中选择“查看&gt;左侧导航栏”即可调出简洁版侧边栏。简洁版侧边栏保留了导航栏中的所有重要元素，点击相应图标即可快速找到某个笔记本或标签。</p>
+<p><strong>快速搜索跳转按钮</strong></p>
+<p>新版本增加了快速搜索笔记本或标签功能，并能点击跳转到相应位置。</p>
+<p>将鼠标停留在“笔记本”区域，就会显示下拉选项，可以选择“搜索笔记本”（放大镜）或“新建笔记本”（加号）。还可以使用同样的方法搜索标签。</p>
+<p><strong>工作生活清晰归类</strong></p>
+<p>新版本还特别对企业版用户的使用界面做了优化。</p>
+<p>之前印象笔记中个人和企业笔记、笔记本、标签及快捷键通通混在一起，资料分类并不清晰，新版本对这个问题特别做了优化。</p>
+<p>新版本中，左侧导航栏中将出现“<strong>企业</strong>”、“<strong>私人</strong>”两个按钮，将企业资料和私人资料分列两栏。由此从视觉上帮您避免了内容归档出现混淆，工作生活清晰归类。</p>
+<p>点击“私人”按钮即可显示所有私人笔记及资料，选择“企业”按钮即可显示所有企业相关内容。此外，还可以通过快捷键 <strong>Alt+1</strong> 调出“私人”内容，快捷键 <strong>Alt+2</strong> 调出“企业”内容。</p>
+<p><em>温馨提示：如需将私人内容复制到企业笔记本，请点击右键找出相应的选项。</em></p>
+<h3 id="智能搜索推荐"><a href="#智能搜索推荐" class="headerlink" title="智能搜索推荐"></a><strong>智能搜索推荐</strong></h3><p>新版本的搜索功能更强啦！无论你在印象笔记中保存了多少笔记，或是使用了多复杂的标签结构，找到资料都易如反掌。 我们根据大家的使用习惯，将搜索框搬到了笔记列表上方。同时，新增搜索推荐功能，在搜索时帮你精确/扩大搜索范围，连“废纸篓”中的笔记都不会放过，准确找到你需要的笔记。</p>
+<p><strong>多彩整理更直观</strong></p>
+<p>总有一些内容对你来说超级重要，但又不知道该如何设置才能让这些“重点”更亮眼。 新版本中增加了彩色标签和笔记本功能。你可以为重要笔记本和标签设置不同的颜色，方便快速找到。</p>
+<h3 id="更多精彩功能"><a href="#更多精彩功能" class="headerlink" title="更多精彩功能"></a><strong>更多精彩功能</strong></h3><p>全新印象笔记 Windows 版支持高清显示屏 (High-DPI)，在 HD 显示器上画质依然清晰鲜明。此外，新版本也在稳定性、流畅度和功能方面做了优化和提升。</p>
+<p><strong>笔记快速切换</strong></p>
+<p>使用新版本编辑笔记时，可以直接从笔记编辑器界面跳转到同一个笔记本或带有同一个标签的其它笔记中。直接点击编辑器上方笔记本或标签名称旁的小按钮即可实现跳转。</p>
+<p><strong>更简洁的工具栏</strong></p>
+<p>阅读笔记内容时，工具栏会自动隐藏，并在创建或编辑笔记时自动出现。此外，还可以自由添加你最常用的功能到工具栏。</p>
+<p>本文来自<a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MjM5MDgzMDYyMA==&mid=2675743777&idx=4&sn=493c14992dfc64720b6e9514a522b363&scene=23&srcid=0425KyKL7s1bZPMJn6yW3ea1#rd">印象笔记微博</a></p>
+<p><strong>延伸阅读：</strong></p>
+<p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2016/01/20/%e4%b8%aa%e4%ba%ba%e4%bf%a1%e6%81%af%e9%9b%86%e4%b8%ad%e7%ae%a1%e7%90%86%ef%bc%9a%e4%b8%80%e5%bc%a0%e5%9b%be%e7%9c%8b%e7%9c%8b%e6%88%91%e6%8a%8a%e5%93%aa%e4%ba%9b%e4%bf%a1%e6%81%af%e6%94%be%e5%85%a5/">个人信息集中管理：一张图看看我把哪些信息放入印象笔记</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2015/12/14/%e5%8d%b0%e8%b1%a1%e7%ac%94%e8%ae%b0windows-%e7%89%88%e5%bf%ab%e6%8d%b7%e9%94%ae%e5%a4%a7%e5%85%a8/">印象笔记Windows 版快捷键大全</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2015/11/09/%e5%8d%b0%e8%b1%a1%e7%ac%94%e8%ae%b0%e6%96%b0%e5%a2%9e%e5%bf%ab%e6%8d%b7%e8%be%93%e5%85%a5%e8%af%ad%e6%b3%95%ef%bc%8c%e5%ae%9e%e4%be%8b%e6%bc%94%e7%a4%ba%e8%ae%a9%e5%86%99%e7%ac%94%e8%ae%b0%e6%9b%b4/">印象笔记新增快捷输入语法，实例演示让写笔记更高效</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2015/10/30/%e5%80%bc%e5%be%97%e7%8f%8d%e8%97%8f%ef%bc%9a%e5%8d%b0%e8%b1%a1%e7%ac%94%e8%ae%b0evernote%e4%b8%ad%e8%bf%9b%e8%a1%8c%e9%ab%98%e7%ba%a7%e6%90%9c%e7%b4%a2%e7%9a%84%e8%af%ad%e6%b3%95%e5%88%86%e4%ba%ab/">值得珍藏：印象笔记Evernote中进行高级搜索的语法分享</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2015/10/26/%e9%87%8d%e6%96%b0%e6%95%b4%e7%90%86%ef%bc%9a%e6%88%91%e7%9a%84%e5%8d%b0%e8%b1%a1%e7%ac%94%e8%ae%b0evernote%e7%9a%84%e5%88%86%e7%b1%bb%e6%96%b9%e6%b3%95%e5%92%8c%e6%a0%87%e7%ad%be%e4%bd%bf%e7%94%a8/">重新整理：我的印象笔记Evernote的分类方法和标签使用技巧</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2015/09/29/%e6%88%91%e7%9a%84%e5%8d%b0%e8%b1%a1%e7%ac%94%e8%ae%b0evernote%e4%b8%ad%e7%9a%84%e7%94%9f%e6%b4%bb%e6%b8%85%e5%8d%95%e5%92%8c%e5%b7%a5%e4%bd%9c%e6%b8%85%e5%8d%95/">我的印象笔记Evernote中的生活清单和工作清单</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2016/02/26/%e8%bd%acevernote-onenote-google-keep-%e9%9b%b2%e7%ab%af%e7%ad%86%e8%a8%98%e5%ae%8c%e6%95%b4%e6%af%94%e8%bc%83%e8%a1%a8/">Evernote, Onenote, Google keep 雲端筆記完整比較表</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2015/10/16/%e5%96%84%e7%94%a8%e4%ba%91%e7%ab%af%e7%ac%94%e8%ae%b0%ef%bc%8c%e6%9b%bf%e4%bb%a3windows%e8%ae%b0%e4%ba%8b%e6%9c%ac%e5%92%8c%e6%96%b0%e5%bb%ba%e4%b8%80%e4%b8%aaword%e5%81%9a%e6%97%a5%e5%b8%b8%e4%bf%a1/">善用云端笔记，替代Windows记事本和新建一个Word做日常信息记录</a></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%8D%B0%E8%B1%A1%E7%AC%94%E8%AE%B0/">印象笔记</a>
+                    
+                      <a class="hover-with-bg" href="/tags/evernote/">evernote</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2016/%E9%87%91%E5%B1%B1%E5%BF%AB%E7%9B%98%E5%81%9C%E6%AD%A2%E6%9C%8D%E5%8A%A1%EF%BC%8C%E6%95%B0%E6%8D%AE%E8%BD%AC%E7%A7%BB%E6%96%B9%E6%A1%88%E5%92%8C%E5%A4%87%E9%80%89%E7%BD%91%E7%9B%98%E6%8E%A8%E8%8D%90/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">金山快盘停止服务，数据转移方案和备选网盘推荐</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2016/%E5%A4%A7%E5%B8%AD%E6%90%9C%E7%9B%98-%E5%9B%BD%E5%86%85%E7%BD%91%E7%9B%98%E8%B5%84%E6%BA%90%E6%90%9C%E7%B4%A2/">
+                        <span class="hidden-mobile">大席搜盘 - 国内网盘资源搜索</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"B2tecGOesiRBcoXldYV5Jk5A-9Nh9j0Va","appKey":"5tFdBthF0o282SCXuNVxbntd","placeholder":"说点什么","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false,"requiredFields":[]},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

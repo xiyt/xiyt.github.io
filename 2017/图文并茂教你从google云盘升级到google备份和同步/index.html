@@ -1,0 +1,484 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="daxi">
+  <meta name="keywords" content="">
+  
+  <title>图文并茂教你从Google云盘升级到Google备份和同步 - 达夕博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiyt.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>达夕博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/banner1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="图文并茂教你从Google云盘升级到Google备份和同步">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2017-07-14 01:21" pubdate>
+        2017年7月14日 凌晨
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      718 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      7
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">图文并茂教你从Google云盘升级到Google备份和同步</h1>
+            
+            <div class="markdown-body">
+              <p>到目前为止我一直使用Dropbox+Google云盘的方式同步自己的文件。大家可以在<a target="_blank" rel="noopener" href="http://www.daxiblog.com/2016/05/04/%e8%ae%a9google-drive%e5%92%8cdropbox%e5%90%8c%e6%ad%a5%e5%90%8c%e4%b8%80%e4%b8%aa%e6%96%87%e4%bb%b6%e5%a4%b9/">这里</a>找到相应的设置方法。这种方式我使用着一直很稳定。而今天Google推出了全新的同步备份工具，名字叫做：Backup and Sync from Google，这是我安装完成后，开始菜单中显示的名字。从名字可以看出，这个工具兼具了备份和同步的双重功能。备份和同步的差别大家应该比较清楚了吧，例如国内之前的金山快盘就是同步盘，而免费的百度网盘就是备份工具。Dropbox也是同步盘。今天Google这个工具，兼具了备份和同步，确实能够满足更多人的需求。下面我就图文并茂的介绍一下从Google云盘升级到Google备份和同步的步骤和方法：</p>
+<h3 id="1、下载安装Backup-and-Sync-from-Google工具"><a href="#1、下载安装Backup-and-Sync-from-Google工具" class="headerlink" title="1、下载安装Backup and Sync from Google工具"></a>1、下载安装Backup and Sync from Google工具</h3><p>地址：<a target="_blank" rel="noopener" href="https://www.google.com/drive/download/">https://www.google.com/drive/download/</a></p>
+<p>注意，原来旧的Google Drive已经不存在，Backup and Sync from Google工具将替代掉Google Drive，不过不用担心，它是兼容旧版本的Google Drive的功能的。和Google的其他产品一样，是在线安装方式的，所以请提前设置好你的网络。可以参考<a target="_blank" rel="noopener" href="http://www.daxiblog.com/?s=Shadowsocks">这里</a></p>
+<p><img src="/2017/%E5%9B%BE%E6%96%87%E5%B9%B6%E8%8C%82%E6%95%99%E4%BD%A0%E4%BB%8Egoogle%E4%BA%91%E7%9B%98%E5%8D%87%E7%BA%A7%E5%88%B0google%E5%A4%87%E4%BB%BD%E5%92%8C%E5%90%8C%E6%AD%A5/google-sync-01.jpg" srcset="/img/loading.gif" lazyload alt="图文并茂教你从Google云盘升级到Google备份和同步"></p>
+<h3 id="2、登录Google账号"><a href="#2、登录Google账号" class="headerlink" title="2、登录Google账号"></a>2、登录Google账号</h3><p><img src="/2017/%E5%9B%BE%E6%96%87%E5%B9%B6%E8%8C%82%E6%95%99%E4%BD%A0%E4%BB%8Egoogle%E4%BA%91%E7%9B%98%E5%8D%87%E7%BA%A7%E5%88%B0google%E5%A4%87%E4%BB%BD%E5%92%8C%E5%90%8C%E6%AD%A5/google-sync-02.jpg" srcset="/img/loading.gif" lazyload></p>
+<h3 id="3、备份功能配置"><a href="#3、备份功能配置" class="headerlink" title="3、备份功能配置"></a>3、备份功能配置</h3><p>登录完成后，接下来就是配置备份功能了，Backup and Sync from Google工具支持<strong>将电脑中的任何文件夹同步到Google</strong>，这是和之前的Google Drive最大的不同。这部分同步的内容会在网页版的<strong>计算机</strong>目录下找到。</p>
+<p><img src="/2017/%E5%9B%BE%E6%96%87%E5%B9%B6%E8%8C%82%E6%95%99%E4%BD%A0%E4%BB%8Egoogle%E4%BA%91%E7%9B%98%E5%8D%87%E7%BA%A7%E5%88%B0google%E5%A4%87%E4%BB%BD%E5%92%8C%E5%90%8C%E6%AD%A5/google-sync-03.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>详细的设定可以参考下图：</p>
+<p><img src="/2017/%E5%9B%BE%E6%96%87%E5%B9%B6%E8%8C%82%E6%95%99%E4%BD%A0%E4%BB%8Egoogle%E4%BA%91%E7%9B%98%E5%8D%87%E7%BA%A7%E5%88%B0google%E5%A4%87%E4%BB%BD%E5%92%8C%E5%90%8C%E6%AD%A5/google-sync-04.jpg" srcset="/img/loading.gif" lazyload></p>
+<h3 id="4、配置同步功能，就是之前的Google-Drive部分的功能"><a href="#4、配置同步功能，就是之前的Google-Drive部分的功能" class="headerlink" title="4、配置同步功能，就是之前的Google Drive部分的功能"></a>4、配置同步功能，就是之前的Google Drive部分的功能</h3><p>这部分设定和之前Google Drive的设定一样，可以选择存放的位置，选项需要同步的文件夹等，详细配置如下。需要<strong>注意的是，如何你正在使用Google Drive，那么切记把这里的文件夹位置选择到你当前的Google Drive目录。</strong></p>
+<p><img src="/2017/%E5%9B%BE%E6%96%87%E5%B9%B6%E8%8C%82%E6%95%99%E4%BD%A0%E4%BB%8Egoogle%E4%BA%91%E7%9B%98%E5%8D%87%E7%BA%A7%E5%88%B0google%E5%A4%87%E4%BB%BD%E5%92%8C%E5%90%8C%E6%AD%A5/google-sync-05.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>5、全新的图标</p>
+<p>Backup and Sync from Google工具采用了全新的图标，安装好后请注意你的系统托盘图标。点击图标后，同样是弹出同步状态窗口，并且可以通过右上角的三个图标，快速打开Google云盘文件夹、网页版Google云盘以及网页版Google照片。</p>
+<p><img src="/2017/%E5%9B%BE%E6%96%87%E5%B9%B6%E8%8C%82%E6%95%99%E4%BD%A0%E4%BB%8Egoogle%E4%BA%91%E7%9B%98%E5%8D%87%E7%BA%A7%E5%88%B0google%E5%A4%87%E4%BB%BD%E5%92%8C%E5%90%8C%E6%AD%A5/google-sync-06.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>6、遗憾：该工具并未提供单独代理设置功能，只能使用系统代理。这个对于需要科学上网的朋友来说，不够友好。</p>
+<p>好了，升级完成，这就是我从Google云盘升级到Google备份和同步的步骤，分享给大家。后续使用过程中有什么经验和技巧还会在这里分享，敬请期待！</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/google-drive/">google-drive</a>
+                    
+                      <a class="hover-with-bg" href="/tags/google%E4%BA%91%E7%9B%98/">google云盘</a>
+                    
+                      <a class="hover-with-bg" href="/tags/google%E5%A4%87%E4%BB%BD/">google备份</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2017/%E4%BA%AB%E7%94%A8%E5%90%A7%EF%BC%81%E5%A4%9A%E8%BE%BE25%E4%B8%AAsublime-text-3%E7%9A%84%E6%B3%A8%E5%86%8C%E7%A0%81/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">享用吧！多达25个Sublime Text 3的注册码</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2017/iphone%E4%B8%AD%E7%BA%AF%E5%87%80%E6%97%A0%E5%B9%BF%E5%91%8A%E5%8F%AF%E4%B8%8B%E8%BD%BD%E8%A7%86%E9%A2%91%E7%9A%84%E4%BC%98%E7%A7%80%E6%B5%8F%E8%A7%88%E5%99%A8-aloha-%E6%8E%A8%E8%8D%90/">
+                        <span class="hidden-mobile">iPhone中纯净无广告可下载视频的优秀浏览器 Aloha 推荐</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"B2tecGOesiRBcoXldYV5Jk5A-9Nh9j0Va","appKey":"5tFdBthF0o282SCXuNVxbntd","placeholder":"说点什么","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false,"requiredFields":[]},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

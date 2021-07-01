@@ -1,0 +1,499 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="daxi">
+  <meta name="keywords" content="">
+  
+  <title>第一时间更新印象笔记：大幅提升操作效率 - 达夕博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiyt.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>达夕博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/banner1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="第一时间更新印象笔记：大幅提升操作效率">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2016-06-03 05:11" pubdate>
+        2016年6月3日 凌晨
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      703 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      7
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">第一时间更新印象笔记：大幅提升操作效率</h1>
+            
+            <div class="markdown-body">
+              <p><img src="/2016/%E7%AC%AC%E4%B8%80%E6%97%B6%E9%97%B4%E6%9B%B4%E6%96%B0%E5%8D%B0%E8%B1%A1%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%A4%A7%E5%B9%85%E6%8F%90%E5%8D%87%E6%93%8D%E4%BD%9C%E6%95%88%E7%8E%87/evernote.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>今天Windows版印象笔记更新到了6.1.2，更新说明如下：</p>
+<blockquote>
+<p>印象笔记 for Windows 6.1.2 版更新说明</p>
+<p>新功能:</p>
+<p>快捷搜索 使用 Ctrl + Q，轻松实现在笔记本、标签及搜索之间快速切换 更快在私人及企业内容之间完成指定笔记本和标签的切换 笔记缩放：Ctrl+”+”, Ctrl+”－”, Ctrl+”0” 性能提升:</p>
+<p>标签视图回来啦！随时用它来筛选、编辑和整理你的标签吧 直接在笔记编辑器中显示并编辑笔记日期 拍照并直接插入笔记中</p>
+</blockquote>
+<p>其中带来了三个主要的更新项目，我们来一同体验一下：</p>
+<h3 id="1、快捷搜索面板Ctrl-Q"><a href="#1、快捷搜索面板Ctrl-Q" class="headerlink" title="1、快捷搜索面板Ctrl + Q"></a><strong>1、快捷搜索面板Ctrl + Q</strong></h3><p>印象笔记新增这一功能主要用来搜索笔记本、标签和已保存的搜索，通过搜索结果快速定位的相应的笔记本、标签和已保存的搜索，这个比在左侧的导航窗口中一点一点寻找方便多了。不过，我倒是觉得如果能把这个Ctrl + Q快捷搜索完善成对印象笔记里的所有内容包括笔记内容的搜索将更加方便。不容把鼠标定位到笔记搜索框，一个Ctrl+Q，打开全局搜索。这只是个建议。</p>
+<p><img src="/2016/%E7%AC%AC%E4%B8%80%E6%97%B6%E9%97%B4%E6%9B%B4%E6%96%B0%E5%8D%B0%E8%B1%A1%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%A4%A7%E5%B9%85%E6%8F%90%E5%8D%87%E6%93%8D%E4%BD%9C%E6%95%88%E7%8E%87/evernote-new1.png" srcset="/img/loading.gif" lazyload>     <img src="/2016/%E7%AC%AC%E4%B8%80%E6%97%B6%E9%97%B4%E6%9B%B4%E6%96%B0%E5%8D%B0%E8%B1%A1%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%A4%A7%E5%B9%85%E6%8F%90%E5%8D%87%E6%93%8D%E4%BD%9C%E6%95%88%E7%8E%87/evernote-new2.png" srcset="/img/loading.gif" lazyload alt="第一时间更新印象笔记：大幅提升操作效率"></p>
+<h3 id="2、笔记窗口的缩放功能"><a href="#2、笔记窗口的缩放功能" class="headerlink" title="2、笔记窗口的缩放功能"></a><strong>2、笔记窗口的缩放功能</strong></h3><p>现在在笔记窗口可以通过以下快捷键来缩放笔记了：</p>
+<ul>
+<li>Ctrl + “+”：放大</li>
+<li>Ctrl + “-“：缩小</li>
+<li>Ctrl + “0”：还原</li>
+</ul>
+<p>这个功能在一定程度上能够替代笔记演示功能，如果你不是印象笔记的高级会员，那么笔记演示功能是无法使用的。但是有了这个笔记放大的功能，一定程度可以替代笔记演示。</p>
+<p><img src="/2016/%E7%AC%AC%E4%B8%80%E6%97%B6%E9%97%B4%E6%9B%B4%E6%96%B0%E5%8D%B0%E8%B1%A1%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%A4%A7%E5%B9%85%E6%8F%90%E5%8D%87%E6%93%8D%E4%BD%9C%E6%95%88%E7%8E%87/evernote-new3.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="3、全局的标签视图"><a href="#3、全局的标签视图" class="headerlink" title="3、全局的标签视图"></a><strong>3、全局的标签视图</strong></h3><p>在早期版本中是有标签视图的，后取消掉了。这次的版本升级后，又将这一有用功能恢复回来了，并且更好易用了。整个标签视图按照字母顺序排列，也可以通过上方的搜索框对标签进行搜索。双击标签就可以显示按照这个标签搜索的笔记结果。</p>
+<p><img src="/2016/%E7%AC%AC%E4%B8%80%E6%97%B6%E9%97%B4%E6%9B%B4%E6%96%B0%E5%8D%B0%E8%B1%A1%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%A4%A7%E5%B9%85%E6%8F%90%E5%8D%87%E6%93%8D%E4%BD%9C%E6%95%88%E7%8E%87/evernote-new4.png" srcset="/img/loading.gif" lazyload></p>
+<p>推荐阅读：</p>
+<p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2016/06/02/%e5%9c%a8%e5%8d%b0%e8%b1%a1%e7%ac%94%e8%ae%b0evernote%e4%b8%ad%e8%bf%9b%e8%a1%8c%e4%bb%a3%e7%a0%81%e7%89%87%e6%ae%b5%e7%ae%a1%e7%90%86%e7%9a%84%e6%96%b9%e6%b3%95%e5%ae%9e%e8%b7%b5/">在印象笔记Evernote中进行代码片段管理的方法实践</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2016/04/25/%e5%88%86%e4%ba%ab%e5%8d%b0%e8%b1%a1%e7%ac%94%e8%ae%b0-windows-v6-%e7%89%88%ef%bd%9c1-%e6%ac%a1%e5%a4%a7%e6%9b%b4%e6%96%b0%ef%bc%8c-10-%e5%a4%a7%e6%96%b0%e5%8a%9f%e8%83%bd%ef%bc%81/">印象笔记 Windows V6 版｜1 次大更新， 10 大新功能！</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2015/12/06/%e5%8d%b0%e8%b1%a1%e7%ac%94%e8%ae%b0%e6%96%b0%e5%a2%9e%e9%80%9a%e7%9f%a5%e6%a0%8f%e5%bf%ab%e9%80%9f%e6%b7%bb%e5%8a%a0%e7%ac%94%e8%ae%b0%e5%8a%9f%e8%83%bd/">印象笔记新增通知栏快速添加笔记功能</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2015/11/09/%e5%8d%b0%e8%b1%a1%e7%ac%94%e8%ae%b0%e6%96%b0%e5%a2%9e%e5%bf%ab%e6%8d%b7%e8%be%93%e5%85%a5%e8%af%ad%e6%b3%95%ef%bc%8c%e5%ae%9e%e4%be%8b%e6%bc%94%e7%a4%ba%e8%ae%a9%e5%86%99%e7%ac%94%e8%ae%b0%e6%9b%b4/">印象笔记新增快捷输入语法，实例演示让写笔记更高效</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2015/10/30/%e5%80%bc%e5%be%97%e7%8f%8d%e8%97%8f%ef%bc%9a%e5%8d%b0%e8%b1%a1%e7%ac%94%e8%ae%b0evernote%e4%b8%ad%e8%bf%9b%e8%a1%8c%e9%ab%98%e7%ba%a7%e6%90%9c%e7%b4%a2%e7%9a%84%e8%af%ad%e6%b3%95%e5%88%86%e4%ba%ab/">值得珍藏：印象笔记Evernote中进行高级搜索的语法分享</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2015/10/26/%e9%87%8d%e6%96%b0%e6%95%b4%e7%90%86%ef%bc%9a%e6%88%91%e7%9a%84%e5%8d%b0%e8%b1%a1%e7%ac%94%e8%ae%b0evernote%e7%9a%84%e5%88%86%e7%b1%bb%e6%96%b9%e6%b3%95%e5%92%8c%e6%a0%87%e7%ad%be%e4%bd%bf%e7%94%a8/">重新整理：我的印象笔记Evernote的分类方法和标签使用技巧</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2015/09/29/%e6%88%91%e7%9a%84%e5%8d%b0%e8%b1%a1%e7%ac%94%e8%ae%b0evernote%e4%b8%ad%e7%9a%84%e7%94%9f%e6%b4%bb%e6%b8%85%e5%8d%95%e5%92%8c%e5%b7%a5%e4%bd%9c%e6%b8%85%e5%8d%95/">我的印象笔记Evernote中的生活清单和工作清单</a></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%8D%B0%E8%B1%A1%E7%AC%94%E8%AE%B0/">印象笔记</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%BF%AB%E6%8D%B7%E6%90%9C%E7%B4%A2/">快捷搜索</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%AC%94%E8%AE%B0%E7%BC%A9%E6%94%BE/">笔记缩放</a>
+                    
+                      <a class="hover-with-bg" href="/tags/evernote/">evernote</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2016/%E6%97%A0%E9%9C%80%E5%AE%89%E8%A3%85%E4%BB%BB%E4%BD%95%E5%BA%94%E7%94%A8%EF%BC%8C%E8%87%AA%E5%8A%A8%E5%90%8C%E6%AD%A5google%E6%97%A5%E5%8E%86%E5%92%8Ciphone%E6%97%A5%E5%8E%86/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">无需安装任何应用，自动同步Google日历和iPhone日历</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2016/%E5%9C%A8%E5%8D%B0%E8%B1%A1%E7%AC%94%E8%AE%B0evernote%E4%B8%AD%E8%BF%9B%E8%A1%8C%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5%E7%AE%A1%E7%90%86%E7%9A%84%E6%96%B9%E6%B3%95%E5%AE%9E%E8%B7%B5/">
+                        <span class="hidden-mobile">在印象笔记Evernote中进行代码片段管理的方法实践</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"B2tecGOesiRBcoXldYV5Jk5A-9Nh9j0Va","appKey":"5tFdBthF0o282SCXuNVxbntd","placeholder":"说点什么","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false,"requiredFields":[]},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

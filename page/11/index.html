@@ -1,0 +1,997 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="daxi">
+  <meta name="keywords" content="">
+  
+  <title>达夕博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiyt.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 100vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>达夕博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/banner1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="热衷于分享IT技术/工作效率/优秀软件，申旦达夕，永无止境">
+              
+            </span>
+
+            
+          </div>
+
+          
+            <div class="scroll-down-bar">
+              <i class="iconfont icon-arrowdown"></i>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div class="py-5" id="board"
+          style=margin-top:0>
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/%E6%97%A0%E9%9C%80%E6%B3%A8%E5%86%8C%E6%97%A0%E9%9C%80%E9%82%80%E8%AF%B7%E6%9C%80%E7%AE%80%E6%B4%81%E7%9A%84%E5%9C%A8%E7%BA%BF%E7%99%BD%E6%9D%BF%E5%8D%8F%E4%BD%9C%E5%B7%A5%E5%85%B7%EF%BC%9Awiteboard/" target="_self">
+          <img src="/2018/%E6%97%A0%E9%9C%80%E6%B3%A8%E5%86%8C%E6%97%A0%E9%9C%80%E9%82%80%E8%AF%B7%E6%9C%80%E7%AE%80%E6%B4%81%E7%9A%84%E5%9C%A8%E7%BA%BF%E7%99%BD%E6%9D%BF%E5%8D%8F%E4%BD%9C%E5%B7%A5%E5%85%B7%EF%BC%9Awiteboard/witeboard.jpg" srcset="/img/loading.gif" lazyload alt="无需注册无需邀请最简洁的在线白板协作工具：witeboard">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/%E6%97%A0%E9%9C%80%E6%B3%A8%E5%86%8C%E6%97%A0%E9%9C%80%E9%82%80%E8%AF%B7%E6%9C%80%E7%AE%80%E6%B4%81%E7%9A%84%E5%9C%A8%E7%BA%BF%E7%99%BD%E6%9D%BF%E5%8D%8F%E4%BD%9C%E5%B7%A5%E5%85%B7%EF%BC%9Awiteboard/" target="_self">
+          无需注册无需邀请最简洁的在线白板协作工具：witeboard
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/%E6%97%A0%E9%9C%80%E6%B3%A8%E5%86%8C%E6%97%A0%E9%9C%80%E9%82%80%E8%AF%B7%E6%9C%80%E7%AE%80%E6%B4%81%E7%9A%84%E5%9C%A8%E7%BA%BF%E7%99%BD%E6%9D%BF%E5%8D%8F%E4%BD%9C%E5%B7%A5%E5%85%B7%EF%BC%9Awiteboard/" target="_self">
+          
+          
+            
+          
+          先直接给一个体验地址：https://witeboard.com/9af75d30-3656-11e8-a571-f379df448185
+就这么简单，witeboard就是通过这样一个唯一链接的分享方式，就可以把多人加入到共同协作的在线白板中来。
+下面来看看它的界面：
+
+这个界面非常简洁，留出大量的空白作为工作区。在右上角显示了有哪些用户正在和你一起协作这个白板，并且通过点击头像，可以设定协作者
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-04-02 11:54" pubdate>
+              2018-04-02
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%9C%A8%E7%BA%BF%E7%99%BD%E6%9D%BF/">在线白板</a>
+            
+              <a href="/tags/whiteboard/">whiteboard</a>
+            
+              <a href="/tags/witeboard/">witeboard</a>
+            
+              <a href="/tags/%E5%8D%8F%E4%BD%9C%E7%99%BD%E6%9D%BF/">协作白板</a>
+            
+              <a href="/tags/onine-board/">onine-board</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/%E5%B9%B2%E5%87%80%E5%BC%BA%E5%A4%A7%E7%9A%84uuid%E5%9C%A8%E7%BA%BF%E7%94%9F%E4%BA%A7%E5%B7%A5%E5%85%B7/" target="_self">
+          <img src="/2018/%E5%B9%B2%E5%87%80%E5%BC%BA%E5%A4%A7%E7%9A%84uuid%E5%9C%A8%E7%BA%BF%E7%94%9F%E4%BA%A7%E5%B7%A5%E5%85%B7/uuidonline.jpg" srcset="/img/loading.gif" lazyload alt="干净强大的UUID在线生产工具">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/%E5%B9%B2%E5%87%80%E5%BC%BA%E5%A4%A7%E7%9A%84uuid%E5%9C%A8%E7%BA%BF%E7%94%9F%E4%BA%A7%E5%B7%A5%E5%85%B7/" target="_self">
+          干净强大的UUID在线生产工具
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/%E5%B9%B2%E5%87%80%E5%BC%BA%E5%A4%A7%E7%9A%84uuid%E5%9C%A8%E7%BA%BF%E7%94%9F%E4%BA%A7%E5%B7%A5%E5%85%B7/" target="_self">
+          
+          
+            
+          
+          在编写代码或者使用数据库的过程中，时不时都会用到UUID随机数，虽然自己编写代码可以获取到UUID，但是太麻烦了，而且要想生产大量UUID也挺费事。于是在网上找到了UUID Online这个工具。虽然类似的工具很多，但是其他的不是有太多广告，就是功能很有限，总体来说都没这个好用。所以推荐给大家：
+网址：http://www.uuid.online/
+界面： 
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-03-29 12:06" pubdate>
+              2018-03-29
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7/">在线工具</a>
+            
+              <a href="/tags/uuid/">uuid</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/%E4%BD%BF%E7%94%A8maven%E5%91%BD%E4%BB%A4%E5%B0%86%E7%AC%AC%E4%B8%89%E6%96%B9jar%E5%8C%85%E5%AF%BC%E5%85%A5%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93/" target="_self">
+          <img src="/2018/%E4%BD%BF%E7%94%A8maven%E5%91%BD%E4%BB%A4%E5%B0%86%E7%AC%AC%E4%B8%89%E6%96%B9jar%E5%8C%85%E5%AF%BC%E5%85%A5%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93/maven-logo-black-on-white.png" srcset="/img/loading.gif" lazyload alt="使用maven命令将第三方jar包导入本地仓库">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/%E4%BD%BF%E7%94%A8maven%E5%91%BD%E4%BB%A4%E5%B0%86%E7%AC%AC%E4%B8%89%E6%96%B9jar%E5%8C%85%E5%AF%BC%E5%85%A5%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93/" target="_self">
+          使用maven命令将第三方jar包导入本地仓库
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/%E4%BD%BF%E7%94%A8maven%E5%91%BD%E4%BB%A4%E5%B0%86%E7%AC%AC%E4%B8%89%E6%96%B9jar%E5%8C%85%E5%AF%BC%E5%85%A5%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93/" target="_self">
+          
+          
+            
+          
+          
+当maven中央仓库或者私服上没有你需要依赖的第三方jar包时，一般都是手动将jar包放入本地repository文件夹下对应的目录，这样才可被maven正确识别。但这种方法操作繁琐，也不便于脚本化。为了化简操作步骤、减少出错率，我们推荐使用 maven-install-plugin 插件来进行jar包安装。
+将jar包导入到本地仓库的命令模板为：
+mvn install:install-fil
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-03-28 10:47" pubdate>
+              2018-03-28
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%8A%80%E6%9C%AF%E7%BC%96%E7%A8%8B/">技术编程</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/jar/">jar</a>
+            
+              <a href="/tags/maven/">maven</a>
+            
+              <a href="/tags/%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93/">本地仓库</a>
+            
+              <a href="/tags/%E7%AC%AC%E4%B8%89%E6%96%B9/">第三方</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/java%E4%B8%AD%E4%BD%BF%E7%94%A8base64%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F/" target="_self">
+          <img src="/2018/java%E4%B8%AD%E4%BD%BF%E7%94%A8base64%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F/base64.png" srcset="/img/loading.gif" lazyload alt="Java中使用Base64两种方式">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/java%E4%B8%AD%E4%BD%BF%E7%94%A8base64%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F/" target="_self">
+          Java中使用Base64两种方式
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/java%E4%B8%AD%E4%BD%BF%E7%94%A8base64%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F/" target="_self">
+          
+          
+            
+          
+          
+一、使用JRE默认提供的Base64功能
+1、需要导入一下的包
+
+import sun.misc.BASE64Decoder; import sun.misc.BASE64Encoder;
+
+2、使用方法
+import sun.misc.BASE64Decoder;import sun.misc.BASE64Encoder;
+public static void main(String args
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-03-27 07:11" pubdate>
+              2018-03-27
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%8A%80%E6%9C%AF%E7%BC%96%E7%A8%8B/">技术编程</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/base64/">base64</a>
+            
+              <a href="/tags/java/">java</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/securecrtsecurefx_8-3-0_%E6%B3%A8%E5%86%8C%E6%9C%BA/" target="_self">
+          <img src="/2018/securecrtsecurefx_8-3-0_%E6%B3%A8%E5%86%8C%E6%9C%BA/secure_crt_fx.png" srcset="/img/loading.gif" lazyload alt="SecureCRT&amp;SecureFX_8.3.0_注册机">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/securecrtsecurefx_8-3-0_%E6%B3%A8%E5%86%8C%E6%9C%BA/" target="_self">
+          SecureCRT&amp;SecureFX_8.3.0_注册机
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/securecrtsecurefx_8-3-0_%E6%B3%A8%E5%86%8C%E6%9C%BA/" target="_self">
+          
+          
+            
+          
+          
+说明：
+1、安装scrt_sfx83-x64.exe或者scrt_sfx83-x86.exe 2、执行注册机中的keygen.exe 3、点击Patch先选择SecureCRT.exe然后确定，再选择LicenseHelper.exe然后确定，即可 4、SecureFX.exe的破解和第三步一样
+链接：https://pan.baidu.com/s/1ljGHMyMlfrhjXtU58z5j2g
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-02-13 12:24" pubdate>
+              2018-02-13
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%B3%A8%E5%86%8C%E6%9C%BA/">注册机</a>
+            
+              <a href="/tags/%E7%A0%B4%E8%A7%A3/">破解</a>
+            
+              <a href="/tags/securecrt/">securecrt</a>
+            
+              <a href="/tags/securefx/">securefx</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/%E3%80%90%E8%BD%AC%E3%80%91%E8%A7%A3%E5%86%B3intellij-idea-terminal%E5%91%BD%E4%BB%A4%E4%B8%ADgit%E4%B8%8D%E6%94%AF%E6%8C%81%E4%B8%AD%E6%96%87%E9%97%AE%E9%A2%98/" target="_self">
+          【转】解决IntelliJ Idea Terminal命令中GIT不支持中文问题
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/%E3%80%90%E8%BD%AC%E3%80%91%E8%A7%A3%E5%86%B3intellij-idea-terminal%E5%91%BD%E4%BB%A4%E4%B8%ADgit%E4%B8%8D%E6%94%AF%E6%8C%81%E4%B8%AD%E6%96%87%E9%97%AE%E9%A2%98/" target="_self">
+          
+          
+            
+          
+          
+修改前  如下图 ：
+
+找到
+
+打开bash.bashrc 在最后添加：
+
+
+export LANG=”zh_CN.UTF-8” export LC_ALL=”zh_CN.UTF-8”
+
+ok!
+
+原文：https://www.cnblogs.com/feihualuoshi/p/7908356.html
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-02-12 01:48" pubdate>
+              2018-02-12
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E4%B8%AD%E6%96%87/">中文</a>
+            
+              <a href="/tags/%E6%8E%A7%E5%88%B6%E5%8F%B0/">控制台</a>
+            
+              <a href="/tags/intellij-idea/">intellij-idea</a>
+            
+              <a href="/tags/git/">git</a>
+            
+              <a href="/tags/terminal/">terminal</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/intellij-idea%E4%B8%ADredis%E7%9A%84%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%E6%8F%92%E4%BB%B6%E4%B8%8B%E8%BD%BD/" target="_self">
+          <img src="/2018/intellij-idea%E4%B8%ADredis%E7%9A%84%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%E6%8F%92%E4%BB%B6%E4%B8%8B%E8%BD%BD/redis.png" srcset="/img/loading.gif" lazyload alt="IntelliJ Idea中Redis的管理工具插件下载">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/intellij-idea%E4%B8%ADredis%E7%9A%84%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%E6%8F%92%E4%BB%B6%E4%B8%8B%E8%BD%BD/" target="_self">
+          IntelliJ Idea中Redis的管理工具插件下载
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/intellij-idea%E4%B8%ADredis%E7%9A%84%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%E6%8F%92%E4%BB%B6%E4%B8%8B%E8%BD%BD/" target="_self">
+          
+          
+            
+          
+          
+ 
+特性：
+
+支持Redis集群连接 ，主备显示
+支持命令操作，命令历史记录
+界面中添加/删除/修改Key
+显示Key类型
+界面中直接修改Value
+不同类型Value值的格式化显示
+
+下载1
+下载2
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-02-12 00:27" pubdate>
+              2018-02-12
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/intellij-idea/">intellij-idea</a>
+            
+              <a href="/tags/iedis/">iedis</a>
+            
+              <a href="/tags/redis/">redis</a>
+            
+              <a href="/tags/redis%E8%BF%9E%E6%8E%A5%E5%B7%A5%E5%85%B7/">redis连接工具</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/xmanager-enterprise-5%E6%B3%A8%E5%86%8C%E7%89%88%E4%B8%8B%E8%BD%BD/" target="_self">
+          <img src="/2018/xmanager-enterprise-5%E6%B3%A8%E5%86%8C%E7%89%88%E4%B8%8B%E8%BD%BD/xmanager5.jpg" srcset="/img/loading.gif" lazyload alt="Xmanager Enterprise 5注册版下载">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/xmanager-enterprise-5%E6%B3%A8%E5%86%8C%E7%89%88%E4%B8%8B%E8%BD%BD/" target="_self">
+          Xmanager Enterprise 5注册版下载
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/xmanager-enterprise-5%E6%B3%A8%E5%86%8C%E7%89%88%E4%B8%8B%E8%BD%BD/" target="_self">
+          
+          
+            
+          
+          Xshell相信大家X都非常熟悉，是一个强大的安全终端模拟软件，它支持SSH1, SSH2, 以及Microsoft Windows 平台的TELNET 协议。Xshell 通过互联网到远程主机的安全连接以及它创新性的设计和特色帮助用户在复杂的网络环境中享受他们的工作。
+而Xmanager Enterprise 5是则是该系列的产品全家桶，涵盖了Xshell、Xftp等其他产品。今天把我在网络上寻
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-01-01 00:03" pubdate>
+              2018-01-01
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/ssh/">ssh</a>
+            
+              <a href="/tags/%E7%BB%88%E7%AB%AF/">终端</a>
+            
+              <a href="/tags/xftp/">xftp</a>
+            
+              <a href="/tags/xmanager/">xmanager</a>
+            
+              <a href="/tags/xshell/">xshell</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2017/%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9intellij-idea-%E4%B8%AD%E7%9A%84%E9%BB%98%E8%AE%A4%E9%85%8D%E7%BD%AE/" target="_self">
+          <img src="/2017/%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9intellij-idea-%E4%B8%AD%E7%9A%84%E9%BB%98%E8%AE%A4%E9%85%8D%E7%BD%AE/idea-default-01.jpg" srcset="/img/loading.gif" lazyload alt="如何修改Intellij Idea 中的默认配置">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2017/%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9intellij-idea-%E4%B8%AD%E7%9A%84%E9%BB%98%E8%AE%A4%E9%85%8D%E7%BD%AE/" target="_self">
+          如何修改Intellij Idea 中的默认配置
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2017/%E5%A6%82%E4%BD%95%E4%BF%AE%E6%94%B9intellij-idea-%E4%B8%AD%E7%9A%84%E9%BB%98%E8%AE%A4%E9%85%8D%E7%BD%AE/" target="_self">
+          
+          
+            
+          
+          每次使用Idea创建项目后，都需要设定项目的SDK版本，maven的配置路径等信息。那么这些配置有没有默认配置呢？答案是肯定的，只是Idea中的默认配置的入口不太好找，或者容易忽略。下面的步骤告诉你如何进行这些默认配置：
+1、打开File中的Other settings
+
+这里就可以看到默认配置和默认项目配置。
+2、修改默认的Maven配置如下：
+
+ 
+3、修改默认的项目配置如下：
+
+以后再新建项
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2017-12-18 23:32" pubdate>
+              2017-12-18
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/maven/">maven</a>
+            
+              <a href="/tags/%E9%BB%98%E8%AE%A4%E9%85%8D%E7%BD%AE/">默认配置</a>
+            
+              <a href="/tags/intellij-idea/">intellij-idea</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2017/%E8%AE%B0%E5%BD%95mysqldump%E5%91%BD%E4%BB%A4%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA%E6%95%B0%E6%8D%AE%E5%BA%93%E6%96%B9%E6%B3%95%E4%B8%8E%E5%AE%9E%E4%BE%8B%E6%B1%87%E6%80%BB/" target="_self">
+          <img src="/2017/%E8%AE%B0%E5%BD%95mysqldump%E5%91%BD%E4%BB%A4%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA%E6%95%B0%E6%8D%AE%E5%BA%93%E6%96%B9%E6%B3%95%E4%B8%8E%E5%AE%9E%E4%BE%8B%E6%B1%87%E6%80%BB/mysql-logo.png" srcset="/img/loading.gif" lazyload alt="[记录]mysqldump命令导入导出数据库方法与实例汇总">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2017/%E8%AE%B0%E5%BD%95mysqldump%E5%91%BD%E4%BB%A4%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA%E6%95%B0%E6%8D%AE%E5%BA%93%E6%96%B9%E6%B3%95%E4%B8%8E%E5%AE%9E%E4%BE%8B%E6%B1%87%E6%80%BB/" target="_self">
+          [记录]mysqldump命令导入导出数据库方法与实例汇总
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2017/%E8%AE%B0%E5%BD%95mysqldump%E5%91%BD%E4%BB%A4%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA%E6%95%B0%E6%8D%AE%E5%BA%93%E6%96%B9%E6%B3%95%E4%B8%8E%E5%AE%9E%E4%BE%8B%E6%B1%87%E6%80%BB/" target="_self">
+          
+          
+            
+          
+          
+1、导出所有库
+系统命令行
+mysqldump -uusername -ppassword –all-databases &gt; all.sql
+2、导入所有库
+mysql命令行
+mysql&gt;source all.sql;
+3、导出某些库
+系统命令行
+mysqldump -uusername -ppassword –databases db1 db2 &gt; db1db2.sql
+4、
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2017-12-13 14:35" pubdate>
+              2017-12-13
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%8A%80%E6%9C%AF%E7%BC%96%E7%A8%8B/">技术编程</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
+            
+              <a href="/tags/mysql/">mysql</a>
+            
+              <a href="/tags/mysqldump/">mysqldump</a>
+            
+              <a href="/tags/%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA/">导入导出</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <a class="extend prev" rel="prev" href="/page/10/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/#board">9</a><a class="page-number" href="/page/10/#board">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/#board">12</a><a class="page-number" href="/page/13/#board">13</a><span class="space">&hellip;</span><a class="page-number" href="/page/33/#board">33</a><a class="extend next" rel="next" href="/page/12/#board"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

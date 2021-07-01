@@ -1,0 +1,527 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="daxi">
+  <meta name="keywords" content="">
+  
+  <title>善用云端笔记，替代Windows记事本和新建一个Word做日常信息记录 - 达夕博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiyt.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>达夕博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/banner1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="善用云端笔记，替代Windows记事本和新建一个Word做日常信息记录">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2015-10-16 00:59" pubdate>
+        2015年10月16日 凌晨
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.3k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      13
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">善用云端笔记，替代Windows记事本和新建一个Word做日常信息记录</h1>
+            
+            <div class="markdown-body">
+              <p>今天早上开会的时候，看到某同事要随手记录一些会议中的信息的时候，他很快的使用WIN+R，然后输入notepad快速的打开了Windows记事本，开始记录了。很明显他已经养成了这个习惯了，不能说这种记录文字的方法就是怎么样的不好，毕竟适合自己的才是最好的。但是这却催使我有个强烈的想法，想把自己记录信息的方法分享给大家。我不知道是不是还有很多人，当需要记录一些信息、灵感或者会议纪要的时候，还是使用Windows记事本或者新建一个word的这种方式，<strong>但当我遇到这种情况的时候，想记录信息时，我的习惯性做法是：打开我的印象笔记</strong>，今天我就和大家分享一下使用云端笔记相比Windows记事本和新建一个Word具有的一些优点：</p>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/10/0034.png"><img src="/2015/%E5%96%84%E7%94%A8%E4%BA%91%E7%AB%AF%E7%AC%94%E8%AE%B0%EF%BC%8C%E6%9B%BF%E4%BB%A3windows%E8%AE%B0%E4%BA%8B%E6%9C%AC%E5%92%8C%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AAword%E5%81%9A%E6%97%A5%E5%B8%B8%E4%BF%A1/0034.png" srcset="/img/loading.gif" lazyload alt="0034"></a></p>
+<p>目录：</p>
+<ul>
+<li>信息集中管理</li>
+<li>实时跨平台同步</li>
+<li>实时保存</li>
+<li>强大的信息搜索</li>
+<li>方便的共享功能</li>
+<li>支持富文本，丰富的格式式样</li>
+<li>清单提醒功能</li>
+<li>灵活的分类和标签功能</li>
+<li>和第三方应用的关联</li>
+<li>全屏演示功能</li>
+</ul>
+<p><strong>一、信息集中管理</strong> 这是一个很重要的理念，使用云端笔记后，你面对的不再是一堆不可控的文件，而是一个信息和知识的系统，你可以把任何你想保存的信息都统一放到这个知识体系里，方便对信息的记录、管理、加工、搜索和再利用。</p>
+<p><strong>二、实时跨平台同步</strong> “云端”两个字就体现在这里，无论在PC端、MAC端还是手机端，都可以做到<strong>一处记录，多处可用</strong>的效果。</p>
+<p><strong>三、实时保存</strong></p>
+<p>之前有个同事在做会议纪要时，把信息随手记录到notepad里面的，而且没有保存，这时突然电脑更新系统补丁时发生错误蓝屏了，这个意外结果，导致了会议纪要全部丢失了，后来只能靠参会者的一起努力，从新拼凑了会议纪要。这里我们就可以看出实时保存和同步的重要性了！</p>
+<p><strong>四、强大的信息搜索</strong> 这也是使用云端笔记的一个很重要功能，如果我们把信息保存到一个个记事本里或者Word文件中，虽然也可以通过一些全文搜索工具来搜索信息，但是这些搜索工具往往需要提前建立索引，而且搜索速度上也都会略于云端笔记自带的搜索功能。而且，例如印象笔记高级版本已经支持搜索图片、扫描件、PDF中的文字了，搜索功能相当强大。</p>
+<p><strong>五、方便的共享功能</strong> 使用云端笔记可以方便的把信息共享给同事、家人和朋友，目前支持的比较多的共享方式有：</p>
+<ul>
+<li>共享公开链接</li>
+<li>分享到社交网络</li>
+<li>通过电子邮件分享</li>
+</ul>
+<p><strong>六、支持富文本，丰富的格式式样</strong> Windows记事本是不支持富文本的，但是现在的一些笔记应用，例如为知笔记、有道笔记、OneNote等，其编辑能力都已经很强大了，一点也不亚于Word支持的各种格式，所以对于日常记录笔记来说，格式方面是完全可以满足的。</p>
+<p><strong>七、笔记清单提醒功能</strong></p>
+<p>可以利用笔记的清单列表功能和提醒功能，进行简单的GTD工作流程。</p>
+<p>延伸阅读： <a target="_blank" rel="noopener" href="http://www.daxiblog.com/2015/09/29/%e6%88%91%e7%9a%84%e5%8d%b0%e8%b1%a1%e7%ac%94%e8%ae%b0evernote%e4%b8%ad%e7%9a%84%e7%94%9f%e6%b4%bb%e6%b8%85%e5%8d%95%e5%92%8c%e5%b7%a5%e4%bd%9c%e6%b8%85%e5%8d%95/">我的印象笔记Evernote中的生活清单和工作清单</a></p>
+<p><strong>八、灵活的分类和标签功能</strong> 可以利用不同的笔记本分类和标签功能，把信息按照类别、用途、流程、优先级、重要性等进行分类和设置标签，有利于知识信息的分类整理</p>
+<p><strong>九、和第三方应用的关联</strong></p>
+<p>现在的云端笔记已经不单纯是一个软件或一个APP了，它可以和其他应用进行关联，例如我们可以：</p>
+<ul>
+<li>把邮件直接存入笔记</li>
+<li>把思维导图导入到笔记</li>
+<li>浏览器剪辑网页信息到笔记</li>
+<li>把名片人脉信息扫描进笔记等</li>
+</ul>
+<p><strong>十、全屏演示功能</strong> 印象笔记/Evernote的一个特殊功能，可以直接打开笔记的演示功能，通过投影仪和大家分享笔记内容，这一点我在工作中也经常使用，替代了PPT的部分功能。</p>
+<blockquote>
+<p><strong><em>--结束语：云端笔记只是好的工具，信息集中管理才是目的！–</em></strong> 云端笔记不会也不可能代替掉作为Windows记事本和Word他们固有的功能，他们有自己的优点和用途，本文的目的是想要让大家使用一个好的工具，实现自己的信息和知识的集中统一管理，云端笔记就一个不错的选择！</p>
+</blockquote>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E6%95%B0%E5%AD%97%E5%8C%96%E5%B7%A5%E4%BD%9C/">数字化工作</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%BE%85%E5%8A%9E%E6%B8%85%E5%8D%95/">待办清单</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E4%BF%A1%E6%81%AF%E7%AE%A1%E7%90%86/">信息管理</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%8D%B0%E8%B1%A1%E7%AC%94%E8%AE%B0/">印象笔记</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E4%B8%BA%E7%9F%A5%E7%AC%94%E8%AE%B0/">为知笔记</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E4%BA%91%E5%90%8C%E6%AD%A5/">云同步</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E4%BA%91%E7%AB%AF%E7%AC%94%E8%AE%B0/">云端笔记</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E4%BF%A1%E6%81%AF%E5%85%B1%E4%BA%AB/">信息共享</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E4%BF%A1%E6%81%AF%E5%88%86%E7%B1%BB/">信息分类</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%AE%9E%E6%97%B6%E4%BF%9D%E5%AD%98/">实时保存</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%9C%89%E9%81%93%E7%AC%94%E8%AE%B0/">有道笔记</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E8%B7%A8%E5%B9%B3%E5%8F%B0%E5%90%8C%E6%AD%A5/">跨平台同步</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2015/%E6%88%91%E5%AF%B9%E6%B8%85%E5%8D%95%E5%B7%A5%E4%BD%9C%E6%B3%95%E7%9A%84%E7%90%86%E8%A7%A3%EF%BC%9A%E9%AB%98%E6%95%88%E3%80%81%E6%8C%89%E6%97%B6%E3%80%81%E4%BF%9D%E8%B4%A8%E4%BF%9D%E9%87%8F%E7%9A%84/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">我对清单工作法的理解：高效、按时、保质保量的完成工作</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2015/%E8%AF%B7%E5%81%9A%E5%A5%BD%E8%BF%99%E5%8D%81%E4%BB%B6%E4%BA%8B%EF%BC%8C%E4%BF%9D%E6%8A%A4%E4%BD%A0%E7%9A%84%E6%89%8B%E6%9C%BA%E5%AE%89%E5%85%A8%EF%BC%81/">
+                        <span class="hidden-mobile">请做好这十件事，保护你的手机安全！</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"B2tecGOesiRBcoXldYV5Jk5A-9Nh9j0Va","appKey":"5tFdBthF0o282SCXuNVxbntd","placeholder":"说点什么","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false,"requiredFields":[]},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

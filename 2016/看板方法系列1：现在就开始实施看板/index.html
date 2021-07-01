@@ -1,0 +1,490 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="daxi">
+  <meta name="keywords" content="">
+  
+  <title>看板方法系列1：现在就开始实施看板 - 达夕博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiyt.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>达夕博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/banner1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="看板方法系列1：现在就开始实施看板">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2016-11-09 06:41" pubdate>
+        2016年11月9日 早上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.3k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      13
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">看板方法系列1：现在就开始实施看板</h1>
+            
+            <div class="markdown-body">
+              <blockquote>
+<p>在2011年的时候，我开始参与一个日本项目，也第一次开始接触敏捷开发。在那之后的两年多里，项目组一直在积极的学习和实践SCRUM敏捷开发模式。我也从中学习到了不少关于SCRUM的理念和方法，对我现在的工作也起到了很大的帮助作用。而从去年开始，新的看法方法又开始进入到了我的工作范畴，在这一年多将近两年的时间了，我同样积攒了一些看板方法的实践经验和总结，所以在接下来的一段时间里，我想把我从书本上学习到的和实践中摸索到的关于看板的知识，在这里记录一下，和大家一起分享和讨论。</p>
+</blockquote>
+<h3 id="一、看板方法的含义"><a href="#一、看板方法的含义" class="headerlink" title="一、看板方法的含义"></a>一、看板方法的含义</h3><p>看板方法是用于高效管理软件开发流程的新技术。看板方法源自丰田的“及时生产”（JIT=just-in-time）系统。尽管生产软件是一项创造性活动，与批量生产汽车有所不同，但是生产线管理背后所蕴含的原理仍然适用。可以认为它一种新的软件开发方法，通过客户需求作为动力，通过限制在制品缩短生产周期，通过可视化展现工作状态和发现问题。</p>
+<h3 id="二、快速实施看板"><a href="#二、快速实施看板" class="headerlink" title="二、快速实施看板"></a>二、快速实施看板</h3><p>看板的实施并不需要很多的前提条件，如果你想，现在就可以开始。而且可以很快的就给你一些反馈。例如团队的里的每个人现在都在做什么？任务都积压在了哪个环节等。下图就是一个简单的流程，按照几个步骤，你的看板就可以创建起来了。</p>
+<p><img src="/2016/%E7%9C%8B%E6%9D%BF%E6%96%B9%E6%B3%95%E7%B3%BB%E5%88%971%EF%BC%9A%E7%8E%B0%E5%9C%A8%E5%B0%B1%E5%BC%80%E5%A7%8B%E5%AE%9E%E6%96%BD%E7%9C%8B%E6%9D%BF/kankan1-01.png" srcset="/img/loading.gif" lazyload alt="看板方法系列1：现在就开始实施看板"></p>
+<p><strong>1、不用调整当前的组织结构</strong></p>
+<p>接触过SCRUM的应该知道，SCRUM严格规定了各种角色以及角色的职责分配，而看板并没有这样的要求，所以你可以继续沿用当前的项目组织结构和人员，不用担心组织结构的调整所带来的烦恼。</p>
+<p><strong>2、找一块尽量大的实体白板</strong></p>
+<p>刚开始时建议使用实体看板，它的特点是一般都比电子版更大，更易于展示，甚至每个人在自己座位上就能将看板上的内容一览无遗，而且放置看板墙地方是团队自然的集会地，可以无形的将每个人拉离自己的作为，来到这里讨论交流问题。另外实体看板便于创建和调整，定制化更强，</p>
+<p><strong>3、从左到右以列的方式画出工作流程</strong></p>
+<p>最通常的做法就是按照从左到右以列的方式画出工作流程，一列就代表一个工作环节，每个工作项从左到右一次通过这些列后，它就被完成了。看板上除了以列这种表现形式外，还可以有其他形式，例如螺旋形，楼梯形等，不过这些用的较少。另外需要注意，这个工作流程应该是团队人员共同参与讨论，确定下来的，这样才能达能一个流程上的共识。</p>
+<p><img src="/2016/%E7%9C%8B%E6%9D%BF%E6%96%B9%E6%B3%95%E7%B3%BB%E5%88%971%EF%BC%9A%E7%8E%B0%E5%9C%A8%E5%B0%B1%E5%BC%80%E5%A7%8B%E5%AE%9E%E6%96%BD%E7%9C%8B%E6%9D%BF/kankan1-02.png" srcset="/img/loading.gif" lazyload></p>
+<p><strong>4、将工作写在便签上</strong></p>
+<p>每个人都将自己的工作写到便签上，描述清楚，并写上自己的名字。这里请大家一定要养成一个习惯，在你开始一项新任务的时候，都请先把它写到便签上。目前可以先不规定便签的写法，描述清楚即可。</p>
+<p><strong>5、将便签贴到流程相应的列中</strong></p>
+<p>将第四步写好的便签，贴到看板墙上相应的列上，表示这个任务所处的流程节点。这时候有可能会出现这样的情况：某个便签不知道贴到哪个列更加合适。例如我刚分析完一个需求，但是由于开发人员不足，无法安排给开发人员。或者开发已经完成了一项任务等待测试人员测试。前者我们可能需要增加“分析完成”这样的列，而后者任务应该继续停留在开发已完成节点，可以认为开发已完成和待测试是同样的含义。在看板中像这样的“分析已完成”、“开发已完成”、“待发布”子列，我们称之为队列。在合适的位置增加队列，能够让看板兼顾更多的工作项，也为以后发现看板瓶颈提供了依据。</p>
+<p><strong>6、让工作项尽快流转下去</strong></p>
+<p>这个我们的目标，如何能让工作项尽快流转下去，直至交付呢？在之后的文章中会做详细的说明和讨论。</p>
+<p>通过以上步骤，我们的看板就可以很快创建成功了，而且看板上能够看到大家的工作，整理的工作流程，以及任务的分布，单单是这些信息的可视化，我想就是一个很大的收获吧。接下来我们将继续学习和讨论看板使用中的一些原则，让看板更加合理和高效。</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E6%8F%90%E9%AB%98%E7%94%9F%E4%BA%A7%E5%8A%9B/">提高生产力</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/">敏捷开发</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%AE%9E%E6%96%BD%E7%9C%8B%E6%9D%BF/">实施看板</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%9C%8B%E6%9D%BF%E6%96%B9%E6%B3%95/">看板方法</a>
+                    
+                      <a class="hover-with-bg" href="/tags/kanban/">kanban</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2016/%E7%9C%8B%E6%9D%BF%E6%96%B9%E6%B3%95%E7%B3%BB%E5%88%972%EF%BC%9A%E5%8F%AF%E8%A7%86%E5%8C%96%E5%8E%9F%E5%88%99/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">看板方法系列2：可视化原则</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2016/%E7%BB%A7dropbox%E4%B9%8B%E5%90%8Eevernote%E5%9B%BD%E9%99%85%E7%89%88%E6%8E%A8%E5%87%BAgoogle%E8%B4%A6%E5%8F%B7%E4%B8%80%E9%94%AE%E7%99%BB%E5%BD%95%E5%8A%9F%E8%83%BD%EF%BC%88%E9%99%84%E6%95%99/">
+                        <span class="hidden-mobile">继Dropbox之后Evernote国际版推出Google账号一键登录功能（附教程）</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"B2tecGOesiRBcoXldYV5Jk5A-9Nh9j0Va","appKey":"5tFdBthF0o282SCXuNVxbntd","placeholder":"说点什么","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false,"requiredFields":[]},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

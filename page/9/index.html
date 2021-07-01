@@ -1,0 +1,984 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="daxi">
+  <meta name="keywords" content="">
+  
+  <title>达夕博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiyt.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 100vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>达夕博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/banner1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="热衷于分享IT技术/工作效率/优秀软件，申旦达夕，永无止境">
+              
+            </span>
+
+            
+          </div>
+
+          
+            <div class="scroll-down-bar">
+              <i class="iconfont icon-arrowdown"></i>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div class="py-5" id="board"
+          style=margin-top:0>
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/vue%E4%B8%AD%E5%AF%B9%E5%8F%91%E9%80%81%E7%9A%84%E8%AF%B7%E6%B1%82%E4%BD%93%E8%BF%9B%E8%A1%8C%E5%8A%A0%E5%AF%86%EF%BC%8C3des%E5%8A%A0rsa%E7%9A%84%E6%96%B9%E5%BC%8F/" target="_self">
+          <img src="/2018/vue%E4%B8%AD%E5%AF%B9%E5%8F%91%E9%80%81%E7%9A%84%E8%AF%B7%E6%B1%82%E4%BD%93%E8%BF%9B%E8%A1%8C%E5%8A%A0%E5%AF%86%EF%BC%8C3des%E5%8A%A0rsa%E7%9A%84%E6%96%B9%E5%BC%8F/201806020955_379.png" srcset="/img/loading.gif" lazyload alt="Vue中对发送的请求体进行加密，3DES加RSA的方式">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/vue%E4%B8%AD%E5%AF%B9%E5%8F%91%E9%80%81%E7%9A%84%E8%AF%B7%E6%B1%82%E4%BD%93%E8%BF%9B%E8%A1%8C%E5%8A%A0%E5%AF%86%EF%BC%8C3des%E5%8A%A0rsa%E7%9A%84%E6%96%B9%E5%BC%8F/" target="_self">
+          Vue中对发送的请求体进行加密，3DES加RSA的方式
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/vue%E4%B8%AD%E5%AF%B9%E5%8F%91%E9%80%81%E7%9A%84%E8%AF%B7%E6%B1%82%E4%BD%93%E8%BF%9B%E8%A1%8C%E5%8A%A0%E5%AF%86%EF%BC%8C3des%E5%8A%A0rsa%E7%9A%84%E6%96%B9%E5%BC%8F/" target="_self">
+          
+          
+            
+          
+          
+在我博客中的前面几篇文中中介绍了，基于Java端的RSA和3DES的加密算法，请参考：
+
+通用的Java 3DES加密工具类，在线工具验证通过
+通用的Java RSA加密工具类，可在线验证通过
+
+环境信息今天我介绍一下在前端如何进行请求体加密，并且配合上面我们介绍的这两篇文件，实现前后端的加解密解决方案。前端我使用的Vue，用的类库有：
+
+axios
+crypto-js
+jsencrypt
+
+这
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-06-02 01:56" pubdate>
+              2018-06-02
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%8A%80%E6%9C%AF%E7%BC%96%E7%A8%8B/">技术编程</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%89%8D%E7%AB%AF%E5%8A%A0%E5%AF%86/">前端加密</a>
+            
+              <a href="/tags/3des/">3des</a>
+            
+              <a href="/tags/rsa/">rsa</a>
+            
+              <a href="/tags/tripledes/">tripledes</a>
+            
+              <a href="/tags/vue/">vue</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/%E9%80%9A%E7%94%A8%E7%9A%84java-3des%E5%8A%A0%E5%AF%86%E5%B7%A5%E5%85%B7%E7%B1%BB%EF%BC%8C%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7%E9%AA%8C%E8%AF%81%E9%80%9A%E8%BF%87/" target="_self">
+          <img src="/2018/%E9%80%9A%E7%94%A8%E7%9A%84java-3des%E5%8A%A0%E5%AF%86%E5%B7%A5%E5%85%B7%E7%B1%BB%EF%BC%8C%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7%E9%AA%8C%E8%AF%81%E9%80%9A%E8%BF%87/201805302204_124.png" srcset="/img/loading.gif" lazyload alt="通用的Java 3DES加密工具类，在线工具验证通过">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/%E9%80%9A%E7%94%A8%E7%9A%84java-3des%E5%8A%A0%E5%AF%86%E5%B7%A5%E5%85%B7%E7%B1%BB%EF%BC%8C%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7%E9%AA%8C%E8%AF%81%E9%80%9A%E8%BF%87/" target="_self">
+          通用的Java 3DES加密工具类，在线工具验证通过
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/%E9%80%9A%E7%94%A8%E7%9A%84java-3des%E5%8A%A0%E5%AF%86%E5%B7%A5%E5%85%B7%E7%B1%BB%EF%BC%8C%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7%E9%AA%8C%E8%AF%81%E9%80%9A%E8%BF%87/" target="_self">
+          
+          
+            
+          
+          
+前面的这篇文章介绍了通用的RSA加密算法，并且是可以在线测试通过的。但是RSA由于性能和效率问题，往往不会用来直接加密大量数据，大部分场合是用来加密密钥的。对于加密数据，可以使用3DES加密算法来完成，3DES的密码使用RSA加密，这样既保证了密钥的安全性，又能够带来高效的加密性能。所以今天把我使用的通用的3DES加密算法分享给大家。该算法通用可以在这个网站测试通过。
+/** * 默认值：DES
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-05-30 14:04" pubdate>
+              2018-05-30
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%8A%80%E6%9C%AF%E7%BC%96%E7%A8%8B/">技术编程</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%8A%A0%E5%AF%86/">加密</a>
+            
+              <a href="/tags/%E5%AE%89%E5%85%A8/">安全</a>
+            
+              <a href="/tags/java/">java</a>
+            
+              <a href="/tags/3des/">3des</a>
+            
+              <a href="/tags/tripledes/">tripledes</a>
+            
+              <a href="/tags/desede/">desede</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/%E5%88%A9%E7%94%A8github%E5%A4%87%E4%BB%BDsublime-text-3%E7%9A%84%E9%85%8D%E7%BD%AE%E5%92%8C%E6%8F%92%E4%BB%B6/" target="_self">
+          <img src="/2018/%E5%88%A9%E7%94%A8github%E5%A4%87%E4%BB%BDsublime-text-3%E7%9A%84%E9%85%8D%E7%BD%AE%E5%92%8C%E6%8F%92%E4%BB%B6/201805292222_648.png" srcset="/img/loading.gif" lazyload alt="利用GitHub备份Sublime Text 3的配置和插件">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/%E5%88%A9%E7%94%A8github%E5%A4%87%E4%BB%BDsublime-text-3%E7%9A%84%E9%85%8D%E7%BD%AE%E5%92%8C%E6%8F%92%E4%BB%B6/" target="_self">
+          利用GitHub备份Sublime Text 3的配置和插件
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/%E5%88%A9%E7%94%A8github%E5%A4%87%E4%BB%BDsublime-text-3%E7%9A%84%E9%85%8D%E7%BD%AE%E5%92%8C%E6%8F%92%E4%BB%B6/" target="_self">
+          
+          
+            
+          
+          
+为了能够保持和备份自己辛苦打造好的Sublime Text  3的相关插件和配置，我的想法了是利用GitHub打造一个自己专属的，可以在其他电脑上随时使用的个性化版本。
+1、下载免安装版本的ST3，然后解压缩文件夹，官网下载
+2、参考我的这篇文件进行破解激活：Sublime Text 3 最新版3176激活方法
+3、安装好自己心爱的各种插件，并且配置好主题、快捷键等其他的配置
+4、GitHub中
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-05-29 14:25" pubdate>
+              2018-05-29
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%8F%92%E4%BB%B6/">插件</a>
+            
+              <a href="/tags/%E5%A4%87%E4%BB%BD/">备份</a>
+            
+              <a href="/tags/%E9%85%8D%E7%BD%AE/">配置</a>
+            
+              <a href="/tags/sublime-test/">sublime-test</a>
+            
+              <a href="/tags/github/">github</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/%E8%91%97%E5%90%8D%E6%96%87%E4%BB%B6%E5%A4%B9%E5%8A%A0%E5%AF%86%E5%B7%A5%E5%85%B7folder-lock-v7-7-6%E4%B8%8B%E8%BD%BD%E5%90%AB%E6%B3%A8%E5%86%8C%E6%9C%BA/" target="_self">
+          <img src="/2018/%E8%91%97%E5%90%8D%E6%96%87%E4%BB%B6%E5%A4%B9%E5%8A%A0%E5%AF%86%E5%B7%A5%E5%85%B7folder-lock-v7-7-6%E4%B8%8B%E8%BD%BD%E5%90%AB%E6%B3%A8%E5%86%8C%E6%9C%BA/201805282209_905.png" srcset="/img/loading.gif" lazyload alt="著名文件夹加密工具Folder Lock v7.7.6下载含注册机">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/%E8%91%97%E5%90%8D%E6%96%87%E4%BB%B6%E5%A4%B9%E5%8A%A0%E5%AF%86%E5%B7%A5%E5%85%B7folder-lock-v7-7-6%E4%B8%8B%E8%BD%BD%E5%90%AB%E6%B3%A8%E5%86%8C%E6%9C%BA/" target="_self">
+          著名文件夹加密工具Folder Lock v7.7.6下载含注册机
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/%E8%91%97%E5%90%8D%E6%96%87%E4%BB%B6%E5%A4%B9%E5%8A%A0%E5%AF%86%E5%B7%A5%E5%85%B7folder-lock-v7-7-6%E4%B8%8B%E8%BD%BD%E5%90%AB%E6%B3%A8%E5%86%8C%E6%9C%BA/" target="_self">
+          
+          
+            
+          
+          1 - 运行安装程序，安装完成后退出 2 - 复制Keygen文件夹下的注册机Folder Lock 7 Keygen.exe到刚才的安装目录 3 - 以管理员身份运行注册机，点击按钮获取注册码
+ 4 - 打开Folder Lock主程序，点击右上角的support，点击注册菜单
+ 5 - 填写第3步中生产的注册码信息，点击激活即可
+
+下面是我试验成的注册码：
+
+F7-20180528-6-639
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-05-28 14:11" pubdate>
+              2018-05-28
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%8A%A0%E5%AF%86/">加密</a>
+            
+              <a href="/tags/%E5%AE%89%E5%85%A8/">安全</a>
+            
+              <a href="/tags/%E6%96%87%E4%BB%B6%E5%8A%A0%E5%AF%86/">文件加密</a>
+            
+              <a href="/tags/%E6%96%87%E4%BB%B6%E5%A4%B9%E5%8A%A0%E5%AF%86/">文件夹加密</a>
+            
+              <a href="/tags/folder-lock/">folder-lock</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/%E9%80%9A%E7%94%A8%E7%9A%84java-rsa%E5%8A%A0%E5%AF%86%E5%B7%A5%E5%85%B7%E7%B1%BB%EF%BC%8C%E5%8F%AF%E5%9C%A8%E7%BA%BF%E9%AA%8C%E8%AF%81%E9%80%9A%E8%BF%87/" target="_self">
+          <img src="/2018/%E9%80%9A%E7%94%A8%E7%9A%84java-rsa%E5%8A%A0%E5%AF%86%E5%B7%A5%E5%85%B7%E7%B1%BB%EF%BC%8C%E5%8F%AF%E5%9C%A8%E7%BA%BF%E9%AA%8C%E8%AF%81%E9%80%9A%E8%BF%87/201805262312_33.jpg" srcset="/img/loading.gif" lazyload alt="通用的Java RSA加密工具类，可在线验证通过">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/%E9%80%9A%E7%94%A8%E7%9A%84java-rsa%E5%8A%A0%E5%AF%86%E5%B7%A5%E5%85%B7%E7%B1%BB%EF%BC%8C%E5%8F%AF%E5%9C%A8%E7%BA%BF%E9%AA%8C%E8%AF%81%E9%80%9A%E8%BF%87/" target="_self">
+          通用的Java RSA加密工具类，可在线验证通过
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/%E9%80%9A%E7%94%A8%E7%9A%84java-rsa%E5%8A%A0%E5%AF%86%E5%B7%A5%E5%85%B7%E7%B1%BB%EF%BC%8C%E5%8F%AF%E5%9C%A8%E7%BA%BF%E9%AA%8C%E8%AF%81%E9%80%9A%E8%BF%87/" target="_self">
+          
+          
+            
+          
+          
+网上Java版本的RSA加密工具类有很多，但是大部分缺少测试代码，或者是没有说明使用时的注意事项。导致加密方和解密方，在联调时会有不少问题。今天分享的这个版本的RSA加密工具类，特点如下：
+1、虽不是我原创编写，但是是我搜集到后，整理测试完成后的版本。使用该工具类的加解密可以在这个在线网站进行测试通过；
+2、main方法中提供了生产密钥的代码，可以作为密钥生产工具；
+3、main方法中注释掉的是
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-05-26 15:14" pubdate>
+              2018-05-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%8A%80%E6%9C%AF%E7%BC%96%E7%A8%8B/">技术编程</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%8A%A0%E5%AF%86/">加密</a>
+            
+              <a href="/tags/%E5%B7%A5%E5%85%B7%E7%B1%BB/">工具类</a>
+            
+              <a href="/tags/%E8%A7%A3%E5%AF%86/">解密</a>
+            
+              <a href="/tags/java/">java</a>
+            
+              <a href="/tags/rsa/">rsa</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/%E7%83%AD%E5%90%AF%E5%8A%A8%E6%8F%92%E4%BB%B6jrebel%E6%BF%80%E6%B4%BB%E6%9C%8D%E5%8A%A1/" target="_self">
+          <img src="/2018/%E7%83%AD%E5%90%AF%E5%8A%A8%E6%8F%92%E4%BB%B6jrebel%E6%BF%80%E6%B4%BB%E6%9C%8D%E5%8A%A1/201805241520_710.png" srcset="/img/loading.gif" lazyload alt="热启动插件JRebel激活服务">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/%E7%83%AD%E5%90%AF%E5%8A%A8%E6%8F%92%E4%BB%B6jrebel%E6%BF%80%E6%B4%BB%E6%9C%8D%E5%8A%A1/" target="_self">
+          热启动插件JRebel激活服务
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/%E7%83%AD%E5%90%AF%E5%8A%A8%E6%8F%92%E4%BB%B6jrebel%E6%BF%80%E6%B4%BB%E6%9C%8D%E5%8A%A1/" target="_self">
+          
+          
+            
+          
+          1、打开JRebel的激活页面，选择第三种激活方式：连接到License Server
+
+2、Server地址填写：http://139.199.89.239:1008/88414687-3b91-4286-89ba-2dc813b107ce，
+邮箱任意填写，点击激活即可。
+※ 如果出现激活过期的情况，请重新生成guid，替换原来的guid即可
+激活效果如下：
+
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-05-24 07:22" pubdate>
+              2018-05-24
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%BF%80%E6%B4%BB/">激活</a>
+            
+              <a href="/tags/jrebel/">jrebel</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/movavi-video-suite-17-4-0%E7%A0%B4%E8%A7%A3%E7%89%88/" target="_self">
+          <img src="/2018/movavi-video-suite-17-4-0%E7%A0%B4%E8%A7%A3%E7%89%88/201805232236_514.jpg" srcset="/img/loading.gif" lazyload alt="Movavi Video Suite 17.4.0破解版">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/movavi-video-suite-17-4-0%E7%A0%B4%E8%A7%A3%E7%89%88/" target="_self">
+          Movavi Video Suite 17.4.0破解版
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/movavi-video-suite-17-4-0%E7%A0%B4%E8%A7%A3%E7%89%88/" target="_self">
+          
+          
+            
+          
+          
+Movavi Video Suite 是一套全面的视频制作软件，它除了包含 Movavi Video Edito 的视频编辑功能外，还具有屏幕录制、格式转换、DVD刻录、视频播放等功能，和 Nero Platinum 2018 Suite 相比具有界面美观、体积小巧等优点。即使您没有相关经验，您也可以通过它快速创建专业水准的电影和幻灯片。使用 Movavi，让视频制作简单有趣！
+Movavi V
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-05-23 14:48" pubdate>
+              2018-05-23
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E8%A7%86%E9%A2%91%E5%88%B6%E4%BD%9C/">视频制作</a>
+            
+              <a href="/tags/movavi-video-suite/">movavi-video-suite</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/%E3%80%90%E6%8E%A8%E8%8D%90%E3%80%91%E4%B8%83%E7%89%9B%E4%BA%91%E6%B3%A8%E5%86%8C%E6%9C%89%E5%A5%BD%E7%A4%BC%E4%BA%86%EF%BC%8C%E5%8D%83%E5%85%83%E5%A4%A7%E7%A4%BC%E5%8C%85%E9%80%81%E7%BB%99%E4%BD%A0/" target="_self">
+          <img src="/2018/%E3%80%90%E6%8E%A8%E8%8D%90%E3%80%91%E4%B8%83%E7%89%9B%E4%BA%91%E6%B3%A8%E5%86%8C%E6%9C%89%E5%A5%BD%E7%A4%BC%E4%BA%86%EF%BC%8C%E5%8D%83%E5%85%83%E5%A4%A7%E7%A4%BC%E5%8C%85%E9%80%81%E7%BB%99%E4%BD%A0/qiniu_logo.5249e634.png" srcset="/img/loading.gif" lazyload alt="【推荐】七牛云注册有好礼了，千元大礼包送给你">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/%E3%80%90%E6%8E%A8%E8%8D%90%E3%80%91%E4%B8%83%E7%89%9B%E4%BA%91%E6%B3%A8%E5%86%8C%E6%9C%89%E5%A5%BD%E7%A4%BC%E4%BA%86%EF%BC%8C%E5%8D%83%E5%85%83%E5%A4%A7%E7%A4%BC%E5%8C%85%E9%80%81%E7%BB%99%E4%BD%A0/" target="_self">
+          【推荐】七牛云注册有好礼了，千元大礼包送给你
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/%E3%80%90%E6%8E%A8%E8%8D%90%E3%80%91%E4%B8%83%E7%89%9B%E4%BA%91%E6%B3%A8%E5%86%8C%E6%9C%89%E5%A5%BD%E7%A4%BC%E4%BA%86%EF%BC%8C%E5%8D%83%E5%85%83%E5%A4%A7%E7%A4%BC%E5%8C%85%E9%80%81%E7%BB%99%E4%BD%A0/" target="_self">
+          
+          
+            
+          
+          
+本博客一直使用七牛云作为静态资源CDN服务器，使用两年多来一直非常稳定，强烈推荐大家注册试用：）
+
+七牛云是国内领先的企业级公有云服务商，致力于打造以数据为核心的场景化PaaS服务。围绕富媒体场景，七牛先后推出了对象存储，融合CDN加速，数据通用处理，内容反垃圾服务，以及直播云服务等。目前，七牛云已经在为 50多万家企业提供服务, 亲历互联网创新创业发展的同时，也深入理解传统企业转型过程中的云服
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-05-23 14:14" pubdate>
+              2018-05-23
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E4%BA%92%E8%81%94%E7%BD%91/">互联网</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E4%B8%83%E7%89%9B%E4%BA%91/">七牛云</a>
+            
+              <a href="/tags/cdn/">cdn</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/%E4%BC%98%E7%A7%80%E5%9B%BE%E7%89%87%E7%BC%96%E8%BE%91%E8%BD%AF%E4%BB%B6movavi-photo-editor-v5-5-1%E7%A0%B4%E8%A7%A3%E7%89%88/" target="_self">
+          <img src="/2018/%E4%BC%98%E7%A7%80%E5%9B%BE%E7%89%87%E7%BC%96%E8%BE%91%E8%BD%AF%E4%BB%B6movavi-photo-editor-v5-5-1%E7%A0%B4%E8%A7%A3%E7%89%88/201805220914_706.png" srcset="/img/loading.gif" lazyload alt="优秀图片编辑软件Movavi Photo Editor V5.5.1破解版">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/%E4%BC%98%E7%A7%80%E5%9B%BE%E7%89%87%E7%BC%96%E8%BE%91%E8%BD%AF%E4%BB%B6movavi-photo-editor-v5-5-1%E7%A0%B4%E8%A7%A3%E7%89%88/" target="_self">
+          优秀图片编辑软件Movavi Photo Editor V5.5.1破解版
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/%E4%BC%98%E7%A7%80%E5%9B%BE%E7%89%87%E7%BC%96%E8%BE%91%E8%BD%AF%E4%BB%B6movavi-photo-editor-v5-5-1%E7%A0%B4%E8%A7%A3%E7%89%88/" target="_self">
+          
+          
+            
+          
+          
+Movavi Photo Editor 是一款照片编辑软件，它最大的优点是能够让你很轻松的清除照片上的任意元素，而且还可以做到修复功能，同时它还提供了照片效果增强功能，内置多种滤镜，让你的照片看上去更漂亮。这里为大家分享Movavi Photo Editor v5.5.1-破解版，欢迎需要的朋友下载使用。主要功能如下：
+* 编辑数码照片，添加伟大的过滤器 * 删除对象，替换背景 * 裁剪，调整大
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-05-22 01:16" pubdate>
+              2018-05-22
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E7%A0%B4%E8%A7%A3/">破解</a>
+            
+              <a href="/tags/%E5%9B%BE%E7%89%87%E7%BC%96%E8%BE%91/">图片编辑</a>
+            
+              <a href="/tags/movavi-photo-editor/">movavi-photo-editor</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/internet-download-manageridm%E4%B8%8B%E8%BD%BD%E5%99%A8-v6-30-build-10%E7%A0%B4%E8%A7%A3%E7%89%88/" target="_self">
+          <img src="/2018/internet-download-manageridm%E4%B8%8B%E8%BD%BD%E5%99%A8-v6-30-build-10%E7%A0%B4%E8%A7%A3%E7%89%88/006tKfTcgy1frh0vglasfj309k0b4jrj.jpg" srcset="/img/loading.gif" lazyload alt="Internet Download Manager(IDM下载器) V6.30 Build 10破解版">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/internet-download-manageridm%E4%B8%8B%E8%BD%BD%E5%99%A8-v6-30-build-10%E7%A0%B4%E8%A7%A3%E7%89%88/" target="_self">
+          Internet Download Manager(IDM下载器) V6.30 Build 10破解版
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/internet-download-manageridm%E4%B8%8B%E8%BD%BD%E5%99%A8-v6-30-build-10%E7%A0%B4%E8%A7%A3%E7%89%88/" target="_self">
+          
+          
+            
+          
+          
+IDM破解版(Internet Download Manager)是国内外优秀下载工具，IDM支持IE浏览器, Opera, Firefox, Chrome等所有浏览器，兼容Windows平台。其中最具特色功能如续传功能，支持恢复因为断线、网络问题、计算机宕机甚至停电故障导致中断的下载任务。
+本破解版本的安装步骤：
+1. 卸载以前的版本 2. 关闭防病毒软件 3. 运行安装程序，然后退出，不要启
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-05-21 02:54" pubdate>
+              2018-05-21
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E4%B8%8B%E8%BD%BD%E8%BD%AF%E4%BB%B6/">下载软件</a>
+            
+              <a href="/tags/%E7%A0%B4%E8%A7%A3/">破解</a>
+            
+              <a href="/tags/idm/">idm</a>
+            
+              <a href="/tags/internet-download-manager/">internet-download-manager</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <a class="extend prev" rel="prev" href="/page/8/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/#board">7</a><a class="page-number" href="/page/8/#board">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/#board">10</a><a class="page-number" href="/page/11/#board">11</a><span class="space">&hellip;</span><a class="page-number" href="/page/33/#board">33</a><a class="extend next" rel="next" href="/page/10/#board"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

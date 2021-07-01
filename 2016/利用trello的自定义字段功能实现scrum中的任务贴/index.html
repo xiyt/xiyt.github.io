@@ -1,0 +1,495 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="daxi">
+  <meta name="keywords" content="">
+  
+  <title>利用Trello的自定义字段功能实现SCRUM中的任务贴 - 达夕博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiyt.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>达夕博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/banner1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="利用Trello的自定义字段功能实现SCRUM中的任务贴">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2016-09-11 02:04" pubdate>
+        2016年9月11日 凌晨
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      822 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      8
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">利用Trello的自定义字段功能实现SCRUM中的任务贴</h1>
+            
+            <div class="markdown-body">
+              <p>在使用Trello进行SCRUM敏捷开发任务管理时，虽然Trello提供的栏位管理已经能够满足大部分SCRUM要求，可以通过建立BackLog、TODO、DOING、DONE等栏位满足看板需求。但是在任务卡片信息的展示方面，Trello和实物中的看板任务卡片相比，还是有一些信息无法直观的看到。而最近Trello更新的Power-Ups中添加的自定义字段功能，能够很好的解决这个问题。今天我就介绍一下如何利用Trello的自定义字段功能实现SCRUM中的任务贴。</p>
+<h3 id="1、首先来看一下实际SCRUM看板中的卡片"><a href="#1、首先来看一下实际SCRUM看板中的卡片" class="headerlink" title="1、首先来看一下实际SCRUM看板中的卡片"></a><strong>1、首先来看一下实际SCRUM看板中的卡片</strong></h3><p><img src="/2016/%E5%88%A9%E7%94%A8trello%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E6%AE%B5%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0scrum%E4%B8%AD%E7%9A%84%E4%BB%BB%E5%8A%A1%E8%B4%B4/trello-scrum02.png" srcset="/img/loading.gif" lazyload alt="利用Trello的自定义字段功能实现SCRUM中的任务贴"></p>
+<ul>
+<li>红色是用户故事卡片，记录了用户故事了名称，优先级和点数(SCRUM中使用点数估算来估计每个用户故事的大小)</li>
+<li>绿色的是任务卡片，记录了任务的名称，所需要的时间和责任者，以及这个任务是和哪个用户故事关联的。</li>
+</ul>
+<p>我们可以看到像名称，责任者这样的字段在Trello中是直接可以支持的，但是像点数、工作量等字段，以前的Trello中，卡片上是无法直接显示的。下面我就用Trello自定义字段解决这个问题。</p>
+<h3 id="2、在Trello中开启自定义字段"><a href="#2、在Trello中开启自定义字段" class="headerlink" title="2、在Trello中开启自定义字段"></a><strong>2、在Trello中开启自定义字段</strong></h3><p>通过Trello中的 菜单中找到Power-Ups，然后启用Custom Fields，就可以了，如下图：</p>
+<p><img src="/2016/%E5%88%A9%E7%94%A8trello%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E6%AE%B5%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0scrum%E4%B8%AD%E7%9A%84%E4%BB%BB%E5%8A%A1%E8%B4%B4/trello-scrum03.png" srcset="/img/loading.gif" lazyload>       <img src="/2016/%E5%88%A9%E7%94%A8trello%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E6%AE%B5%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0scrum%E4%B8%AD%E7%9A%84%E4%BB%BB%E5%8A%A1%E8%B4%B4/trello-scrum04.png" srcset="/img/loading.gif" lazyload></p>
+<p>注意要使用Power Ups中的功能时，你需要为你的看板添加团队，随便建立一个团队就可以了。</p>
+<h3 id="3、为看板创建自定义字段"><a href="#3、为看板创建自定义字段" class="headerlink" title="3、为看板创建自定义字段"></a><strong>3、为看板创建自定义字段</strong></h3><p>启用了Custom Fields之后，我们就可以添加自定义字段了，目前每个看板里，Trello支持添加5个自定义字段，支持的字段类型包括：文本、数字、复选框、日期、下拉框，添加字段后，如果选择了，那么新增加的字段就会直接显示在卡片正面。在这里我添加了如下四个字段：点数、时间、故事编码和优先级</p>
+<p><img src="/2016/%E5%88%A9%E7%94%A8trello%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E6%AE%B5%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0scrum%E4%B8%AD%E7%9A%84%E4%BB%BB%E5%8A%A1%E8%B4%B4/trello-scrum05.png" srcset="/img/loading.gif" lazyload></p>
+<p> </p>
+<h3 id="4、在卡片中使用自定义字段"><a href="#4、在卡片中使用自定义字段" class="headerlink" title="4、在卡片中使用自定义字段"></a><strong>4、在卡片中使用自定义字段</strong></h3><p>添加好自定义字段后（你也可以在创建卡片时添加/修改自定义字段），我们就可以使用了。打开卡片创建页面，点击右侧Power-Ups里的自定义字段，就可以看到我们添加了字段了，可以为卡片设定相应的值，或者添加新的字段。</p>
+<p><img src="/2016/%E5%88%A9%E7%94%A8trello%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E6%AE%B5%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0scrum%E4%B8%AD%E7%9A%84%E4%BB%BB%E5%8A%A1%E8%B4%B4/trello-scrum06.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="5、看板首页的卡片信息直接显示自定义字段"><a href="#5、看板首页的卡片信息直接显示自定义字段" class="headerlink" title="5、看板首页的卡片信息直接显示自定义字段"></a><strong>5、看板首页的卡片信息直接显示自定义字段</strong></h3><p>由于我在创建自定义自定时，勾选了选项，所以现在我的看板首页的卡片上，也可以直接显示这些自定义字段： <img src="/2016/%E5%88%A9%E7%94%A8trello%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E6%AE%B5%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0scrum%E4%B8%AD%E7%9A%84%E4%BB%BB%E5%8A%A1%E8%B4%B4/trello-scrum07.png" srcset="/img/loading.gif" lazyload alt="利用Trello的自定义字段功能实现SCRUM中的任务贴"></p>
+<p>这样就完全解决了我文章一开头的问题，让我们在Trello中创建的看板可以保持住SCRUM中卡片的展示规则，让看板更加自由和灵活。</p>
+<h3 id="推荐阅读："><a href="#推荐阅读：" class="headerlink" title="推荐阅读："></a><strong>推荐阅读：</strong></h3><p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2016/07/26/trello%e4%b8%ad%e5%bc%80%e5%90%af%e5%8d%a1%e7%89%87%e7%94%9f%e5%91%bd%e5%91%a8%e6%9c%9f%e5%8a%9f%e8%83%bd%ef%bc%8c%e7%aa%81%e5%87%ba%e5%bd%93%e5%89%8d%e9%87%8d%e7%82%b9%e4%bb%bb%e5%8a%a1/">Trello中开启卡片生命周期功能，突出当前重点任务</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2015/11/03/%e8%91%97%e5%90%8d%e7%9c%8b%e6%9d%bf%e4%bb%bb%e5%8a%a1%e7%ae%a1%e7%90%86%e5%b7%a5%e5%85%b7%e6%8e%a8%e8%8d%90%ef%bc%9a%e4%bd%bf%e7%94%a8trello%e5%bc%80%e5%b1%95kanban%e5%b7%a5%e4%bd%9c%e6%b3%95/">著名看板任务管理工具推荐：使用Trello开展KANBAN工作法</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2015/11/16/%e4%bd%bf%e7%94%a8%e5%9b%bd%e4%ba%a7%e4%bc%98%e7%a7%80%e7%9a%84%e6%95%8f%e6%8d%b7%e5%9b%a2%e9%98%9f%e5%8d%8f%e4%bd%9c%e5%b7%a5%e5%85%b7leangoo%e5%bc%80%e5%b1%95scrum%e7%9c%8b%e6%9d%bf%e5%b7%a5/">使用国产优秀的敏捷团队协作工具LEANGOO开展SCRUM看板工作</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2016/08/10/%e8%ae%a9outlook%e9%82%ae%e4%bb%b6%e4%bb%bb%e5%8a%a1%e5%ae%8c%e7%be%8e%e7%bb%93%e5%90%88%e5%88%b0trello%e7%9a%84%e6%96%b9%e6%b3%95/">让Outlook邮件任务完美结合到Trello的方法</a></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E6%8F%90%E9%AB%98%E7%94%9F%E4%BA%A7%E5%8A%9B/">提高生产力</a>
+                    
+                      <a class="hover-with-bg" href="/categories/%E6%8F%90%E9%AB%98%E7%94%9F%E4%BA%A7%E5%8A%9B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%9C%8B%E6%9D%BF/">看板</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86/">任务管理</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/">敏捷开发</a>
+                    
+                      <a class="hover-with-bg" href="/tags/scrum/">scrum</a>
+                    
+                      <a class="hover-with-bg" href="/tags/trello/">trello</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2016/angularjs%E5%AD%A6%E4%B9%A0%E6%91%98%E8%AE%B0/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">AngularJS学习摘记</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2016/%E4%B8%8B%E8%BD%BDaxure-rp%E5%8E%9F%E5%9E%8B%E8%AE%BE%E8%AE%A1%E5%B7%A5%E5%85%B7/">
+                        <span class="hidden-mobile">[下载]Axure RP原型设计工具</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"B2tecGOesiRBcoXldYV5Jk5A-9Nh9j0Va","appKey":"5tFdBthF0o282SCXuNVxbntd","placeholder":"说点什么","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false,"requiredFields":[]},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

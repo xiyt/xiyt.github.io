@@ -1,0 +1,984 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="daxi">
+  <meta name="keywords" content="">
+  
+  <title>达夕博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiyt.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 100vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>达夕博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/banner1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="热衷于分享IT技术/工作效率/优秀软件，申旦达夕，永无止境">
+              
+            </span>
+
+            
+          </div>
+
+          
+            <div class="scroll-down-bar">
+              <i class="iconfont icon-arrowdown"></i>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div class="py-5" id="board"
+          style=margin-top:0>
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/swagger%E4%B8%AD%E8%BF%87%E6%BB%A4%E6%8E%89%E4%BB%BB%E6%84%8Fapi%E6%8E%A5%E5%8F%A3%E7%9A%84%E6%96%B9%E6%B3%95/" target="_self">
+          <img src="/2018/swagger%E4%B8%AD%E8%BF%87%E6%BB%A4%E6%8E%89%E4%BB%BB%E6%84%8Fapi%E6%8E%A5%E5%8F%A3%E7%9A%84%E6%96%B9%E6%B3%95/Swagger_UI.png?ext=.png" srcset="/img/loading.gif" lazyload alt="Swagger中过滤掉任意API接口的方法">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/swagger%E4%B8%AD%E8%BF%87%E6%BB%A4%E6%8E%89%E4%BB%BB%E6%84%8Fapi%E6%8E%A5%E5%8F%A3%E7%9A%84%E6%96%B9%E6%B3%95/" target="_self">
+          Swagger中过滤掉任意API接口的方法
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/swagger%E4%B8%AD%E8%BF%87%E6%BB%A4%E6%8E%89%E4%BB%BB%E6%84%8Fapi%E6%8E%A5%E5%8F%A3%E7%9A%84%E6%96%B9%E6%B3%95/" target="_self">
+          
+          
+            
+          
+          
+Swagger是目前最受欢迎的REST APIs文档生成工具，同时也是API的在线测试工具。功能强大谁用谁知道。我就不用在这里推广它了。今天要解决的问题是：如果让一些特定的API接口在Swagger中不显示，即从Swagger中过滤掉一些不想展示的接口？
+通常我们使用Swagger都是通过指定要扫描的包或者扫描具有某些注解的Controller，来生成API，那么如果这其中还想过滤掉一些特定AP
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-07-25 15:07" pubdate>
+              2018-07-25
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%8A%80%E6%9C%AF%E7%BC%96%E7%A8%8B/">技术编程</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E8%BF%87%E6%BB%A4%E5%99%A8/">过滤器</a>
+            
+              <a href="/tags/restful/">restful</a>
+            
+              <a href="/tags/swagger/">swagger</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/intellij-idea%E5%BC%80%E5%90%AFrundashboard%E9%85%8D%E7%BD%AE/" target="_self">
+          <img src="/2018/intellij-idea%E5%BC%80%E5%90%AFrundashboard%E9%85%8D%E7%BD%AE/201807130018_87.png" srcset="/img/loading.gif" lazyload alt="Intellij Idea开启RunDashboard配置">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/intellij-idea%E5%BC%80%E5%90%AFrundashboard%E9%85%8D%E7%BD%AE/" target="_self">
+          Intellij Idea开启RunDashboard配置
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/intellij-idea%E5%BC%80%E5%90%AFrundashboard%E9%85%8D%E7%BD%AE/" target="_self">
+          
+          
+            
+          
+          找到.idea文件下的workspace.xml，并找到RunDashboard
+
+  
+    
+      
+        
+      
+      
+        
+      
+    
+  
+
+
+加入以下配置：
+
+  
+    
+  
+
+
+最终改为：
+
+  
+    
+      
+    
+  
+  
+    
+      
+        
+      
+      
+    
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-07-12 16:15" pubdate>
+              2018-07-12
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/intellij-idea/">intellij-idea</a>
+            
+              <a href="/tags/run-dashboard/">run-dashboard</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/javascript%E4%B8%ADevery%E5%92%8Csome%E7%9A%84%E7%94%A8%E6%B3%95/" target="_self">
+          <img src="/2018/javascript%E4%B8%ADevery%E5%92%8Csome%E7%9A%84%E7%94%A8%E6%B3%95/201806291438_839.png" srcset="/img/loading.gif" lazyload alt="Javascript中every()和some()的用法">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/javascript%E4%B8%ADevery%E5%92%8Csome%E7%9A%84%E7%94%A8%E6%B3%95/" target="_self">
+          Javascript中every()和some()的用法
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/javascript%E4%B8%ADevery%E5%92%8Csome%E7%9A%84%E7%94%A8%E6%B3%95/" target="_self">
+          
+          
+            
+          
+          every()与some()方法都是Javascript中数组的迭代方法。
+every()是对数组中每一项运行给定函数，如果该函数对每一****项返回true,则返回true。
+some()是对数组中每一项运行给定函数，如果该函数对任一****项返回true，则返回true。
+我用Google Chrome的开发者工具在测试了一下这两个方法：
+
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-06-29 06:40" pubdate>
+              2018-06-29
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%8A%80%E6%9C%AF%E7%BC%96%E7%A8%8B/">技术编程</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/every/">every</a>
+            
+              <a href="/tags/some/">some</a>
+            
+              <a href="/tags/javascript/">javascript</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/%E3%80%90%E9%A2%84%E4%B8%8B%E4%BB%8E%E9%80%9F%E3%80%91ccleaner-5-44-%E5%AE%89%E8%A3%85%E4%B8%93%E4%B8%9A%E7%89%88-%E5%95%86%E4%B8%9A%E7%89%88-%E6%8A%80%E6%9C%AF%E7%89%88%E5%85%A8%E9%9D%A2%E7%A0%B4/" target="_self">
+          <img src="/2018/%E3%80%90%E9%A2%84%E4%B8%8B%E4%BB%8E%E9%80%9F%E3%80%91ccleaner-5-44-%E5%AE%89%E8%A3%85%E4%B8%93%E4%B8%9A%E7%89%88-%E5%95%86%E4%B8%9A%E7%89%88-%E6%8A%80%E6%9C%AF%E7%89%88%E5%85%A8%E9%9D%A2%E7%A0%B4/ccleaner-logo.jpg" srcset="/img/loading.gif" lazyload alt="【预下从速】CCleaner 5.44 安装+专业版/商业版/技术版全面破解">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/%E3%80%90%E9%A2%84%E4%B8%8B%E4%BB%8E%E9%80%9F%E3%80%91ccleaner-5-44-%E5%AE%89%E8%A3%85%E4%B8%93%E4%B8%9A%E7%89%88-%E5%95%86%E4%B8%9A%E7%89%88-%E6%8A%80%E6%9C%AF%E7%89%88%E5%85%A8%E9%9D%A2%E7%A0%B4/" target="_self">
+          【预下从速】CCleaner 5.44 安装+专业版/商业版/技术版全面破解
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/%E3%80%90%E9%A2%84%E4%B8%8B%E4%BB%8E%E9%80%9F%E3%80%91ccleaner-5-44-%E5%AE%89%E8%A3%85%E4%B8%93%E4%B8%9A%E7%89%88-%E5%95%86%E4%B8%9A%E7%89%88-%E6%8A%80%E6%9C%AF%E7%89%88%E5%85%A8%E9%9D%A2%E7%A0%B4/" target="_self">
+          
+          
+            
+          
+          
+CCleaner是一款免费的系统优化和隐私保护工具。CCleaner的主要用来清除Windows系统不再使用的垃圾文件，以腾出更多硬盘空间。它的另一大功能是清除使用者的上网记录。CCleanerBT的体积小，运行速度极快，可以对文件夹、历史记录、回收站等进行垃圾清理，并可对注册表进行垃圾项扫描、清理。附带软件卸载功能。 同时支持IE、Firefox。免费使用，不含任何间谍软件和垃圾程序。支持包括
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-06-28 14:40" pubdate>
+              2018-06-28
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E7%B3%BB%E7%BB%9F%E4%BC%98%E5%8C%96/">系统优化</a>
+            
+              <a href="/tags/%E7%B3%BB%E7%BB%9F%E6%B8%85%E7%90%86/">系统清理</a>
+            
+              <a href="/tags/windows/">windows</a>
+            
+              <a href="/tags/ccleaner/">ccleaner</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/redis%E4%BD%BF%E7%94%A8redis-trib-rb%E5%88%9B%E5%BB%BA%E5%B8%A6%E5%AF%86%E7%A0%81%E7%9A%84%E9%9B%86%E7%BE%A4%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/" target="_self">
+          <img src="/2018/redis%E4%BD%BF%E7%94%A8redis-trib-rb%E5%88%9B%E5%BB%BA%E5%B8%A6%E5%AF%86%E7%A0%81%E7%9A%84%E9%9B%86%E7%BE%A4%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/redis-logo.png" srcset="/img/loading.gif" lazyload alt="Redis使用redis-trib.rb创建带密码的集群问题总结">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/redis%E4%BD%BF%E7%94%A8redis-trib-rb%E5%88%9B%E5%BB%BA%E5%B8%A6%E5%AF%86%E7%A0%81%E7%9A%84%E9%9B%86%E7%BE%A4%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/" target="_self">
+          Redis使用redis-trib.rb创建带密码的集群问题总结
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/redis%E4%BD%BF%E7%94%A8redis-trib-rb%E5%88%9B%E5%BB%BA%E5%B8%A6%E5%AF%86%E7%A0%81%E7%9A%84%E9%9B%86%E7%BE%A4%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/" target="_self">
+          
+          
+            
+          
+          
+1、设定集群密码
+各个节点的配置中设定密码，注意集群模式下，下面两行都需要
+masterauth passwd123requirepass passwd123
+2、各个节点的配置中开启集群配置的相关选项，如下：
+port 30001cluster-enabled yescluster-config-file nodes-30001.confcluster-node-timeout 5000app
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-06-27 15:06" pubdate>
+              2018-06-27
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%8A%80%E6%9C%AF%E7%BC%96%E7%A8%8B/">技术编程</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%AF%86%E7%A0%81/">密码</a>
+            
+              <a href="/tags/%E9%9B%86%E7%BE%A4/">集群</a>
+            
+              <a href="/tags/redis/">redis</a>
+            
+              <a href="/tags/edis-trib-rb/">edis-trib-rb</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/q-dir-7-0-7-64%E4%BD%8D%E4%B8%8B%E8%BD%BD%EF%BC%8C%E4%BD%93%E9%AA%8C%E8%B6%85%E5%BF%AB%E6%84%9F%E7%9A%84%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%99%A8/" target="_self">
+          <img src="/2018/q-dir-7-0-7-64%E4%BD%8D%E4%B8%8B%E8%BD%BD%EF%BC%8C%E4%BD%93%E9%AA%8C%E8%B6%85%E5%BF%AB%E6%84%9F%E7%9A%84%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%99%A8/201806261608_663.png" srcset="/img/loading.gif" lazyload alt="Q-Dir 7.0.7 64位下载，体验超快感的资源管理器">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/q-dir-7-0-7-64%E4%BD%8D%E4%B8%8B%E8%BD%BD%EF%BC%8C%E4%BD%93%E9%AA%8C%E8%B6%85%E5%BF%AB%E6%84%9F%E7%9A%84%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%99%A8/" target="_self">
+          Q-Dir 7.0.7 64位下载，体验超快感的资源管理器
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/q-dir-7-0-7-64%E4%BD%8D%E4%B8%8B%E8%BD%BD%EF%BC%8C%E4%BD%93%E9%AA%8C%E8%B6%85%E5%BF%AB%E6%84%9F%E7%9A%84%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%99%A8/" target="_self">
+          
+          
+            
+          
+          适合于频繁在多目录之间切换的文件操作的独特资源管理器
+※ 快速访问最常用的文件夹。 ※ 可以通过拖拽移动文件到个窗口。 ※ 在Q – dir目录视图和其他程序之间的复制/粘贴。 ※ 支持文件夹类型： ZIP 、FTP、网络、系统文件、快捷方式… ※ 文件过滤器：允许的项目快速，轻松过滤。 ※ 所有栏目的支持保存功能。 ※ 对于快速文件夹访问权限。 ※ 浏览视图：大图标、小图标、列表、详细、缩略图。
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-06-26 08:13" pubdate>
+              2018-06-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%99%A8/">资源管理器</a>
+            
+              <a href="/tags/q-dir/">q-dir</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/windows-10%E4%B8%AD%E3%80%90%E9%9C%80%E8%A6%81%E6%96%B0%E7%9A%84%E5%BA%94%E7%94%A8%E6%89%93%E5%BC%80%E6%AD%A4-exe%E3%80%91%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" target="_self">
+          <img src="/2018/windows-10%E4%B8%AD%E3%80%90%E9%9C%80%E8%A6%81%E6%96%B0%E7%9A%84%E5%BA%94%E7%94%A8%E6%89%93%E5%BC%80%E6%AD%A4-exe%E3%80%91%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/201806142149_660.png" srcset="/img/loading.gif" lazyload alt="Windows 10中【需要新的应用打开此.exe】问题的解决方法">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/windows-10%E4%B8%AD%E3%80%90%E9%9C%80%E8%A6%81%E6%96%B0%E7%9A%84%E5%BA%94%E7%94%A8%E6%89%93%E5%BC%80%E6%AD%A4-exe%E3%80%91%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" target="_self">
+          Windows 10中【需要新的应用打开此.exe】问题的解决方法
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/windows-10%E4%B8%AD%E3%80%90%E9%9C%80%E8%A6%81%E6%96%B0%E7%9A%84%E5%BA%94%E7%94%A8%E6%89%93%E5%BC%80%E6%AD%A4-exe%E3%80%91%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" target="_self">
+          
+          
+            
+          
+          昨天真是悲催的一天，我的Windows 10竟然中毒了，平时一直开着Windows Defender。而昨天由于下载了某个软件的破解补丁，临时关闭了Defender，结果就中招了。现象是，所有的exe文件都无法双击打开，提示 需要新的应用打开此.exe 错误。然后右键通过管理员权限是能够打开的。我的探索解决步骤如下：
+1、使用360安全卫士扫描，结果连360的exe也无法打开；右键以管理员启动时，
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-06-14 13:56" pubdate>
+              2018-06-14
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/exe%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80/">exe无法打开</a>
+            
+              <a href="/tags/windows-10/">windows-10</a>
+            
+              <a href="/tags/%E9%9C%80%E8%A6%81%E6%96%B0%E7%9A%84%E5%BA%94%E7%94%A8%E6%89%93%E5%BC%80%E6%AD%A4-exe/">需要新的应用打开此-exe</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/fast-stone-video-capture-v9-0-%E7%BB%BF%E8%89%B2%E7%A0%B4%E8%A7%A3%E7%89%88%E4%B8%8B%E8%BD%BD/" target="_self">
+          <img src="/2018/fast-stone-video-capture-v9-0-%E7%BB%BF%E8%89%B2%E7%A0%B4%E8%A7%A3%E7%89%88%E4%B8%8B%E8%BD%BD/201806122246_439.png" srcset="/img/loading.gif" lazyload alt="Fast Stone Video Capture v9.0 绿色破解版下载">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/fast-stone-video-capture-v9-0-%E7%BB%BF%E8%89%B2%E7%A0%B4%E8%A7%A3%E7%89%88%E4%B8%8B%E8%BD%BD/" target="_self">
+          Fast Stone Video Capture v9.0 绿色破解版下载
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/fast-stone-video-capture-v9-0-%E7%BB%BF%E8%89%B2%E7%A0%B4%E8%A7%A3%E7%89%88%E4%B8%8B%E8%BD%BD/" target="_self">
+          
+          
+            
+          
+          FastStone Capture (FSCapture) 是经典好用的屏幕截图软件，还具有图像编辑和屏幕录制两大功能，可以捕捉全屏图像，或者活动窗口、窗口内的控件对象截图、支持手绘区域自由截图，或者滚动窗口等等，支持所有主流图片格式。FastStone 捕获可保存为 BMP、GIF、JPEG、PCX、PNG、TGA、TIFF 和 PDF 格式的文件。FastStone Capture 已经支持固
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-06-12 14:50" pubdate>
+              2018-06-12
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%8F%96%E8%89%B2%E5%99%A8/">取色器</a>
+            
+              <a href="/tags/%E5%9B%BE%E7%89%87%E6%B5%8F%E8%A7%88/">图片浏览</a>
+            
+              <a href="/tags/%E5%B1%8F%E5%B9%95%E5%B0%BA%E5%AD%90/">屏幕尺子</a>
+            
+              <a href="/tags/%E5%BD%95%E5%B1%8F/">录屏</a>
+            
+              <a href="/tags/%E6%88%AA%E5%9B%BE/">截图</a>
+            
+              <a href="/tags/fast-stone-video-capture/">fast-stone-video-capture</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/mac%E4%BD%BF%E7%94%A8bootcamp%E5%AE%89%E8%A3%85%E5%8F%8C%E7%B3%BB%E7%BB%9F%EF%BC%8C%E8%A7%A3%E5%86%B3%E6%82%A8%E7%9A%84%E7%A3%81%E7%9B%98%E6%9C%AA%E8%83%BD%E5%88%86%E5%8C%BA%E9%94%99%E8%AF%AF/" target="_self">
+          <img src="/2018/mac%E4%BD%BF%E7%94%A8bootcamp%E5%AE%89%E8%A3%85%E5%8F%8C%E7%B3%BB%E7%BB%9F%EF%BC%8C%E8%A7%A3%E5%86%B3%E6%82%A8%E7%9A%84%E7%A3%81%E7%9B%98%E6%9C%AA%E8%83%BD%E5%88%86%E5%8C%BA%E9%94%99%E8%AF%AF/IMG_3468.JPG" srcset="/img/loading.gif" lazyload alt="Mac使用Bootcamp安装双系统，解决您的磁盘未能分区错误">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/mac%E4%BD%BF%E7%94%A8bootcamp%E5%AE%89%E8%A3%85%E5%8F%8C%E7%B3%BB%E7%BB%9F%EF%BC%8C%E8%A7%A3%E5%86%B3%E6%82%A8%E7%9A%84%E7%A3%81%E7%9B%98%E6%9C%AA%E8%83%BD%E5%88%86%E5%8C%BA%E9%94%99%E8%AF%AF/" target="_self">
+          Mac使用Bootcamp安装双系统，解决您的磁盘未能分区错误
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/mac%E4%BD%BF%E7%94%A8bootcamp%E5%AE%89%E8%A3%85%E5%8F%8C%E7%B3%BB%E7%BB%9F%EF%BC%8C%E8%A7%A3%E5%86%B3%E6%82%A8%E7%9A%84%E7%A3%81%E7%9B%98%E6%9C%AA%E8%83%BD%E5%88%86%E5%8C%BA%E9%94%99%E8%AF%AF/" target="_self">
+          
+          
+            
+          
+          我第一次安装双系统，Mac+Windows 10的时候，并没有问题。就是使用Bootcamp安装的，一切顺利。但是当时分配给windows的磁盘空间太小了，需要调整Bootcamp分区的大小，于是备份了windows系统，然后删除Bootcamp分区，准备重新安装。结果，当我准备再次使用Bootcamp分区时，一直报错“您的磁盘未能分区，请进行磁盘检查”类似的错误。
+
+ 
+解决方法如下：
+1、重启
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-06-05 08:10" pubdate>
+              2018-06-05
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%8F%8C%E7%B3%BB%E7%BB%9F/">双系统</a>
+            
+              <a href="/tags/%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA/">磁盘分区</a>
+            
+              <a href="/tags/bootcamp/">bootcamp</a>
+            
+              <a href="/tags/mac/">mac</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/%E8%BF%85%E9%9B%B7thunder5-8-14-706%E5%85%B8%E8%97%8F%E7%89%88%E4%B8%8B%E8%BD%BD%EF%BC%8C%E5%AE%9E%E6%B5%8B%E5%8F%AF%E9%AB%98%E9%80%9F%E4%B8%8B%E8%BD%BD/" target="_self">
+          <img src="/2018/%E8%BF%85%E9%9B%B7thunder5-8-14-706%E5%85%B8%E8%97%8F%E7%89%88%E4%B8%8B%E8%BD%BD%EF%BC%8C%E5%AE%9E%E6%B5%8B%E5%8F%AF%E9%AB%98%E9%80%9F%E4%B8%8B%E8%BD%BD/201806022357_48.png" srcset="/img/loading.gif" lazyload alt="迅雷Thunder5.8.14.706典藏版下载，实测可高速下载">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/%E8%BF%85%E9%9B%B7thunder5-8-14-706%E5%85%B8%E8%97%8F%E7%89%88%E4%B8%8B%E8%BD%BD%EF%BC%8C%E5%AE%9E%E6%B5%8B%E5%8F%AF%E9%AB%98%E9%80%9F%E4%B8%8B%E8%BD%BD/" target="_self">
+          迅雷Thunder5.8.14.706典藏版下载，实测可高速下载
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/%E8%BF%85%E9%9B%B7thunder5-8-14-706%E5%85%B8%E8%97%8F%E7%89%88%E4%B8%8B%E8%BD%BD%EF%BC%8C%E5%AE%9E%E6%B5%8B%E5%8F%AF%E9%AB%98%E9%80%9F%E4%B8%8B%E8%BD%BD/" target="_self">
+          
+          
+            
+          
+          最新的版的迅雷由于各种限制，版权问题，下载资源几乎已经是废了。而今天我要下载的电影正好又是迅雷链接，一番搜索后，发现大家普遍反映迅雷5.8版本，现在用着还非常不错，也没有什么限制。所以就找到这个迅雷Thunder5.8.14.706典藏版，试用后效果非常满意，请看截图。需要的朋友尽快下载吧：)
+
+网盘下载  密码: qm2f
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-06-04 01:30" pubdate>
+              2018-06-04
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E4%B8%8B%E8%BD%BD/">下载</a>
+            
+              <a href="/tags/%E8%BF%85%E9%9B%B7/">迅雷</a>
+            
+              <a href="/tags/thunder/">thunder</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <a class="extend prev" rel="prev" href="/page/7/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/#board">6</a><a class="page-number" href="/page/7/#board">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/#board">9</a><a class="page-number" href="/page/10/#board">10</a><span class="space">&hellip;</span><a class="page-number" href="/page/33/#board">33</a><a class="extend next" rel="next" href="/page/9/#board"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

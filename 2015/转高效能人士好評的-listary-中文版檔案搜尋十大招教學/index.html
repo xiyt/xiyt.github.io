@@ -1,0 +1,518 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="daxi">
+  <meta name="keywords" content="">
+  
+  <title>[转]高效能人士好評的 Listary 中文版檔案搜尋十大招教學 - 达夕博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiyt.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>达夕博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/banner1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="[转]高效能人士好評的 Listary 中文版檔案搜尋十大招教學">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2015-11-12 06:50" pubdate>
+        2015年11月12日 早上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.8k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      18
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">[转]高效能人士好評的 Listary 中文版檔案搜尋十大招教學</h1>
+            
+            <div class="markdown-body">
+              <p>有一個老牌的免費軟體在高效能工作者之間廣受好評，可以改變檔案瀏覽、開啟、管理的繁瑣步驟，但電腦玩物上一直遲遲沒有特別介紹。他可以媲美「 <a target="_blank" rel="noopener" href="http://www.playpcesor.com/2011/02/ditto.html">Ditto</a> 」這樣的強化剪貼簿軟體，是簡化日常瑣碎工作操作的好工具，隨時都用得到，上手後的朋友很可能離不開他。</p>
+<p>這款軟體就叫做：<strong>「 Listary 」，他是一款檔案搜尋器，但他帶來的改變不只是加快搜尋，而是加快 Windows 上全面的檔案處理效率</strong>。</p>
+<p>「 Listary 」的主標語是：「Keep files at your fingertips」，意思是透過鍵盤上的指令輸入，彈指間就能快速處理需要的文件檔案。而且他無所不在，所以讓我們的手指不需要離開鍵盤、不需要另外開啟檔案總管，也能快速瀏覽需要的資料內容。</p>
+<p>雖然「 Listary 」可能是很多專業工作者已經使用多年的軟體，但還是讓我來針對中文免費版中的幾個重點功能做一番介紹，也讓尚未嘗試「 Listary 」的朋友，可以先看看這款軟體是否適合自己。</p>
+<h3 id="1-支援中文版，最快速的檔案搜尋"><a href="#1-支援中文版，最快速的檔案搜尋" class="headerlink" title="1. 支援中文版，最快速的檔案搜尋"></a>1. 支援中文版，最快速的檔案搜尋</h3><p>「 <a target="_blank" rel="noopener" href="http://www.listary.com/">Listary</a> 」下載免費版後，一安裝完成就可以選擇繁體中文版。</p>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/11/Listary-01.png"><img src="/2015/%E8%BD%AC%E9%AB%98%E6%95%88%E8%83%BD%E4%BA%BA%E5%A3%AB%E5%A5%BD%E8%A9%95%E7%9A%84-listary-%E4%B8%AD%E6%96%87%E7%89%88%E6%AA%94%E6%A1%88%E6%90%9C%E5%B0%8B%E5%8D%81%E5%A4%A7%E6%8B%9B%E6%95%99%E5%AD%B8/Listary-01.png" srcset="/img/loading.gif" lazyload alt="Listary"></a></p>
+<p>「 Listary 」最基本的用法就是幫助我們搜尋整個硬碟的檔案、文件、已安裝軟體等資料，而且安裝完成不需要另外設定，就能用飛快的速度搜尋整個硬碟的所有內容。</p>
+<p>他的搜尋速度在實際使用上不輸也很快的「 <a target="_blank" rel="noopener" href="http://www.playpcesor.com/2009/01/everything-windows.html">Everything</a> 」，比「 <a target="_blank" rel="noopener" href="http://www.playpcesor.com/2008/08/launchy-212.html">Launchy</a> 」快上許多。但是「 Listary 」兼顧了 Everything 超速搜尋的優點，以及 Launchy 便利的快捷條。</p>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/11/Listary-02.png"><img src="/2015/%E8%BD%AC%E9%AB%98%E6%95%88%E8%83%BD%E4%BA%BA%E5%A3%AB%E5%A5%BD%E8%A9%95%E7%9A%84-listary-%E4%B8%AD%E6%96%87%E7%89%88%E6%AA%94%E6%A1%88%E6%90%9C%E5%B0%8B%E5%8D%81%E5%A4%A7%E6%8B%9B%E6%95%99%E5%AD%B8/Listary-02.png" srcset="/img/loading.gif" lazyload alt="Listary-02"></a></p>
+<h3 id="2-無所不在，改變你的檔案瀏覽方式"><a href="#2-無所不在，改變你的檔案瀏覽方式" class="headerlink" title="2. 無所不在，改變你的檔案瀏覽方式"></a>2. 無所不在，改變你的檔案瀏覽方式</h3><p>你可以在電腦上任何地方、使用任何軟體時，輸入［ Win ］+［ S ］快捷鍵來呼叫出「 Listary 」的搜尋列，接著直接輸入關鍵字搜尋，就能快速找到需要的檔案、開啟需要的資料夾。</p>
+<p>很多時候，就不需要另外打開檔案總管了。</p>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/11/Listary-03.png"><img src="/2015/%E8%BD%AC%E9%AB%98%E6%95%88%E8%83%BD%E4%BA%BA%E5%A3%AB%E5%A5%BD%E8%A9%95%E7%9A%84-listary-%E4%B8%AD%E6%96%87%E7%89%88%E6%AA%94%E6%A1%88%E6%90%9C%E5%B0%8B%E5%8D%81%E5%A4%A7%E6%8B%9B%E6%95%99%E5%AD%B8/Listary-03-300x170.png" srcset="/img/loading.gif" lazyload alt="Listary-03"></a></p>
+<h3 id="3-基本搜尋技巧：分段關鍵字、副檔名、資料夾"><a href="#3-基本搜尋技巧：分段關鍵字、副檔名、資料夾" class="headerlink" title="3. 基本搜尋技巧：分段關鍵字、副檔名、資料夾"></a>3. 基本搜尋技巧：分段關鍵字、副檔名、資料夾</h3><p>而且「 Listary 」的搜尋結果很聰明，懂得排序常用檔案，也可以運用不同搜尋技巧來更準確的找出某個資料夾內的某份文件。</p>
+<p>例如我要找出「在我的新書《打開大家的 Evernote 筆記本》裡某個子資料夾中的一個檔名跟筆記有關的圖片檔案」，我可以用下面的關鍵字組合快速透過「 Listary 」找出來：</p>
+<blockquote>
+<p>evernote\  筆記  .png</p>
+</blockquote>
+<p>「 evernote\ 」代表搜尋名稱中有 evernote 的資料夾，「筆記」代表搜尋檔名有筆記的檔案，也可以組合多個關鍵字，最後「 .png 」代表搜尋此副檔名的圖檔。</p>
+<p>「 Listary 」可以聰明的比對我們想搜尋的關鍵字，可以深入每一層資料夾去找，不僅速度快、效果也好，要聚焦搜尋範圍也很容易，確實可以取代打開檔案總管翻找檔案的動作。</p>
+<p>如果你有像我之前分享的「<a target="_blank" rel="noopener" href="http://www.playpcesor.com/2015/10/file-name-tips.html">一看就能採取行動的檔案命名技巧：我的兩大檔名規則</a>」文章那樣對檔案進行有效命名，那麼利用「 Listary 」找檔案也會更加事半功倍。</p>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/11/Listary-04.png"><img src="/2015/%E8%BD%AC%E9%AB%98%E6%95%88%E8%83%BD%E4%BA%BA%E5%A3%AB%E5%A5%BD%E8%A9%95%E7%9A%84-listary-%E4%B8%AD%E6%96%87%E7%89%88%E6%AA%94%E6%A1%88%E6%90%9C%E5%B0%8B%E5%8D%81%E5%A4%A7%E6%8B%9B%E6%95%99%E5%AD%B8/Listary-04.png" srcset="/img/loading.gif" lazyload alt="Listary-04"></a></p>
+<h3 id="4-取代滑鼠右鍵選單"><a href="#4-取代滑鼠右鍵選單" class="headerlink" title="4. 取代滑鼠右鍵選單"></a>4. 取代滑鼠右鍵選單</h3><p>「 Listary 」也不只是可以找到檔案，在他的搜尋列上還能取代滑鼠右鍵選單的功能。</p>
+<p>當我們在搜尋列上找到需要的檔案時，可以按下方向鍵［－＞（右）］，這時候就會出現我們熟悉的滑鼠右鍵選單功能，可以快速複製檔案，或是針對檔案下更多指令。</p>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/11/Listary-05.png"><img src="/2015/%E8%BD%AC%E9%AB%98%E6%95%88%E8%83%BD%E4%BA%BA%E5%A3%AB%E5%A5%BD%E8%A9%95%E7%9A%84-listary-%E4%B8%AD%E6%96%87%E7%89%88%E6%AA%94%E6%A1%88%E6%90%9C%E5%B0%8B%E5%8D%81%E5%A4%A7%E6%8B%9B%E6%95%99%E5%AD%B8/Listary-05.png" srcset="/img/loading.gif" lazyload alt="Listary-05"></a></p>
+<h3 id="5-桌面、檔案總管中都支援直接搜尋"><a href="#5-桌面、檔案總管中都支援直接搜尋" class="headerlink" title="5. 桌面、檔案總管中都支援直接搜尋"></a>5. 桌面、檔案總管中都支援直接搜尋</h3><p>而且在我們最常開啟的電腦桌面、檔案總管視窗中，使用「 Listary 」不需要輸入快捷鍵呼叫，只要直接打字輸入想要查詢的關鍵字，就能立刻啟動「 Listary 」開始搜尋。</p>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/11/Listary-06.png"><img src="/2015/%E8%BD%AC%E9%AB%98%E6%95%88%E8%83%BD%E4%BA%BA%E5%A3%AB%E5%A5%BD%E8%A9%95%E7%9A%84-listary-%E4%B8%AD%E6%96%87%E7%89%88%E6%AA%94%E6%A1%88%E6%90%9C%E5%B0%8B%E5%8D%81%E5%A4%A7%E6%8B%9B%E6%95%99%E5%AD%B8/Listary-06.png" srcset="/img/loading.gif" lazyload alt="Listary-06"></a></p>
+<h3 id="6-快速切換資料夾視窗"><a href="#6-快速切換資料夾視窗" class="headerlink" title="6. 快速切換資料夾視窗"></a>6. 快速切換資料夾視窗</h3><p>這樣的特性，讓「 Listary 」也可以成為檔案總管裡的高效率輔助工具。</p>
+<p>例如我正在檔案總管裡瀏覽某一個資料夾的檔案，想要跳轉到另外一個資料夾，免不了要用滑鼠多次點選才能跳轉過去。</p>
+<p>但是有了「 Listary 」，我只要直接輸入目標資料夾的部分關鍵字，按下［ Enter ］，就能直接切換資料夾畫面了！</p>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/11/Listary-07.png"><img src="/2015/%E8%BD%AC%E9%AB%98%E6%95%88%E8%83%BD%E4%BA%BA%E5%A3%AB%E5%A5%BD%E8%A9%95%E7%9A%84-listary-%E4%B8%AD%E6%96%87%E7%89%88%E6%AA%94%E6%A1%88%E6%90%9C%E5%B0%8B%E5%8D%81%E5%A4%A7%E6%8B%9B%E6%95%99%E5%AD%B8/Listary-07.png" srcset="/img/loading.gif" lazyload alt="Listary-07"></a></p>
+<h3 id="7-快速複製檔案"><a href="#7-快速複製檔案" class="headerlink" title="7. 快速複製檔案"></a>7. 快速複製檔案</h3><p>在檔案總管裡想要複製檔案到新的資料夾時，「 Listary 」也能幫上大忙。</p>
+<p>當我正在某一個資料夾中，想要把某個檔案複製過來，我只要輸入那麼檔案的名稱，在「 Listary 」的往右選單裡選擇［複製］或［剪下］，然後回到檔案總管視窗直接貼上即可，再也不用在不同資料夾之間切換。</p>
+<p>更進一步的，如果我使用「 Listary 」的付費版，我甚至還能選擇「直接複製到當前資料夾」的功能。</p>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/11/Listary-08.png"><img src="/2015/%E8%BD%AC%E9%AB%98%E6%95%88%E8%83%BD%E4%BA%BA%E5%A3%AB%E5%A5%BD%E8%A9%95%E7%9A%84-listary-%E4%B8%AD%E6%96%87%E7%89%88%E6%AA%94%E6%A1%88%E6%90%9C%E5%B0%8B%E5%8D%81%E5%A4%A7%E6%8B%9B%E6%95%99%E5%AD%B8/Listary-08.png" srcset="/img/loading.gif" lazyload alt="Listary-08"></a></p>
+<h3 id="8-結合「開啟檔案」的對話框"><a href="#8-結合「開啟檔案」的對話框" class="headerlink" title="8. 結合「開啟檔案」的對話框"></a>8. 結合「開啟檔案」的對話框</h3><p>在繪圖軟體、文書軟體中要開啟舊檔案時，都會有一個［開啟檔案］的對話視窗，我們要在這裡翻找出需要的檔案，這是不是也有點麻煩？</p>
+<p>而「 Listary 」會自動整合在這個軟體的［開啟檔案］視窗中，你可以看到下方有一個「 Listary 」的搜尋列，只要直接搜尋資料夾或檔案，上方的對話視窗就能快速切換。</p>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/11/Listary-09.png"><img src="/2015/%E8%BD%AC%E9%AB%98%E6%95%88%E8%83%BD%E4%BA%BA%E5%A3%AB%E5%A5%BD%E8%A9%95%E7%9A%84-listary-%E4%B8%AD%E6%96%87%E7%89%88%E6%AA%94%E6%A1%88%E6%90%9C%E5%B0%8B%E5%8D%81%E5%A4%A7%E6%8B%9B%E6%95%99%E5%AD%B8/Listary-09.png" srcset="/img/loading.gif" lazyload alt="Listary-09"></a></p>
+<h3 id="9-建立我的最愛資料夾"><a href="#9-建立我的最愛資料夾" class="headerlink" title="9. 建立我的最愛資料夾"></a>9. 建立我的最愛資料夾</h3><p>而當「 Listary 」愈用愈熟練後，我們還可以建立最愛資料夾（通常是最近工作上常常要用到的幾個資料夾），方便我們隨時隨地呼叫並進入這些檔案夾中。</p>
+<p>在檔案總管裡的重要資料夾頁面，空白處點兩下呼叫出「 Listary 」的設定畫面，將目前資料夾加入到最愛中即可。</p>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/11/Listary-10.png"><img src="/2015/%E8%BD%AC%E9%AB%98%E6%95%88%E8%83%BD%E4%BA%BA%E5%A3%AB%E5%A5%BD%E8%A9%95%E7%9A%84-listary-%E4%B8%AD%E6%96%87%E7%89%88%E6%AA%94%E6%A1%88%E6%90%9C%E5%B0%8B%E5%8D%81%E5%A4%A7%E6%8B%9B%E6%95%99%E5%AD%B8/Listary-10.png" srcset="/img/loading.gif" lazyload alt="Listary-10"></a></p>
+<h3 id="10-指定搜尋檔案類型-：doc-pic-audio-vidio-file-folder"><a href="#10-指定搜尋檔案類型-：doc-pic-audio-vidio-file-folder" class="headerlink" title="10. 指定搜尋檔案類型 ：doc pic audio vidio file folder"></a>10. 指定搜尋檔案類型 ：doc pic audio vidio file folder</h3><p>最後，我們也能一開始就指定我要搜尋哪一種類型的檔案，例如圖檔、文件檔、聲音檔、影片檔或資料夾等。上方就是各自需要使用的關鍵字，例如要搜尋圖檔，就輸入「pic:關鍵字」，就會單純針對圖片進行搜尋。</p>
+<p>「 Listary 」的好處，對我來說不只是搜尋與開啟檔案，而是省去了在檔案總管中很多滑鼠移動切換的時間，這對於追求高效率的工作者可以說是必備軟體之一，推薦給大家。</p>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/11/Listary-11.png"><img src="/2015/%E8%BD%AC%E9%AB%98%E6%95%88%E8%83%BD%E4%BA%BA%E5%A3%AB%E5%A5%BD%E8%A9%95%E7%9A%84-listary-%E4%B8%AD%E6%96%87%E7%89%88%E6%AA%94%E6%A1%88%E6%90%9C%E5%B0%8B%E5%8D%81%E5%A4%A7%E6%8B%9B%E6%95%99%E5%AD%B8/Listary-11.png" srcset="/img/loading.gif" lazyload alt="Listary-11"></a></p>
+<p><a target="_blank" rel="noopener" href="http://www.listary.com/">「 Listary 」下載</a></p>
+<p>-——————————————————————————————————————</p>
+<p>声明：</p>
+<p>本文转自電腦玩物原創作者 esor huang（異塵行者）</p>
+<p>原文链接：<a target="_blank" rel="noopener" href="http://www.playpcesor.com/2015/11/listary.html">高效能人士好評的 Listary 中文版檔案搜尋十大招教學</a></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%96%87%E6%A1%A3%E7%AE%A1%E7%90%86/">文档管理</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%96%87%E4%BB%B6%E6%90%9C%E7%B4%A2/">文件搜索</a>
+                    
+                      <a class="hover-with-bg" href="/tags/listary/">listary</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%BF%AB%E9%80%9F%E6%90%9C%E7%B4%A2/">快速搜索</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2015/%E4%BD%BF%E7%94%A8%E5%9B%BD%E4%BA%A7%E4%BC%98%E7%A7%80%E7%9A%84%E6%95%8F%E6%8D%B7%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C%E5%B7%A5%E5%85%B7leangoo%E5%BC%80%E5%B1%95scrum%E7%9C%8B%E6%9D%BF%E5%B7%A5/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">使用国产优秀的敏捷团队协作工具LEANGOO开展SCRUM看板工作</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2015/dropbox-paper%EF%BC%9A%E5%8D%8F%E4%BD%9C%E6%80%A7%E6%96%87%E6%A1%A3%E5%92%8C%E7%AC%94%E8%AE%B0%E7%BC%96%E8%BE%91%E5%B9%B3%E5%8F%B0%E8%AF%95%E7%94%A8%E4%BD%93%E9%AA%8C/">
+                        <span class="hidden-mobile">Dropbox Paper：协作性文档和笔记编辑平台试用体验</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"B2tecGOesiRBcoXldYV5Jk5A-9Nh9j0Va","appKey":"5tFdBthF0o282SCXuNVxbntd","placeholder":"说点什么","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false,"requiredFields":[]},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

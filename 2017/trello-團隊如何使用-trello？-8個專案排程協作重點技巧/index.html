@@ -1,0 +1,543 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="daxi">
+  <meta name="keywords" content="">
+  
+  <title>Trello 團隊如何使用 Trello？ 8個專案排程協作重點技巧 - 达夕博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiyt.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>达夕博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/banner1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="Trello 團隊如何使用 Trello？ 8個專案排程協作重點技巧">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2017-02-20 00:20" pubdate>
+        2017年2月20日 凌晨
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.5k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      25
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Trello 團隊如何使用 Trello？ 8個專案排程協作重點技巧</h1>
+            
+            <div class="markdown-body">
+              <p>我最近讀到兩篇文章，對如何使用 Trello 進行專案管理很有收穫：第一篇是 Zapier 團隊去採訪 Trello 團隊成員如何使用 Trello ：「<a target="_blank" rel="noopener" href="https://zapier.com/blog/how-trello-uses-trello/">How Trello Uses Trello to Collaborate, Plan, and Communicate as a Team</a>」。第二篇則是 Trello 團隊自己整理了前一篇文章的精華，重新解釋自己使用 Trello 時的管理邏輯：「 <a target="_blank" rel="noopener" href="http://blog.trello.com/how-teams-at-trello-use-trello-pro-tips">How Teams At Trello Use Trello</a> 」。</p>
+<p>100 多人的 Trello 團隊，如何利用 150 多個團隊共用的 Trello 看板（不包含 Trello 成員自己建立的個人看板），來管理有 1700 多萬用戶的 Trello 服務呢？</p>
+<p>我身為 <a target="_blank" rel="noopener" href="http://www.playpcesor.com/2015/06/trello.html">Trello</a> 的使用者之一，仔細研讀了這兩篇文章裡提到的各種方法，並且實際嘗試一遍，加上我的理解、整理和個人看法，幫大家也重新詮釋一篇 <strong>Trello 團隊自己使用 Trello 的工作哲學</strong>。</p>
+<p>裡面有些工作方法，我想不只是使用 Trello ，對使用其他<a target="_blank" rel="noopener" href="http://www.playpcesor.com/2015/06/project-manager-best-13-tools.html">專案管理軟體</a>也應該會有所啟發。</p>
+<p>同樣的，如果你是剛剛接觸 Trello ，對功能還不熟悉，歡迎先參考我之前的幾篇教學文章，今日之文我則會略過這些功能教學的部分，直接說明方法：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="http://www.playpcesor.com/2015/06/trello.html">為什麼大家愛用 Trello ？最佳整理教學讓事情井然有序</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.playpcesor.com/2016/08/trello-custom-fields-power-ups.html">Trello 卡片自訂欄位密技！最想要的強大 Trello 客製化範例教學</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.playpcesor.com/2016/08/trello-evernote.html">Trello 開放「強化功能」讓免費用戶串聯 Evernote 等雲端服務</a></li>
+</ul>
+<h3 id="一，-每個專案都有一個［收件匣］列表："><a href="#一，-每個專案都有一個［收件匣］列表：" class="headerlink" title="一， 每個專案都有一個［收件匣］列表："></a>一， 每個專案都有一個［收件匣］列表：</h3><p>Trello 團隊提到他們在各部門工作看板裡，會建立一個叫做「 incoming list 」的列表，我們就叫他「收件匣（收集箱）」，這個用意是讓任何其他部門的人要轉交任務時、其他團隊裡的人要提供建議時、部門內的人有什麼新點子時，都先一律丟入「 incoming list 」。</p>
+<blockquote>
+<p>這個「收集箱（收件匣）」可以讓整個公司的人對任何部門、團隊提供各種建議，有一個「<strong>雜事統一收集處</strong>」，但又「<strong>不會干擾該團隊的正常工作流程</strong>」。</p>
+</blockquote>
+<p>一個更具體的使用情境會像是：客服團隊接到一個客戶對某產品的回饋，於是把這個客戶回饋丟到「某產品開發團隊」的「收集箱（收件匣）」，於是產品開發團隊就可以自行決定如何處理他。</p>
+<p><img src="/2017/trello-%E5%9C%98%E9%9A%8A%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-trello%EF%BC%9F-8%E5%80%8B%E5%B0%88%E6%A1%88%E6%8E%92%E7%A8%8B%E5%8D%94%E4%BD%9C%E9%87%8D%E9%BB%9E%E6%8A%80%E5%B7%A7/trello%20use%20trello-01.png" srcset="/img/loading.gif" lazyload></p>
+<p>「收集箱（收件匣）」的概念真的太重要了，我們每天的工作流程都會出現很多雜事、瑣事、新任務，可能是別人交代的、自己想到的，需要一個「收集箱（收件匣）」先統一收納，再根據實際專案的輕重緩急判斷，來決定如何處理。</p>
+<p>「收集箱（收件匣）」保證了每個看板都能隨時接收發生的所有問題、回饋、新要求，但是又可以有一個「緩衝」，先不要直接干擾目前的工作流程。這其實也正是時間管理的必要流程，如果你想更詳細了解，可以延伸閱讀：<a target="_blank" rel="noopener" href="http://www.playpcesor.com/2016/08/evernote-gtd-2016.html">Evernote GTD 方法教學：我的「搞定」時間管理實踐 2016 版</a>。</p>
+<h3 id="二，看板根據「工作流程」自由設計："><a href="#二，看板根據「工作流程」自由設計：" class="headerlink" title="二，看板根據「工作流程」自由設計："></a>二，看板根據「工作流程」自由設計：</h3><p>Trello 的優點就是直覺且富有彈性，看似簡單的看板列表，實則可以讓我們：「<strong>視覺化的排出清楚易懂的工作流程</strong>」。這一點對很多工作者來說很有吸引力，也難怪我之前介紹類似服務：「<a target="_blank" rel="noopener" href="http://www.playpcesor.com/2017/01/zenkit.html">Zenkit 一個專案多種視覺化管理：清單、看板、表格、月曆合一</a>」，獲得很多迴響。</p>
+<p>從 Trello 團隊的經驗分享中，可以看到 Trello 自己使用 Trello 時，大多時候也都是<strong>根據「工作進度階段」</strong>來分類列表的。</p>
+<p>以 Trello 在發佈新功能時使用的看板，採用了如下的工作進度列表設計：</p>
+<ul>
+<li>專案基本資料</li>
+<li>待辦事項</li>
+<li>處理中</li>
+<li>準備發布</li>
+<li>已經發布</li>
+</ul>
+<p>其中有一個也很有巧思的設計是一開始的<strong>「專案基本資料」</strong>列表， Trello 團隊會在這個列表中放入說明專案的卡片，以及專案需要的一些基本模板的卡片（後面會介紹），這樣執行專案時就可以隨時參考與取用。</p>
+<p>然後接下來的一系列「進度列表」，就是把任務卡片依據進度，調整位置，直到最終完成發佈。</p>
+<p><img src="/2017/trello-%E5%9C%98%E9%9A%8A%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-trello%EF%BC%9F-8%E5%80%8B%E5%B0%88%E6%A1%88%E6%8E%92%E7%A8%8B%E5%8D%94%E4%BD%9C%E9%87%8D%E9%BB%9E%E6%8A%80%E5%B7%A7/trello%20use%20trello-02.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="三，利用卡片待辦清單，決定卡片是否移動到下個進度："><a href="#三，利用卡片待辦清單，決定卡片是否移動到下個進度：" class="headerlink" title="三，利用卡片待辦清單，決定卡片是否移動到下個進度："></a>三，利用卡片待辦清單，決定卡片是否移動到下個進度：</h3><p>不過， Trello 團隊提到他們在「<strong>決定任務卡片要不要移動到下一個進度列表</strong>」時，有一個很棒的設計，值得我們學起來。</p>
+<p>這個方法是在卡片中，利用「加入待辦清單」功能，建立起這個任務在每個進度時必須完成的所有步驟，例如我下面舉例一本書要出版，企畫階段要完成什麼步驟？編輯階段要完成什麼步驟？準備出書階段要完成什麼步驟？</p>
+<p>如果這張任務卡片的步驟只勾選到企劃階段，且尚未完成，那麼他就只能放在「待辦事項」列表中，表示還在準備。</p>
+<p><img src="/2017/trello-%E5%9C%98%E9%9A%8A%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-trello%EF%BC%9F-8%E5%80%8B%E5%B0%88%E6%A1%88%E6%8E%92%E7%A8%8B%E5%8D%94%E4%BD%9C%E9%87%8D%E9%BB%9E%E6%8A%80%E5%B7%A7/trello%20use%20trello-03.png" srcset="/img/loading.gif" lazyload></p>
+<p>如果這張任務卡片的步驟已經勾選到編輯處理階段了，那麼就表示負責人可以把這張卡片移動到「處理中」的列表。</p>
+<p>依此類推，如果這張卡片的步驟都勾選完成，就可以進入「準備發布」的列表。</p>
+<p>利用這個方法來明確的規範卡片的處理進度，而且也不會漏掉任何步驟，確實是個好方法。</p>
+<p><img src="/2017/trello-%E5%9C%98%E9%9A%8A%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-trello%EF%BC%9F-8%E5%80%8B%E5%B0%88%E6%A1%88%E6%8E%92%E7%A8%8B%E5%8D%94%E4%BD%9C%E9%87%8D%E9%BB%9E%E6%8A%80%E5%B7%A7/trello%20use%20trello-04.png" srcset="/img/loading.gif" lazyload></p>
+<p> </p>
+<h3 id="四，利用空白卡片，建立可複製工作步驟模板："><a href="#四，利用空白卡片，建立可複製工作步驟模板：" class="headerlink" title="四，利用空白卡片，建立可複製工作步驟模板："></a>四，利用空白卡片，建立可複製工作步驟模板：</h3><p>因為上述的做法，任務的執行步驟變得很重要，而且一些大任務的執行步驟可能很多，如果這些大任務的執行步驟常常是類似的話，那麼 Trello 團隊就會在前面說的「專案基本資料」列表中，建立起空白的任務卡片模板。</p>
+<p><img src="/2017/trello-%E5%9C%98%E9%9A%8A%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-trello%EF%BC%9F-8%E5%80%8B%E5%B0%88%E6%A1%88%E6%8E%92%E7%A8%8B%E5%8D%94%E4%BD%9C%E9%87%8D%E9%BB%9E%E6%8A%80%E5%B7%A7/trello%20use%20trello-05.png" srcset="/img/loading.gif" lazyload></p>
+<p><strong>空白任務卡片模板</strong>中，事先規範好執行這類任務需要的基本進度與待辦清單，以後要執行這類任務的團隊成員，只要［複製］模板，就能快速產生卡片。</p>
+<p>一方面快速，一方面讓團隊工作不容易出錯。</p>
+<p><img src="/2017/trello-%E5%9C%98%E9%9A%8A%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-trello%EF%BC%9F-8%E5%80%8B%E5%B0%88%E6%A1%88%E6%8E%92%E7%A8%8B%E5%8D%94%E4%BD%9C%E9%87%8D%E9%BB%9E%E6%8A%80%E5%B7%A7/trello%20use%20trello-06.png" srcset="/img/loading.gif" lazyload></p>
+<p> </p>
+<h3 id="五，另外建立資源看板，和專案流程看板區隔："><a href="#五，另外建立資源看板，和專案流程看板區隔：" class="headerlink" title="五，另外建立資源看板，和專案流程看板區隔："></a>五，另外建立資源看板，和專案流程看板區隔：</h3><p>在 Trello 團隊利用大量看板管理工作流程的過程中，他們提到經過經驗累積，發現看板<strong>應該區分「專案流程看板」與「資源支援看板」</strong>。</p>
+<p>「專案流程看板」就是我前面介紹的，去完成某個專案工作進度的管理看板，裡面是任務的執行步驟。</p>
+<p><img src="/2017/trello-%E5%9C%98%E9%9A%8A%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-trello%EF%BC%9F-8%E5%80%8B%E5%B0%88%E6%A1%88%E6%8E%92%E7%A8%8B%E5%8D%94%E4%BD%9C%E9%87%8D%E9%BB%9E%E6%8A%80%E5%B7%A7/trello%20use%20trello-07.png" srcset="/img/loading.gif" lazyload></p>
+<p>而「資源支援看板」，則像是資料庫，可以用列表分類團隊需要的一些資源，讓團隊成員可以隨時取用。</p>
+<p>專案執行與資源支援要分開，才不會搞得一團亂。這個邏輯，我在自己的 Evernote 筆記管理中也是如此分類，有興趣的朋友可以參考：<a target="_blank" rel="noopener" href="http://www.playpcesor.com/2016/07/evernote-3-3.html">Evernote 整理3部曲-3：用最少記事本完成高效率管理</a>。</p>
+<p><img src="/2017/trello-%E5%9C%98%E9%9A%8A%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-trello%EF%BC%9F-8%E5%80%8B%E5%B0%88%E6%A1%88%E6%8E%92%E7%A8%8B%E5%8D%94%E4%BD%9C%E9%87%8D%E9%BB%9E%E6%8A%80%E5%B7%A7/trello%20use%20trello-08.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="六，建立最佳流程後，隨時可以複製使用："><a href="#六，建立最佳流程後，隨時可以複製使用：" class="headerlink" title="六，建立最佳流程後，隨時可以複製使用："></a>六，建立最佳流程後，隨時可以複製使用：</h3><p>除了任務卡片可以複製裡面的資料、步驟外，整個看板的流程列表也可以複製。</p>
+<p>尤其公司裡如果有特定的專案流程，或是這次執行專案後發現這個流程很好用，那麼下一次可以直接［複製］這次專案的看板來使用，就<strong>不用多花時間重新建立流程</strong>。</p>
+<p><img src="/2017/trello-%E5%9C%98%E9%9A%8A%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-trello%EF%BC%9F-8%E5%80%8B%E5%B0%88%E6%A1%88%E6%8E%92%E7%A8%8B%E5%8D%94%E4%BD%9C%E9%87%8D%E9%BB%9E%E6%8A%80%E5%B7%A7/trello%20use%20trello-09.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="七，減少會議時間的技巧："><a href="#七，減少會議時間的技巧：" class="headerlink" title="七，減少會議時間的技巧："></a>七，減少會議時間的技巧：</h3><p>Trello 團隊還提到他們用 Trello 看板來減少會議時間的小技巧。</p>
+<p>在執行工作時，本來就會發生一些「待解決、待討論」的問題，這時候他們就在有疑問的任務卡片<strong>加上［開會討論］的「標籤」</strong>。</p>
+<p><img src="/2017/trello-%E5%9C%98%E9%9A%8A%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-trello%EF%BC%9F-8%E5%80%8B%E5%B0%88%E6%A1%88%E6%8E%92%E7%A8%8B%E5%8D%94%E4%BD%9C%E9%87%8D%E9%BB%9E%E6%8A%80%E5%B7%A7/trello%20use%20trello-10.png" srcset="/img/loading.gif" lazyload></p>
+<p>這樣一來，等到團隊會議進行時，就在團隊看板裡「過濾出」加上「開會討論標籤」的卡片，直接針對這些卡片討論，討論完畢就把標籤去除。</p>
+<p>開會前可以簡單收集要討論的重點，開會時可以聚焦在要解決的問題，自然就加快會議速度了。（這個技巧你還可以延伸閱讀：<a target="_blank" rel="noopener" href="http://www.playpcesor.com/2015/03/amazing-meeting.html">開會浪費時間？用特製會議記錄格式開一次有效會議</a>）</p>
+<p><img src="/2017/trello-%E5%9C%98%E9%9A%8A%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-trello%EF%BC%9F-8%E5%80%8B%E5%B0%88%E6%A1%88%E6%8E%92%E7%A8%8B%E5%8D%94%E4%BD%9C%E9%87%8D%E9%BB%9E%E6%8A%80%E5%B7%A7/trello%20use%20trello-11.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="八，減少通知噪音的技巧："><a href="#八，減少通知噪音的技巧：" class="headerlink" title="八，減少通知噪音的技巧："></a>八，減少通知噪音的技巧：</h3><p>最後，因為 Trello 整個公司有超過 150 個團隊共用的看板，他們要如何降低大量看板隨時有更新通知的噪音呢？</p>
+<p>Trello 團隊提到，他們會<strong>善用「訂閱」</strong>的功能，只訂閱自己需要的看板，只接收自己需要的通知。</p>
+<p><img src="/2017/trello-%E5%9C%98%E9%9A%8A%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-trello%EF%BC%9F-8%E5%80%8B%E5%B0%88%E6%A1%88%E6%8E%92%E7%A8%8B%E5%8D%94%E4%BD%9C%E9%87%8D%E9%BB%9E%E6%8A%80%E5%B7%A7/trello%20use%20trello-12.png" srcset="/img/loading.gif" lazyload></p>
+<p>或者對某個特殊任務卡片有興趣（有需要），也可以單獨［訂閱］這張卡片，只接收這個任務裡的新變化。</p>
+<p>以上，就是 Trello 團隊使用 Trello 的幾個關鍵的專案管理技巧，是不是對你也有所啟發呢？</p>
+<p>延伸閱讀相關文章：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="http://www.playpcesor.com/2013/10/10.html">10 個真的可以被具體執行的時間管理技巧</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.playpcesor.com/2016/09/google-gtd-inbox-keep-calendar.html">Google GTD 方法教學：用 Inbox、 Keep、日曆搞定時間管理</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.playpcesor.com/2016/09/ganttproject.html">GanttProject 免費中文專案管理軟體下載，製作甘特圖快速教學</a></li>
+</ul>
+<p>轉貼本文時禁止修改，禁止商業使用，並且必須註明來自電腦玩物原創作者 esor huang（異塵行者），及附上原文連結：<a target="_blank" rel="noopener" href="http://www.playpcesor.com/2017/02/trello-trello-8.html">Trello 團隊如何使用 Trello？ 8個專案排程協作重點技巧</a></p>
+<p><img src="/2017/trello-%E5%9C%98%E9%9A%8A%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8-trello%EF%BC%9F-8%E5%80%8B%E5%B0%88%E6%A1%88%E6%8E%92%E7%A8%8B%E5%8D%94%E4%BD%9C%E9%87%8D%E9%BB%9E%E6%8A%80%E5%B7%A7/trello%20use%20trello-13.png" srcset="/img/loading.gif" lazyload></p>
+<p><em>声明：本文转自电脑玩物，原文链接：<a target="_blank" rel="noopener" href="http://www.playpcesor.com/2017/02/trello-trello-8.html">http://www.playpcesor.com/2017/02/trello-trello-8.html</a></em></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%9C%8B%E6%9D%BF/">看板</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%8D%8F%E5%90%8C%E5%8A%9E%E5%85%AC/">协同办公</a>
+                    
+                      <a class="hover-with-bg" href="/tags/trello/">trello</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2017/office2013%E5%8D%87%E7%BA%A7%E5%88%B0office2016%E7%9A%84%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B%E5%88%86%E6%9E%90/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Office2013升级到Office2016的安装过程分析（附激活）</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2017/svnsync%E6%96%B9%E5%BC%8F%E5%AE%9E%E7%8E%B0svn%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%8C%E6%9C%BA%E8%87%AA%E5%8A%A8%E5%A4%87%E4%BB%BD/">
+                        <span class="hidden-mobile">svnsync方式实现svn服务器双机自动备份</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"B2tecGOesiRBcoXldYV5Jk5A-9Nh9j0Va","appKey":"5tFdBthF0o282SCXuNVxbntd","placeholder":"说点什么","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false,"requiredFields":[]},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

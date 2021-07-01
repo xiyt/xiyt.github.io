@@ -1,0 +1,930 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="daxi">
+  <meta name="keywords" content="">
+  
+  <title>达夕博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiyt.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 100vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>达夕博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/banner1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="热衷于分享IT技术/工作效率/优秀软件，申旦达夕，永无止境">
+              
+            </span>
+
+            
+          </div>
+
+          
+            <div class="scroll-down-bar">
+              <i class="iconfont icon-arrowdown"></i>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div class="py-5" id="board"
+          style=margin-top:0>
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2020/redis-cli-%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" target="_self">
+          <img src="/2020/redis-cli-%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/redis.jpg" srcset="/img/loading.gif" lazyload alt="redis cli 客户端常用命令">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/redis-cli-%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" target="_self">
+          redis cli 客户端常用命令
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/redis-cli-%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" target="_self">
+          
+          
+            
+          
+          
+redis安装后，在src和/usr/local/bin下有几个以redis开头的可执行文件，称为redis shell，这些可执行文件可做很多事情。
+ 可执行文件作用redis-server启动redisredis-cliredis命令行工具redis-benchmark基准测试工具redis-check-aofAOF持久化文件检测工具和修复工具redis-check-dumpRDB持久化文件
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-03-17 01:40" pubdate>
+              2020-03-17
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">常用命令</a>
+            
+              <a href="/tags/redis/">redis</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/windows%E5%AE%89%E8%A3%85%E7%89%88redis-desktop-manager-2019-5%E4%B8%8B%E8%BD%BD/" target="_self">
+          Windows安装版Redis Desktop Manager 2019.5下载
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/windows%E5%AE%89%E8%A3%85%E7%89%88redis-desktop-manager-2019-5%E4%B8%8B%E8%BD%BD/" target="_self">
+          
+          
+            
+          
+          
+RedisDesktopManager 2019.5版本已发布，Redis Desktop Manager（RedisDesktopManager，RDM）是一个快速、简单、支持跨平台的 Redis 桌面管理工具，基于 Qt 5 开发，支持通过 SSH Tunnel 连接。是一个非常好用的Redis客户端工具。虽然该软件是开源的，但是并不提供免费的可执行文件下载，是要收费的。而且自行编译也非常的
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-03-16 15:46" pubdate>
+              2020-03-16
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%AE%A2%E6%88%B7%E7%AB%AF/">客户端</a>
+            
+              <a href="/tags/redis/">redis</a>
+            
+              <a href="/tags/redis%E8%BF%9E%E6%8E%A5%E5%B7%A5%E5%85%B7/">redis连接工具</a>
+            
+              <a href="/tags/redisdesktopmanager/">redisdesktopmanager</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2020/%E8%AE%BE%E7%BD%AEgit%E4%BD%BF%E7%94%A8http-%E5%8D%8F%E8%AE%AE%E4%BB%A3%E6%9B%BFgit-%E5%8D%8F%E8%AE%AE/" target="_self">
+          <img src="/2020/%E8%AE%BE%E7%BD%AEgit%E4%BD%BF%E7%94%A8http-%E5%8D%8F%E8%AE%AE%E4%BB%A3%E6%9B%BFgit-%E5%8D%8F%E8%AE%AE/logo@2x.png" srcset="/img/loading.gif" lazyload alt="设置git使用http://协议代替git://协议">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/%E8%AE%BE%E7%BD%AEgit%E4%BD%BF%E7%94%A8http-%E5%8D%8F%E8%AE%AE%E4%BB%A3%E6%9B%BFgit-%E5%8D%8F%E8%AE%AE/" target="_self">
+          设置git使用http://协议代替git://协议
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/%E8%AE%BE%E7%BD%AEgit%E4%BD%BF%E7%94%A8http-%E5%8D%8F%E8%AE%AE%E4%BB%A3%E6%9B%BFgit-%E5%8D%8F%E8%AE%AE/" target="_self">
+          
+          
+            
+          
+          
+在使用npm install中，经常有一些包是通过git://协议去下载的，但是由于网络原因，经常性的失败。这时候可以设置git使用http://协议代替git://协议
+命令如下：
+git config –global url.”https://“.insteadOf git://
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-03-13 02:45" pubdate>
+              2020-03-13
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%8D%8F%E8%AE%AE/">协议</a>
+            
+              <a href="/tags/git/">git</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2020/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E5%88%A0%E9%99%A4node_modules%E6%96%87%E4%BB%B6%E5%A4%B9/" target="_self">
+          <img src="/2020/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E5%88%A0%E9%99%A4node_modules%E6%96%87%E4%BB%B6%E5%A4%B9/u4918650451211705331fm26gp0.png" srcset="/img/loading.gif" lazyload alt="如何快速删除node_modules文件夹">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E5%88%A0%E9%99%A4node_modules%E6%96%87%E4%BB%B6%E5%A4%B9/" target="_self">
+          如何快速删除node_modules文件夹
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E5%88%A0%E9%99%A4node_modules%E6%96%87%E4%BB%B6%E5%A4%B9/" target="_self">
+          
+          
+            
+          
+          
+当使用nodejs安装了较多模块后，node_modules目录下的文件会很多，直接删除整个目录会很慢，下面介绍些快速删除node_modules目录的方法。
+方法一：使用rimraf模块的命令
+在全局安装rimraf模块，然后通过其命令来快速删除node_modules目录：
+npm install rimraf -grimraf node_modules
+方法二：使用命令来删除目录
+Wind
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-03-12 16:36" pubdate>
+              2020-03-12
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%8A%80%E6%9C%AF%E7%BC%96%E7%A8%8B/">技术编程</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/node-modules/">node_modules</a>
+            
+              <a href="/tags/%E5%BF%AB%E9%80%9F%E5%88%A0%E9%99%A4/">快速删除</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2020/intellij-idea%E6%9C%80%E6%96%B0%E7%89%882019-3-3%E6%BF%80%E6%B4%BB%E6%96%B9%E6%B3%95/" target="_self">
+          <img src="/2020/intellij-idea%E6%9C%80%E6%96%B0%E7%89%882019-3-3%E6%BF%80%E6%B4%BB%E6%96%B9%E6%B3%95/idea20193.3.png" srcset="/img/loading.gif" lazyload alt="IntelliJ Idea最新版2019.3.3激活方法">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/intellij-idea%E6%9C%80%E6%96%B0%E7%89%882019-3-3%E6%BF%80%E6%B4%BB%E6%96%B9%E6%B3%95/" target="_self">
+          IntelliJ Idea最新版2019.3.3激活方法
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/intellij-idea%E6%9C%80%E6%96%B0%E7%89%882019-3-3%E6%BF%80%E6%B4%BB%E6%96%B9%E6%B3%95/" target="_self">
+          
+          
+            
+          
+          这是我找到的最方便可靠的IntelliJ Idea最新版2019.3.3的激活方法，这里分享给大家。
+直接下载压缩包文件，里面有详细的README说明。可以使用在线激活也可使用激活码激活。如果使用激活码的方式，请使用压缩包中lib\ACTIVATION_CODE.txt中的激活码即可。如果想生成自己的个性激活码请参考这里：https://zhile.io/custom-license.html
+我
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-03-09 07:57" pubdate>
+              2020-03-09
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%BF%80%E6%B4%BB/">激活</a>
+            
+              <a href="/tags/intellij-idea/">intellij-idea</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2020/centos-%E5%90%84%E7%89%88%E6%9C%AC%E9%95%9C%E5%83%8F%E8%B5%84%E6%BA%90%E4%B8%8B%E8%BD%BD/" target="_self">
+          <img src="/2020/centos-%E5%90%84%E7%89%88%E6%9C%AC%E9%95%9C%E5%83%8F%E8%B5%84%E6%BA%90%E4%B8%8B%E8%BD%BD/logo.png" srcset="/img/loading.gif" lazyload alt="CentOS 各版本镜像资源下载">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/centos-%E5%90%84%E7%89%88%E6%9C%AC%E9%95%9C%E5%83%8F%E8%B5%84%E6%BA%90%E4%B8%8B%E8%BD%BD/" target="_self">
+          CentOS 各版本镜像资源下载
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/centos-%E5%90%84%E7%89%88%E6%9C%AC%E9%95%9C%E5%83%8F%E8%B5%84%E6%BA%90%E4%B8%8B%E8%BD%BD/" target="_self">
+          
+          
+            
+          
+          
+1、官网下载地址：http://isoredirect.centos.org/centos/7/isos/x86\_64/
+进入到下载页面后，给出了一些国内就近的镜像站点，可以根据网速选择下载：
+http://mirrors.tuna.tsinghua.edu.cn/centos/7.7.1908/isos/x86_64/ http://mirrors.nju.edu.cn/centos/7.7
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-01-08 01:36" pubdate>
+              2020-01-08
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E4%B8%8B%E8%BD%BD/">下载</a>
+            
+              <a href="/tags/%E9%95%9C%E5%83%8F/">镜像</a>
+            
+              <a href="/tags/centos/">centos</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2019/powerdesigner-16-6%E7%9A%84%E5%AE%89%E8%A3%85%E7%A0%B4%E8%A7%A3%E8%B5%84%E6%BA%90%E4%B8%8B%E8%BD%BD/" target="_self">
+          <img src="/2019/powerdesigner-16-6%E7%9A%84%E5%AE%89%E8%A3%85%E7%A0%B4%E8%A7%A3%E8%B5%84%E6%BA%90%E4%B8%8B%E8%BD%BD/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1571723002133&amp;di=aa88056c4a6f66f610a302e6b1737eb0&amp;imgtype=0&amp;src=http://www.jiuaijsj.com/sites/default/files/jsoftwarepic/PowerDesigner-Logo.jpg" srcset="/img/loading.gif" lazyload alt="PowerDesigner 16.6的安装破解资源下载">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2019/powerdesigner-16-6%E7%9A%84%E5%AE%89%E8%A3%85%E7%A0%B4%E8%A7%A3%E8%B5%84%E6%BA%90%E4%B8%8B%E8%BD%BD/" target="_self">
+          PowerDesigner 16.6的安装破解资源下载
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2019/powerdesigner-16-6%E7%9A%84%E5%AE%89%E8%A3%85%E7%A0%B4%E8%A7%A3%E8%B5%84%E6%BA%90%E4%B8%8B%E8%BD%BD/" target="_self">
+          
+          
+            
+          
+          
+上一篇分享了PowerDesigner 16.5版本的安装破解汉化资源下载。看了下PowerDesigner 的最新版本，好久之前就已经更新到了16.6。但是PowerDesigner在使用功能上基本变化不大，所以一直没有升级。今天找到了PowerDesigner 16.6的相关资源，所以就更新了。这里也资源分享给大家。资源里包含有32位和64位两个版本，按需下载即可。
+下载地址 提取码: ag
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-10-23 01:11" pubdate>
+              2019-10-23
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E7%A0%B4%E8%A7%A3/">破解</a>
+            
+              <a href="/tags/powerdesigner/">powerdesigner</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2019/%E4%B8%89%E6%AD%A5%E5%AE%8C%E6%88%90powerdesigner-16-5%E7%9A%84%E5%AE%89%E8%A3%85%E7%A0%B4%E8%A7%A3%E6%B1%89%E5%8C%96/" target="_self">
+          <img src="/2019/%E4%B8%89%E6%AD%A5%E5%AE%8C%E6%88%90powerdesigner-16-5%E7%9A%84%E5%AE%89%E8%A3%85%E7%A0%B4%E8%A7%A3%E6%B1%89%E5%8C%96/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1571723002133&amp;di=aa88056c4a6f66f610a302e6b1737eb0&amp;imgtype=0&amp;src=http://www.jiuaijsj.com/sites/default/files/jsoftwarepic/PowerDesigner-Logo.jpg" srcset="/img/loading.gif" lazyload alt="三步完成PowerDesigner 16.5的安装破解汉化">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2019/%E4%B8%89%E6%AD%A5%E5%AE%8C%E6%88%90powerdesigner-16-5%E7%9A%84%E5%AE%89%E8%A3%85%E7%A0%B4%E8%A7%A3%E6%B1%89%E5%8C%96/" target="_self">
+          三步完成PowerDesigner 16.5的安装破解汉化
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2019/%E4%B8%89%E6%AD%A5%E5%AE%8C%E6%88%90powerdesigner-16-5%E7%9A%84%E5%AE%89%E8%A3%85%E7%A0%B4%E8%A7%A3%E6%B1%89%E5%8C%96/" target="_self">
+          
+          
+            
+          
+          
+PowerDesigner是Sybase的企业建模和设计解决方案，采用模型驱动方法，将业务与IT结合起来，可帮助部署有效的企业体系架构，并为研发生命周期管理提供强大的分析与设计技术。PowerDesigner独具匠心地将多种标准数据建模技术（UML、业务流程建模以及市场领先的数据建模）集成一体，并与 .NET、WorkSpace、PowerBuilder、Java™、Eclipse 等主流开发平
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-10-22 05:04" pubdate>
+              2019-10-22
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%B1%89%E5%8C%96/">汉化</a>
+            
+              <a href="/tags/%E7%A0%B4%E8%A7%A3/">破解</a>
+            
+              <a href="/tags/powerdesigner/">powerdesigner</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2019/windows%E5%AE%89%E8%A3%85%E7%89%88redis-desktop-manager-2019-4%E4%B8%8B%E8%BD%BD/" target="_self">
+          Windows安装版Redis Desktop Manager 2019.4下载
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2019/windows%E5%AE%89%E8%A3%85%E7%89%88redis-desktop-manager-2019-4%E4%B8%8B%E8%BD%BD/" target="_self">
+          
+          
+            
+          
+           RedisDesktopManager
+RedisDesktopManager 2019.4 版本已发布，Redis Desktop Manager（RedisDesktopManager，RDM）是一个快速、简单、支持跨平台的 Redis 桌面管理工具，基于 Qt 5 开发，支持通过 SSH Tunnel 连接。是一个非常好用的Redis客户端工具。虽然该软件是开源的，但是并不提供免费的可执行
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-10-21 06:24" pubdate>
+              2019-10-21
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%AE%A2%E6%88%B7%E7%AB%AF/">客户端</a>
+            
+              <a href="/tags/redis/">redis</a>
+            
+              <a href="/tags/redis%E8%BF%9E%E6%8E%A5%E5%B7%A5%E5%85%B7/">redis连接工具</a>
+            
+              <a href="/tags/redisdesktopmanager/">redisdesktopmanager</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2019/%E5%B7%A5%E4%BD%9C%E4%B8%AD-99-%E8%83%BD%E7%94%A8%E5%88%B0%E7%9A%84-git-%E5%91%BD%E4%BB%A4/" target="_self">
+          <img src="/2019/%E5%B7%A5%E4%BD%9C%E4%B8%AD-99-%E8%83%BD%E7%94%A8%E5%88%B0%E7%9A%84-git-%E5%91%BD%E4%BB%A4/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1570815493892&amp;di=a75f5d9f447774c9c0fcd53d3023220c&amp;imgtype=0&amp;src=http://ww1.sinaimg.cn/mw690/44894cbbgw1euism5dws6j20dm05ojrh.jpg" srcset="/img/loading.gif" lazyload alt="工作中 99% 能用到的 Git 命令">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2019/%E5%B7%A5%E4%BD%9C%E4%B8%AD-99-%E8%83%BD%E7%94%A8%E5%88%B0%E7%9A%84-git-%E5%91%BD%E4%BB%A4/" target="_self">
+          工作中 99% 能用到的 Git 命令
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2019/%E5%B7%A5%E4%BD%9C%E4%B8%AD-99-%E8%83%BD%E7%94%A8%E5%88%B0%E7%9A%84-git-%E5%91%BD%E4%BB%A4/" target="_self">
+          
+          
+            
+          
+          搜集整理一下工作中常用的Git命令分支操作
+git branch 创建分支
+git branch -b 创建并切换到新建的分支上
+git checkout 切换分支
+git branch 查看分支列表
+git branch -v 查看所有分支的最后一次操作
+git branch -vv 查看当前分支
+git brabch -b 分支名 origin/分支名 创建远程分支到本地
+git branch
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-10-11 14:51" pubdate>
+              2019-10-11
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%8A%80%E6%9C%AF%E7%BC%96%E7%A8%8B/">技术编程</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">常用命令</a>
+            
+              <a href="/tags/git/">git</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <a class="extend prev" rel="prev" href="/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/#board">3</a><a class="page-number" href="/page/4/#board">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/33/#board">33</a><a class="extend next" rel="next" href="/page/3/#board"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

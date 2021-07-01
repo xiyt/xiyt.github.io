@@ -1,0 +1,490 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="daxi">
+  <meta name="keywords" content="">
+  
+  <title>[转]終於更新！ Google Drive 可以選擇性同步子資料夾了 - 达夕博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiyt.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>达夕博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/banner1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="[转]終於更新！ Google Drive 可以選擇性同步子資料夾了">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2016-04-20 04:51" pubdate>
+        2016年4月20日 凌晨
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      970 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      10
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">[转]終於更新！ Google Drive 可以選擇性同步子資料夾了</h1>
+            
+            <div class="markdown-body">
+              <p>一個很有趣的現象是，一兩年前開始，我的 Google 雲端硬碟線上空間，已經大於我的 Macbook 筆電的空間，甚至大於我桌機電腦硬碟的空間（我很少更換電腦硬體，所以硬碟大小還是幾年前的幾百 GB 規格而已）。</p>
+<p>於是當 1TB 空間的 Google Drive 與幾百 GB 的電腦進行檔案同步時，我勢必要「選擇性的同步」，讓備份用的檔案留在雲端，讓最近需要的檔案下載到電腦。</p>
+<p>或者有時候公司、家裡、筆電選擇性同步不同檔案，也是一種資訊安全的手段。</p>
+<p>而這幾天「 Google 雲端硬碟桌面同步軟體」終於帶來了一個我期待以久的更新，那就是「支援選擇性同步子資料夾」，我可以更自由的剔除那些占空間又不常需要的檔案，讓重要的檔案下載到電腦中使用。</p>
+<p>然而，難道以前的 Google Drive 桌面同步軟體沒有選擇性同步嗎？以前也有，但以前只能選擇性同步根目錄的母資料夾，而沒辦法像現在新版這樣，一層一層的子資料夾都可自訂。</p>
+<p>下面的影片，我就示範了在 Mac 版的 Google Drive 桌面同步軟體中如何完成選擇性同步子資料夾的操作。 </p>
+<iframe src="https://www.youtube.com/embed/PRzWNWt5MjM" width="640" height="360" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+
+<p> 你可以在桌面端的 Google 雲端硬碟同步軟體中，進入［偏好設定］，來開始選擇性同步子資料夾的操作。</p>
+<p>如果你的桌面端軟體還沒有看到這個更新，可以直接下載「 Google 雲端硬碟最新版桌面同步軟體」，手動強制更新軟體。</p>
+<p><img src="/2016/%E8%BD%AC%E7%B5%82%E6%96%BC%E6%9B%B4%E6%96%B0%EF%BC%81-google-drive-%E5%8F%AF%E4%BB%A5%E9%81%B8%E6%93%87%E6%80%A7%E5%90%8C%E6%AD%A5%E5%AD%90%E8%B3%87%E6%96%99%E5%A4%BE%E4%BA%86/google%20drive%20sync-01.png" srcset="/img/loading.gif" lazyload></p>
+<p>進入新版的 Google Drive 桌面同步設定畫面，可以看到［僅同步處理這些資料夾］的欄位有了很大的改進。</p>
+<p>在多欄式的視窗中，我們終於可以選擇性取消勾選不要同步的子資料夾。</p>
+<p>例如我是依據一個一個專案來做母資料夾的分類（參考：一看就能採取行動的檔案命名技巧：我的兩大檔名規則），可是單獨一個專案分類裡，也會有佔用空間的資料備份檔案，和正在處理的工作中檔案，現在我就可以選擇性同步這些內容了。 <img src="/2016/%E8%BD%AC%E7%B5%82%E6%96%BC%E6%9B%B4%E6%96%B0%EF%BC%81-google-drive-%E5%8F%AF%E4%BB%A5%E9%81%B8%E6%93%87%E6%80%A7%E5%90%8C%E6%AD%A5%E5%AD%90%E8%B3%87%E6%96%99%E5%A4%BE%E4%BA%86/google%20drive%20sync-02.png" srcset="/img/loading.gif" lazyload></p>
+<p>而且新版的 Google Drive 桌面同步軟體還可以顯示出每個雲端資料夾占用多少空間，這樣我們在選擇性同步時，就更容易找出耗費空間的資料夾，優先取消同步。 <img src="/2016/%E8%BD%AC%E7%B5%82%E6%96%BC%E6%9B%B4%E6%96%B0%EF%BC%81-google-drive-%E5%8F%AF%E4%BB%A5%E9%81%B8%E6%93%87%E6%80%A7%E5%90%8C%E6%AD%A5%E5%AD%90%E8%B3%87%E6%96%99%E5%A4%BE%E4%BA%86/google%20drive%20sync-03.png" srcset="/img/loading.gif" lazyload></p>
+<p>選擇性同步後，這些檔案只是不會下載到這台電腦，他們還是一樣繼續儲存在雲端空間，所以不用擔心以後找不到。</p>
+<p>有了子資料夾的選擇性同步，我們就能更好的利用 Google 雲端硬碟來工作囉！</p>
+<p>最後，讓我做一個自己課程的宣傳廣告，最近我和「專案管理生活思維」的 Joe 與 Bryan 合作，在他們的大人學教室開辦了全天七個半小時的「 Google 雲端辦公室進階實作班」課程，內容經過了與他們討論後重新設計，希望讓想學會 Google 雲端工作術的朋友、團隊有所收穫，推薦大家來報名參加，即將額滿囉！報名連結：「 Google 雲端辦公室進階實作班」。</p>
+<p><img src="/2016/%E8%BD%AC%E7%B5%82%E6%96%BC%E6%9B%B4%E6%96%B0%EF%BC%81-google-drive-%E5%8F%AF%E4%BB%A5%E9%81%B8%E6%93%87%E6%80%A7%E5%90%8C%E6%AD%A5%E5%AD%90%E8%B3%87%E6%96%99%E5%A4%BE%E4%BA%86/google%20drive%20sync-04.png" srcset="/img/loading.gif" lazyload></p>
+<p>声明：本文转自电脑玩物，原文链接：<a target="_blank" rel="noopener" href="http://www.playpcesor.com/2016/04/google-drive.html">終於更新！ Google Drive 可以選擇性同步子資料夾了</a></p>
+<p>延伸阅读：</p>
+<p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2016/04/08/%e6%8a%8agoogle-%e4%ba%91%e7%ab%af%e7%a1%ac%e7%9b%98%e4%bd%9c%e4%b8%ba%e8%a7%86%e9%a2%91%e6%b5%81%e6%9c%8d%e5%8a%a1%e5%99%a8%ef%bc%8c%e5%b9%b6%e6%8a%8a%e8%a7%86%e9%a2%91%e5%b5%8c%e5%85%a5%e5%88%b0/">把Google 云端硬盘作为视频流服务器，并把视频嵌入到网页中</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2016/04/06/dropbox%e6%96%b0%e5%8a%9f%e8%83%bd%ef%bc%9ams-office-online%e9%9b%86%e6%88%90%e5%85%8d%e8%b4%b9%e5%9b%a2%e9%98%9f%e5%8a%9f%e8%83%bd%e5%bc%80%e6%94%be/">DropBox新功能：MS-Office-Online集成+免费团队功能开放</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2016/02/26/%e8%bd%acevernote-onenote-google-keep-%e9%9b%b2%e7%ab%af%e7%ad%86%e8%a8%98%e5%ae%8c%e6%95%b4%e6%af%94%e8%bc%83%e8%a1%a8/">Evernote, Onenote, Google keep 雲端筆記完整比較表</a></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E4%BA%91%E7%AB%AF%E7%A1%AC%E7%9B%98/">云端硬盘</a>
+                    
+                      <a class="hover-with-bg" href="/tags/google-drive/">google-drive</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2016/%E4%BB%8Efoxmail%E6%88%96outlook-express%E8%BF%81%E7%A7%BB%E5%88%B0outlook-2013%E7%9A%84%E6%96%B9%E6%A1%88%E6%80%BB%E7%BB%93/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">从Foxmail或Outlook Express迁移到Outlook 2013的方案总结</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2016/%E8%AE%B0%E5%BD%95centos6%E4%B8%AD%E5%AE%89%E8%A3%85shadowsocks%E5%92%8Cpptp-vpn/">
+                        <span class="hidden-mobile">[记录]CentOS6中安装Shadowsocks和pptp VPN</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"B2tecGOesiRBcoXldYV5Jk5A-9Nh9j0Va","appKey":"5tFdBthF0o282SCXuNVxbntd","placeholder":"说点什么","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false,"requiredFields":[]},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

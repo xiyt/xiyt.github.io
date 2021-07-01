@@ -1,0 +1,518 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="daxi">
+  <meta name="keywords" content="">
+  
+  <title>Java 8 中处理日期和时间示例 - 达夕博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiyt.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>达夕博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/banner1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="Java 8 中处理日期和时间示例">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2019-10-03 23:51" pubdate>
+        2019年10月3日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.5k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      20
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Java 8 中处理日期和时间示例</h1>
+            
+            <div class="markdown-body">
+              <h1 id=""><a href="#" class="headerlink" title=""></a><img src="/2019/java-8-%E4%B8%AD%E5%A4%84%E7%90%86%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4%E7%A4%BA%E4%BE%8B/u=2653152305,3527265194&fm=26&gp=0.jpg" srcset="/img/loading.gif" lazyload alt="Java 8 中处理日期和时间示例"></h1><h1 id="目录："><a href="#目录：" class="headerlink" title="目录："></a>目录：</h1><ul>
+<li>1、获取今天的日期</li>
+<li>2、指定日期，进行相应操作</li>
+<li>3、生日检查或者账单日检查</li>
+<li>4、获取当前的时间</li>
+<li>5、日期前后比较</li>
+<li>6、处理不同时区的时间</li>
+<li>7、比较两个日期之前时间差</li>
+<li>8、日期时间格式解析、格式化</li>
+<li>9、java8 时间类与Date类的相互转化</li>
+</ul>
+<hr>
+<p>在<a target="_blank" rel="noopener" href="https://www.daxiblog.com/?s=java">Java 8</a>以前，日期和时间处理一直被广大java程序员抱怨太难用，首先是java.util和java.sql中，都包含Date类，如果要进行时间格式化，还需要java.text.DateFormat类处理。同时java.util.Date中既包含了日期，又包含了时间，所以java8新的日期和时间库，很好的解决了以前日期和时间类的很多弊端。并且也借鉴了第三方日期库joda很多的优点。</p>
+<p>在java8中，java.time包下主要包含下面几个主要的类：</p>
+<p>Instant：时间戳<br>Duration：持续时间，时间差<br>LocalDate：只包含日期，比如：2016-10-20<br>LocalTime：只包含时间，比如：23:12:10<br>LocalDateTime：包含日期和时间，比如：2016-10-20 23:14:21<br>Period：时间段<br>ZoneOffset：时区偏移量，比如：+8:00<br>ZonedDateTime：带时区的时间<br>Clock：时钟，比如获取目前美国纽约的时间<br>以及java.time.format包中的<br>DateTimeFormatter：时间格式化</p>
+<p>下面我们通过例子来看如何使用java8新的日期时间库</p>
+<h1 id="1、获取今天的日期"><a href="#1、获取今天的日期" class="headerlink" title="1、获取今天的日期"></a>1、获取今天的日期</h1><p>LocalDate todayDate = LocalDate.now();<br>System.out.println(“今天的日期：”+todayDate);<br>//结果<br>今天的日期：2016-10-20</p>
+<h1 id="2、指定日期，进行相应操作"><a href="#2、指定日期，进行相应操作" class="headerlink" title="2、指定日期，进行相应操作"></a>2、指定日期，进行相应操作</h1><p>//取2016年10月的第1天<br>LocalDate firstDay = oneday.with(TemporalAdjusters.firstDayOfMonth());<br>System.out.println(firstDay);</p>
+<p>//取2016年10月的第1天，另外一种写法<br>LocalDate firstDay2 = oneday.withDayOfMonth(1);<br>System.out.println(firstDay2);</p>
+<p>//取2016年10月的最后1天，不用考虑大月，小月，平年，闰年<br>LocalDate lastDay = oneday.with(TemporalAdjusters.lastDayOfMonth());<br>System.out.println(lastDay);</p>
+<p>//当前日期＋1天<br>LocalDate tomorrow = oneday.plusDays(1);<br>System.out.println(tomorrow);</p>
+<p>//判断是否为闰年<br>boolean isLeapYear = tomorrow.isLeapYear();<br>System.out.println(isLeapYear);</p>
+<p>//运行结果<br>2016-10-20<br>2016-10-01<br>2016-10-01<br>2016-10-31<br>2016-10-21<br>true</p>
+<h1 id="3、生日检查或者账单日检查"><a href="#3、生日检查或者账单日检查" class="headerlink" title="3、生日检查或者账单日检查"></a>3、生日检查或者账单日检查</h1><p>开发过程中，经常需要为过生日的用户送上一些祝福，例如，用户的生日为1990-10-12，如果今天是2016-10-12，那么今天就是用户的生日（按公历／身份证日期来算），那么通过java8新的日期库，我们该如何来进行判断？</p>
+<p>在java8中，可以使用MonthDay，该类不包含年份信息，当然还有一个类是YearMonth</p>
+<p>LocalDate birthday = LocalDate.of(1990, 10, 12);<br>MonthDay birthdayMd = MonthDay.of(birthday.getMonth(), birthday.getDayOfMonth());<br>MonthDay today = MonthDay.from(LocalDate.of(2016, 10, 12)); <br>System.out.println(today.equals(birthdayMd));<br>//结果<br>true</p>
+<h1 id="4、获取当前的时间"><a href="#4、获取当前的时间" class="headerlink" title="4、获取当前的时间"></a>4、获取当前的时间</h1><p>日期主要是使用LocalTime，该类不包含日期，只有时间信息</p>
+<p>//获取当前的时间<br>LocalTime nowTime = LocalTime.now(); //结果14:29:40.558</p>
+<p>//如果不想显示毫秒<br>LocalTime nowTime2 = LocalTime.now().withNano(0); //14:43:14</p>
+<p>//指定时间<br>LocalTime time = LocalTime.of(14, 10, 21); //14:10:21<br>LocalTime time2 = LocalTime.parse(“12:00:01”); // 12:00:01</p>
+<p>//当前时间增加2小时<br>LocalTime nowTimePlus2Hour = nowTime.plusHours(2); //16:47:23.144<br>//或者<br>LocalTime nowTimePlus2Hour2 = nowTime.plus(2, ChronoUnit.HOURS);</p>
+<h1 id="5、日期前后比较"><a href="#5、日期前后比较" class="headerlink" title="5、日期前后比较"></a>5、日期前后比较</h1><p>比较2个日期哪个在前，哪个在后，java8 LocalDate提供了2个方法，isAfter(),isBefore</p>
+<p>LocalDate today = LocalDate.now();<br>LocalDate specifyDate = LocalDate.of(2015, 10, 20);<br>System.out.println(today.isAfter(specifyDate)); //true</p>
+<h1 id="6、处理不同时区的时间"><a href="#6、处理不同时区的时间" class="headerlink" title="6、处理不同时区的时间"></a>6、处理不同时区的时间</h1><p>java8中，将日期，时间，时区都很好的进行了分离。</p>
+<p>//查看当前的时区<br>ZoneId defaultZone = ZoneId.systemDefault();<br>System.out.println(defaultZone); //Asia/Shanghai</p>
+<p>//查看美国纽约当前的时间<br>ZoneId america = ZoneId.of(“America/New_York”);<br>LocalDateTime shanghaiTime = LocalDateTime.now();<br>LocalDateTime americaDateTime = LocalDateTime.now(america);<br>System.out.println(shanghaiTime); //2016-11-06T15:20:27.996<br>System.out.println(americaDateTime); //2016-11-06T02:20:27.996 ，可以看到美国与北京时间差了13小时</p>
+<p>//带有时区的时间<br>ZonedDateTime americaZoneDateTime = ZonedDateTime.now(america);<br>System.out.println(americaZoneDateTime); //2016-11-06T02:23:44.863-05:00</p>
+<h1 id="7、比较两个日期之前时间差"><a href="#7、比较两个日期之前时间差" class="headerlink" title="7、比较两个日期之前时间差"></a>7、比较两个日期之前时间差</h1><p>在项目中，经常需要比较两个日期之间相差几天，或者相隔几个月，我们可以使用java8的Period来进行处理。</p>
+<p>LocalDate today = LocalDate.now();<br>LocalDate specifyDate = LocalDate.of(2015, 10, 2);<br>Period period = Period.between(specifyDate, today);</p>
+<p>System.out.println(period.getDays());  //4<br>System.out.println(period.getMonths()); //1<br>System.out.println(specifyDate.until(today, ChronoUnit.DAYS)); //401<br>//输出结果<br>4<br>1<br>401</p>
+<p>我们可以看到，我们使用Period类比较天数，比较奇怪，他返回的值，并不是2个日期之间总共的天数差，而是一个相对天数差，比如，5月1日，和10月2日，他比较的是仅仅2个天之间的差，那1号和2号，相差1天，而实际上，因为中间相差了好几个月，所以真正的天数差肯定不是1天，所以我们可以使用until，并指明精度单位是days，就可以计算真正的天数差了。</p>
+<h1 id="8、日期时间格式解析、格式化"><a href="#8、日期时间格式解析、格式化" class="headerlink" title="8、日期时间格式解析、格式化"></a>8、日期时间格式解析、格式化</h1><p>在java8之前，我们进行时间格式化主要是使用SimpleDateFormat，而在java8中，主要是使用</p>
+<p>DateTimeFormatter,java8中，预定义了一些标准的时间格式，我们可以直接将时间转换为标准的时间格式：<br>String specifyDate = “20151011”;<br>DateTimeFormatter formatter = DateTimeFormatter.BASIC_ISO_DATE;<br>LocalDate formatted = LocalDate.parse(specifyDate,formatter); <br>System.out.println(formatted); <br>//输出<br>2015-10-11<br>当然，很多时间标准的时间格式可能也不满足我们的要求，我们需要转为自定义的时间格式<br>DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern(“YYYY MM dd”);<br>System.out.println(formatter2.format(LocalDate.now()));<br>//结果<br>2015 10 11</p>
+<h1 id="9、java8-时间类与Date类的相互转化"><a href="#9、java8-时间类与Date类的相互转化" class="headerlink" title="9、java8 时间类与Date类的相互转化"></a>9、java8 时间类与Date类的相互转化</h1><p>在转换中，我们需要注意，因为java8之前Date是包含日期和时间的，而LocalDate只包含日期，LocalTime只包含时间，所以与Date在互转中，势必会丢失日期或者时间，或者会使用起始时间。如果转LocalDateTime，那么就不存在信息误差。</p>
+<p>//Date与Instant的相互转化<br>Instant instant  = Instant.now();<br>Date date = Date.from(instant);<br>Instant instant2 = date.toInstant();</p>
+<p>//Date转为LocalDateTime<br>Date date2 = new Date();<br>LocalDateTime localDateTime2 = LocalDateTime.ofInstant(date2.toInstant(), ZoneId.systemDefault());</p>
+<p>//LocalDateTime转Date<br>LocalDateTime localDateTime3 = LocalDateTime.now();<br>Instant instant3 = localDateTime3.atZone(ZoneId.systemDefault()).toInstant();<br>Date date3 = Date.from(instant);</p>
+<p>//LocalDate转Date<br>//因为LocalDate不包含时间，所以转Date时，会默认转为当天的起始时间，00:00:00<br>LocalDate localDate4 = LocalDate.now();<br>Instant instant4 = localDate4.atStartOfDay().atZone(ZoneId.systemDefault()).toInstant();<br>Date date4 = Date.from(instant);</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%97%A5%E6%9C%9F/">日期</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%97%B6%E9%97%B4/">时间</a>
+                    
+                      <a class="hover-with-bg" href="/tags/java/">java</a>
+                    
+                      <a class="hover-with-bg" href="/tags/jdk8/">jdk8</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2019/faststone-capturefscapture-%E6%88%AA%E5%9B%BE%E5%BD%95%E5%B1%8F%E8%BD%AF%E4%BB%B6%E7%BB%BF%E8%89%B2%E6%B1%89%E5%8C%96/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">FastStone Capture(FSCapture) 截图录屏软件绿色汉化</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2019/spring-boot%E8%BF%9E%E6%8E%A5sql-server/">
+                        <span class="hidden-mobile">Spring Boot连接SQL Server</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"B2tecGOesiRBcoXldYV5Jk5A-9Nh9j0Va","appKey":"5tFdBthF0o282SCXuNVxbntd","placeholder":"说点什么","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false,"requiredFields":[]},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

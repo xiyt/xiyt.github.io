@@ -1,0 +1,498 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="daxi">
+  <meta name="keywords" content="">
+  
+  <title>七个优秀的在线配色工具收集 - 达夕博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiyt.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>达夕博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/banner1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="七个优秀的在线配色工具收集">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2017-03-27 01:17" pubdate>
+        2017年3月27日 凌晨
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      500 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      5
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">七个优秀的在线配色工具收集</h1>
+            
+            <div class="markdown-body">
+              <p>虽然我不是专门的UI设计工作者，但是日常工作中也免不了涉及到UI、网页配色等相关工作。一个好的配色工具能够很好的帮助我很快的找到配色灵感，颜色搭配也很协调。所以我经常使用一些的在线的配色工具，今天把这些搜集到的优秀的配色工具整理出来，分享给大家。</p>
+<h3 id="Material-Palette"><a href="#Material-Palette" class="headerlink" title="Material Palette"></a><strong>Material Palette</strong></h3><p>Material Palette 是一款提供 Material Design 配色的在线配色工具</p>
+<p><img src="/2017/%E4%B8%83%E4%B8%AA%E4%BC%98%E7%A7%80%E7%9A%84%E5%9C%A8%E7%BA%BF%E9%85%8D%E8%89%B2%E5%B7%A5%E5%85%B7%E6%94%B6%E9%9B%86/peise01.png" srcset="/img/loading.gif" lazyload alt="七个优秀的在线配色工具收集"></p>
+<p>网址：<a target="_blank" rel="noopener" href="https://www.materialpalette.com/">https://www.materialpalette.com/</a></p>
+<hr>
+<h3 id="ColorDrop"><a href="#ColorDrop" class="headerlink" title="ColorDrop"></a><strong>ColorDrop</strong></h3><p>ColorDrop中收录非常丰富的优秀配色方案，打开页面就是一个长长的配色方案列表，点击后可以在右侧看到该方案的详细信息。并且可以暂时收藏这些方案，然后对收藏的方案，做第二轮筛选。另外ColorDrop也提供了不少Material Design方案。点击左侧的即可查看</p>
+<p><img src="/2017/%E4%B8%83%E4%B8%AA%E4%BC%98%E7%A7%80%E7%9A%84%E5%9C%A8%E7%BA%BF%E9%85%8D%E8%89%B2%E5%B7%A5%E5%85%B7%E6%94%B6%E9%9B%86/peise02.png" srcset="/img/loading.gif" lazyload></p>
+<p>网址：<a target="_blank" rel="noopener" href="https://colordrop.io/">https://colordrop.io/</a></p>
+<hr>
+<h3 id="LOL-Colors"><a href="#LOL-Colors" class="headerlink" title="LOL Colors"></a><strong>LOL Colors</strong></h3><p>简单可爱的在线配色工具，据说作者是在24小时之内完成了这个在线产品的，但是功能一点都不逊色。大家可是试用一下。</p>
+<p><img src="/2017/%E4%B8%83%E4%B8%AA%E4%BC%98%E7%A7%80%E7%9A%84%E5%9C%A8%E7%BA%BF%E9%85%8D%E8%89%B2%E5%B7%A5%E5%85%B7%E6%94%B6%E9%9B%86/peise03.png" srcset="/img/loading.gif" lazyload></p>
+<p>网址：<a target="_blank" rel="noopener" href="http://www.lolcolors.com/">http://www.lolcolors.com/</a></p>
+<hr>
+<h3 id="Adobe-Color-CC"><a href="#Adobe-Color-CC" class="headerlink" title="Adobe Color CC"></a><strong>Adobe Color CC</strong></h3><p>在线制作、分享和搜索配色方案的好去处。</p>
+<p><img src="/2017/%E4%B8%83%E4%B8%AA%E4%BC%98%E7%A7%80%E7%9A%84%E5%9C%A8%E7%BA%BF%E9%85%8D%E8%89%B2%E5%B7%A5%E5%85%B7%E6%94%B6%E9%9B%86/peise04.png" srcset="/img/loading.gif" lazyload></p>
+<p>网址：<a target="_blank" rel="noopener" href="https://color.adobe.com/zh/explore/">https://color.adobe.com/zh/explore/</a></p>
+<hr>
+<h3 id="Color-Hunt"><a href="#Color-Hunt" class="headerlink" title="Color Hunt"></a><strong>Color Hunt</strong></h3><p>可以按照最新、最热、最流行和随机方式查看配色方案。每天都会有更新。同时你也通过通过左侧菜单的创建按钮，来提交自己的配色作品。</p>
+<p><img src="/2017/%E4%B8%83%E4%B8%AA%E4%BC%98%E7%A7%80%E7%9A%84%E5%9C%A8%E7%BA%BF%E9%85%8D%E8%89%B2%E5%B7%A5%E5%85%B7%E6%94%B6%E9%9B%86/peise05.png" srcset="/img/loading.gif" lazyload></p>
+<p>网址：<a target="_blank" rel="noopener" href="http://www.colorhunt.co/">http://www.colorhunt.co/</a></p>
+<hr>
+<h3 id="Colorrrs"><a href="#Colorrrs" class="headerlink" title="Colorrrs"></a><strong>Colorrrs</strong></h3><p>极简风格的颜色设计器，只需要点击空格键，Colorrrs就会推荐给你漂亮的颜色色码，并作为整个网页背景的颜色。方面你大角度的查看。</p>
+<p><img src="/2017/%E4%B8%83%E4%B8%AA%E4%BC%98%E7%A7%80%E7%9A%84%E5%9C%A8%E7%BA%BF%E9%85%8D%E8%89%B2%E5%B7%A5%E5%85%B7%E6%94%B6%E9%9B%86/peise06.png" srcset="/img/loading.gif" lazyload></p>
+<p>网址：<a target="_blank" rel="noopener" href="http://colorrrs.com/">http://colorrrs.com/</a></p>
+<hr>
+<h3 id="flatuicolors"><a href="#flatuicolors" class="headerlink" title="flatuicolors"></a><strong>flatuicolors</strong></h3><p>flatuicolors是单页面应用，上面罗列了常用的Material Design色彩搭配，点击卡片后就可以整屏查看颜色效果，并复制色码到剪切板。</p>
+<p><img src="/2017/%E4%B8%83%E4%B8%AA%E4%BC%98%E7%A7%80%E7%9A%84%E5%9C%A8%E7%BA%BF%E9%85%8D%E8%89%B2%E5%B7%A5%E5%85%B7%E6%94%B6%E9%9B%86/peise07.png" srcset="/img/loading.gif" lazyload></p>
+<p>网址：<a target="_blank" rel="noopener" href="http://flatuicolors.com/">http://flatuicolors.com/</a></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E8%AE%BE%E8%AE%A1/">设计</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E9%85%8D%E8%89%B2/">配色</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%9C%A8%E7%BA%BF%E9%85%8D%E8%89%B2/">在线配色</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E9%A2%9C%E8%89%B2%E6%90%AD%E9%85%8D/">颜色搭配</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2017/workflow%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E6%8C%96%E6%8E%98%E6%AF%94%E8%A7%84%E5%88%99%E6%9B%B4%E9%87%8D%E8%A6%81/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">workflow使用场景挖掘比规则更重要</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2017/jetbrains-intellij-idea%E5%90%84%E7%89%88%E6%9C%AC%E6%BF%80%E6%B4%BB%E6%96%B9%E6%B3%95/">
+                        <span class="hidden-mobile">JetBrains IntelliJ IDEA各版本激活方法</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"B2tecGOesiRBcoXldYV5Jk5A-9Nh9j0Va","appKey":"5tFdBthF0o282SCXuNVxbntd","placeholder":"说点什么","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false,"requiredFields":[]},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

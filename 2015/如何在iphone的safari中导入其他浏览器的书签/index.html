@@ -1,0 +1,496 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="daxi">
+  <meta name="keywords" content="">
+  
+  <title>如何在iPhone的Safari中导入其他浏览器的书签 - 达夕博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiyt.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>达夕博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/banner1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="如何在iPhone的Safari中导入其他浏览器的书签">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2015-12-28 07:06" pubdate>
+        2015年12月28日 早上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      532 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      5
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">如何在iPhone的Safari中导入其他浏览器的书签</h1>
+            
+            <div class="markdown-body">
+              <p>对于浏览器，之前由于使用的是安卓手机，所以一直使用Google Chrome作为我的主要浏览器(是的，我还有个UC浏览器作为备用，功能全面，特别是播放和缓存视频)。我PC端也是使用Chrome，然后借助Google强大的同步功能，手机上的书签和PC上的书签就可以轻松的同步了。但是在iPhone中，我觉得最好用的/最适合我的还是自带的Safari浏览器，原因如下：</p>
+<ol>
+<li>iPhone中无法设置默认浏览器，在Spotlight搜索、第三方应用中，打开链接时，默认会使用Safari打开</li>
+<li>Safari支持的3D Touch功能更加全面，其中的链接预览功能，很不错</li>
+<li>我的手机时16G的，能用自带的就用自带的，节省点空间O(∩_∩)O~</li>
+</ol>
+<p>但是又遇到另外一个问题，我用的PC一直是Windows，那么如何把Windows中浏览器的书签导入到Safari呢？今天我就分享一下我的使用经验：</p>
+<h3 id="一、iPhone中启用iCloud，并勾选Safari同步，如下图："><a href="#一、iPhone中启用iCloud，并勾选Safari同步，如下图：" class="headerlink" title="一、iPhone中启用iCloud，并勾选Safari同步，如下图："></a>一、iPhone中启用iCloud，并勾选Safari同步，如下图：</h3><p><img src="/2015/%E5%A6%82%E4%BD%95%E5%9C%A8iphone%E7%9A%84safari%E4%B8%AD%E5%AF%BC%E5%85%A5%E5%85%B6%E4%BB%96%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E4%B9%A6%E7%AD%BE/safari-book1.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="二、PC端安装iCloud-Windwos版本"><a href="#二、PC端安装iCloud-Windwos版本" class="headerlink" title="二、PC端安装iCloud Windwos版本"></a><strong>二、PC端安装iCloud Windwos版本</strong></h3><p><strong>下载地址：<a target="_blank" rel="noopener" href="https://support.apple.com/kb/DL1455">https://support.apple.com/kb/DL1455</a></strong></p>
+<p>下载安装完成后，打开iCloud就可以看到设置界面了，选择勾选书签，并点击选项，如下图选择要从哪个浏览器里同步书签</p>
+<p><img src="/2015/%E5%A6%82%E4%BD%95%E5%9C%A8iphone%E7%9A%84safari%E4%B8%AD%E5%AF%BC%E5%85%A5%E5%85%B6%E4%BB%96%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E4%B9%A6%E7%AD%BE/safari-book.png" srcset="/img/loading.gif" lazyload alt="iPhone的Safari中导入其他浏览器的书签"></p>
+<p>我试验过Google Chrome和IE，分别是这样的：</p>
+<p>如果选择的是IE，那么IE中的书签会直接同步到Safari，并且IE的收藏夹栏里的书签，会添加到Safari的主屏幕</p>
+<p>如果现则是Chrome，会提示你安装Chrome的iCloud 书签扩展，安装地址如下，安装后就可以同步Chrome的书签了</p>
+<p><a target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/icloud-bookmarks/fkepacicchenbjecpbpbclokcabebhah?utm_source=chrome-ntp-icon">https://chrome.google.com/webstore/detail/icloud-bookmarks/fkepacicchenbjecpbpbclokcabebhah?utm_source=chrome-ntp-icon</a></p>
+<p> </p>
+<p><strong>同步后的效果如下：</strong></p>
+<p><img src="/2015/%E5%A6%82%E4%BD%95%E5%9C%A8iphone%E7%9A%84safari%E4%B8%AD%E5%AF%BC%E5%85%A5%E5%85%B6%E4%BB%96%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E4%B9%A6%E7%AD%BE/safari-book2.jpg" srcset="/img/loading.gif" lazyload></p>
+<p> </p>
+<p><strong>延伸阅读：我的iPhone相关文章</strong></p>
+<p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2015/12/18/%e6%8e%a8%e8%8d%90%e6%96%b0%e6%89%8b%e5%bf%85%e5%a4%87%ef%bc%9a10%e5%a4%a7iphone6s%e5%8a%9f%e8%83%bd%e5%8f%8a50%e4%b8%aaios9%e6%8a%80%e5%b7%a7/">新手必备：10大iPhone6s功能及50个iOS9技巧</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2015/12/21/iphone%e9%80%9a%e7%9f%a5%e6%a0%8f%e5%bf%ab%e9%80%9f%e5%90%af%e5%8a%a8%e6%8f%92%e4%bb%b6%e6%8e%a8%e8%8d%90%ef%bc%9a%e7%88%b1%e5%90%af%e5%8a%a8/">iPhone通知栏快速启动插件推荐：爱启动</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2015/12/23/%e4%b8%80%e5%bc%a0%e5%9b%be%e7%9c%8b%e7%9c%8b%e6%88%91%e7%9a%84iphone%e5%b0%8f%e5%9c%86%e7%82%b9assistivetouch%e8%ae%be%e7%bd%ae%e5%92%8c%e5%b8%83%e5%b1%80%e6%8a%80%e5%b7%a7/">一张图看看我的iPhone小圆点AssistiveTouch设置和布局技巧</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2015/12/25/windowsiphone%e7%94%a8%e6%88%b7%e7%9a%84%e6%8f%90%e9%86%92%e4%ba%8b%e9%a1%b9%e5%90%8c%e6%ad%a5%e7%ad%96%e7%95%a5%ef%bc%9a%e6%b4%bb%e7%94%a8iphone%e7%89%88%e6%bb%b4%e7%ad%94%e6%b8%85%e5%8d%95/">Windows+iPhone用户的提醒事项同步策略：活用iPhone版滴答清单</a></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E6%99%BA%E8%83%BD%E6%89%8B%E6%9C%BA/">智能手机</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E4%B9%A6%E7%AD%BE%E5%90%8C%E6%AD%A5/">书签同步</a>
+                    
+                      <a class="hover-with-bg" href="/tags/iphone/">iphone</a>
+                    
+                      <a class="hover-with-bg" href="/tags/google-chrome/">google-chrome</a>
+                    
+                      <a class="hover-with-bg" href="/tags/icloud/">icloud</a>
+                    
+                      <a class="hover-with-bg" href="/tags/safari/">safari</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2015/iphone%E4%B8%ADsurge%E4%B8%8A%E7%BD%91%E5%BA%94%E7%94%A8pp%E6%AD%A3%E7%89%88%E4%B8%8B%E8%BD%BD/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">[下载]iPhone中Surge上网应用PP正版下载+使用教程</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2015/%E7%B0%A1%E5%96%AE%E6%9C%89%E6%95%88google%E6%99%82%E9%96%93%E7%AE%A1%E7%90%86%E7%B3%BB%E7%B5%B1%EF%BC%9A-keep-inbox-%E6%97%A5%E6%9B%86/">
+                        <span class="hidden-mobile">[转]簡單有效Google時間管理系統： Keep+ Inbox+ 日曆</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"B2tecGOesiRBcoXldYV5Jk5A-9Nh9j0Va","appKey":"5tFdBthF0o282SCXuNVxbntd","placeholder":"说点什么","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false,"requiredFields":[]},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

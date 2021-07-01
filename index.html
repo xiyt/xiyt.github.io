@@ -1,0 +1,917 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="daxi">
+  <meta name="keywords" content="">
+  
+  <title>达夕博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiyt.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 100vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>达夕博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/banner1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="热衷于分享IT技术/工作效率/优秀软件，申旦达夕，永无止境">
+              
+            </span>
+
+            
+          </div>
+
+          
+            <div class="scroll-down-bar">
+              <i class="iconfont icon-arrowdown"></i>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div class="py-5" id="board"
+          style=margin-top:0>
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2021/%E5%85%A8%E8%83%BD%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7datagrip%E6%8E%A8%E8%8D%90%E4%BD%BF%E7%94%A82019-3-5%E7%89%88%E6%9C%AC/" target="_self">
+          <img src="/2021/%E5%85%A8%E8%83%BD%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7datagrip%E6%8E%A8%E8%8D%90%E4%BD%BF%E7%94%A82019-3-5%E7%89%88%E6%9C%AC/datagrip.jpg" srcset="/img/loading.gif" lazyload alt="全能数据库管理工具DataGrip推荐使用2019.3.5版本">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/%E5%85%A8%E8%83%BD%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7datagrip%E6%8E%A8%E8%8D%90%E4%BD%BF%E7%94%A82019-3-5%E7%89%88%E6%9C%AC/" target="_self">
+          全能数据库管理工具DataGrip推荐使用2019.3.5版本
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/%E5%85%A8%E8%83%BD%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7datagrip%E6%8E%A8%E8%8D%90%E4%BD%BF%E7%94%A82019-3-5%E7%89%88%E6%9C%AC/" target="_self">
+          
+          
+            
+          
+          由于某种原因我最爱的Navicat不让用了。之后我遍尝试了其他各种数据库管理工具，推荐最多是Dbeaver。虽然是免费开源的，但是用起来怎么都感觉很别扭。界面操作很不顺，而且是java开发的性能也不好，最终还是放弃了。
+还有一个推荐的比较多的是DataGrip，其他都还要，但是新版本DataGrip有一点让我非常不能接受，2020以后版本的DataGrip在做数据库整体导出数据时，不能把导出结果写
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-04-26 13:45" pubdate>
+              2021-04-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/datagrip/">datagrip</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2021/%E5%AE%89%E5%8D%93%E4%BC%98%E7%A7%80%E6%92%AD%E6%94%BE%E5%99%A8kmplayer-plus-divx_v30-12-251%E4%B8%8B%E8%BD%BD/" target="_self">
+          <img src="/2021/%E5%AE%89%E5%8D%93%E4%BC%98%E7%A7%80%E6%92%AD%E6%94%BE%E5%99%A8kmplayer-plus-divx_v30-12-251%E4%B8%8B%E8%BD%BD/kmplayer-logo.png" srcset="/img/loading.gif" lazyload alt="安卓优秀播放器KMPlayer Plus (Divx)_v30.12.251下载">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/%E5%AE%89%E5%8D%93%E4%BC%98%E7%A7%80%E6%92%AD%E6%94%BE%E5%99%A8kmplayer-plus-divx_v30-12-251%E4%B8%8B%E8%BD%BD/" target="_self">
+          安卓优秀播放器KMPlayer Plus (Divx)_v30.12.251下载
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/%E5%AE%89%E5%8D%93%E4%BC%98%E7%A7%80%E6%92%AD%E6%94%BE%E5%99%A8kmplayer-plus-divx_v30-12-251%E4%B8%8B%E8%BD%BD/" target="_self">
+          
+          
+            
+          
+          
+KMPlayer是源自韩国的一套超实用多媒体播放软体，支援各种常见的codec，轻巧而华丽的播放介面，深受大家的喜爱。
+KMPlayer不但支援各种常见的 codec，而且软体轻巧，比起微软的Windows Media Player还轻巧，操作相当顺畅。KMPlayer不只可直接播放一般常见的各式影音档、MP3…，连Flash游戏、影片都可以拉进去直接播唷！此外，你从YouTube或Yahoo影
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-03-08 01:20" pubdate>
+              2021-03-08
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%AE%89%E5%8D%93/">安卓</a>
+            
+              <a href="/tags/kmplayer/">kmplayer</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2021/intellij-idea-2020-3-1%E6%97%A0%E9%99%90%E8%AF%95%E7%94%A8%E6%BF%80%E6%B4%BB%E8%A1%A5%E4%B8%81/" target="_self">
+          <img src="/2021/intellij-idea-2020-3-1%E6%97%A0%E9%99%90%E8%AF%95%E7%94%A8%E6%BF%80%E6%B4%BB%E8%A1%A5%E4%B8%81/u8139388751836502292fm26gp0.jpg" srcset="/img/loading.gif" lazyload alt="Intellij Idea 2020.3.1无限试用激活补丁">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/intellij-idea-2020-3-1%E6%97%A0%E9%99%90%E8%AF%95%E7%94%A8%E6%BF%80%E6%B4%BB%E8%A1%A5%E4%B8%81/" target="_self">
+          Intellij Idea 2020.3.1无限试用激活补丁
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/intellij-idea-2020-3-1%E6%97%A0%E9%99%90%E8%AF%95%E7%94%A8%E6%BF%80%E6%B4%BB%E8%A1%A5%E4%B8%81/" target="_self">
+          
+          
+            
+          
+          对于最新版Intellij Idea 2020.3.1来说，目前网传的各种激活破解补丁都已经失效了。不过可以通过无限试用补丁达到长期使用的效果。补丁使用也很简单，直接放到Idea中作为插件安装好，然后就会在Help菜单下多出来一个Eval Reset菜单。点击该菜单后即可自动延长试用期限。当然这个补丁还会定期提醒，如果试用期快用完了，就会弹出一个提示，点击一下就可以了。使用起来还是非常方便的。在没
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-08 04:42" pubdate>
+              2021-01-08
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%BF%80%E6%B4%BB/">激活</a>
+            
+              <a href="/tags/%E8%AF%95%E7%94%A8/">试用</a>
+            
+              <a href="/tags/intellij-idea/">intellij-idea</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2021/pdf%E5%85%A8%E8%83%BD%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88adobe-acrobat-dc-2020-sp-%E7%9B%B4%E8%A3%85%E7%89%B9%E5%88%AB%E7%89%88/" target="_self">
+          <img src="/2021/pdf%E5%85%A8%E8%83%BD%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88adobe-acrobat-dc-2020-sp-%E7%9B%B4%E8%A3%85%E7%89%B9%E5%88%AB%E7%89%88/15fc697be268d1.jpg" srcset="/img/loading.gif" lazyload alt="PDF全能解决方案Adobe Acrobat DC 2020 SP 直装特别版">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/pdf%E5%85%A8%E8%83%BD%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88adobe-acrobat-dc-2020-sp-%E7%9B%B4%E8%A3%85%E7%89%B9%E5%88%AB%E7%89%88/" target="_self">
+          PDF全能解决方案Adobe Acrobat DC 2020 SP 直装特别版
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/pdf%E5%85%A8%E8%83%BD%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88adobe-acrobat-dc-2020-sp-%E7%9B%B4%E8%A3%85%E7%89%B9%E5%88%AB%E7%89%88/" target="_self">
+          
+          
+            
+          
+          Adobe Acrobat 是由Adobe公司开发的一款PDF（Portable Document Format，便携式文档格式）编辑软件。借助它，您可以以PDF格式制作和保存你的文档 ，以便于浏览和打印，或使用更高级的功能。
+主要功能介绍如下：
+一、扫描至PDF、转换PDF文档：
+使用Acrobat X Pro内置的PDF转换器，你可以将纸质文档、电子表单 Excel、电子邮件、网站、照片、Fl
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-07 03:17" pubdate>
+              2021-01-07
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2020/intellij-idea-%E5%BC%80%E5%8F%91%E5%8A%A9%E6%89%8B%E6%8F%92%E4%BB%B6devhelper-1-0-2%E7%89%88%E6%9C%AC%E5%8F%91%E5%B8%83/" target="_self">
+          <img src="/2020/intellij-idea-%E5%BC%80%E5%8F%91%E5%8A%A9%E6%89%8B%E6%8F%92%E4%BB%B6devhelper-1-0-2%E7%89%88%E6%9C%AC%E5%8F%91%E5%B8%83/screenshot_23740.jpg" srcset="/img/loading.gif" lazyload alt="IntelliJ IDEA 开发助手插件DevHelper 1.0.2版本发布">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/intellij-idea-%E5%BC%80%E5%8F%91%E5%8A%A9%E6%89%8B%E6%8F%92%E4%BB%B6devhelper-1-0-2%E7%89%88%E6%9C%AC%E5%8F%91%E5%B8%83/" target="_self">
+          IntelliJ IDEA 开发助手插件DevHelper 1.0.2版本发布
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/intellij-idea-%E5%BC%80%E5%8F%91%E5%8A%A9%E6%89%8B%E6%8F%92%E4%BB%B6devhelper-1-0-2%E7%89%88%E6%9C%AC%E5%8F%91%E5%B8%83/" target="_self">
+          
+          
+            
+          
+          IntelliJ IDEA 开发助手插件DevHelper 1.0.2发布，更新内容：
+
+优化了界面大小自适应问题
+优化了格式化界面的布局问
+
+
+详解介绍请参看：
+IntelliJ IDEA 开发助手插件DevHelper发布啦，充分提高工作效率
+插件官网：https://plugins.jetbrains.com/plugin/15322-devhelper/versions/stable/10
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-11-21 02:00" pubdate>
+              2020-11-21
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%8F%92%E4%BB%B6/">插件</a>
+            
+              <a href="/tags/intellij-idea/">intellij-idea</a>
+            
+              <a href="/tags/devhelper/">devhelper</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2020/intellij-idea-%E5%BC%80%E5%8F%91%E5%8A%A9%E6%89%8B%E6%8F%92%E4%BB%B6devhelper%E5%8F%91%E5%B8%83%E5%95%A6%EF%BC%8C%E5%85%85%E5%88%86%E6%8F%90%E9%AB%98%E5%B7%A5%E4%BD%9C%E6%95%88%E7%8E%87/" target="_self">
+          <img src="/2020/intellij-idea-%E5%BC%80%E5%8F%91%E5%8A%A9%E6%89%8B%E6%8F%92%E4%BB%B6devhelper%E5%8F%91%E5%B8%83%E5%95%A6%EF%BC%8C%E5%85%85%E5%88%86%E6%8F%90%E9%AB%98%E5%B7%A5%E4%BD%9C%E6%95%88%E7%8E%87/base64.jpg" srcset="/img/loading.gif" lazyload alt="IntelliJ IDEA 开发助手插件DevHelper发布啦，充分提高工作效率">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/intellij-idea-%E5%BC%80%E5%8F%91%E5%8A%A9%E6%89%8B%E6%8F%92%E4%BB%B6devhelper%E5%8F%91%E5%B8%83%E5%95%A6%EF%BC%8C%E5%85%85%E5%88%86%E6%8F%90%E9%AB%98%E5%B7%A5%E4%BD%9C%E6%95%88%E7%8E%87/" target="_self">
+          IntelliJ IDEA 开发助手插件DevHelper发布啦，充分提高工作效率
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/intellij-idea-%E5%BC%80%E5%8F%91%E5%8A%A9%E6%89%8B%E6%8F%92%E4%BB%B6devhelper%E5%8F%91%E5%B8%83%E5%95%A6%EF%BC%8C%E5%85%85%E5%88%86%E6%8F%90%E9%AB%98%E5%B7%A5%E4%BD%9C%E6%95%88%E7%8E%87/" target="_self">
+          
+          
+            
+          
+          DevHelper是一个能够提高效率的IntelliJ IDEA开发助手插件，使用该插件把开发过程中常用的开发工具直接集成到IDE中，使用起来既快捷又方便，能够大大提高工作效率。目前提供的功能如下，博主会及时更新和添加新的功能，敬请期待
+1、生产密码可以指定大小写字母、数字、特殊符号任意组合，长度任意指定，点击按钮一键批量生成密码；
+
+2、生成序列开发过程或者数据库操作过程中，经常需要填入序列，该
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-11-15 15:23" pubdate>
+              2020-11-15
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%BC%80%E5%8F%91%E5%8A%A9%E6%89%8B/">开发助手</a>
+            
+              <a href="/tags/%E6%8F%92%E4%BB%B6/">插件</a>
+            
+              <a href="/tags/intellij-idea/">intellij-idea</a>
+            
+              <a href="/tags/devhelper/">devhelper</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2020/%E5%85%A8%E8%83%BD%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7navicat-15-%E6%97%97%E8%88%B0%E7%89%88x64%E4%BD%8D%E5%AE%89%E8%A3%85%E6%BF%80%E6%B4%BB/" target="_self">
+          <img src="/2020/%E5%85%A8%E8%83%BD%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7navicat-15-%E6%97%97%E8%88%B0%E7%89%88x64%E4%BD%8D%E5%AE%89%E8%A3%85%E6%BF%80%E6%B4%BB/1.jpg" srcset="/img/loading.gif" lazyload alt="全能数据库管理工具Navicat 15 旗舰版x64位安装激活">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/%E5%85%A8%E8%83%BD%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7navicat-15-%E6%97%97%E8%88%B0%E7%89%88x64%E4%BD%8D%E5%AE%89%E8%A3%85%E6%BF%80%E6%B4%BB/" target="_self">
+          全能数据库管理工具Navicat 15 旗舰版x64位安装激活
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/%E5%85%A8%E8%83%BD%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7navicat-15-%E6%97%97%E8%88%B0%E7%89%88x64%E4%BD%8D%E5%AE%89%E8%A3%85%E6%BF%80%E6%B4%BB/" target="_self">
+          
+          
+            
+          
+          软件介绍
+Navicat Premium 是一套数据库开发工具，让你从单一应用程序中同时连接 MySQL、MariaDB、MongoDB、SQL Server、Oracle、PostgreSQL 和 SQLite 数据库。它与 Amazon RDS、Amazon Aurora、Amazon Redshift、Microsoft Azure、Oracle Cloud、MongoDB Atlas、阿里
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-08-28 01:33" pubdate>
+              2020-08-28
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%A2%E6%88%B7%E7%AB%AF/">数据库客户端</a>
+            
+              <a href="/tags/navicat/">navicat</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2020/redis%E5%8F%AF%E8%A7%86%E5%8C%96%E5%B7%A5%E5%85%B7redis-desktop-manager-2020-2%E4%B8%8B%E8%BD%BD/" target="_self">
+          <img src="/2020/redis%E5%8F%AF%E8%A7%86%E5%8C%96%E5%B7%A5%E5%85%B7redis-desktop-manager-2020-2%E4%B8%8B%E8%BD%BD/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20200827233828.jpg" srcset="/img/loading.gif" lazyload alt="Redis可视化工具Redis Desktop Manager 2020.2下载">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/redis%E5%8F%AF%E8%A7%86%E5%8C%96%E5%B7%A5%E5%85%B7redis-desktop-manager-2020-2%E4%B8%8B%E8%BD%BD/" target="_self">
+          Redis可视化工具Redis Desktop Manager 2020.2下载
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/redis%E5%8F%AF%E8%A7%86%E5%8C%96%E5%B7%A5%E5%85%B7redis-desktop-manager-2020-2%E4%B8%8B%E8%BD%BD/" target="_self">
+          
+          
+            
+          
+          
+软件介绍Redis Desktop Manager（RedisDesktopManager，RDM）是一个快速、简单、支持跨平台的 Redis 桌面管理工具，基于 Qt 5 开发，支持通过 SSH Tunnel 连接。是一个非常好用的Redis客户端工具。虽然该软件是开源的，但是并不提供免费的可执行文件下载，是要收费的。而且自行编译也非常的麻烦，所以这里把我在网络上搜集到的，编译好的可执行文件分
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-08-27 16:08" pubdate>
+              2020-08-27
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/redis-desktop-manager/">redis-desktop-manager</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2020/v2ray%E5%90%AF%E5%8A%A8%E6%8A%A5codeexited-status218-capabilities%E9%94%99%E8%AF%AF%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" target="_self">
+          <img src="/2020/v2ray%E5%90%AF%E5%8A%A8%E6%8A%A5codeexited-status218-capabilities%E9%94%99%E8%AF%AF%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/v2ray_1024.png" srcset="/img/loading.gif" lazyload alt="v2ray启动报code=exited, status=218/CAPABILITIES错误的解决方法">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/v2ray%E5%90%AF%E5%8A%A8%E6%8A%A5codeexited-status218-capabilities%E9%94%99%E8%AF%AF%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" target="_self">
+          v2ray启动报code=exited, status=218/CAPABILITIES错误的解决方法
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/v2ray%E5%90%AF%E5%8A%A8%E6%8A%A5codeexited-status218-capabilities%E9%94%99%E8%AF%AF%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" target="_self">
+          
+          
+            
+          
+          
+今天再一台香港的vps上安装好v2ray后，一键安装脚本在这里：
+bash &lt;(curl -L -s https://install.direct/go.sh)
+安装一起正常，通过service v2ray start命令启动后，也没有提示任何错误。但是通过service v2ray status查看状态后，发现启动失败了，一直报这个错误：code=exited, status=218/C
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-08-07 23:45" pubdate>
+              2020-08-07
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/v2ray/">v2ray</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2020/adobe-photoshop-2020-v21-1-0-106-%E7%BB%BF%E8%89%B2%E7%89%B9%E5%88%AB%E7%89%88/" target="_self">
+          <img src="/2020/adobe-photoshop-2020-v21-1-0-106-%E7%BB%BF%E8%89%B2%E7%89%B9%E5%88%AB%E7%89%88/photo-logo.jpg" srcset="/img/loading.gif" lazyload alt="Adobe Photoshop 2020 V21.1.0.106 绿色特别版">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2020/adobe-photoshop-2020-v21-1-0-106-%E7%BB%BF%E8%89%B2%E7%89%B9%E5%88%AB%E7%89%88/" target="_self">
+          Adobe Photoshop 2020 V21.1.0.106 绿色特别版
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/adobe-photoshop-2020-v21-1-0-106-%E7%BB%BF%E8%89%B2%E7%89%B9%E5%88%AB%E7%89%88/" target="_self">
+          
+          
+            
+          
+          Adobe Photoshop 2020是 Adobe 公司最新最知名的软件之一，它集成图像扫描、编辑修改、图像制作、广告创意，图像输入与输出于一体，深受广大平面设计人员和电脑美术爱好者的喜爱。Adobe Photoshop 2020 作为最先进和最流行的应用方案，新版本增加了很多新功能，肯定会得到您的钟爱的！Adobe Photoshop 2020拥有智能型锐利化、智能型增加取样、3D 场景面板
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-03-20 16:34" pubdate>
+              2020-03-20
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E7%B2%BE%E7%AE%80%E7%89%88/">精简版</a>
+            
+              <a href="/tags/%E7%BB%BF%E8%89%B2%E7%89%88/">绿色版</a>
+            
+              <a href="/tags/photoshop/">photoshop</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/#board">2</a><a class="page-number" href="/page/3/#board">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/33/#board">33</a><a class="extend next" rel="next" href="/page/2/#board"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

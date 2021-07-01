@@ -1,0 +1,577 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="daxi">
+  <meta name="keywords" content="">
+  
+  <title>[转]Java CompletableFuture 详解 - 达夕博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiyt.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>达夕博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/banner1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="[转]Java CompletableFuture 详解">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2018-08-12 15:08" pubdate>
+        2018年8月12日 下午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      4.1k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      54
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">[转]Java CompletableFuture 详解</h1>
+            
+            <div class="markdown-body">
+              <p><a target="_blank" rel="noopener" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Future.html">Future</a>是Java 5添加的类，用来描述一个异步计算的结果。你可以使用<code>isDone</code>方法检查计算是否完成，或者使用<code>get</code>阻塞住调用线程，直到计算完成返回结果，你也可以使用<code>cancel</code>方法停止任务的执行。</p>
+<p>public class BasicFuture {<br>    public static void main(String args) throws ExecutionException, InterruptedException {<br>        ExecutorService es = Executors.newFixedThreadPool(10);<br>        Future<Integer> f = es.submit(() -&gt;{<br>                // 长时间的异步计算<br>                // ……<br>                // 然后返回结果<br>                return 100;<br>            });<br>//        while(!f.isDone())<br>//            ;<br>        f.get();<br>    }<br>}</p>
+<p> </p>
+<p>虽然<code>Future</code>以及相关使用方法提供了异步执行任务的能力，但是对于结果的获取却是很不方便，只能通过阻塞或者轮询的方式得到任务的结果。阻塞的方式显然和我们的异步编程的初衷相违背，轮询的方式又会耗费无谓的CPU资源，而且也不能及时地得到计算结果，为什么不能用观察者设计模式当计算结果完成及时通知监听者呢？</p>
+<p>很多语言，比如Node.js，采用回调的方式实现异步编程。Java的一些框架，比如Netty，自己扩展了Java的 <code>Future</code>接口，提供了<code>addListener</code>等多个扩展方法：</p>
+<p>ChannelFuture future = bootstrap.connect(new InetSocketAddress(host, port));<br>      future.addListener(new ChannelFutureListener()<br>      {<br>              @Override<br>              public void operationComplete(ChannelFuture future) throws Exception<br>              {<br>                  if (future.isSuccess()) {<br>                      // SUCCESS<br>                  }<br>                  else {<br>                      // FAILURE<br>                  }<br>              }<br>      });</p>
+<p> </p>
+<p>Google guava也提供了通用的扩展Future:<a target="_blank" rel="noopener" href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/util/concurrent/ListenableFuture.html">ListenableFuture</a>、<a target="_blank" rel="noopener" href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/util/concurrent/SettableFuture.html">SettableFuture</a> 以及辅助类<a target="_blank" rel="noopener" href="http://google.github.io/guava/releases/19.0/api/docs/com/google/common/util/concurrent/Futures.html">Futures</a>等,方便异步编程。</p>
+<p>final String name = …;<br>inFlight.add(name);<br>ListenableFuture<Result> future = service.query(name);<br>future.addListener(new Runnable() {<br>  public void run() {<br>    processedCount.incrementAndGet();<br>    inFlight.remove(name);<br>    lastProcessed.set(name);<br>    logger.info(“Done with {0}”, name);<br>  }<br>}, executor);</p>
+<p> </p>
+<p>Scala也提供了简单易用且功能强大的Future/Promise<a target="_blank" rel="noopener" href="http://docs.scala-lang.org/overviews/core/futures.html">异步编程模式</a>。</p>
+<p>作为正统的Java类库，是不是应该做点什么，加强一下自身库的功能呢？</p>
+<p>在Java 8中, 新增加了一个包含50个方法左右的类: <a target="_blank" rel="noopener" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html">CompletableFuture</a>，提供了非常强大的Future的扩展功能，可以帮助我们简化异步编程的复杂性，提供了函数式编程的能力，可以通过回调的方式处理计算结果，并且提供了转换和组合CompletableFuture的方法。</p>
+<p>下面我们就看一看它的功能吧。</p>
+<h2 id="主动完成计算"><a href="#主动完成计算" class="headerlink" title="主动完成计算"></a>主动完成计算</h2><p>CompletableFuture类实现了<a target="_blank" rel="noopener" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletionStage.html">CompletionStage</a>和<a target="_blank" rel="noopener" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Future.html">Future</a>接口，所以你还是可以像以前一样通过阻塞或者轮询的方式获得结果，尽管这种方式不推荐使用。</p>
+<p>public T     get()<br>public T     get(long timeout, TimeUnit unit)<br>public T     getNow(T valueIfAbsent)<br>public T     join()</p>
+<p> </p>
+<p><code>getNow</code>有点特殊，如果结果已经计算完则返回结果或者抛出异常，否则返回给定的<code>valueIfAbsent</code>值。 <code>join</code>返回计算的结果或者抛出一个unchecked异常(CompletionException)，它和<code>get</code>对抛出的异常的处理有些细微的区别，你可以运行下面的代码进行比较：</p>
+<p>CompletableFuture<Integer> future = CompletableFuture.supplyAsync(() -&gt; {<br>    int i = 1/0;<br>    return 100;<br>});<br>//future.join();<br>future.get();</p>
+<p> </p>
+<p>尽管Future可以代表在另外的线程中执行的一段异步代码，但是你还是可以在本身线程中执行：</p>
+<p>public static CompletableFuture<Integer> compute() {<br>    final CompletableFuture<Integer> future = new CompletableFuture&lt;&gt;();<br>    return future;<br>}</p>
+<p>上面的代码中<code>future</code>没有关联任何的<code>Callback</code>、线程池、异步任务等，如果客户端调用<code>future.get</code>就会一致傻等下去。你可以通过下面的代码完成一个计算，触发客户端的等待：</p>
+<p>f.complete(100);</p>
+<p>当然你也可以抛出一个异常，而不是一个成功的计算结果：</p>
+<p>f.completeExceptionally(new Exception());</p>
+<p>完整的代码如下：</p>
+<p>public class BasicMain {<br>    public static CompletableFuture<Integer> compute() {<br>        final CompletableFuture<Integer> future = new CompletableFuture&lt;&gt;();<br>        return future;<br>    }<br>    public static void main(String args) throws Exception {<br>        final CompletableFuture<Integer> f = compute();<br>        class Client extends Thread {<br>            CompletableFuture<Integer> f;<br>            Client(String threadName, CompletableFuture<Integer> f) {<br>                super(threadName);<br>                this.f = f;<br>            }<br>            @Override<br>            public void run() {<br>                try {<br>                    System.out.println(this.getName() + “: “ + f.get());<br>                } catch (InterruptedException e) {<br>                    e.printStackTrace();<br>                } catch (ExecutionException e) {<br>                    e.printStackTrace();<br>                }<br>            }<br>        }<br>        new Client(“Client1”, f).start();<br>        new Client(“Client2”, f).start();<br>        System.out.println(“waiting”);<br>        f.complete(100);<br>        //f.completeExceptionally(new Exception());<br>        System.in.read();<br>    }<br>}</p>
+<p>可以看到我们并没有把<code>f.complete(100);</code>放在另外的线程中去执行，但是在大部分情况下我们可能会用一个线程池去执行这些异步任务。<code>CompletableFuture.complete()</code>、<code>CompletableFuture.completeExceptionally</code>只能被调用一次。但是我们有两个后门方法可以重设这个值:<code>obtrudeValue</code>、<code>obtrudeException</code>，但是使用的时候要小心，因为<code>complete</code>已经触发了客户端，有可能导致客户端会得到不期望的结果。</p>
+<h2 id="创建CompletableFuture对象。"><a href="#创建CompletableFuture对象。" class="headerlink" title="创建CompletableFuture对象。"></a>创建CompletableFuture对象。</h2><p><code>CompletableFuture.completedFuture</code>是一个静态辅助方法，用来返回一个已经计算好的<code>CompletableFuture</code>。</p>
+<p>public static <U> CompletableFuture<U> completedFuture(U value)</p>
+<p>而以下四个静态方法用来为一段异步执行的代码创建<code>CompletableFuture</code>对象：</p>
+<p>public static CompletableFuture<Void>     runAsync(Runnable runnable)<br>public static CompletableFuture<Void>     runAsync(Runnable runnable, Executor executor)<br>public static <U> CompletableFuture<U>     supplyAsync(Supplier<U> supplier)<br>public static <U> CompletableFuture<U>     supplyAsync(Supplier<U> supplier, Executor executor)、</p>
+<p>以<code>Async</code>结尾并且没有指定<code>Executor</code>的方法会使用<code>ForkJoinPool.commonPool()</code>作为它的线程池执行异步代码。</p>
+<p><code>runAsync</code>方法也好理解，它以<code>Runnable</code>函数式接口类型为参数，所以<code>CompletableFuture</code>的计算结果为空。</p>
+<p><code>supplyAsync</code>方法以<code>Supplier&lt;U&gt;</code>函数式接口类型为参数,<code>CompletableFuture</code>的计算结果类型为<code>U</code>。</p>
+<p>因为方法的参数类型都是函数式接口，所以可以使用lambda表达式实现异步任务，比如：</p>
+<p>CompletableFuture<String> future = CompletableFuture.supplyAsync(() -&gt; {<br>    //长时间的计算任务<br>    return “·00”;<br>});</p>
+<h2 id="计算结果完成时的处理"><a href="#计算结果完成时的处理" class="headerlink" title="计算结果完成时的处理"></a>计算结果完成时的处理</h2><p>当<code>CompletableFuture</code>的计算结果完成，或者抛出异常的时候，我们可以执行特定的<code>Action</code>。主要是下面的方法：</p>
+<p>public CompletableFuture<T>     whenComplete(BiConsumer&lt;? super T,? super Throwable&gt; action)<br>public CompletableFuture<T>     whenCompleteAsync(BiConsumer&lt;? super T,? super Throwable&gt; action)<br>public CompletableFuture<T>     whenCompleteAsync(BiConsumer&lt;? super T,? super Throwable&gt; action, Executor executor)<br>public CompletableFuture<T>     exceptionally(Function&lt;Throwable,? extends T&gt; fn)</p>
+<p>可以看到<code>Action</code>的类型是<code>BiConsumer&lt;? super T,? super Throwable&gt;</code>，它可以处理正常的计算结果，或者异常情况。 方法不以<code>Async</code>结尾，意味着<code>Action</code>使用相同的线程执行，而<code>Async</code>可能会使用其它的线程去执行(如果使用相同的线程池，也可能会被同一个线程选中执行)。</p>
+<p>注意这几个方法都会返回<code>CompletableFuture</code>，当<code>Action</code>执行完毕后它的结果返回原始的<code>CompletableFuture</code>的计算结果或者返回异常。</p>
+<p>public class Main {<br>    private static Random rand = new Random();<br>    private static long t = System.currentTimeMillis();<br>    static int getMoreData() {<br>        System.out.println(“begin to start compute”);<br>        try {<br>            Thread.sleep(10000);<br>        } catch (InterruptedException e) {<br>            throw new RuntimeException(e);<br>        }<br>        System.out.println(“end to start compute. passed “ + (System.currentTimeMillis() - t)/1000 + “ seconds”);<br>        return rand.nextInt(1000);<br>    }<br>    public static void main(String args) throws Exception {<br>        CompletableFuture<Integer> future = CompletableFuture.supplyAsync(Main::getMoreData);<br>        Future<Integer> f = future.whenComplete((v, e) -&gt; {<br>            System.out.println(v);<br>            System.out.println(e);<br>        });<br>        System.out.println(f.get());<br>        System.in.read();<br>    }<br>}</p>
+<p><code>exceptionally</code>方法返回一个新的CompletableFuture，当原始的CompletableFuture抛出异常的时候，就会触发这个CompletableFuture的计算，调用function计算值，否则如果原始的CompletableFuture正常计算完后，这个新的CompletableFuture也计算完成，它的值和原始的CompletableFuture的计算的值相同。也就是这个<code>exceptionally</code>方法用来处理异常的情况。</p>
+<p>下面一组方法虽然也返回CompletableFuture对象，但是对象的值和原来的CompletableFuture计算的值不同。当原先的CompletableFuture的值计算完成或者抛出异常的时候，会触发这个CompletableFuture对象的计算，结果由<code>BiFunction</code>参数计算而得。因此这组方法兼有<code>whenComplete</code>和转换的两个功能。</p>
+<p>public <U> CompletableFuture<U>     handle(BiFunction&lt;? super T,Throwable,? extends U&gt; fn)<br>public <U> CompletableFuture<U>     handleAsync(BiFunction&lt;? super T,Throwable,? extends U&gt; fn)<br>public <U> CompletableFuture<U>     handleAsync(BiFunction&lt;? super T,Throwable,? extends U&gt; fn, Executor executor)</p>
+<p>同样，不以<code>Async</code>结尾的方法由原来的线程计算，以<code>Async</code>结尾的方法由默认的线程池<code>ForkJoinPool.commonPool()</code>或者指定的线程池<code>executor</code>运行。</p>
+<h2 id="转换"><a href="#转换" class="headerlink" title="转换"></a>转换</h2><p><code>CompletableFuture</code>可以作为monad(单子)和functor。由于回调风格的实现，我们不必因为等待一个计算完成而阻塞着调用线程，而是告诉<code>CompletableFuture</code>当计算完成的时候请执行某个<code>function</code>。而且我们还可以将这些操作串联起来，或者将<code>CompletableFuture</code>组合起来。</p>
+<p>public <U> CompletableFuture<U>     thenApply(Function&lt;? super T,? extends U&gt; fn)<br>public <U> CompletableFuture<U>     thenApplyAsync(Function&lt;? super T,? extends U&gt; fn)<br>public <U> CompletableFuture<U>     thenApplyAsync(Function&lt;? super T,? extends U&gt; fn, Executor executor)</p>
+<p>这一组函数的功能是当原来的CompletableFuture计算完后，将结果传递给函数<code>fn</code>，将<code>fn</code>的结果作为新的<code>CompletableFuture</code>计算结果。因此它的功能相当于将<code>CompletableFuture&lt;T&gt;</code>转换成<code>CompletableFuture&lt;U&gt;</code>。</p>
+<p>这三个函数的区别和上面介绍的一样，不以<code>Async</code>结尾的方法由原来的线程计算，以<code>Async</code>结尾的方法由默认的线程池<code>ForkJoinPool.commonPool()</code>或者指定的线程池<code>executor</code>运行。Java的CompletableFuture类总是遵循这样的原则，下面就不一一赘述了。</p>
+<p>使用例子如下：</p>
+<p>CompletableFuture<Integer> future = CompletableFuture.supplyAsync(() -&gt; {<br>    return 100;<br>});<br>CompletableFuture<String> f =  future.thenApplyAsync(i -&gt; i * 10).thenApply(i -&gt; i.toString());<br>System.out.println(f.get()); //“1000”</p>
+<p>需要注意的是，这些转换并不是马上执行的，也不会阻塞，而是在前一个stage完成后继续执行。</p>
+<p>它们与<code>handle</code>方法的区别在于<code>handle</code>方法会处理正常计算值和异常，因此它可以屏蔽异常，避免异常继续抛出。而<code>thenApply</code>方法只是用来处理正常值，因此一旦有异常就会抛出。</p>
+<h2 id="纯消费-执行Action"><a href="#纯消费-执行Action" class="headerlink" title="纯消费(执行Action)"></a>纯消费(执行Action)</h2><p>上面的方法是当计算完成的时候，会生成新的计算结果(<code>thenApply</code>, <code>handle</code>)，或者返回同样的计算结果<code>whenComplete</code>，<code>CompletableFuture</code>还提供了一种处理结果的方法，只对结果执行<code>Action</code>,而不返回新的计算值，因此计算值为<code>Void</code>:</p>
+<p>public CompletableFuture<Void>     thenAccept(Consumer&lt;? super T&gt; action)<br>public CompletableFuture<Void>     thenAcceptAsync(Consumer&lt;? super T&gt; action)<br>public CompletableFuture<Void>     thenAcceptAsync(Consumer&lt;? super T&gt; action, Executor executor)</p>
+<p>看它的参数类型也就明白了，它们是函数式接口<code>Consumer</code>，这个接口只有输入，没有返回值。</p>
+<p>CompletableFuture<Integer> future = CompletableFuture.supplyAsync(() -&gt; {<br>    return 100;<br>});<br>CompletableFuture<Void> f =  future.thenAccept(System.out::println);<br>System.out.println(f.get());</p>
+<p><code>thenAcceptBoth</code>以及相关方法提供了类似的功能，当两个CompletionStage都正常完成计算的时候，就会执行提供的<code>action</code>，它用来组合另外一个异步的结果。 <code>runAfterBoth</code>是当两个CompletionStage都正常完成计算的时候,执行一个Runnable，这个Runnable并不使用计算的结果。</p>
+<p>public <U> CompletableFuture<Void>     thenAcceptBoth(CompletionStage<? extends U> other, BiConsumer<? super T,? super U> action)
+public <U> CompletableFuture<Void>     thenAcceptBothAsync(CompletionStage<? extends U> other, BiConsumer<? super T,? super U> action)
+public <U> CompletableFuture<Void>     thenAcceptBothAsync(CompletionStage<? extends U> other, BiConsumer<? super T,? super U> action, Executor executor)
+public     CompletableFuture<Void>     runAfterBoth(CompletionStage<?> other,  Runnable action)</p>
+<p>例子如下：</p>
+<p>CompletableFuture<Integer> future = CompletableFuture.supplyAsync(() -&gt; {<br>    return 100;<br>});<br>CompletableFuture<Void> f =  future.thenAcceptBoth(CompletableFuture.completedFuture(10), (x, y) -&gt; System.out.println(x * y));<br>System.out.println(f.get());</p>
+<p>更彻底地，下面一组方法当计算完成的时候会执行一个Runnable,与<code>thenAccept</code>不同，Runnable并不使用CompletableFuture计算的结果。</p>
+<p>public CompletableFuture<Void>     thenRun(Runnable action)<br>public CompletableFuture<Void>     thenRunAsync(Runnable action)<br>public CompletableFuture<Void>     thenRunAsync(Runnable action, Executor executor)</p>
+<p>因此先前的CompletableFuture计算的结果被忽略了,这个方法返回<code>CompletableFuture&lt;Void&gt;</code>类型的对象。</p>
+<p>CompletableFuture<Integer> future = CompletableFuture.supplyAsync(() -&gt; {<br>    return 100;<br>});<br>CompletableFuture<Void> f =  future.thenRun(() -&gt; System.out.println(“finished”));<br>System.out.println(f.get());</p>
+<blockquote>
+<p>因此，你可以根据方法的参数的类型来加速你的记忆。<code>Runnable</code>类型的参数会忽略计算的结果，<code>Consumer</code>是纯消费计算结果，<code>BiConsumer</code>会组合另外一个<code>CompletionStage</code>纯消费，<code>Function</code>会对计算结果做转换，<code>BiFunction</code>会组合另外一个<code>CompletionStage</code>的计算结果做转换。</p>
+</blockquote>
+<h2 id="组合"><a href="#组合" class="headerlink" title="组合"></a>组合</h2><p>public <U> CompletableFuture<U>     thenCompose(Function&lt;? super T,? extends CompletionStage<U>&gt; fn)<br>public <U> CompletableFuture<U>     thenComposeAsync(Function&lt;? super T,? extends CompletionStage<U>&gt; fn)<br>public <U> CompletableFuture<U>     thenComposeAsync(Function&lt;? super T,? extends CompletionStage<U>&gt; fn, Executor executor)</p>
+<p>这一组方法接受一个Function作为参数，这个Function的输入是当前的CompletableFuture的计算值，返回结果将是一个新的CompletableFuture，这个新的CompletableFuture会组合原来的CompletableFuture和函数返回的CompletableFuture。因此它的功能类似:</p>
+<p>A +–&gt; B +—&gt; C</p>
+<p>记住，<code>thenCompose</code>返回的对象并不一是函数<code>fn</code>返回的对象，如果原来的<code>CompletableFuture</code>还没有计算出来，它就会生成一个新的组合后的CompletableFuture。</p>
+<p>例子：</p>
+<p>CompletableFuture<Integer> future = CompletableFuture.supplyAsync(() -&gt; {<br>    return 100;<br>});<br>CompletableFuture<String> f =  future.thenCompose( i -&gt; {<br>    return CompletableFuture.supplyAsync(() -&gt; {<br>        return (i * 10) + “”;<br>    });<br>});<br>System.out.println(f.get()); //1000</p>
+<p>而下面的一组方法<code>thenCombine</code>用来复合另外一个CompletionStage的结果。它的功能类似：</p>
+<p>A +<br>  |<br>  +——&gt; C<br>  +——^<br>B +</p>
+<p>两个CompletionStage是并行执行的，它们之间并没有先后依赖顺序，<code>other</code>并不会等待先前的<code>CompletableFuture</code>执行完毕后再执行。</p>
+<p>public &lt;U,V&gt; CompletableFuture<V>     thenCombine(CompletionStage&lt;? extends U&gt; other, BiFunction&lt;? super T,? super U,? extends V&gt; fn)<br>public &lt;U,V&gt; CompletableFuture<V>     thenCombineAsync(CompletionStage&lt;? extends U&gt; other, BiFunction&lt;? super T,? super U,? extends V&gt; fn)<br>public &lt;U,V&gt; CompletableFuture<V>     thenCombineAsync(CompletionStage&lt;? extends U&gt; other, BiFunction&lt;? super T,? super U,? extends V&gt; fn, Executor executor)</p>
+<p>其实从功能上来讲,它们的功能更类似<code>thenAcceptBoth</code>，只不过<code>thenAcceptBoth</code>是纯消费，它的函数参数没有返回值，而<code>thenCombine</code>的函数参数<code>fn</code>有返回值。</p>
+<p>CompletableFuture<Integer> future = CompletableFuture.supplyAsync(() -&gt; {<br>    return 100;<br>});<br>CompletableFuture<String> future2 = CompletableFuture.supplyAsync(() -&gt; {<br>    return “abc”;<br>});<br>CompletableFuture<String> f =  future.thenCombine(future2, (x,y) -&gt; y + “-“ + x);<br>System.out.println(f.get()); //abc-100</p>
+<h2 id="Either"><a href="#Either" class="headerlink" title="Either"></a>Either</h2><p><code>thenAcceptBoth</code>和<code>runAfterBoth</code>是当两个CompletableFuture都计算完成，而我们下面要了解的方法是当任意一个CompletableFuture计算完成的时候就会执行。</p>
+<p>public CompletableFuture<Void>     acceptEither(CompletionStage&lt;? extends T&gt; other, Consumer&lt;? super T&gt; action)<br>public CompletableFuture<Void>     acceptEitherAsync(CompletionStage&lt;? extends T&gt; other, Consumer&lt;? super T&gt; action)<br>public CompletableFuture<Void>     acceptEitherAsync(CompletionStage&lt;? extends T&gt; other, Consumer&lt;? super T&gt; action, Executor executor)<br>public <U> CompletableFuture<U>     applyToEither(CompletionStage&lt;? extends T&gt; other, Function&lt;? super T,U&gt; fn)<br>public <U> CompletableFuture<U>     applyToEitherAsync(CompletionStage&lt;? extends T&gt; other, Function&lt;? super T,U&gt; fn)<br>public <U> CompletableFuture<U>     applyToEitherAsync(CompletionStage&lt;? extends T&gt; other, Function&lt;? super T,U&gt; fn, Executor executor)</p>
+<p><code>acceptEither</code>方法是当任意一个CompletionStage完成的时候，<code>action</code>这个消费者就会被执行。这个方法返回<code>CompletableFuture&lt;Void&gt;</code></p>
+<p><code>applyToEither</code>方法是当任意一个CompletionStage完成的时候，<code>fn</code>会被执行，它的返回值会当作新的<code>CompletableFuture&lt;U&gt;</code>的计算结果。</p>
+<p>下面这个例子有时会输出<code>100</code>,有时候会输出<code>200</code>,哪个Future先完成就会根据它的结果计算。</p>
+<p>Random rand = new Random();<br>CompletableFuture<Integer> future = CompletableFuture.supplyAsync(() -&gt; {<br>    try {<br>        Thread.sleep(10000 + rand.nextInt(1000));<br>    } catch (InterruptedException e) {<br>        e.printStackTrace();<br>    }<br>    return 100;<br>});<br>CompletableFuture<Integer> future2 = CompletableFuture.supplyAsync(() -&gt; {<br>    try {<br>        Thread.sleep(10000 + rand.nextInt(1000));<br>    } catch (InterruptedException e) {<br>        e.printStackTrace();<br>    }<br>    return 200;<br>});<br>CompletableFuture<String> f =  future.applyToEither(future2,i -&gt; i.toString());</p>
+<h2 id="辅助方法-allOf-和-anyOf"><a href="#辅助方法-allOf-和-anyOf" class="headerlink" title="辅助方法 allOf 和 anyOf"></a>辅助方法 <code>allOf</code> 和 <code>anyOf</code></h2><p>前面我们已经介绍了几个静态方法：<code>completedFuture</code>、<code>runAsync</code>、<code>supplyAsync</code>,下面介绍的这两个方法用来组合多个CompletableFuture。</p>
+<p>public static CompletableFuture<Void>         allOf(CompletableFuture<?>... cfs)
+public static CompletableFuture<Object>     anyOf(CompletableFuture<?>… cfs)</p>
+<p><code>allOf</code>方法是当所有的<code>CompletableFuture</code>都执行完后执行计算。</p>
+<p><code>anyOf</code>方法是当任意一个<code>CompletableFuture</code>执行完后就会执行计算，计算的结果相同。</p>
+<p>下面的代码运行结果有时是100,有时是”abc”。但是<code>anyOf</code>和<code>applyToEither</code>不同。<code>anyOf</code>接受任意多的CompletableFuture但是<code>applyToEither</code>只是判断两个CompletableFuture,<code>anyOf</code>返回值的计算结果是参数中其中一个CompletableFuture的计算结果，<code>applyToEither</code>返回值的计算结果却是要经过<code>fn</code>处理的。当然还有静态方法的区别，线程池的选择等。</p>
+<p>Random rand = new Random();<br>CompletableFuture<Integer> future1 = CompletableFuture.supplyAsync(() -&gt; {<br>    try {<br>        Thread.sleep(10000 + rand.nextInt(1000));<br>    } catch (InterruptedException e) {<br>        e.printStackTrace();<br>    }<br>    return 100;<br>});<br>CompletableFuture<String> future2 = CompletableFuture.supplyAsync(() -&gt; {<br>    try {<br>        Thread.sleep(10000 + rand.nextInt(1000));<br>    } catch (InterruptedException e) {<br>        e.printStackTrace();<br>    }<br>    return “abc”;<br>});<br>//CompletableFuture<Void> f =  CompletableFuture.allOf(future1,future2);<br>CompletableFuture<Object> f =  CompletableFuture.anyOf(future1,future2);<br>System.out.println(f.get());</p>
+<p>我想通过上面的介绍，应该把CompletableFuture的方法和功能介绍完了(<code>cancel</code>、<code>isCompletedExceptionally()</code>、<code>isDone()</code>以及继承于Object的方法无需介绍了， <code>toCompletableFuture()</code>返回CompletableFuture本身)，希望你能全面了解CompletableFuture强大的功能，并将它应用到Java的异步编程中。如果你有使用它的开源项目，可以留言分享一下。</p>
+<h2 id="更进一步"><a href="#更进一步" class="headerlink" title="更进一步"></a>更进一步</h2><p>如果你用过Guava的Future类，你就会知道它的<code>Futures</code>辅助类提供了很多便利方法，用来处理多个Future，而不像Java的CompletableFuture，只提供了<code>allOf</code>、<code>anyOf</code>两个方法。 比如有这样一个需求，将多个CompletableFuture组合成一个CompletableFuture，这个组合后的CompletableFuture的计算结果是个List,它包含前面所有的CompletableFuture的计算结果，guava的<code>Futures.allAsList</code>可以实现这样的功能，但是对于java CompletableFuture，我们需要一些辅助方法：</p>
+<p>public static <T> CompletableFuture&lt;List<T>&gt; sequence(List&lt;CompletableFuture<T>&gt; futures) {<br>       CompletableFuture<Void> allDoneFuture = CompletableFuture.allOf(futures.toArray(new CompletableFuture));<br>       return allDoneFuture.thenApply(v -&gt; futures.stream().map(CompletableFuture::join).collect(Collectors.<T>toList()));<br>   }<br>public static <T> CompletableFuture&lt;Stream<T>&gt; sequence(Stream&lt;CompletableFuture<T>&gt; futures) {<br>       List&lt;CompletableFuture<T>&gt; futureList = futures.filter(f -&gt; f != null).collect(Collectors.toList());<br>       return sequence(futureList);<br>   }</p>
+<p> </p>
+<p>或者Java Future转CompletableFuture:</p>
+<p>public static <T> CompletableFuture<T> toCompletable(Future<T> future, Executor executor) {<br>    return CompletableFuture.supplyAsync(() -&gt; {<br>        try {<br>            return future.get();<br>        } catch (InterruptedException | ExecutionException e) {<br>            throw new RuntimeException(e);<br>        }<br>    }, executor);<br>}</p>
+<p>github有多个项目可以实现Java CompletableFuture与其它Future (如Guava ListenableFuture)之间的转换，如<a target="_blank" rel="noopener" href="https://github.com/spotify/futures-extra">spotify/futures-extra</a>、<a target="_blank" rel="noopener" href="https://github.com/lukas-krecan/future-converter">future-converter</a>、<a target="_blank" rel="noopener" href="https://github.com/scala/scala-java8-compat/blob/master/src/main/scala/scala/compat/java8/FutureConverters.scala">scala/scala-java8-compat</a> 等。</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E6%8A%80%E6%9C%AF%E7%BC%96%E7%A8%8B/">技术编程</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/java/">java</a>
+                    
+                      <a class="hover-with-bg" href="/tags/completablefuture/">completablefuture</a>
+                    
+                      <a class="hover-with-bg" href="/tags/java8/">java8</a>
+                    
+                      <a class="hover-with-bg" href="/tags/jdk8/">jdk8</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/">异步编程</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2018/jenkins-pipeline%E4%B8%AD%E6%97%A0%E6%B3%95%E9%80%9A%E8%BF%87shell%E8%84%9A%E6%9C%AC%E5%90%AF%E5%8A%A8%E5%90%8E%E5%8F%B0%E5%BA%94%E7%94%A8%E7%9A%84%E9%97%AE%E9%A2%98/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Jenkins Pipeline中无法通过Shell脚本启动后台应用的问题</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2018/excel%E4%B8%AD%E6%89%B9%E9%87%8F%E4%BF%9D%E6%8A%A4%E5%92%8C%E6%92%A4%E9%94%80%E5%B7%A5%E4%BD%9C%E8%A1%A8/">
+                        <span class="hidden-mobile">Excel中批量保护和撤销工作表</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"B2tecGOesiRBcoXldYV5Jk5A-9Nh9j0Va","appKey":"5tFdBthF0o282SCXuNVxbntd","placeholder":"说点什么","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false,"requiredFields":[]},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

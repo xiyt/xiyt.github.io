@@ -1,0 +1,964 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="daxi">
+  <meta name="keywords" content="">
+  
+  <title>达夕博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiyt.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 100vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>达夕博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/banner1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="热衷于分享IT技术/工作效率/优秀软件，申旦达夕，永无止境">
+              
+            </span>
+
+            
+          </div>
+
+          
+            <div class="scroll-down-bar">
+              <i class="iconfont icon-arrowdown"></i>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div class="py-5" id="board"
+          style=margin-top:0>
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/%E8%BD%AC%E6%96%B0%E7%89%88-google-%E4%BA%91%E7%AB%AF%E7%A1%AC%E7%A2%9F%E7%BD%91%E9%A1%B5%E4%B8%8A%E7%BA%BF%EF%BC%8C%E9%9D%9E%E7%94%A8%E7%BD%91%E9%A1%B5%E7%89%88%E4%B8%8D%E5%8F%AF%E7%9A%84-11/" target="_self">
+          <img src="/2018/%E8%BD%AC%E6%96%B0%E7%89%88-google-%E4%BA%91%E7%AB%AF%E7%A1%AC%E7%A2%9F%E7%BD%91%E9%A1%B5%E4%B8%8A%E7%BA%BF%EF%BC%8C%E9%9D%9E%E7%94%A8%E7%BD%91%E9%A1%B5%E7%89%88%E4%B8%8D%E5%8F%AF%E7%9A%84-11/2018-05-19-032531.png" srcset="/img/loading.gif" lazyload alt="[转]新版 Google 云端硬碟网页上线，非用网页版不可的 11 个功能">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/%E8%BD%AC%E6%96%B0%E7%89%88-google-%E4%BA%91%E7%AB%AF%E7%A1%AC%E7%A2%9F%E7%BD%91%E9%A1%B5%E4%B8%8A%E7%BA%BF%EF%BC%8C%E9%9D%9E%E7%94%A8%E7%BD%91%E9%A1%B5%E7%89%88%E4%B8%8D%E5%8F%AF%E7%9A%84-11/" target="_self">
+          [转]新版 Google 云端硬碟网页上线，非用网页版不可的 11 个功能
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/%E8%BD%AC%E6%96%B0%E7%89%88-google-%E4%BA%91%E7%AB%AF%E7%A1%AC%E7%A2%9F%E7%BD%91%E9%A1%B5%E4%B8%8A%E7%BA%BF%EF%BC%8C%E9%9D%9E%E7%94%A8%E7%BD%91%E9%A1%B5%E7%89%88%E4%B8%8D%E5%8F%AF%E7%9A%84-11/" target="_self">
+          
+          
+            
+          
+          
+最近幾天， Google 雲端硬碟「網頁版」的新介面上線，我在自己的帳號頁面也看到了更新，變成跟「新版 Gmail 網頁」一樣的風格，不知道大家是否發現了？
+或許不是每個朋友都常常打開 Google 雲端硬碟的「網頁版」，可能你只是使用桌面端同步備份軟體為主，所以還是用自己電腦的檔案總管來取用檔案。
+
+但是我自己的的使用習慣剛好相反，對我來說更常直接打開「 Google Drive 網頁版」進行
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-05-20 02:45" pubdate>
+              2018-05-20
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E4%BA%91%E7%AB%AF%E7%A1%AC%E7%9B%98/">云端硬盘</a>
+            
+              <a href="/tags/google/">google</a>
+            
+              <a href="/tags/google-drive/">google-drive</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/sublime-text-3-%E6%9C%80%E6%96%B0%E7%89%883176%E6%BF%80%E6%B4%BB%E6%96%B9%E6%B3%95/" target="_self">
+          <img src="/2018/sublime-text-3-%E6%9C%80%E6%96%B0%E7%89%883176%E6%BF%80%E6%B4%BB%E6%96%B9%E6%B3%95/201805182354_37.png" srcset="/img/loading.gif" lazyload alt="Sublime Text 3 最新版3176激活方法">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/sublime-text-3-%E6%9C%80%E6%96%B0%E7%89%883176%E6%BF%80%E6%B4%BB%E6%96%B9%E6%B3%95/" target="_self">
+          Sublime Text 3 最新版3176激活方法
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/sublime-text-3-%E6%9C%80%E6%96%B0%E7%89%883176%E6%BF%80%E6%B4%BB%E6%96%B9%E6%B3%95/" target="_self">
+          
+          
+            
+          
+          Sublime Text 3更新到最新版3176后，之前的激活码已经不可用了，变成了未激活状态。下面提供一个最新的激活工具，可以一键激活3176这个版本。激活方法如下：
+1、点击这里下载激活文件
+2、将压缩文件中的Patch.exe解压到Sublime Text的安装根目录
+3、以管理身份运行Patch.exe文件，即可激活，效果图如下：
+
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-05-19 02:51" pubdate>
+              2018-05-19
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%BF%80%E6%B4%BB/">激活</a>
+            
+              <a href="/tags/sublime-text/">sublime-text</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/gitlab%E4%B8%AD%E4%BF%AE%E6%94%B9%E9%A1%B9%E7%9B%AE%E5%90%8D%E7%A7%B0%E7%9A%84%E6%AD%A3%E7%A1%AE%E5%A7%BF%E5%8A%BF/" target="_self">
+          <img src="/2018/gitlab%E4%B8%AD%E4%BF%AE%E6%94%B9%E9%A1%B9%E7%9B%AE%E5%90%8D%E7%A7%B0%E7%9A%84%E6%AD%A3%E7%A1%AE%E5%A7%BF%E5%8A%BF/201805181640_674.png" srcset="/img/loading.gif" lazyload alt="GitLab中修改项目名称的正确姿势">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/gitlab%E4%B8%AD%E4%BF%AE%E6%94%B9%E9%A1%B9%E7%9B%AE%E5%90%8D%E7%A7%B0%E7%9A%84%E6%AD%A3%E7%A1%AE%E5%A7%BF%E5%8A%BF/" target="_self">
+          GitLab中修改项目名称的正确姿势
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/gitlab%E4%B8%AD%E4%BF%AE%E6%94%B9%E9%A1%B9%E7%9B%AE%E5%90%8D%E7%A7%B0%E7%9A%84%E6%AD%A3%E7%A1%AE%E5%A7%BF%E5%8A%BF/" target="_self">
+          
+          
+            
+          
+          GitLab中修改项目名称的正确姿势如果在GitLab里已经创建好了一个项目，但是名字起的不好，需要修改，那么应该怎么操作呢？今天我就遇到了这个情况，其实方法也很简单，操作过程如下：
+1、修改项目名称
+在项目的Settings-&gt;General-&gt;Advanced settings中，有Rename repository的操作，如下图所示把项目名称和路径中的名称同时修改。 
+2、修改本
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-05-18 08:56" pubdate>
+              2018-05-18
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E9%87%8D%E5%91%BD%E5%90%8D/">重命名</a>
+            
+              <a href="/tags/gitlab/">gitlab</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BA%E7%9A%84gitlab%E4%B8%AD%E5%BC%80%E5%90%AFpages%E5%8A%9F%E8%83%BD%EF%BC%8C%E4%B8%8D%E9%9C%80%E8%A6%81%E5%9F%9F%E5%90%8D%E4%B9%9F%E5%8F%AF%E4%BB%A5/" target="_self">
+          <img src="/2018/%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BA%E7%9A%84gitlab%E4%B8%AD%E5%BC%80%E5%90%AFpages%E5%8A%9F%E8%83%BD%EF%BC%8C%E4%B8%8D%E9%9C%80%E8%A6%81%E5%9F%9F%E5%90%8D%E4%B9%9F%E5%8F%AF%E4%BB%A5/gitlabpage-logo.jpg" srcset="/img/loading.gif" lazyload alt="本地搭建的GitLab中开启Pages功能，不需要域名也可以">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BA%E7%9A%84gitlab%E4%B8%AD%E5%BC%80%E5%90%AFpages%E5%8A%9F%E8%83%BD%EF%BC%8C%E4%B8%8D%E9%9C%80%E8%A6%81%E5%9F%9F%E5%90%8D%E4%B9%9F%E5%8F%AF%E4%BB%A5/" target="_self">
+          本地搭建的GitLab中开启Pages功能，不需要域名也可以
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BA%E7%9A%84gitlab%E4%B8%AD%E5%BC%80%E5%90%AFpages%E5%8A%9F%E8%83%BD%EF%BC%8C%E4%B8%8D%E9%9C%80%E8%A6%81%E5%9F%9F%E5%90%8D%E4%B9%9F%E5%8F%AF%E4%BB%A5/" target="_self">
+          
+          
+            
+          
+          
+最近在公司内部，我负责搭建了GitLab服务，开启了从SVN逐步转到GIT的路程。目前自建的GitLab运行状态良好，非常好用。但是默认的GitLab并没有开启Pages服务，这样的话在编写项目说明文档时，就很不方便了。于是自己试着在本地搭建的GitLab中开启Pages功能，下面把开启过程和遇到的问题记录下来，分享给大家。
+1、开启GitLab Pages功能编辑 /etc/gitlab/gi
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-05-17 06:44" pubdate>
+              2018-05-17
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%9F%9F%E5%90%8D/">域名</a>
+            
+              <a href="/tags/gitlab/">gitlab</a>
+            
+              <a href="/tags/nginx/">nginx</a>
+            
+              <a href="/tags/pages/">pages</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/%E6%9C%80%E6%96%B0%E7%89%88mac%E7%94%A8shadowsocks%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%B8%8B%E8%BD%BD/" target="_self">
+          <img src="/2018/%E6%9C%80%E6%96%B0%E7%89%88mac%E7%94%A8shadowsocks%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%B8%8B%E8%BD%BD/ss.png" srcset="/img/loading.gif" lazyload alt="最新版Mac用Shadowsocks客户端下载">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/%E6%9C%80%E6%96%B0%E7%89%88mac%E7%94%A8shadowsocks%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%B8%8B%E8%BD%BD/" target="_self">
+          最新版Mac用Shadowsocks客户端下载
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/%E6%9C%80%E6%96%B0%E7%89%88mac%E7%94%A8shadowsocks%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%B8%8B%E8%BD%BD/" target="_self">
+          
+          
+            
+          
+          
+Mac上Shadowsocks客户端，目前最新版本是：ShadowsocksX-NG.1.7.1
+需要的朋友拿去：下载地址
+ 
+http://www.daxiblog.com/2016/05/05/iphone%e4%b8%ad%e4%bd%bf%e7%94%a8shadowrocket%e5%85%a8%e5%b1%80%e7%a7%91%e5%ad%a6%e4%b8%8a%e7%bd%91/
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-05-10 01:00" pubdate>
+              2018-05-10
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/">科学上网</a>
+            
+              <a href="/tags/shadowsocks/">shadowsocks</a>
+            
+              <a href="/tags/mac/">mac</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/%E3%80%90%E4%BA%B2%E6%B5%8B%E3%80%91%E3%80%90%E7%A0%B4%E8%A7%A3%E3%80%91mac%E4%B8%8A%E6%9C%80%E5%BC%BA%E5%A4%A7%E7%9A%84%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD%EF%BC%9Aparallel/" target="_self">
+          <img src="/2018/%E3%80%90%E4%BA%B2%E6%B5%8B%E3%80%91%E3%80%90%E7%A0%B4%E8%A7%A3%E3%80%91mac%E4%B8%8A%E6%9C%80%E5%BC%BA%E5%A4%A7%E7%9A%84%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD%EF%BC%9Aparallel/Parallels.jpg" srcset="/img/loading.gif" lazyload alt="【亲测】【破解】Mac上最强大的虚拟机软件下载：Parallels Desktop 13">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/%E3%80%90%E4%BA%B2%E6%B5%8B%E3%80%91%E3%80%90%E7%A0%B4%E8%A7%A3%E3%80%91mac%E4%B8%8A%E6%9C%80%E5%BC%BA%E5%A4%A7%E7%9A%84%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD%EF%BC%9Aparallel/" target="_self">
+          【亲测】【破解】Mac上最强大的虚拟机软件下载：Parallels Desktop 13
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/%E3%80%90%E4%BA%B2%E6%B5%8B%E3%80%91%E3%80%90%E7%A0%B4%E8%A7%A3%E3%80%91mac%E4%B8%8A%E6%9C%80%E5%BC%BA%E5%A4%A7%E7%9A%84%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD%EF%BC%9Aparallel/" target="_self">
+          
+          
+            
+          
+          
+Parallels Desktop 13中文版 被称为 Mac 电脑上最强大的虚拟机软件。用户可以在 OS X 下同时运行 Windows、Linux 等操作系统及软件，而不必繁琐地重启电脑，并能轻松在 Win 与 Mac 等不同系统之间切换。
+Parallels Desktop 13 for Mac 新增功能： ※ 完美支持最新的 Windows 10 创意者更新版 以及 macOS High
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-05-08 02:47" pubdate>
+              2018-05-08
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E8%99%9A%E6%8B%9F%E5%99%A8/">虚拟器</a>
+            
+              <a href="/tags/mac/">mac</a>
+            
+              <a href="/tags/parallels-desktop/">parallels-desktop</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/%E3%80%90%E4%BA%B2%E6%B5%8B%E3%80%91cornerstone-mac-svn%E5%AE%A2%E6%88%B7%E7%AB%AF-v3-0-3-%E7%A0%B4%E8%A7%A3%E7%89%88/" target="_self">
+          <img src="/2018/%E3%80%90%E4%BA%B2%E6%B5%8B%E3%80%91cornerstone-mac-svn%E5%AE%A2%E6%88%B7%E7%AB%AF-v3-0-3-%E7%A0%B4%E8%A7%A3%E7%89%88/cornerstone3-01.jpg" srcset="/img/loading.gif" lazyload alt="【亲测】Cornerstone Mac (SVN客户端) V3.0.3 破解版">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/%E3%80%90%E4%BA%B2%E6%B5%8B%E3%80%91cornerstone-mac-svn%E5%AE%A2%E6%88%B7%E7%AB%AF-v3-0-3-%E7%A0%B4%E8%A7%A3%E7%89%88/" target="_self">
+          【亲测】Cornerstone Mac (SVN客户端) V3.0.3 破解版
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/%E3%80%90%E4%BA%B2%E6%B5%8B%E3%80%91cornerstone-mac-svn%E5%AE%A2%E6%88%B7%E7%AB%AF-v3-0-3-%E7%A0%B4%E8%A7%A3%E7%89%88/" target="_self">
+          
+          
+            
+          
+          
+下载地址 密码: wmka
+注意事项，请先在终端中执行以下命令，以允许安装任何来源的软件：
+sudo spctl –master-disable
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-04-19 00:55" pubdate>
+              2018-04-19
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/mac/">mac</a>
+            
+              <a href="/tags/cornerstone/">cornerstone</a>
+            
+              <a href="/tags/svn%E5%AE%A2%E6%88%B7%E7%AB%AF/">svn客户端</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/%E3%80%90%E6%9C%80%E6%96%B0%E3%80%91intellij-idea-2018-%E5%85%8D%E8%B4%B9%E6%BF%80%E6%B4%BB%E6%96%B9%E6%B3%95/" target="_self">
+          <img src="/2018/%E3%80%90%E6%9C%80%E6%96%B0%E3%80%91intellij-idea-2018-%E5%85%8D%E8%B4%B9%E6%BF%80%E6%B4%BB%E6%96%B9%E6%B3%95/idea-active.jpg" srcset="/img/loading.gif" lazyload alt="【最新】IntelliJ Idea 2018 免费激活方法">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/%E3%80%90%E6%9C%80%E6%96%B0%E3%80%91intellij-idea-2018-%E5%85%8D%E8%B4%B9%E6%BF%80%E6%B4%BB%E6%96%B9%E6%B3%95/" target="_self">
+          【最新】IntelliJ Idea 2018 免费激活方法
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/%E3%80%90%E6%9C%80%E6%96%B0%E3%80%91intellij-idea-2018-%E5%85%8D%E8%B4%B9%E6%BF%80%E6%B4%BB%E6%96%B9%E6%B3%95/" target="_self">
+          
+          
+            
+          
+          
+1、下载激活用Jar文件：下载
+2、编辑idea启动配置文件
+打开idea.exe.vmoptions或者idea64.exe.vmoptions文件，末尾添加如下：
+-javaagent:E:/JetbrainsCrack-2.7-release-str.jar
+3、启动idea，输入以下激活信息：
+ThisCrackLicenseId-{“licenseId”:”ThisCrackLicen
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-04-18 13:21" pubdate>
+              2018-04-18
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%BF%80%E6%B4%BB/">激活</a>
+            
+              <a href="/tags/%E6%B0%B8%E4%B9%85%E6%BF%80%E6%B4%BB/">永久激活</a>
+            
+              <a href="/tags/intellij-idea/">intellij-idea</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/%E5%B0%BD%E5%BF%AB%E4%B8%8B%E8%BD%BDnavicat-premium-12-0-26%E5%90%AB%E6%B3%A8%E5%86%8C%E6%9C%BA/" target="_self">
+          <img src="/2018/%E5%B0%BD%E5%BF%AB%E4%B8%8B%E8%BD%BDnavicat-premium-12-0-26%E5%90%AB%E6%B3%A8%E5%86%8C%E6%9C%BA/navicat12-01.jpg" srcset="/img/loading.gif" lazyload alt="尽快下载Navicat-Premium-12.0.26含注册机">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/%E5%B0%BD%E5%BF%AB%E4%B8%8B%E8%BD%BDnavicat-premium-12-0-26%E5%90%AB%E6%B3%A8%E5%86%8C%E6%9C%BA/" target="_self">
+          尽快下载Navicat-Premium-12.0.26含注册机
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/%E5%B0%BD%E5%BF%AB%E4%B8%8B%E8%BD%BDnavicat-premium-12-0-26%E5%90%AB%E6%B3%A8%E5%86%8C%E6%9C%BA/" target="_self">
+          
+          
+            
+          
+          Navicat不用多说，数据库管理工具，支持Mysql、SQL Server、Oracle等多种数据库，操作方便，功能强大，但是旗舰版是收费的。昨天在网络上找到了这个Navicat Premium最新版12.0.26的激活方法，现分享给大家，需要的赶快拿去！
+1、先看激活效果：
+
+2、使用方法：
+、
+3、下载地址：
+百度网盘链接: https://pan.baidu.com/s/1kmoj1glc
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-04-11 11:49" pubdate>
+              2018-04-11
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%B3%A8%E5%86%8C%E6%9C%BA/">注册机</a>
+            
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%A2%E6%88%B7%E7%AB%AF/">数据库客户端</a>
+            
+              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
+            
+              <a href="/tags/mysql/">mysql</a>
+            
+              <a href="/tags/navicat/">navicat</a>
+            
+              <a href="/tags/oracle/">oracle</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/windows%E4%B8%AD%E5%BF%AB%E9%80%9F%E6%89%BE%E5%88%B0%E6%AD%A3%E5%9C%A8%E8%A2%AB%E5%8D%A0%E7%94%A8%E7%9A%84%E6%96%87%E4%BB%B6%E7%9A%84%E8%BF%9B%E7%A8%8B/" target="_self">
+          <img src="/2018/windows%E4%B8%AD%E5%BF%AB%E9%80%9F%E6%89%BE%E5%88%B0%E6%AD%A3%E5%9C%A8%E8%A2%AB%E5%8D%A0%E7%94%A8%E7%9A%84%E6%96%87%E4%BB%B6%E7%9A%84%E8%BF%9B%E7%A8%8B/ckwjbzy.jpg" srcset="/img/loading.gif" lazyload alt="windows中快速找到正在被占用的文件的进程">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/windows%E4%B8%AD%E5%BF%AB%E9%80%9F%E6%89%BE%E5%88%B0%E6%AD%A3%E5%9C%A8%E8%A2%AB%E5%8D%A0%E7%94%A8%E7%9A%84%E6%96%87%E4%BB%B6%E7%9A%84%E8%BF%9B%E7%A8%8B/" target="_self">
+          windows中快速找到正在被占用的文件的进程
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/windows%E4%B8%AD%E5%BF%AB%E9%80%9F%E6%89%BE%E5%88%B0%E6%AD%A3%E5%9C%A8%E8%A2%AB%E5%8D%A0%E7%94%A8%E7%9A%84%E6%96%87%E4%BB%B6%E7%9A%84%E8%BF%9B%E7%A8%8B/" target="_self">
+          
+          
+            
+          
+          在Windows中删除文件时，经常会遇到文件正在被占用无法删除的错误提示，有时候确实知道是哪个程序占用了，把程序关闭即可。但有时候开的程序很多，确实很难知道是被哪个程序占用了。这时候不放试用下以下的方法：
+1、打开资源监视器
+Windows10中直接win+s搜索即可打开。或者win+r打开运行窗口，输入resmon即可打开资源监视器
+2、搜索占用文件的进程
+切换到CPU标签，然后在关联的句柄后面
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-04-05 02:16" pubdate>
+              2018-04-05
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%96%87%E4%BB%B6%E6%AD%A3%E5%9C%A8%E8%A2%AB%E5%8D%A0%E7%94%A8/">文件正在被占用</a>
+            
+              <a href="/tags/%E8%B5%84%E6%BA%90%E7%9B%91%E8%A7%86%E5%99%A8/">资源监视器</a>
+            
+              <a href="/tags/%E8%BF%9B%E7%A8%8B/">进程</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <a class="extend prev" rel="prev" href="/page/9/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/#board">8</a><a class="page-number" href="/page/9/#board">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/#board">11</a><a class="page-number" href="/page/12/#board">12</a><span class="space">&hellip;</span><a class="page-number" href="/page/33/#board">33</a><a class="extend next" rel="next" href="/page/11/#board"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

@@ -1,0 +1,952 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="daxi">
+  <meta name="keywords" content="">
+  
+  <title>达夕博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiyt.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 100vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>达夕博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/banner1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="热衷于分享IT技术/工作效率/优秀软件，申旦达夕，永无止境">
+              
+            </span>
+
+            
+          </div>
+
+          
+            <div class="scroll-down-bar">
+              <i class="iconfont icon-arrowdown"></i>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div class="py-5" id="board"
+          style=margin-top:0>
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/%E4%B8%8B%E8%BD%BDaxure-rp%E5%8E%9F%E5%9E%8B%E8%AE%BE%E8%AE%A1%E5%B7%A5%E5%85%B7/" target="_self">
+          <img src="/2016/%E4%B8%8B%E8%BD%BDaxure-rp%E5%8E%9F%E5%9E%8B%E8%AE%BE%E8%AE%A1%E5%B7%A5%E5%85%B7/axure2.png" srcset="/img/loading.gif" lazyload alt="[下载]Axure RP原型设计工具">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/%E4%B8%8B%E8%BD%BDaxure-rp%E5%8E%9F%E5%9E%8B%E8%AE%BE%E8%AE%A1%E5%B7%A5%E5%85%B7/" target="_self">
+          [下载]Axure RP原型设计工具
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/%E4%B8%8B%E8%BD%BDaxure-rp%E5%8E%9F%E5%9E%8B%E8%AE%BE%E8%AE%A1%E5%B7%A5%E5%85%B7/" target="_self">
+          
+          
+            
+          
+          近期的工作任务涉及到了一些界面原型设计的任务，原型设计工具的选择和使用显然是首先要解决的问题。通过搜寻了解到这款大名鼎鼎的Axure RP原型设计工具。
+
+Axure RP是美国Axure Software Solution公司旗舰产品，是一个专业的快速原型设计工具，让负责定义需求和规格、设计功能和界面的专家能够快速创建应用软件或Web网站的线框图、流程图、原型和规格说明文档。
+
+看着这段百度百科
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-09-10 01:13" pubdate>
+              2016-09-10
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E7%A0%B4%E8%A7%A3/">破解</a>
+            
+              <a href="/tags/axure/">axure</a>
+            
+              <a href="/tags/axure-rp/">axure-rp</a>
+            
+              <a href="/tags/rapid-prototyping/">rapid-prototyping</a>
+            
+              <a href="/tags/%E5%8E%9F%E5%9E%8B%E8%AE%BE%E8%AE%A1/">原型设计</a>
+            
+              <a href="/tags/%E5%BF%AB%E9%80%9F%E5%8E%9F%E5%9E%8B/">快速原型</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/%E5%A4%A7%E5%B8%AD%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E5%85%AC%E5%91%8A/" target="_self">
+          大席的博客更新公告
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/%E5%A4%A7%E5%B8%AD%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E5%85%AC%E5%91%8A/" target="_self">
+          
+          
+            
+          
+          由于个人家庭事由，时间上无法保证，所以大席的博客近期没有正常更新，在此表示歉意，预计下周开始恢复正常，再次感谢大席博客的关注者。
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-08-30 23:22" pubdate>
+              2016-08-30
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E5%85%AC%E5%91%8A%E9%80%9A%E7%9F%A5/">公告通知</a>
+            
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/%E8%AE%A9outlook%E9%82%AE%E4%BB%B6%E4%BB%BB%E5%8A%A1%E5%AE%8C%E7%BE%8E%E7%BB%93%E5%90%88%E5%88%B0trello%E7%9A%84%E6%96%B9%E6%B3%95/" target="_self">
+          <img src="/2016/%E8%AE%A9outlook%E9%82%AE%E4%BB%B6%E4%BB%BB%E5%8A%A1%E5%AE%8C%E7%BE%8E%E7%BB%93%E5%90%88%E5%88%B0trello%E7%9A%84%E6%96%B9%E6%B3%95/trellolinkoutlook00.png" srcset="/img/loading.gif" lazyload alt="让Outlook邮件任务完美结合到Trello的方法">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/%E8%AE%A9outlook%E9%82%AE%E4%BB%B6%E4%BB%BB%E5%8A%A1%E5%AE%8C%E7%BE%8E%E7%BB%93%E5%90%88%E5%88%B0trello%E7%9A%84%E6%96%B9%E6%B3%95/" target="_self">
+          让Outlook邮件任务完美结合到Trello的方法
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/%E8%AE%A9outlook%E9%82%AE%E4%BB%B6%E4%BB%BB%E5%8A%A1%E5%AE%8C%E7%BE%8E%E7%BB%93%E5%90%88%E5%88%B0trello%E7%9A%84%E6%96%B9%E6%B3%95/" target="_self">
+          
+          
+            
+          
+          
+Outlook 2013是我目前使用的邮件客户端，Trello是我目前使用的任务看板管理工具。关于我对于Outlook 2013和Trello的使用感受和方法，大家可以点击链接参考我之前的一些文章。今天遇到问题时，我经常在Outlook中收到各种任务和问题，如何把这些需要采取下一步行动的邮件任务和我的Trello链接起来呢，这样我就可以把任务进行整合，统一在Trello中进行管理了。在Outlo
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-08-10 04:46" pubdate>
+              2016-08-10
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%8F%90%E9%AB%98%E7%94%9F%E4%BA%A7%E5%8A%9B/">提高生产力</a>
+            
+              <a href="/categories/%E6%8F%90%E9%AB%98%E7%94%9F%E4%BA%A7%E5%8A%9B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/outlook/">outlook</a>
+            
+              <a href="/tags/trello/">trello</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/google-chrome%E7%9A%84%E5%AE%98%E6%96%B9%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85%E5%8C%85%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80/" target="_self">
+          <img src="/2016/google-chrome%E7%9A%84%E5%AE%98%E6%96%B9%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85%E5%8C%85%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80/chromedownload-logo.png" srcset="/img/loading.gif" lazyload alt="Google Chrome的官方离线安装包下载地址">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/google-chrome%E7%9A%84%E5%AE%98%E6%96%B9%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85%E5%8C%85%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80/" target="_self">
+          Google Chrome的官方离线安装包下载地址
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/google-chrome%E7%9A%84%E5%AE%98%E6%96%B9%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85%E5%8C%85%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80/" target="_self">
+          
+          
+            
+          
+          
+由于各种网络情况的原因，对于在线安装这种流行的方式，在国内很多情况下并不好用，有可能你使用的是公司网络，也有可能是校园网，或者自己使用的网络环境不够稳定，或者只有很短时间的FQ时间，这种情况下还是直接下载离线安装包，采用传统的安装方式靠谱。这里分享一下Google Chrome的官方离线安装包下载地址：
+Windows 32位稳定版：
+https://www.google.com/chrome/
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-08-05 22:53" pubdate>
+              2016-08-05
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E4%B8%8B%E8%BD%BD/">下载</a>
+            
+              <a href="/tags/google-chrome/">google-chrome</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/wox-%E5%8F%AF%E7%94%A8%E5%A4%96%E6%8E%9B%E5%BC%B7%E5%8C%96%E7%9A%84-windows-%E5%BF%AB%E6%8D%B7%E5%95%9F%E5%8B%95%E5%88%97%EF%BC%8C%E5%85%8D%E8%B2%BB%E9%96%8B%E6%BA%90/" target="_self">
+          <img src="/2016/wox-%E5%8F%AF%E7%94%A8%E5%A4%96%E6%8E%9B%E5%BC%B7%E5%8C%96%E7%9A%84-windows-%E5%BF%AB%E6%8D%B7%E5%95%9F%E5%8B%95%E5%88%97%EF%BC%8C%E5%85%8D%E8%B2%BB%E9%96%8B%E6%BA%90/%E3%80%8C%20Wox%20%E3%80%8D-00.png" srcset="/img/loading.gif" lazyload alt="[電腦玩物]Wox 可用外掛強化的 Windows 快捷啟動列，免費開源">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/wox-%E5%8F%AF%E7%94%A8%E5%A4%96%E6%8E%9B%E5%BC%B7%E5%8C%96%E7%9A%84-windows-%E5%BF%AB%E6%8D%B7%E5%95%9F%E5%8B%95%E5%88%97%EF%BC%8C%E5%85%8D%E8%B2%BB%E9%96%8B%E6%BA%90/" target="_self">
+          [電腦玩物]Wox 可用外掛強化的 Windows 快捷啟動列，免費開源
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/wox-%E5%8F%AF%E7%94%A8%E5%A4%96%E6%8E%9B%E5%BC%B7%E5%8C%96%E7%9A%84-windows-%E5%BF%AB%E6%8D%B7%E5%95%9F%E5%8B%95%E5%88%97%EF%BC%8C%E5%85%8D%E8%B2%BB%E9%96%8B%E6%BA%90/" target="_self">
+          
+          
+            
+          
+           前天介紹了「不只是優秀截圖軟體！ Snipaste 用貼圖創造多工神器」後，獲得很多回響，我自己也覺得有段時間沒有研究一下 Windows 上的高效率工具了，於是打開我筆記本裡長長的待辦研究清單，看看有沒有什麼還沒試過的軟體可以翻出來研究。
+於是發現了這個叫做「 Wox 」的 Windows 快捷列軟體，她號稱是 Windows 上的 Alfred ，透過一條小小的搜尋列，可以開啟軟體、搜尋檔案
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-08-05 00:33" pubdate>
+              2016-08-05
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8/">快速启动</a>
+            
+              <a href="/tags/%E6%96%87%E4%BB%B6%E6%90%9C%E7%B4%A2/">文件搜索</a>
+            
+              <a href="/tags/windows/">windows</a>
+            
+              <a href="/tags/wox/">wox</a>
+            
+              <a href="/tags/%E7%94%B5%E8%84%91%E7%8E%A9%E7%89%A9/">电脑玩物</a>
+            
+              <a href="/tags/%E7%A8%8B%E5%BA%8F%E5%90%AF%E5%8A%A8/">程序启动</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/windows10%E5%B0%8F%E5%A8%9C%E6%90%9C%E7%B4%A2everything%E5%AE%9E%E7%8E%B0%E8%B5%84%E6%BA%90%E7%9A%84%E5%BF%AB%E9%80%9F%E5%AE%9A%E4%BD%8D/" target="_self">
+          <img src="/2016/windows10%E5%B0%8F%E5%A8%9C%E6%90%9C%E7%B4%A2everything%E5%AE%9E%E7%8E%B0%E8%B5%84%E6%BA%90%E7%9A%84%E5%BF%AB%E9%80%9F%E5%AE%9A%E4%BD%8D/quickstart01.png" srcset="/img/loading.gif" lazyload alt="Windows10小娜搜索+Everything实现资源的快速定位">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/windows10%E5%B0%8F%E5%A8%9C%E6%90%9C%E7%B4%A2everything%E5%AE%9E%E7%8E%B0%E8%B5%84%E6%BA%90%E7%9A%84%E5%BF%AB%E9%80%9F%E5%AE%9A%E4%BD%8D/" target="_self">
+          Windows10小娜搜索+Everything实现资源的快速定位
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/windows10%E5%B0%8F%E5%A8%9C%E6%90%9C%E7%B4%A2everything%E5%AE%9E%E7%8E%B0%E8%B5%84%E6%BA%90%E7%9A%84%E5%BF%AB%E9%80%9F%E5%AE%9A%E4%BD%8D/" target="_self">
+          
+          
+            
+          
+          作为电脑工作者，想要提高工作效率，在电脑中进行快速的资源定位能力是必不可少的。这些资源包括程序、Windows设置项、普通文档、视频、音频、图片等等。随着Windows10一周年更新的发布，今天也综合介绍下如何利用Windows10的搜索功能，再配合上Everything实现各种资源的快速定位。
+一、安装程序的定位对于传统的安装程序或者是通过Windows Store安装的程序，采取以下方式：
+1
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-08-04 02:39" pubdate>
+              2016-08-04
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%8F%90%E9%AB%98%E7%94%9F%E4%BA%A7%E5%8A%9B/">提高生产力</a>
+            
+              <a href="/categories/%E6%8F%90%E9%AB%98%E7%94%9F%E4%BA%A7%E5%8A%9B/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%B0%8F%E5%A8%9C%E6%90%9C%E7%B4%A2/">小娜搜索</a>
+            
+              <a href="/tags/windows-10/">windows-10</a>
+            
+              <a href="/tags/everythins/">everythins</a>
+            
+              <a href="/tags/cortana/">cortana</a>
+            
+              <a href="/tags/windows-%E6%90%9C%E7%B4%A2/">windows-搜索</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/%E8%AE%BE%E8%AE%A1%E5%BF%85%E5%A4%87%E5%8F%88%E4%B8%80%E5%BC%BA%E5%A4%A7%E7%9A%84%E5%9B%BE%E7%89%87%E8%B5%84%E6%BA%90%E7%BD%91%E7%AB%99%EF%BC%9Avisualhunt/" target="_self">
+          <img src="/2016/%E8%AE%BE%E8%AE%A1%E5%BF%85%E5%A4%87%E5%8F%88%E4%B8%80%E5%BC%BA%E5%A4%A7%E7%9A%84%E5%9B%BE%E7%89%87%E8%B5%84%E6%BA%90%E7%BD%91%E7%AB%99%EF%BC%9Avisualhunt/visualhunt-01.png" srcset="/img/loading.gif" lazyload alt="[设计必备]又一强大的图片资源网站：visualhunt">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/%E8%AE%BE%E8%AE%A1%E5%BF%85%E5%A4%87%E5%8F%88%E4%B8%80%E5%BC%BA%E5%A4%A7%E7%9A%84%E5%9B%BE%E7%89%87%E8%B5%84%E6%BA%90%E7%BD%91%E7%AB%99%EF%BC%9Avisualhunt/" target="_self">
+          [设计必备]又一强大的图片资源网站：visualhunt
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/%E8%AE%BE%E8%AE%A1%E5%BF%85%E5%A4%87%E5%8F%88%E4%B8%80%E5%BC%BA%E5%A4%A7%E7%9A%84%E5%9B%BE%E7%89%87%E8%B5%84%E6%BA%90%E7%BD%91%E7%AB%99%EF%BC%9Avisualhunt/" target="_self">
+          
+          
+            
+          
+          在我之前的文章中介绍过Pixabay这个图片资源网站，在这里可以找到心仪的图片，无论是在说PPT还是文章插图或是简报的时候，都需要一张合适的图片来衬托。而今天介绍的这个Visualhunt在一定程度上更胜于Pixabay，不但资源丰富，而且图片搜索、图片信息、下载方式等功能更加优秀。下面我做一下简单的介绍：
+一、visualhunt首页直接根据颜色搜索图片打开visualhunt的首页，就会看到搜
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-08-03 01:07" pubdate>
+              2016-08-03
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%9B%BE%E7%89%87%E7%B4%A0%E6%9D%90/">图片素材</a>
+            
+              <a href="/tags/visualhunt/">visualhunt</a>
+            
+              <a href="/tags/%E5%9B%BE%E7%89%87%E4%B8%8B%E8%BD%BD/">图片下载</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/%E5%9B%BD%E4%BA%A7%E7%B2%BE%E5%93%81%E5%9C%A8%E7%BA%BF%E4%BD%9C%E5%9B%BE%E5%B7%A5%E5%85%B7%E6%88%91%E9%80%89%E5%AE%83%EF%BC%9Aprocesson/" target="_self">
+          <img src="/2016/%E5%9B%BD%E4%BA%A7%E7%B2%BE%E5%93%81%E5%9C%A8%E7%BA%BF%E4%BD%9C%E5%9B%BE%E5%B7%A5%E5%85%B7%E6%88%91%E9%80%89%E5%AE%83%EF%BC%9Aprocesson/processon01.png" srcset="/img/loading.gif" lazyload alt="[国产精品]在线作图工具我选它：ProcessOn">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/%E5%9B%BD%E4%BA%A7%E7%B2%BE%E5%93%81%E5%9C%A8%E7%BA%BF%E4%BD%9C%E5%9B%BE%E5%B7%A5%E5%85%B7%E6%88%91%E9%80%89%E5%AE%83%EF%BC%9Aprocesson/" target="_self">
+          [国产精品]在线作图工具我选它：ProcessOn
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/%E5%9B%BD%E4%BA%A7%E7%B2%BE%E5%93%81%E5%9C%A8%E7%BA%BF%E4%BD%9C%E5%9B%BE%E5%B7%A5%E5%85%B7%E6%88%91%E9%80%89%E5%AE%83%EF%BC%9Aprocesson/" target="_self">
+          
+          
+            
+          
+          关于作图工具不管，包括流程图、脑图、甘特图、UML图等，我使用过的工具有Microsoft VISIO、freeMind、xmind等这些本地类工具，还是使用过像coggle这样的国外开发的网络应用。而今天介绍的ProcessOn是我们国产的网络版的作图软件的精品。ProcessOn是北京一家科技公司制作的一款垂直领域的在线作图工具和分享社区。功能强大界面友好，接下来我就介绍一下我的使用体验。
+一
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-08-02 01:45" pubdate>
+              2016-08-02
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%8D%8F%E4%BD%9C%E5%8A%9E%E5%85%AC/">协作办公</a>
+            
+              <a href="/tags/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/">思维导图</a>
+            
+              <a href="/tags/processon/">processon</a>
+            
+              <a href="/tags/%E5%9C%A8%E7%BA%BF%E4%BD%9C%E5%9B%BE/">在线作图</a>
+            
+              <a href="/tags/%E5%9C%A8%E7%BA%BF%E6%B5%81%E7%A8%8B%E5%9B%BE/">在线流程图</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/snipaste-%E6%88%AA%E5%9B%BE%E5%B7%A5%E5%85%B7%E4%B8%AD%E7%9A%84%E7%A5%9E%E5%99%A8/" target="_self">
+          <img src="/2016/snipaste-%E6%88%AA%E5%9B%BE%E5%B7%A5%E5%85%B7%E4%B8%AD%E7%9A%84%E7%A5%9E%E5%99%A8/snipaste-logo.png" srcset="/img/loading.gif" lazyload alt="Snipaste - 截图工具中的神器">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/snipaste-%E6%88%AA%E5%9B%BE%E5%B7%A5%E5%85%B7%E4%B8%AD%E7%9A%84%E7%A5%9E%E5%99%A8/" target="_self">
+          Snipaste - 截图工具中的神器
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/snipaste-%E6%88%AA%E5%9B%BE%E5%B7%A5%E5%85%B7%E4%B8%AD%E7%9A%84%E7%A5%9E%E5%99%A8/" target="_self">
+          
+          
+            
+          
+          
+近几天Snipaste这款软件可是出尽了风头，各个有名的网站（少数派、电脑玩物）都在纷纷介绍这个截图神器，作者介绍说使用了三年的时候打造了这款截图工具，我使用后发现确实是款不可多得的优秀截图工具。让我用几个关键词来说明一下：
+
+窗口控件检测
+标注工具丰富
+快速贴图
+自定义界面
+自定义快捷键
+取色器
+历史回放
+免费
+免安装
+
+软件首页：http://zh.snipaste.com/
+下面是官方的对
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-08-01 07:02" pubdate>
+              2016-08-01
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%88%AA%E5%9B%BE/">截图</a>
+            
+              <a href="/tags/%E8%B4%B4%E5%9B%BE/">贴图</a>
+            
+              <a href="/tags/snipaste/">snipaste</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/%E6%96%B9%E4%BE%BF%E5%A5%BD%E7%94%A8%E7%9A%84logo%E6%90%9C%E5%AF%BB%E4%B8%8B%E8%BD%BD%EF%BC%8C%E6%94%AF%E6%8C%81png%E3%80%81svg%E6%A0%BC%E5%BC%8F%E4%B8%8B%E8%BD%BD/" target="_self">
+          <img src="/2016/%E6%96%B9%E4%BE%BF%E5%A5%BD%E7%94%A8%E7%9A%84logo%E6%90%9C%E5%AF%BB%E4%B8%8B%E8%BD%BD%EF%BC%8C%E6%94%AF%E6%8C%81png%E3%80%81svg%E6%A0%BC%E5%BC%8F%E4%B8%8B%E8%BD%BD/instantlogosearch01.png" srcset="/img/loading.gif" lazyload alt="方便好用的LOGO搜寻下载网站，支持PNG、SVG格式下载">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/%E6%96%B9%E4%BE%BF%E5%A5%BD%E7%94%A8%E7%9A%84logo%E6%90%9C%E5%AF%BB%E4%B8%8B%E8%BD%BD%EF%BC%8C%E6%94%AF%E6%8C%81png%E3%80%81svg%E6%A0%BC%E5%BC%8F%E4%B8%8B%E8%BD%BD/" target="_self">
+          方便好用的LOGO搜寻下载网站，支持PNG、SVG格式下载
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/%E6%96%B9%E4%BE%BF%E5%A5%BD%E7%94%A8%E7%9A%84logo%E6%90%9C%E5%AF%BB%E4%B8%8B%E8%BD%BD%EF%BC%8C%E6%94%AF%E6%8C%81png%E3%80%81svg%E6%A0%BC%E5%BC%8F%E4%B8%8B%E8%BD%BD/" target="_self">
+          
+          
+            
+          
+          我在写博客的时候，总喜欢把要介绍的网站或者软件的LOGO加上自己的修饰后，作为文章的封面来使用。大家可能也有这样的时候，无论是在做PPT、写一段文章、可能都需要找到一些LOGO，然后加以处理后使用，使得自己的PPT或者文章更加丰富多彩。除了在百度、Google中搜寻LOGO外，今天介绍给大家一个专门提供LOGO搜索的网站：http://instantlogosearch.com/
+1、该网站收录了
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-08-01 01:23" pubdate>
+              2016-08-01
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%A5%BD%E7%BD%91%E7%AB%99/">好网站</a>
+            
+              <a href="/tags/%E7%B4%A0%E6%9D%90%E4%B8%8B%E8%BD%BD/">素材下载</a>
+            
+              <a href="/tags/logo%E4%B8%8B%E8%BD%BD/">logo下载</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <a class="extend prev" rel="prev" href="/page/19/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/18/#board">18</a><a class="page-number" href="/page/19/#board">19</a><span class="page-number current">20</span><a class="page-number" href="/page/21/#board">21</a><a class="page-number" href="/page/22/#board">22</a><span class="space">&hellip;</span><a class="page-number" href="/page/33/#board">33</a><a class="extend next" rel="next" href="/page/21/#board"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

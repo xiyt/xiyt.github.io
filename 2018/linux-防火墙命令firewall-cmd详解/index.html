@@ -1,0 +1,495 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="daxi">
+  <meta name="keywords" content="">
+  
+  <title>Linux 防火墙命令firewall-cmd详解 - 达夕博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiyt.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>达夕博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/banner1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="Linux 防火墙命令firewall-cmd详解">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2018-09-29 05:23" pubdate>
+        2018年9月29日 凌晨
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.7k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      20
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Linux 防火墙命令firewall-cmd详解</h1>
+            
+            <div class="markdown-body">
+              <p><img src="/2018/linux-%E9%98%B2%E7%81%AB%E5%A2%99%E5%91%BD%E4%BB%A4firewall-cmd%E8%AF%A6%E8%A7%A3/linux-firewalls_d83b0dd1e94642eca6148ea3ed40ecf9.jpg" srcset="/img/loading.gif" lazyload alt="Linux 防火墙命令firewall-cmd详解"></p>
+<h2 id="firewall-cmd"><a href="#firewall-cmd" class="headerlink" title="firewall-cmd"></a>firewall-cmd</h2><p>Linux上新用的防火墙软件，跟iptables差不多的工具。补充说明 firewall-cmd 是 firewalld的字符界面管理工具，firewalld是centos7的一大特性，最大的好处有两个：支持动态更新，不用重启服务；第二个就是加入了防火墙的“zone”概念。 firewalld跟iptables比起来至少有两大好处： * firewalld可以动态修改单条规则，而不需要像iptables那样，在修改了规则后必须得全部刷新才可以生效。 * firewalld在使用上要比iptables人性化很多，即使不明白“五张表五条链”而且对TCP/IP协议也不理解也可以实现大部分功能。</p>
+<p>firewalld自身并不具备防火墙的功能，而是和iptables一样需要通过内核的netfilter来实现，也就是说firewalld和 iptables一样，他们的作用都是用于维护规则，而真正使用规则干活的是内核的netfilter，只不过firewalld和iptables的结 构以及使用方法不一样罢了。语法</p>
+<h3 id="安装firewalld"><a href="#安装firewalld" class="headerlink" title="安装firewalld"></a>安装firewalld</h3><figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs gauss">yum install firewalld firewall-config<br>systemctl start firewalld <span class="hljs-meta"># 启动</span><br>systemctl status firewalld <span class="hljs-meta"># 或者 firewall-cmd --state 查看状态</span><br>systemctl <span class="hljs-keyword">disable</span> firewalld <span class="hljs-meta"># 停止</span><br>systemctl <span class="hljs-keyword">stop</span> firewalld <span class="hljs-meta"># 禁用</span><br><br><span class="hljs-meta"># 关闭服务的方法</span><br><span class="hljs-meta"># 你也可以关闭目前还不熟悉的FirewallD防火墙，而使用iptables，命令如下：</span><br>systemctl <span class="hljs-keyword">stop</span> firewalld<br>systemctl <span class="hljs-keyword">disable</span> firewalld<br>yum install iptables-services<br>systemctl start iptables<br>systemctl <span class="hljs-keyword">enable</span> iptables<br></code></pre></td></tr></table></figure>
+
+<h3 id="配置firewalld"><a href="#配置firewalld" class="headerlink" title="配置firewalld"></a>配置firewalld</h3><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli">firewall-cmd <span class="hljs-params">--version</span> <span class="hljs-comment"># 查看版本</span><br>firewall-cmd <span class="hljs-params">--help</span> <span class="hljs-comment"># 查看帮助</span><br><br><span class="hljs-comment"># 查看设置：</span><br>firewall-cmd <span class="hljs-params">--state</span> <span class="hljs-comment"># 显示状态</span><br>firewall-cmd <span class="hljs-params">--get-active-zones</span> <span class="hljs-comment"># 查看区域信息</span><br>firewall-cmd <span class="hljs-params">--get-zone-of-interface=eth0</span> <span class="hljs-comment"># 查看指定接口所属区域</span><br>firewall-cmd <span class="hljs-params">--panic-on</span> <span class="hljs-comment"># 拒绝所有包</span><br>firewall-cmd <span class="hljs-params">--panic-off</span> <span class="hljs-comment"># 取消拒绝状态</span><br>firewall-cmd <span class="hljs-params">--query-panic</span> <span class="hljs-comment"># 查看是否拒绝</span><br><br>firewall-cmd <span class="hljs-params">--reload</span> <span class="hljs-comment"># 更新防火墙规则</span><br>firewall-cmd <span class="hljs-params">--complete-reload</span><br><span class="hljs-comment"># 两者的区别就是第一个无需断开连接，就是firewalld特性之一动态添加规则，第二个需要断开连接，类似重启服务</span><br><br><br><span class="hljs-comment"># 将接口添加到区域，默认接口都在public</span><br>firewall-cmd <span class="hljs-params">--zone=public</span> <span class="hljs-params">--add-interface=eth0</span><br><span class="hljs-comment"># 永久生效再加上 --permanent 然后reload防火墙</span><br><br><span class="hljs-comment"># 设置默认接口区域，立即生效无需重启</span><br>firewall-cmd <span class="hljs-params">--set-default-zone=public</span><br><br><span class="hljs-comment"># 查看所有打开的端口：</span><br>firewall-cmd <span class="hljs-params">--zone=dmz</span> <span class="hljs-params">--list-ports</span><br><br><span class="hljs-comment"># 加入一个端口到区域：</span><br>firewall-cmd <span class="hljs-params">--zone=dmz</span> <span class="hljs-params">--add-port=8080/tcp</span><br><span class="hljs-comment"># 若要永久生效方法同上</span><br><br><span class="hljs-comment"># 打开一个服务，类似于将端口可视化，服务需要在配置文件中添加，/etc/firewalld 目录下有services文件夹，这个不详细说了，详情参考文档</span><br>firewall-cmd <span class="hljs-params">--zone=work</span> <span class="hljs-params">--add-service=smtp</span><br><br><span class="hljs-comment"># 移除服务</span><br>firewall-cmd <span class="hljs-params">--zone=work</span> <span class="hljs-params">--remove-service=smtp</span><br><br><span class="hljs-comment"># 显示支持的区域列表</span><br>firewall-cmd <span class="hljs-params">--get-zones</span><br><br><span class="hljs-comment"># 设置为家庭区域</span><br>firewall-cmd <span class="hljs-params">--set-default-zone=home</span><br><br><span class="hljs-comment"># 查看当前区域</span><br>firewall-cmd <span class="hljs-params">--get-active-zones</span><br><br><span class="hljs-comment"># 设置当前区域的接口</span><br>firewall-cmd <span class="hljs-params">--get-zone-of-interface=enp03s</span><br><br><span class="hljs-comment"># 显示所有公共区域（public）</span><br>firewall-cmd <span class="hljs-params">--zone=public</span> <span class="hljs-params">--list-all</span><br><br><span class="hljs-comment"># 临时修改网络接口（enp0s3）为内部区域（internal）</span><br>firewall-cmd <span class="hljs-params">--zone=internal</span> <span class="hljs-params">--change-interface=enp03s</span><br><br><span class="hljs-comment"># 永久修改网络接口enp03s为内部区域（internal）</span><br>firewall-cmd <span class="hljs-params">--permanent</span> <span class="hljs-params">--zone=internal</span> <span class="hljs-params">--change-interface=enp03s</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="服务管理"><a href="#服务管理" class="headerlink" title="服务管理"></a>服务管理</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-comment"># 显示服务列表</span><br>Amanda, FTP, Samba和TFTP等最重要的服务已经被FirewallD提供相应的服务，可以使用如下命令查看：<br><br>firewall-cmd --get-services<br><br><span class="hljs-comment"># 允许SSH服务通过</span><br>firewall-cmd --<span class="hljs-builtin-name">enable</span> <span class="hljs-attribute">service</span>=ssh<br><br><span class="hljs-comment"># 禁止SSH服务通过</span><br>firewall-cmd --<span class="hljs-builtin-name">disable</span> <span class="hljs-attribute">service</span>=ssh<br><br><span class="hljs-comment"># 打开TCP的8080端口</span><br>firewall-cmd --<span class="hljs-builtin-name">enable</span> <span class="hljs-attribute">ports</span>=8080/tcp<br><br><span class="hljs-comment"># 临时允许Samba服务通过600秒</span><br>firewall-cmd --<span class="hljs-builtin-name">enable</span> <span class="hljs-attribute">service</span>=samba <span class="hljs-attribute">--timeout</span>=600<br><br><span class="hljs-comment"># 显示当前服务</span><br>firewall-cmd --list-services<br><br><span class="hljs-comment"># 添加HTTP服务到内部区域（internal）</span><br>firewall-cmd --permanent <span class="hljs-attribute">--zone</span>=internal <span class="hljs-attribute">--add-service</span>=http<br>firewall-cmd --reload # 在不改变状态的条件下重新加载防火墙<br></code></pre></td></tr></table></figure>
+
+<h3 id="端口管理"><a href="#端口管理" class="headerlink" title="端口管理"></a>端口管理</h3><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli"><span class="hljs-comment"># 打开443/TCP端口</span><br>firewall-cmd <span class="hljs-params">--add-port=443/tcp</span><br><br><span class="hljs-comment"># 永久打开3690/TCP端口</span><br>firewall-cmd <span class="hljs-params">--permanent</span> <span class="hljs-params">--add-port=3690/tcp</span><br><br><span class="hljs-comment"># 永久打开端口好像需要reload一下，临时打开好像不用，如果用了reload临时打开的端口就失效了</span><br><span class="hljs-comment"># 其它服务也可能是这样的，这个没有测试</span><br>firewall-cmd <span class="hljs-params">--reload</span><br><br><span class="hljs-comment"># 查看防火墙，添加的端口也可以看到</span><br>firewall-cmd <span class="hljs-params">--list-all</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="直接模式"><a href="#直接模式" class="headerlink" title="直接模式"></a>直接模式</h3><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-comment"># FirewallD包括一种直接模式，使用它可以完成一些工作，例如打开TCP协议的9999端口</span><br><br><span class="hljs-attribute">firewall</span>-cmd --direct -add-rule ipv<span class="hljs-number">4</span> filter INPUT <span class="hljs-number">0</span> -p tcp --dport <span class="hljs-number">9000</span> -j ACCEPT<br><span class="hljs-attribute">firewall</span>-cmd --reload<br></code></pre></td></tr></table></figure>
+
+<h3 id="控制端口-服务"><a href="#控制端口-服务" class="headerlink" title="控制端口 / 服务"></a>控制端口 / 服务</h3><p>可以通过两种方式控制端口的开放，一种是指定端口号另一种是指定服务名。虽然开放 http 服务就是开放了 80 端口，但是还是不能通过端口号来关闭，也就是说通过指定服务名开放的就要通过指定服务名关闭；通过指定端口号开放的就要通过指定端口号关闭。还有一个要注意的就是指定端口的时候一定要指定是什么协议，tcp 还是 udp。知道这个之后以后就不用每次先关防火墙了，可以让防火墙真正的生效。</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs dockerfile">firewall-<span class="hljs-keyword">cmd</span><span class="bash"> --add-service=mysql <span class="hljs-comment"># 开放mysql端口</span></span><br>firewall-<span class="hljs-keyword">cmd</span><span class="bash"> --remove-service=http <span class="hljs-comment"># 阻止http端口</span></span><br>firewall-<span class="hljs-keyword">cmd</span><span class="bash"> --list-services <span class="hljs-comment"># 查看开放的服务</span></span><br>firewall-<span class="hljs-keyword">cmd</span><span class="bash"> --add-port=3306/tcp <span class="hljs-comment"># 开放通过tcp访问3306</span></span><br>firewall-<span class="hljs-keyword">cmd</span><span class="bash"> --remove-port=80tcp <span class="hljs-comment"># 阻止通过tcp访问3306</span></span><br>firewall-<span class="hljs-keyword">cmd</span><span class="bash"> --add-port=233/udp <span class="hljs-comment"># 开放通过udp访问233</span></span><br>firewall-<span class="hljs-keyword">cmd</span><span class="bash"> --list-ports <span class="hljs-comment"># 查看开放的端口</span></span><br></code></pre></td></tr></table></figure>
+
+<h3 id="伪装-IP"><a href="#伪装-IP" class="headerlink" title="伪装 IP"></a>伪装 IP</h3><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs dockerfile">firewall-<span class="hljs-keyword">cmd</span><span class="bash"> --query-masquerade <span class="hljs-comment"># 检查是否允许伪装IP</span></span><br>firewall-<span class="hljs-keyword">cmd</span><span class="bash"> --add-masquerade <span class="hljs-comment"># 允许防火墙伪装IP</span></span><br>firewall-<span class="hljs-keyword">cmd</span><span class="bash"> --remove-masquerade<span class="hljs-comment"># 禁止防火墙伪装IP</span></span><br></code></pre></td></tr></table></figure>
+
+<h3 id="端口转发"><a href="#端口转发" class="headerlink" title="端口转发"></a>端口转发</h3><p>端口转发可以将指定地址访问指定的端口时，将流量转发至指定地址的指定端口。转发的目的如果不指定 ip 的话就默认为本机，如果指定了 ip 却没指定端口，则默认使用来源端口。 如果配置好端口转发之后不能用，可以检查下面两个问题： * 比如我将 80 端口转发至 8080 端口，首先检查本地的 80 端口和目标的 8080 端口是否开放监听了 * 其次检查是否允许伪装 IP，没允许的话要开启伪装 IP</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">firewall</span>-cmd --add-forward-port=port=<span class="hljs-number">80</span>:proto=tcp:toport=<span class="hljs-number">8080</span> # 将<span class="hljs-number">80</span>端口的流量转发至<span class="hljs-number">8080</span><br><span class="hljs-attribute">firewall</span>-cmd --add-forward-port=port=<span class="hljs-number">80</span>:proto=tcp:toaddr=<span class="hljs-number">192.168.0.1</span> # 将<span class="hljs-number">80</span>端口的流量转发至<span class="hljs-number">192.168.0.1</span><br><span class="hljs-attribute">firewall</span>-cmd --add-forward-port=port=<span class="hljs-number">80</span>:proto=tcp:toaddr=<span class="hljs-number">192.168.0.1</span>:toport=<span class="hljs-number">8080</span> # 将<span class="hljs-number">80</span>端口的流量转发至<span class="hljs-number">192.168.0.1</span>的<span class="hljs-number">8080</span>端口<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>当我们想把某个端口隐藏起来的时候，就可以在防火墙上阻止那个端口访问，然后再开一个不规则的端口，之后配置防火墙的端口转发，将流量转发过去。</li>
+<li>端口转发还可以做流量分发，一个防火墙拖着好多台运行着不同服务的机器，然后用防火墙将不同端口的流量转发至不同机器。</li>
+</ul>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E6%8A%80%E6%9C%AF%E7%BC%96%E7%A8%8B/">技术编程</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/firewall/">firewall</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E9%98%B2%E7%81%AB%E5%A2%99/">防火墙</a>
+                    
+                      <a class="hover-with-bg" href="/tags/centos/">centos</a>
+                    
+                      <a class="hover-with-bg" href="/tags/linux/">linux</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2018/no-more-google%E7%A1%AE%E5%AE%9E%E6%98%AF%E4%B8%AA%E4%B8%8D%E9%94%99%E7%9A%84%E4%BC%98%E7%A7%80%E8%BD%AF%E4%BB%B6%E6%B8%85%E5%8D%95%EF%BC%8C%E5%80%BC%E7%9A%84%E6%94%B6%E8%97%8F/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">No More Google 确实是个不错的优秀软件清单，值的收藏</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2018/phpstorm-2018%E6%9C%80%E6%96%B0%E7%89%B9%E5%88%AB%E7%89%88%E4%B8%8B%E8%BD%BD/">
+                        <span class="hidden-mobile">PhpStorm 2018最新特别版下载</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"B2tecGOesiRBcoXldYV5Jk5A-9Nh9j0Va","appKey":"5tFdBthF0o282SCXuNVxbntd","placeholder":"说点什么","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false,"requiredFields":[]},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

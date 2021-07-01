@@ -1,0 +1,940 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="daxi">
+  <meta name="keywords" content="">
+  
+  <title>达夕博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiyt.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 100vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>达夕博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/banner1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="热衷于分享IT技术/工作效率/优秀软件，申旦达夕，永无止境">
+              
+            </span>
+
+            
+          </div>
+
+          
+            <div class="scroll-down-bar">
+              <i class="iconfont icon-arrowdown"></i>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div class="py-5" id="board"
+          style=margin-top:0>
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/%E6%96%B0%E7%89%88firefox%E4%BA%94%E5%A4%A7%E6%94%B9%E8%BF%9B%EF%BC%8C%E5%A4%A7%E5%B9%85%E6%8F%90%E5%8D%87%E6%80%A7%E8%83%BD%E5%92%8C%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C%E5%BA%A6/" target="_self">
+          <img src="/2016/%E6%96%B0%E7%89%88firefox%E4%BA%94%E5%A4%A7%E6%94%B9%E8%BF%9B%EF%BC%8C%E5%A4%A7%E5%B9%85%E6%8F%90%E5%8D%87%E6%80%A7%E8%83%BD%E5%92%8C%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C%E5%BA%A6/ios-firefox-new1.png" srcset="/img/loading.gif" lazyload alt="[iOS]新版Firefox五大改进，大幅提升性能和用户体验度">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/%E6%96%B0%E7%89%88firefox%E4%BA%94%E5%A4%A7%E6%94%B9%E8%BF%9B%EF%BC%8C%E5%A4%A7%E5%B9%85%E6%8F%90%E5%8D%87%E6%80%A7%E8%83%BD%E5%92%8C%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C%E5%BA%A6/" target="_self">
+          [iOS]新版Firefox五大改进，大幅提升性能和用户体验度
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/%E6%96%B0%E7%89%88firefox%E4%BA%94%E5%A4%A7%E6%94%B9%E8%BF%9B%EF%BC%8C%E5%A4%A7%E5%B9%85%E6%8F%90%E5%8D%87%E6%80%A7%E8%83%BD%E5%92%8C%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C%E5%BA%A6/" target="_self">
+          
+          
+            
+          
+          今天IOS中的Firefox更新到了版本，在这次升级中Firefox表示大幅提升了性能并减少了手机内存和CPU的使用率，并且在界面操控体验上也尽心了更加人性化的修改。经过这两更新到最新版后的使用体验，个人觉得确实比以前好用多了，特别是在界面操控上，更加方便快捷。接下来我就分享一下我的使用经验：
+一、主页导航按钮现在Firefox的主页导航按钮做了调整，把最需要使用的功能放到了最方便点击的地方。如下
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-07-28 02:13" pubdate>
+              2016-07-28
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/firefox/">firefox</a>
+            
+              <a href="/tags/%E5%88%87%E6%8D%A2%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/">切换搜索引擎</a>
+            
+              <a href="/tags/%E5%AF%86%E7%A0%81%E8%AE%BF%E9%97%AE/">密码访问</a>
+            
+              <a href="/tags/%E9%9A%90%E7%A7%81%E6%B5%8F%E8%A7%88/">隐私浏览</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/trello%E4%B8%AD%E5%BC%80%E5%90%AF%E5%8D%A1%E7%89%87%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%8A%9F%E8%83%BD%EF%BC%8C%E7%AA%81%E5%87%BA%E5%BD%93%E5%89%8D%E9%87%8D%E7%82%B9%E4%BB%BB%E5%8A%A1/" target="_self">
+          <img src="/2016/trello%E4%B8%AD%E5%BC%80%E5%90%AF%E5%8D%A1%E7%89%87%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%8A%9F%E8%83%BD%EF%BC%8C%E7%AA%81%E5%87%BA%E5%BD%93%E5%89%8D%E9%87%8D%E7%82%B9%E4%BB%BB%E5%8A%A1/trello-time-logo.png" srcset="/img/loading.gif" lazyload alt="Trello中开启卡片生命周期功能，突出当前重点任务">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/trello%E4%B8%AD%E5%BC%80%E5%90%AF%E5%8D%A1%E7%89%87%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%8A%9F%E8%83%BD%EF%BC%8C%E7%AA%81%E5%87%BA%E5%BD%93%E5%89%8D%E9%87%8D%E7%82%B9%E4%BB%BB%E5%8A%A1/" target="_self">
+          Trello中开启卡片生命周期功能，突出当前重点任务
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/trello%E4%B8%AD%E5%BC%80%E5%90%AF%E5%8D%A1%E7%89%87%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%8A%9F%E8%83%BD%EF%BC%8C%E7%AA%81%E5%87%BA%E5%BD%93%E5%89%8D%E9%87%8D%E7%82%B9%E4%BB%BB%E5%8A%A1/" target="_self">
+          
+          
+            
+          
+          
+今天在使用Trello时，偶尔发现其扩展功能里有个卡片生命周期的功能。官方描述是这样的：
+
+如果没有任何活动，卡片会随着时间的流逝以可视化的形式“变旧”。在正常模式下，旧卡片会一点一点越来越透明。在私人模式下，旧卡片会有裂纹和撕痕，就像一幅老旧藏宝图。一旦卡片上有新活动，它们的卡龄会重置并且再次变新。卡龄临界值为1、2和4周。
+
+这个功能确实很有意思，很多时候在我们的Trello中总会有一些当初
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-07-26 03:17" pubdate>
+              2016-07-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E4%BB%BB%E5%8A%A1%E5%8D%A1%E7%89%87/">任务卡片</a>
+            
+              <a href="/tags/%E5%8D%A1%E7%89%87%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/">卡片生命周期</a>
+            
+              <a href="/tags/trello/">trello</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/%E4%B8%8D%E9%9C%80%E8%A6%81itunes%E7%9B%B4%E6%8E%A5%E4%B8%8B%E8%BD%BD%E5%9B%BE%E4%B9%A6%E5%88%B0ibooks/" target="_self">
+          <img src="/2016/%E4%B8%8D%E9%9C%80%E8%A6%81itunes%E7%9B%B4%E6%8E%A5%E4%B8%8B%E8%BD%BD%E5%9B%BE%E4%B9%A6%E5%88%B0ibooks/downloadibooks-logo-new.png" srcset="/img/loading.gif" lazyload alt="不需要iTunes直接下载图书到iBooks">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/%E4%B8%8D%E9%9C%80%E8%A6%81itunes%E7%9B%B4%E6%8E%A5%E4%B8%8B%E8%BD%BD%E5%9B%BE%E4%B9%A6%E5%88%B0ibooks/" target="_self">
+          不需要iTunes直接下载图书到iBooks
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/%E4%B8%8D%E9%9C%80%E8%A6%81itunes%E7%9B%B4%E6%8E%A5%E4%B8%8B%E8%BD%BD%E5%9B%BE%E4%B9%A6%E5%88%B0ibooks/" target="_self">
+          
+          
+            
+          
+          
+周末想在iBooks中找几本书看看，但是发现目前IOS9.3中iBooks无法正常使用，不能从iBooks store中添加图书。而通过iTunes从电脑端同步图书的做法又太麻烦，能不能像我们平时搜索资源一样，直接在网络上找到喜欢的图书然后下载到iBooks中呢？经过这两天的尝试，确实是可以的，而且非常简答，今天就把方法分享给大家。
+一、iBooks支持的图书类型：PDF、EPUBiBooks目
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-07-18 02:35" pubdate>
+              2016-07-18
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/ibooks/">ibooks</a>
+            
+              <a href="/tags/iphone%E5%AF%BC%E5%85%A5%E5%9B%BE%E4%B9%A6/">iphone导入图书</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/%E6%9B%B4%E6%96%B0%E5%A4%A7%E5%B8%AD%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E9%9B%86v1-3%E7%89%88%E6%9C%AC%E5%8F%91%E5%B8%83/" target="_self">
+          <img src="/2016/%E6%9B%B4%E6%96%B0%E5%A4%A7%E5%B8%AD%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E9%9B%86v1-3%E7%89%88%E6%9C%AC%E5%8F%91%E5%B8%83/daxidevtoolsv1.3.png" srcset="/img/loading.gif" lazyload alt="[更新]大席开发工具集V1.3版本发布">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/%E6%9B%B4%E6%96%B0%E5%A4%A7%E5%B8%AD%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E9%9B%86v1-3%E7%89%88%E6%9C%AC%E5%8F%91%E5%B8%83/" target="_self">
+          [更新]大席开发工具集V1.3版本发布
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/%E6%9B%B4%E6%96%B0%E5%A4%A7%E5%B8%AD%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E9%9B%86v1-3%E7%89%88%E6%9C%AC%E5%8F%91%E5%B8%83/" target="_self">
+          
+          
+            
+          
+          今天把大席开发工具集更新到了1.3版本，在该版本中主要变化点如下：
+
+修改：修改了文本处理页面的布局方式，改为左右布局，并将功能分组显示；
+新增：文本编辑页面新增行首尾添加字符、按指定字符合并行、添加行号功能；
+新增：Base64界面，新增文件选择功能，不需要再手动输入文件地址了。
+其他的一些代码优化和调整
+
+
+详情和下载页面
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-07-12 04:55" pubdate>
+              2016-07-12
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/">开发工具</a>
+            
+              <a href="/tags/%E5%BC%80%E5%8F%91%E5%8A%A9%E6%89%8B/">开发助手</a>
+            
+              <a href="/tags/%E5%A4%A7%E5%B8%AD%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E9%9B%86/">大席开发工具集</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/%E4%B8%8B%E8%BD%BDlogviewerpro%E5%B8%AE%E4%BA%86%E6%88%91%E5%A4%A7%E5%BF%99%EF%BC%8C%E5%A4%A7%E6%96%87%E4%BB%B6%E7%BC%96%E8%BE%91%E5%99%A8/" target="_self">
+          <img src="/2016/%E4%B8%8B%E8%BD%BDlogviewerpro%E5%B8%AE%E4%BA%86%E6%88%91%E5%A4%A7%E5%BF%99%EF%BC%8C%E5%A4%A7%E6%96%87%E4%BB%B6%E7%BC%96%E8%BE%91%E5%99%A8/logviewer.png" srcset="/img/loading.gif" lazyload alt="[下载]LogViewerPro帮了我大忙，大文件编辑器">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/%E4%B8%8B%E8%BD%BDlogviewerpro%E5%B8%AE%E4%BA%86%E6%88%91%E5%A4%A7%E5%BF%99%EF%BC%8C%E5%A4%A7%E6%96%87%E4%BB%B6%E7%BC%96%E8%BE%91%E5%99%A8/" target="_self">
+          [下载]LogViewerPro帮了我大忙，大文件编辑器
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/%E4%B8%8B%E8%BD%BDlogviewerpro%E5%B8%AE%E4%BA%86%E6%88%91%E5%A4%A7%E5%BF%99%EF%BC%8C%E5%A4%A7%E6%96%87%E4%BB%B6%E7%BC%96%E8%BE%91%E5%99%A8/" target="_self">
+          
+          
+            
+          
+          
+今天需要处理一个超大的文本日志文件，大概20多M，使用Sublime Text、NotePad++虽然能够打开，但是打开速度非常的慢，而且打开后基本无法对文件进行编辑和查询，不是软件死掉，就是占用过大内存，电脑异常卡顿。通过在网上查询，知道LogViewerPro是一个专门用来打开大文件的方法，从名字也不难看出。其特点是：
+
+Fast scrolling, eats low memory
+Sup
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-07-08 08:30" pubdate>
+              2016-07-08
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/">文本编辑器</a>
+            
+              <a href="/tags/%E5%A4%A7%E6%96%87%E4%BB%B6/">大文件</a>
+            
+              <a href="/tags/%E6%97%A5%E5%BF%97%E6%9F%A5%E7%9C%8B/">日志查看</a>
+            
+              <a href="/tags/%E7%BC%96%E8%BE%91%E5%99%A8/">编辑器</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE%E5%B7%A5%E5%85%B7xmind-7-update1-windows%E7%89%88/" target="_self">
+          <img src="/2016/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE%E5%B7%A5%E5%85%B7xmind-7-update1-windows%E7%89%88/xmind0.png" srcset="/img/loading.gif" lazyload alt="[下载]思维导图工具xmind-7-update1-windows版">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE%E5%B7%A5%E5%85%B7xmind-7-update1-windows%E7%89%88/" target="_self">
+          [下载]思维导图工具xmind-7-update1-windows版
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE%E5%B7%A5%E5%85%B7xmind-7-update1-windows%E7%89%88/" target="_self">
+          
+          
+            
+          
+          
+xmind是思维导图软件中的优秀作品，今天在网上寻找到了一个不错的资源，xmind7 pro版（已PJ），这里分享给大家下载使用。
+软件截图如下：
+
+提供丰富的模板：
+
+下载地址:
+由于版权问题，下载地址已失效
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-07-05 10:32" pubdate>
+              2016-07-05
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E4%B8%8B%E8%BD%BD/">下载</a>
+            
+              <a href="/tags/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/">思维导图</a>
+            
+              <a href="/tags/xmind/">xmind</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/%E6%9B%B4%E6%96%B0%EF%BC%9A%E5%A4%A7%E5%B8%AD%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E9%9B%86%E6%96%B0%E5%A2%9E%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E5%8A%9F%E8%83%BD/" target="_self">
+          <img src="/2016/%E6%9B%B4%E6%96%B0%EF%BC%9A%E5%A4%A7%E5%B8%AD%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E9%9B%86%E6%96%B0%E5%A2%9E%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E5%8A%9F%E8%83%BD/daxidevtools-autocreate.png" srcset="/img/loading.gif" lazyload alt="更新：大席开发工具集新增自动生成功能">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/%E6%9B%B4%E6%96%B0%EF%BC%9A%E5%A4%A7%E5%B8%AD%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E9%9B%86%E6%96%B0%E5%A2%9E%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E5%8A%9F%E8%83%BD/" target="_self">
+          更新：大席开发工具集新增自动生成功能
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/%E6%9B%B4%E6%96%B0%EF%BC%9A%E5%A4%A7%E5%B8%AD%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E9%9B%86%E6%96%B0%E5%A2%9E%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E5%8A%9F%E8%83%BD/" target="_self">
+          
+          
+            
+          
+          今天大席开发工具集新增了自动生成的功能，该功能可以生成序列和密码/随机码，通过设定开始值、步长、前后缀等生产自定义长度的序列。密码生产功能，支持大写字母、小写字母、数字、特殊字母的各种混个模式下，生产自定义长度的密码。
+
+下载地址
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-07-01 02:11" pubdate>
+              2016-07-01
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/%E6%96%B0%E7%89%88dropbox%E5%8A%A0%E5%85%A5%E4%BA%86%E8%BF%99%E4%BA%9B%E6%9C%9F%E5%BE%85%E5%B7%B2%E4%B9%85%E7%9A%84%E5%AE%9E%E7%94%A8%E5%8A%9F%E8%83%BD/" target="_self">
+          <img src="/2016/%E6%96%B0%E7%89%88dropbox%E5%8A%A0%E5%85%A5%E4%BA%86%E8%BF%99%E4%BA%9B%E6%9C%9F%E5%BE%85%E5%B7%B2%E4%B9%85%E7%9A%84%E5%AE%9E%E7%94%A8%E5%8A%9F%E8%83%BD/dropboxnew0.png" srcset="/img/loading.gif" lazyload alt="新版Dropbox加入了这些期待已久的实用功能">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/%E6%96%B0%E7%89%88dropbox%E5%8A%A0%E5%85%A5%E4%BA%86%E8%BF%99%E4%BA%9B%E6%9C%9F%E5%BE%85%E5%B7%B2%E4%B9%85%E7%9A%84%E5%AE%9E%E7%94%A8%E5%8A%9F%E8%83%BD/" target="_self">
+          新版Dropbox加入了这些期待已久的实用功能
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/%E6%96%B0%E7%89%88dropbox%E5%8A%A0%E5%85%A5%E4%BA%86%E8%BF%99%E4%BA%9B%E6%9C%9F%E5%BE%85%E5%B7%B2%E4%B9%85%E7%9A%84%E5%AE%9E%E7%94%A8%E5%8A%9F%E8%83%BD/" target="_self">
+          
+          
+            
+          
+          
+昨天我把iPhone的Dropbox更新到了最新版本11.2，对应的桌面版也得到了更新，版本为5.4.24。这次的更新还是挺大的，特别是手机端，添加了拍照扫描、上传照片、创建Office文档等实用功能。接下来我们就一起来体验一下。
+1、一个简洁又强大的”+”号在新版Dropbox中，首页底部多了一个加号，其实在很多Google的应用中，或者是印象笔记中，都有这种类似的加号。非常易用的一个按钮，通
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-06-27 03:09" pubdate>
+              2016-06-27
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/%E5%A6%82%E4%BD%95%E5%9C%A8edge%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%E5%81%9Aweb%E7%AC%94%E8%AE%B0/" target="_self">
+          <img src="/2016/%E5%A6%82%E4%BD%95%E5%9C%A8edge%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%E5%81%9Aweb%E7%AC%94%E8%AE%B0/edgenote1.png" srcset="/img/loading.gif" lazyload alt="如何在Edge浏览器中做WEB笔记">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/%E5%A6%82%E4%BD%95%E5%9C%A8edge%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%E5%81%9Aweb%E7%AC%94%E8%AE%B0/" target="_self">
+          如何在Edge浏览器中做WEB笔记
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/%E5%A6%82%E4%BD%95%E5%9C%A8edge%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%E5%81%9Aweb%E7%AC%94%E8%AE%B0/" target="_self">
+          
+          
+            
+          
+          已经更新到Windows 10的用户可能知道，在Windows 10中，微软添加了一款新的浏览器，叫做Microsoft Edge，该浏览器可以认为是轻量版的IE，在手机、平板等触摸设备上优势更加明显。也正因为它的简洁和快速，在桌面端使用Edge体验也是非常不错了。Edge有个特有的功能叫做：“做 Web 笔记”，它允许你对当前页面做任何标注然后保存到OneNote或者截图后保存到其他应用中，进行
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-06-21 01:52" pubdate>
+              2016-06-21
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E7%BD%91%E9%A1%B5%E6%A0%87%E6%B3%A8/">网页标注</a>
+            
+              <a href="/tags/edge%E6%B5%8F%E8%A7%88%E5%99%A8/">edge浏览器</a>
+            
+              <a href="/tags/web%E7%AC%94%E8%AE%B0/">web笔记</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2016/%E5%BC%80%E5%8F%91%E5%8A%A9%E6%89%8B%EF%BC%9A%E4%BD%BF%E7%94%A8excel%E6%89%93%E9%80%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%BC%80%E5%8F%91%E5%B0%8F%E5%B7%A5%E5%85%B7/" target="_self">
+          <img src="/2016/%E5%BC%80%E5%8F%91%E5%8A%A9%E6%89%8B%EF%BC%9A%E4%BD%BF%E7%94%A8excel%E6%89%93%E9%80%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%BC%80%E5%8F%91%E5%B0%8F%E5%B7%A5%E5%85%B7/exceldevtools0.png" srcset="/img/loading.gif" lazyload alt="开发助手：使用Excel打造自己的开发小工具">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2016/%E5%BC%80%E5%8F%91%E5%8A%A9%E6%89%8B%EF%BC%9A%E4%BD%BF%E7%94%A8excel%E6%89%93%E9%80%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%BC%80%E5%8F%91%E5%B0%8F%E5%B7%A5%E5%85%B7/" target="_self">
+          开发助手：使用Excel打造自己的开发小工具
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2016/%E5%BC%80%E5%8F%91%E5%8A%A9%E6%89%8B%EF%BC%9A%E4%BD%BF%E7%94%A8excel%E6%89%93%E9%80%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%BC%80%E5%8F%91%E5%B0%8F%E5%B7%A5%E5%85%B7/" target="_self">
+          
+          
+            
+          
+          我之前发布过一款为开发人员使用的开发工具集，大家可以在这里下载。后来评论中发现，好多朋友有的想添加这个功能，有的想添加那个功能，其实今天想说的是通过Excel就可以打造自己专属的开发小工具集合，根据自己的实际需要，添加自己喜欢的功能。下面介绍一下我使用Excel打造自己的开发小工具。
+
+ 
+1、加解密和编码
+在加解密和编码这一页，我主要添加了Base64的编码解码和MD5加密，这些都是我日常常用的
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2016-06-17 04:50" pubdate>
+              2016-06-17
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/">开发工具</a>
+            
+              <a href="/tags/%E5%BC%80%E5%8F%91%E5%8A%A9%E6%89%8B/">开发助手</a>
+            
+              <a href="/tags/excel/">excel</a>
+            
+              <a href="/tags/vba/">vba</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <a class="extend prev" rel="prev" href="/page/20/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/#board">19</a><a class="page-number" href="/page/20/#board">20</a><span class="page-number current">21</span><a class="page-number" href="/page/22/#board">22</a><a class="page-number" href="/page/23/#board">23</a><span class="space">&hellip;</span><a class="page-number" href="/page/33/#board">33</a><a class="extend next" rel="next" href="/page/22/#board"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

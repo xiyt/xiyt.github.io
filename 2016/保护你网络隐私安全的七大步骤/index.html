@@ -1,0 +1,522 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="daxi">
+  <meta name="keywords" content="">
+  
+  <title>保护你网络隐私安全的七大步骤 - 达夕博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiyt.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>达夕博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/banner1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="保护你网络隐私安全的七大步骤">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2016-12-05 08:11" pubdate>
+        2016年12月5日 早上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.2k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      22
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">保护你网络隐私安全的七大步骤</h1>
+            
+            <div class="markdown-body">
+              <p>据纽约时报报道，现在比过去任何时候都更需要搞清楚如何保护你的个人信息。大规模的黑客袭击似乎比以前更加频繁了。调查人员相信，一系列绝密国家安全机构黑客工具在今年夏天被提供给了网上的竞拍者。他们中有许多人对美国国家安全局(NSA)和其他政府机构不断扩大的监控感到担忧，开始采取措施，保障自身的通信安全。</p>
+<p>学习编程的开源社区自由编程营(Free Code Camp)创始人昆西·拉森(Quincy Larson)最近在Medium网站发表了一篇文章，详细解释了为何人们将个人数据变得更难让袭击者获得是有益的。</p>
+<p>“这里的‘袭击者’，是指任何未经你的允许试图获取你的数据的人，”他写道。“不管它是黑客、企业，还是政府。”</p>
+<p>在接受采访时，拉森给我介绍了一些他推荐的基本步骤。我们基于其他采访又增添了几条自己的建议。</p>
+<p>现在，让我们开始加密。</p>
+<p><img src="/2016/%E4%BF%9D%E6%8A%A4%E4%BD%A0%E7%BD%91%E7%BB%9C%E9%9A%90%E7%A7%81%E5%AE%89%E5%85%A8%E7%9A%84%E4%B8%83%E5%A4%A7%E6%AD%A5%E9%AA%A4/4801_1.jpg" srcset="/img/loading.gif" lazyload alt="保护你网络隐私安全的七大步骤"></p>
+<p><strong>1.下载</strong><a target="_blank" rel="noopener" href="http://www.williamlong.info/apps/archives/349.html"><strong>Signal</strong></a><strong>，或使用</strong><a target="_blank" rel="noopener" href="http://www.williamlong.info/apps/archives/80.html"><strong>WhatsApp</strong></a><strong>发送短信。</strong></p>
+<p>加密是一个高大上的计算机术语，意思是对你的数据加以处理，直到没有密钥就没有人能理解它为止。但加密绝不仅仅是调换几个字母那么简单。</p>
+<p>拉尔森说，据估计，使用苹果的默认加密方案，“你必须有一台超级计算机昼夜不停的运转很多年，才能解锁一台计算机。”</p>
+<p>他说，销毁数据的最佳方法是不删除数据，而是以“加密安全形式”进行编码，因为删除的数据可以从硬盘驱动器里恢复。</p>
+<p>如果你想保护自己的短信，Signal是人气最高的此类应用之一。它是免费的，非常容易使用。苹果的iMessage虽然也是能加密，但Signal使用的代码是开源的，这和iMessage不同。</p>
+<p>“看一看代码，你就能确定他们没有对你的数据做过奇怪的事情，”拉尔森说。</p>
+<p>“总的来说，这个应用的想法是让隐私保护和交流尽可能地简单，”开发出Signal的公司开放耳语系统(Open Whisper Systems)的创始人莫克西·马林斯派克(Moxie Marlinspike)说。</p>
+<p>这意味着该应用允许你使用颜文字、发送图片和群发文字。</p>
+<p>有一个不利因素：如果想给朋友们发讯息，就必须说服他们也加入该服务使用者的行列。但它让这个过程变得很容易。</p>
+<p>很受欢迎的聊天工具WhatsApp使用Signal的软件为自己的通讯信息加密。在<a target="_blank" rel="noopener" href="http://www.williamlong.info/apps/archives/189.html">Facebook Messenger</a>和谷歌(Google)的通讯应用程序<a target="_blank" rel="noopener" href="http://www.williamlong.info/archives/4798.html">Allo</a>中，你可以启用为讯息加密的选项。</p>
+<p>马林斯派克说，总统选举激发了很多人对Signal的兴趣，导致“用户数量大幅增加”。</p>
+<p>被问及个中原因时，马林斯派克简单地说道，“唐纳德·特朗普(Donald Trump)即将控制世界上最具影响力和侵略性、且最不可能被问责的监控机构。”</p>
+<p><strong>2. 用FileVault或者BitLocker保护你的电脑硬件。</strong></p>
+<p>你或许总是把手机带在身边，但马林斯派克认为电脑才是真正的个人信息金矿。</p>
+<p>即便你的数据受到密码保护，某个进入你电脑的人还是“可以看到你的所有文件，如果它们没有被加密的话”。</p>
+<p>幸运的是，苹果和Windows都提供了自动加密工具，只需启用即可。</p>
+<p><strong>3. 你处理密码的方式可能是错误而糟糕的。</strong></p>
+<p>现在你已经知道了这一点。为了保护自己免遭数码入侵，你能做的最简单的事情之一就是常常更换密码。</p>
+<p>不过，不停地创建新的密码是一件麻烦事。</p>
+<p>拉尔森推荐使用可以帮助保存很多密码，且只需记住一个主密码的<a target="_blank" rel="noopener" href="http://www.williamlong.info/archives/3100.html">密码管理器</a>。他说自己用的是<a target="_blank" rel="noopener" href="http://www.williamlong.info/apps/archives/326.html">LastPass</a>，但知道很多人都在用<a target="_blank" rel="noopener" href="https://1password.com/">1Password</a>和<a target="_blank" rel="noopener" href="http://keepass.info/" title="Link: http://keepass.info/">KeePass</a>，而他没有什么强有力的理由来建议大家选择某一种而非另外两种。</p>
+<p>并非每个安全专家都信任密码管理器。一些专家指出，LastPass本身去年就遭到了入侵。</p>
+<p>因此你或许想要把密码写在一个秘密的地方，也许是家里的一张即时贴上。黑客更加没有可能为了设法进入你的电脑而费事闯进你家寻找一张即时贴。</p>
+<p>如果你采用这种方法，我们建议你在日历中设定每周一次或者每两周一次的更换密码任务提醒。</p>
+<p>至于密码的创建，建议你不要过分讲究。使用一个随机的词（例如当你凑近即时贴的时候，身旁的一个物件）再加上一组数字。如果你会把密码写下来，就不必担心如何才能让它们便于记忆了。</p>
+<p><strong>4. 用两步验证保护你的电子邮箱以及其他账号。</strong></p>
+<p>当你启用这一功能时，任何试图在陌生设备上登陆你的邮箱的人，都必须通过两步验证：用以进入邮箱的验证码会通过短信发送到你的手机上。（遗憾的是，不是通过Signal。）</p>
+<p><a target="_blank" rel="noopener" href="http://www.williamlong.info/archives/2754.html">点击这里查看</a>如何为Gmail帐号启用两步验证。</p>
+<p>你还可以为社交媒体账号以及其他网站设置两步验证。但电子邮箱才是最重要的账号，因为很多网站都用电子邮箱进行密码恢复，黑客们已经在利用这一点了。他们一旦进入你的邮箱，就可以攻克你的银行、社交媒体、数据备份和工作账号。</p>
+<p><strong>5. 使用一个名叫HTTPS Everywhere的浏览器插件。</strong></p>
+<p>马林斯派克推荐的这个插件是由数字安全机构电子前哨基金会(Electronic Frontier Foundation)开发的。它能确保你以安全的方式访问网站。这意味着你对网站的访问会被加密，从而保护你免遭各种形式的监控和入侵。</p>
+<p>借此机会还要指出，你应该时时警惕自己使用的Wi-Fi网络是否安全。公共网络——乃至没有安全密匙的私人网络——通常并不安全。</p>
+<p><strong>6. 切记，隐身模式并非总能保护隐私。</strong></p>
+<p>你或许急匆匆地使用了这个在Chrome、Safari、火狐以及其他一些浏览器上都能见到的功能，却没有注意到它发出的明确警告。</p>
+<p>在Chrome上打开介绍“隐身”模式的页面，第二段写得清清楚楚。</p>
+<p>“您的活动并非无法被察觉，”那上面说。“使用隐身模式后，您的雇主、您的互联网服务提供商或者您访问的网站本身，还是可以查看您的网站访问活动记录。”</p>
+<p>拉尔森在他的文章中推荐了Tor，一款让人得以进行私密网络活动的浏览器。但我们在这里不会做这样的推荐，主要原因是Tor目前较为缓慢和笨重。</p>
+<p>“说老实话，我并没有非常频繁地使用它，”拉尔森说。</p>
+<p>他说他预计其他浏览器也会着手添加能让人更安全地浏览网页的功能。</p>
+<p>“苹果的安全意识非常强，”他说。“如果他们开始把类似于Tor的功能融入Safari，我一点儿也不会感到惊讶。”</p>
+<p><strong>7. 用DuckDuckGo进行较为敏感的搜索。</strong></p>
+<p>拉尔森说，如果有人对谷歌极度不放心，他会强烈推荐他们使用另一款搜索引擎DuckDuckGo。</p>
+<p>不过他说，他本人对谷歌并无成见。</p>
+<p>“谷歌的创建以黑客伦理为基础，他们在某些方面是把原则置于利润之上的，”他说。</p>
+<p>但他也承认，他“常常”遇到“对所有大型软件组织都心怀疑虑的人，而且我觉得他们持这种态度也是合情合理的”。有利就有弊。与竞争对手相比，谷歌的搜索结果更有用，也更准确，但这恰恰是因为它会搜集并分析与用户的搜索活动有关的信息。</p>
+<p>附赠锦囊一枚：用胶带盖住摄像头。</p>
+<p>这样一来，即便有人得以入侵你的电脑，也无法通过电脑上的摄像头窥视你。</p>
+<p>稿源：纽约时报 Kacper Pempel/Reuters</p>
+<p>声明：本文转自月光博客文章：<a target="_blank" rel="noopener" href="http://www.williamlong.info/archives/4801.html">http://www.williamlong.info/archives/4801.html</a></p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E4%BA%92%E8%81%94%E7%BD%91/">互联网</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%AE%89%E5%85%A8/">安全</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">网络安全</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E9%9A%90%E7%A7%81/">隐私</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2016/%E6%9C%80%E6%96%B0aws%E5%85%8D%E8%B4%B9%E4%B8%80%E5%B9%B4%E4%BA%91%E6%9C%8D%E5%8A%A1%E7%94%B3%E8%AF%B7%E7%BB%86%E8%8A%82%E5%88%86%E4%BA%AB%E5%8F%8A%E9%85%8D%E7%BD%AEshadowsocks%E6%9C%8D%E5%8A%A1/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">[最新]AWS免费一年云服务申请细节分享及配置Shadowsocks服务</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2016/waifu2x%E5%9C%A8%E7%BA%BF%E5%9B%BE%E7%89%87%E6%94%BE%E5%A4%A7%E5%B7%A5%E5%85%B7/">
+                        <span class="hidden-mobile">把这个网址收藏起来以备不时之需：waifu2x在线图片放大工具</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"B2tecGOesiRBcoXldYV5Jk5A-9Nh9j0Va","appKey":"5tFdBthF0o282SCXuNVxbntd","placeholder":"说点什么","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false,"requiredFields":[]},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

@@ -1,0 +1,541 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="daxi">
+  <meta name="keywords" content="">
+  
+  <title>我精选的10个Excel快捷键：把它们养成习惯性动作，有效提高工作效率 - 达夕博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiyt.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>达夕博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/banner1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="我精选的10个Excel快捷键：把它们养成习惯性动作，有效提高工作效率">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2015-10-23 03:08" pubdate>
+        2015年10月23日 凌晨
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.1k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      11
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">我精选的10个Excel快捷键：把它们养成习惯性动作，有效提高工作效率</h1>
+            
+            <div class="markdown-body">
+              <p>在我们日常工作中，Excel应该是我们常用的办公软件之一了，在处理数据、统计数据、制作图表等方面有着很强的功能，今天我想分享一下我常用的Excel快捷键，其实在网络上搜索”Excel快捷键”都能找到很多相关的文章，例如”Excel快捷键大全”、”30个常用的Excel快捷键”等，都很全面的整理了Excel的各种快捷键功能，很好。但是今天这篇文章我想有所不同，其实我们在日常使用中，也就只有很小一部分快捷键能够熟练使用，这篇文章我精选了十组我觉得最重要、最能提高效率、  最易养成使用习惯的快捷键，分享给大家，希望能提高我们的工作效率。</p>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/10/0060.png"><img src="/2015/%E6%88%91%E7%B2%BE%E9%80%89%E7%9A%8410%E4%B8%AAexcel%E5%BF%AB%E6%8D%B7%E9%94%AE%EF%BC%9A%E6%8A%8A%E5%AE%83%E4%BB%AC%E5%85%BB%E6%88%90%E4%B9%A0%E6%83%AF%E8%A1%8C%E5%8A%A8%E4%BD%9C%EF%BC%8C%E6%9C%89/0060.png" srcset="/img/loading.gif" lazyload alt="0060"></a></p>
+<h2 id="Excel快捷键精选："><a href="#Excel快捷键精选：" class="headerlink" title="Excel快捷键精选："></a>Excel快捷键精选：</h2><ul>
+<li><strong>F1</strong></li>
+</ul>
+<p>我觉得这是你最应该学会也是最重要的快捷键，也就是打开Excel的帮助对话框，在这里你可以搜索关于Excel的各种问题、教程、函数使用说明等信息，而且质量很高，所以大家一定要善用自带帮助功能，不用每次都去百度、Google上搜索</p>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/10/0061.png"><img src="/2015/%E6%88%91%E7%B2%BE%E9%80%89%E7%9A%8410%E4%B8%AAexcel%E5%BF%AB%E6%8D%B7%E9%94%AE%EF%BC%9A%E6%8A%8A%E5%AE%83%E4%BB%AC%E5%85%BB%E6%88%90%E4%B9%A0%E6%83%AF%E8%A1%8C%E5%8A%A8%E4%BD%9C%EF%BC%8C%E6%9C%89/0061.png" srcset="/img/loading.gif" lazyload alt="Excel快捷键"></a></p>
+<ul>
+<li><strong>F2</strong></li>
+</ul>
+<p>Windows中我们使用F2来重命名文件/文件夹，在Excel里可以快速的编辑当前活动单元格，并将光标放在单元格内容的结尾，也可以记忆为把单元格的内容”重命名”。</p>
+<ul>
+<li><strong>F4</strong></li>
+</ul>
+<p>重复上次操作，例如：</p>
+<p>1、对一个单元格设定了颜色格式，在另外一个单元格上点击F4就会设定相同的颜色格式到该单元格上</p>
+<p>2、想在两行之间插入一些行，我们只需要插入一行，然后按住F4不放，就会不断的继续插入多行</p>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/10/0058.gif"><img src="/2015/%E6%88%91%E7%B2%BE%E9%80%89%E7%9A%8410%E4%B8%AAexcel%E5%BF%AB%E6%8D%B7%E9%94%AE%EF%BC%9A%E6%8A%8A%E5%AE%83%E4%BB%AC%E5%85%BB%E6%88%90%E4%B9%A0%E6%83%AF%E8%A1%8C%E5%8A%A8%E4%BD%9C%EF%BC%8C%E6%9C%89/0058.gif" srcset="/img/loading.gif" lazyload alt="0058"></a></p>
+<ul>
+<li><strong>Ctrl + D 和 Ctrl + R</strong></li>
+</ul>
+<p>这一组是快速复制填充单元格的快捷键，Ctrl+D是快向下(Down)复制，Ctrl+R是快速向右(Right)复制</p>
+<p>1、复制一个：如果选择了一行/单元格 ，则将上面一行/单元格的内容，复制到当前选择行/单元格 ；</p>
+<p>2、复制一片：如果选择了多行/单元格 ，则将选中区域的第一行/单元格 内容复制到下面的行/单元格；</p>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/10/0059.gif"><img src="/2015/%E6%88%91%E7%B2%BE%E9%80%89%E7%9A%8410%E4%B8%AAexcel%E5%BF%AB%E6%8D%B7%E9%94%AE%EF%BC%9A%E6%8A%8A%E5%AE%83%E4%BB%AC%E5%85%BB%E6%88%90%E4%B9%A0%E6%83%AF%E8%A1%8C%E5%8A%A8%E4%BD%9C%EF%BC%8C%E6%9C%89/0059.gif" srcset="/img/loading.gif" lazyload alt="0059"></a></p>
+<ul>
+<li><strong>Alt + Enter</strong></li>
+</ul>
+<p>在单元格内换行，这个不用多说。这个我删除了，因为它不是一个提高效率的快捷键，而是一个功能性的快捷键。</p>
+<ul>
+<li><strong>ESC</strong></li>
+</ul>
+<p>不用总是去动你的鼠标，所使用ESC按键，这是个重要的”退出”、”取消”快捷键，在任何时候想退出正在编辑或使用的功能时，都可快速的点击一下ESC按钮，退出当前的操作</p>
+<ul>
+<li><strong>Ctrl + ; 和 Ctrl + Shift + ;</strong></li>
+</ul>
+<p>快速的在单元格里插入当前日期和时间</p>
+<ul>
+<li><strong>Ctrl + B 、Ctrl + I 和 Ctrl + U</strong></li>
+</ul>
+<p>最常用的三种文本格式化，加粗、斜体、下划线，自然有最方便的快捷键。其实这个不光在Excel里是这样的设置，在其他的编辑器、WORD、印象笔记里等里都是这样的这是设定，已经成了惯例了。</p>
+<ul>
+<li><strong>Ctrl +1</strong></li>
+</ul>
+<p>快速打开设置单元格格式对话框，大家肯定猜的出来，肯定还有Ctrl+2、3…，确实有，但是为什么我只推荐Ctrl+1呢，因为设置单个或一个区域的单元格是一个很常用，很重要的设置，建议大家记住并能熟练使用，其他的可以不用记了，要知道花时间和精力去记忆也是一种成本。</p>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/10/0062.png"><img src="/2015/%E6%88%91%E7%B2%BE%E9%80%89%E7%9A%8410%E4%B8%AAexcel%E5%BF%AB%E6%8D%B7%E9%94%AE%EF%BC%9A%E6%8A%8A%E5%AE%83%E4%BB%AC%E5%85%BB%E6%88%90%E4%B9%A0%E6%83%AF%E8%A1%8C%E5%8A%A8%E4%BD%9C%EF%BC%8C%E6%9C%89/0062.png" srcset="/img/loading.gif" lazyload alt="0062"></a></p>
+<ul>
+<li><strong>定位：Home 和 Ctrl + Home</strong></li>
+</ul>
+<p>快速定位到当前行的第一个单元格和工作表的第一个单元格，这是我介绍的唯一一个快速定位的快捷键，因为行首和工作表的开头，是我们最经常要定位到的地方。</p>
+<ul>
+<li><strong>选择：Shift + 方向键 和 Shift + Home</strong></li>
+</ul>
+<p>Shift+方向键：能够快速已当前单元格为起点，快速向四周选择区域</p>
+<p>Shift+Home：能够已当前单元格为终点，快速选择到所在行的行头</p>
+<blockquote>
+<p><strong>结束语</strong></p>
+<p>Excel的快捷键很多，大家不用一个一个专门的记忆，找几个自己常用的，用的最多的，然后切实应用到自己的操作中，并且养成习惯性动作，就能有效的提高我们的效率。</p>
+</blockquote>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E6%8F%90%E9%AB%98%E7%94%9F%E4%BA%A7%E5%8A%9B/">提高生产力</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/">快捷键</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%BF%AB%E9%80%9F%E8%BE%93%E5%85%A5/">快速输入</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E4%B9%A0%E6%83%AF%E5%85%BB%E6%88%90/">习惯养成</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%AE%9A%E4%BD%8D/">定位</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/">帮助文档</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%8F%90%E9%AB%98%E6%95%88%E7%8E%87/">提高效率</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E7%B2%BE%E9%80%89/">精选</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E9%80%89%E6%8B%A9/">选择</a>
+                    
+                      <a class="hover-with-bg" href="/tags/excel/">excel</a>
+                    
+                      <a class="hover-with-bg" href="/tags/windows/">windows</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2015/%E9%87%8D%E6%96%B0%E6%95%B4%E7%90%86%EF%BC%9A%E6%88%91%E7%9A%84%E5%8D%B0%E8%B1%A1%E7%AC%94%E8%AE%B0evernote%E7%9A%84%E5%88%86%E7%B1%BB%E6%96%B9%E6%B3%95%E5%92%8C%E6%A0%87%E7%AD%BE%E4%BD%BF%E7%94%A8/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">重新整理：我的印象笔记Evernote的分类方法和标签使用技巧</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2015/%E6%88%91%E7%9A%84pc%E7%AB%AF%E5%92%8C%E7%A7%BB%E5%8A%A8%E7%AB%AF%E7%9A%84%E5%8D%8F%E5%90%8C%E5%B7%A5%E4%BD%9C%E6%96%B9%E5%BC%8F%EF%BC%8C%E5%BC%80%E5%B1%95%E7%A7%BB%E5%8A%A8%E5%8A%9E%E5%85%AC/">
+                        <span class="hidden-mobile">我的PC端和移动端的协同工作方式，开展移动办公</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"B2tecGOesiRBcoXldYV5Jk5A-9Nh9j0Va","appKey":"5tFdBthF0o282SCXuNVxbntd","placeholder":"说点什么","path":"window.location.pathname","avatar":"retro","meta":["nick","mail","link"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false,"requiredFields":[]},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>

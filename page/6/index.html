@@ -1,0 +1,959 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="daxi">
+  <meta name="keywords" content="">
+  
+  <title>达夕博客</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"xiyt.github.io","root":"/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 100vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>达夕博客</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/banner1.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="热衷于分享IT技术/工作效率/优秀软件，申旦达夕，永无止境">
+              
+            </span>
+
+            
+          </div>
+
+          
+            <div class="scroll-down-bar">
+              <i class="iconfont icon-arrowdown"></i>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div class="py-5" id="board"
+          style=margin-top:0>
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/spring-boot%E6%89%93war%E5%8C%85%E5%8F%91%E5%B8%83%E4%BA%B2%E6%B5%8B%E5%8F%AF%E7%94%A8/" target="_self">
+          <img src="/2018/spring-boot%E6%89%93war%E5%8C%85%E5%8F%91%E5%B8%83%E4%BA%B2%E6%B5%8B%E5%8F%AF%E7%94%A8/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1547400913192&amp;di=d9892d624eb21978697f2bbb6bcd02f3&amp;imgtype=0&amp;src=http://img.mp.itc.cn/upload/20161209/39e6aef0d951457ba627d5d64c6142b5_th.png" srcset="/img/loading.gif" lazyload alt="Spring Boot打war包发布亲测可用">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/spring-boot%E6%89%93war%E5%8C%85%E5%8F%91%E5%B8%83%E4%BA%B2%E6%B5%8B%E5%8F%AF%E7%94%A8/" target="_self">
+          Spring Boot打war包发布亲测可用
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/spring-boot%E6%89%93war%E5%8C%85%E5%8F%91%E5%B8%83%E4%BA%B2%E6%B5%8B%E5%8F%AF%E7%94%A8/" target="_self">
+          
+          
+            
+          
+          
+1、排除内置tomcat
+
+    org.springframework.boot
+    spring-boot-starter-tomcat
+    1.5.9.RELEASE
+    provided
+
+
+2、启动类修改启动类需要继承SpringBootServletInitializer，并且重写configure方法，如下：
+12345678910111213141516public
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-11-11 10:08" pubdate>
+              2018-11-11
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%8A%80%E6%9C%AF%E7%BC%96%E7%A8%8B/">技术编程</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/tomcat/">tomcat</a>
+            
+              <a href="/tags/war%E5%8C%85/">war包</a>
+            
+              <a href="/tags/%E9%83%A8%E7%BD%B2/">部署</a>
+            
+              <a href="/tags/spring-boot/">spring-boot</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/windows-10%E6%B0%B8%E4%B9%85%E6%BF%80%E6%B4%BB-%E6%95%B0%E5%AD%97%E6%9D%83%E5%88%A9%E6%BF%80%E6%B4%BB%E5%B7%A5%E5%85%B7%E4%B8%8B%E8%BD%BD/" target="_self">
+          <img src="/2018/windows-10%E6%B0%B8%E4%B9%85%E6%BF%80%E6%B4%BB-%E6%95%B0%E5%AD%97%E6%9D%83%E5%88%A9%E6%BF%80%E6%B4%BB%E5%B7%A5%E5%85%B7%E4%B8%8B%E8%BD%BD/windows10-active_53f3b7c3041a457d9e437556f25b4057.png" srcset="/img/loading.gif" lazyload alt="Windows 10永久激活/数字权利激活工具下载">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/windows-10%E6%B0%B8%E4%B9%85%E6%BF%80%E6%B4%BB-%E6%95%B0%E5%AD%97%E6%9D%83%E5%88%A9%E6%BF%80%E6%B4%BB%E5%B7%A5%E5%85%B7%E4%B8%8B%E8%BD%BD/" target="_self">
+          Windows 10永久激活/数字权利激活工具下载
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/windows-10%E6%B0%B8%E4%B9%85%E6%BF%80%E6%B4%BB-%E6%95%B0%E5%AD%97%E6%9D%83%E5%88%A9%E6%BF%80%E6%B4%BB%E5%B7%A5%E5%85%B7%E4%B8%8B%E8%BD%BD/" target="_self">
+          
+          
+            
+          
+          Windows 10永久激活/数字权利激活工具下载可能大部分人的windows激活方式和我一样，用的都是KMS激活方式，不过这种激活方式往往需要每半年自动激活几次，不能实现永久激活。今天在某国外论坛里发现了这个能够永久激活windows 10的工具，在不更换电脑的情况下，实现永久激活。支持的版本包括： * windows 10家庭版（Home） * windows 10单语言版（SingleLan
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-10-06 14:45" pubdate>
+              2018-10-06
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%95%B0%E5%AD%97%E6%9D%83%E5%88%A9%E6%BF%80%E6%B4%BB/">数字权利激活</a>
+            
+              <a href="/tags/%E6%B0%B8%E4%B9%85%E6%BF%80%E6%B4%BB/">永久激活</a>
+            
+              <a href="/tags/windows-10/">windows-10</a>
+            
+              <a href="/tags/windows-10%E6%B0%B8%E4%B9%85%E6%BF%80%E6%B4%BB/">windows-10永久激活</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/no-more-google%E7%A1%AE%E5%AE%9E%E6%98%AF%E4%B8%AA%E4%B8%8D%E9%94%99%E7%9A%84%E4%BC%98%E7%A7%80%E8%BD%AF%E4%BB%B6%E6%B8%85%E5%8D%95%EF%BC%8C%E5%80%BC%E7%9A%84%E6%94%B6%E8%97%8F/" target="_self">
+          <img src="/2018/no-more-google%E7%A1%AE%E5%AE%9E%E6%98%AF%E4%B8%AA%E4%B8%8D%E9%94%99%E7%9A%84%E4%BC%98%E7%A7%80%E8%BD%AF%E4%BB%B6%E6%B8%85%E5%8D%95%EF%BC%8C%E5%80%BC%E7%9A%84%E6%94%B6%E8%97%8F/nomoregoogle_e1862eb3c0d44956accbe02505aac9b6.png" srcset="/img/loading.gif" lazyload alt="No More Google 确实是个不错的优秀软件清单，值的收藏">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/no-more-google%E7%A1%AE%E5%AE%9E%E6%98%AF%E4%B8%AA%E4%B8%8D%E9%94%99%E7%9A%84%E4%BC%98%E7%A7%80%E8%BD%AF%E4%BB%B6%E6%B8%85%E5%8D%95%EF%BC%8C%E5%80%BC%E7%9A%84%E6%94%B6%E8%97%8F/" target="_self">
+          No More Google 确实是个不错的优秀软件清单，值的收藏
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/no-more-google%E7%A1%AE%E5%AE%9E%E6%98%AF%E4%B8%AA%E4%B8%8D%E9%94%99%E7%9A%84%E4%BC%98%E7%A7%80%E8%BD%AF%E4%BB%B6%E6%B8%85%E5%8D%95%EF%BC%8C%E5%80%BC%E7%9A%84%E6%94%B6%E8%97%8F/" target="_self">
+          
+          
+            
+          
+          
+最近看了几篇文章都是在介绍 No More Google 的这个网站的。意思是，如果这个世界上没有了Google，我们能找到哪些好的软件来替代Google的产品。网站上列出了很多Google产品的替代方案，可以为自己喜欢的软件点赞，也可以提交自己认为可以替代Google的产品。我看了一下，上面确实有不少优秀的软件，虽然No More Google这个假设几乎不会变为现实，至少近很长一段时间都不会
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-10-05 01:08" pubdate>
+              2018-10-05
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E8%BD%AF%E4%BB%B6%E6%B8%85%E5%8D%95/">软件清单</a>
+            
+              <a href="/tags/google%E6%9B%BF%E4%BB%A3%E6%96%B9%E6%A1%88/">google替代方案</a>
+            
+              <a href="/tags/no-more-google/">no-more-google</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/linux-%E9%98%B2%E7%81%AB%E5%A2%99%E5%91%BD%E4%BB%A4firewall-cmd%E8%AF%A6%E8%A7%A3/" target="_self">
+          <img src="/2018/linux-%E9%98%B2%E7%81%AB%E5%A2%99%E5%91%BD%E4%BB%A4firewall-cmd%E8%AF%A6%E8%A7%A3/linux-firewalls_d83b0dd1e94642eca6148ea3ed40ecf9.jpg" srcset="/img/loading.gif" lazyload alt="Linux 防火墙命令firewall-cmd详解">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/linux-%E9%98%B2%E7%81%AB%E5%A2%99%E5%91%BD%E4%BB%A4firewall-cmd%E8%AF%A6%E8%A7%A3/" target="_self">
+          Linux 防火墙命令firewall-cmd详解
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/linux-%E9%98%B2%E7%81%AB%E5%A2%99%E5%91%BD%E4%BB%A4firewall-cmd%E8%AF%A6%E8%A7%A3/" target="_self">
+          
+          
+            
+          
+          
+firewall-cmdLinux上新用的防火墙软件，跟iptables差不多的工具。补充说明 firewall-cmd 是 firewalld的字符界面管理工具，firewalld是centos7的一大特性，最大的好处有两个：支持动态更新，不用重启服务；第二个就是加入了防火墙的“zone”概念。 firewalld跟iptables比起来至少有两大好处： * firewalld可以动态修改单条
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-09-29 05:23" pubdate>
+              2018-09-29
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%8A%80%E6%9C%AF%E7%BC%96%E7%A8%8B/">技术编程</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/firewall/">firewall</a>
+            
+              <a href="/tags/%E9%98%B2%E7%81%AB%E5%A2%99/">防火墙</a>
+            
+              <a href="/tags/centos/">centos</a>
+            
+              <a href="/tags/linux/">linux</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/phpstorm-2018%E6%9C%80%E6%96%B0%E7%89%B9%E5%88%AB%E7%89%88%E4%B8%8B%E8%BD%BD/" target="_self">
+          <img src="/2018/phpstorm-2018%E6%9C%80%E6%96%B0%E7%89%B9%E5%88%AB%E7%89%88%E4%B8%8B%E8%BD%BD/phpStorm-active_aa41a1c805374436b86fed85bc8e9c22.png" srcset="/img/loading.gif" lazyload alt="PhpStorm 2018最新特别版下载">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/phpstorm-2018%E6%9C%80%E6%96%B0%E7%89%B9%E5%88%AB%E7%89%88%E4%B8%8B%E8%BD%BD/" target="_self">
+          PhpStorm 2018最新特别版下载
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/phpstorm-2018%E6%9C%80%E6%96%B0%E7%89%B9%E5%88%AB%E7%89%88%E4%B8%8B%E8%BD%BD/" target="_self">
+          
+          
+            
+          
+          我虽然不会使用PHP，但是近期相对自己的博客做一些修改。随意准备着手搭建一个PHP的开发环境。于是搜寻了一下PHP的开发工具。我平时用的最多的是IntelliJ IDEA，看到他们公司的PhpStorm产品，自然觉得亲切。于是在网络上找到了这份PhpStorm的最新版特别版下载资源。这里分享给大家使用。特别版安装方法如下：
+1、运行PhpStorm-2018.2.3.exe，正常安装程序后，关闭
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-09-26 08:10" pubdate>
+              2018-09-26
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/">开发工具</a>
+            
+              <a href="/tags/php/">php</a>
+            
+              <a href="/tags/phpstorm/">phpstorm</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/intellij-idea%E6%B1%89%E5%8C%96%E5%8C%85%E4%B8%8B%E8%BD%BD/" target="_self">
+          <img src="/2018/intellij-idea%E6%B1%89%E5%8C%96%E5%8C%85%E4%B8%8B%E8%BD%BD/idea-banner_ab45d270c0d34ab1802ed44d2a43e1f6.png" srcset="/img/loading.gif" lazyload alt="IntelliJ IDEA汉化包下载">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/intellij-idea%E6%B1%89%E5%8C%96%E5%8C%85%E4%B8%8B%E8%BD%BD/" target="_self">
+          IntelliJ IDEA汉化包下载
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/intellij-idea%E6%B1%89%E5%8C%96%E5%8C%85%E4%B8%8B%E8%BD%BD/" target="_self">
+          
+          
+            
+          
+          
+虽然大部分人应该用不到IntelliJ IDEA的汉化包，基本的英文界面也可以看明白。但是一些IDEA的初级使用者，可以对英文的界面更加感到陌生。所以这里在网上找到了这个IntelliJ IDEA汉化包下载。分享给大家，有需要的朋友请下载使用。使用方法： * 点击这里下载汉化包，提取码: b84d * 放到安装目录的lib目录下，重启IntelliJ IDEA即可
+
+附JetBrains 系列软
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-09-25 15:16" pubdate>
+              2018-09-25
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%B1%89%E5%8C%96/">汉化</a>
+            
+              <a href="/tags/intellij-idea/">intellij-idea</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/centos-7%E6%B7%BB%E5%8A%A0%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8%E6%9C%8D%E5%8A%A1-%E8%84%9A%E6%9C%AC/" target="_self">
+          <img src="/2018/centos-7%E6%B7%BB%E5%8A%A0%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8%E6%9C%8D%E5%8A%A1-%E8%84%9A%E6%9C%AC/startonboot_aa5d1c46b76e4d8a90fa56e4d5d1fcac.png" srcset="/img/loading.gif" lazyload alt="CentOS 7添加开机启动服务/脚本">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/centos-7%E6%B7%BB%E5%8A%A0%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8%E6%9C%8D%E5%8A%A1-%E8%84%9A%E6%9C%AC/" target="_self">
+          CentOS 7添加开机启动服务/脚本
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/centos-7%E6%B7%BB%E5%8A%A0%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8%E6%9C%8D%E5%8A%A1-%E8%84%9A%E6%9C%AC/" target="_self">
+          
+          
+            
+          
+          
+添加开机自启服务在CentOS 7中添加开机自启服务非常方便，只需要两条命令(以Jenkins为例)：
+12systemctl enable jenkins.service #设置jenkins服务为自启动服务sysstemctl start  jenkins.service #启动jenkins服务
+
+添加开机自启脚本在centos7中增加脚本有两种常用的方法，以脚本autostart.sh为
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-09-23 16:04" pubdate>
+              2018-09-23
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/">开机启动</a>
+            
+              <a href="/tags/%E8%84%9A%E6%9C%AC/">脚本</a>
+            
+              <a href="/tags/centos/">centos</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/beyond-compare%E6%9C%80%E6%96%B0%E7%89%B9%E5%88%AB%E7%89%884-2-6-23150%E4%B8%8B%E8%BD%BD/" target="_self">
+          <img src="/2018/beyond-compare%E6%9C%80%E6%96%B0%E7%89%B9%E5%88%AB%E7%89%884-2-6-23150%E4%B8%8B%E8%BD%BD/swiper1.png" srcset="/img/loading.gif" lazyload alt="Beyond Compare最新特别版4.2.6.23150下载">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/beyond-compare%E6%9C%80%E6%96%B0%E7%89%B9%E5%88%AB%E7%89%884-2-6-23150%E4%B8%8B%E8%BD%BD/" target="_self">
+          Beyond Compare最新特别版4.2.6.23150下载
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/beyond-compare%E6%9C%80%E6%96%B0%E7%89%B9%E5%88%AB%E7%89%884-2-6-23150%E4%B8%8B%E8%BD%BD/" target="_self">
+          
+          
+            
+          
+          
+介绍
+Beyond Compare是一套由Scooter Software推出的内容比较工具软件。除了可以作文件比较以外，还可以比对文件目录、FTP目录及压缩文件的内容等。因为这些功能，Beyond Compare被应用于版本控制及数据同步的工作上
+
+以上是摘自维基百科的解释，一下是我对Beyond Compare的功能总结： - 比较文件，文件夹 - 三种方式合并 - 同步文件夹 - 多平台 
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-09-21 05:32" pubdate>
+              2018-09-21
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%BF%80%E6%B4%BB/">激活</a>
+            
+              <a href="/tags/%E6%96%87%E4%BB%B6%E6%AF%94%E8%BE%83/">文件比较</a>
+            
+              <a href="/tags/%E6%B3%A8%E5%86%8C/">注册</a>
+            
+              <a href="/tags/beyond-compare/">beyond-compare</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/eslint%E5%BC%80%E5%90%AF%E8%87%AA%E5%8A%A8%E4%BF%AE%E5%A4%8D%E6%A0%BC%E5%BC%8F%E9%94%99%E8%AF%AF%E7%9A%84%E6%96%B9%E6%B3%95/" target="_self">
+          <img src="/2018/eslint%E5%BC%80%E5%90%AF%E8%87%AA%E5%8A%A8%E4%BF%AE%E5%A4%8D%E6%A0%BC%E5%BC%8F%E9%94%99%E8%AF%AF%E7%9A%84%E6%96%B9%E6%B3%95/eslint-autofix_464c5549da954e6e85a845b7a8467862.png" srcset="/img/loading.gif" lazyload alt="ESLint开启自动修复格式错误的方法">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/eslint%E5%BC%80%E5%90%AF%E8%87%AA%E5%8A%A8%E4%BF%AE%E5%A4%8D%E6%A0%BC%E5%BC%8F%E9%94%99%E8%AF%AF%E7%9A%84%E6%96%B9%E6%B3%95/" target="_self">
+          ESLint开启自动修复格式错误的方法
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/eslint%E5%BC%80%E5%90%AF%E8%87%AA%E5%8A%A8%E4%BF%AE%E5%A4%8D%E6%A0%BC%E5%BC%8F%E9%94%99%E8%AF%AF%E7%9A%84%E6%96%B9%E6%B3%95/" target="_self">
+          
+          
+            
+          
+          在VSCode中使用ESlint进行代码格式检查，当扫描到格式错误后，ESlint默认只是提示错误信息。并没有启动自动修复的功能，手动修改起来很是麻烦。可以通过下图的步骤，开启ESlint的自动修复功能。这样编写完代码，保存后，格式就是自动修复。注意： * 如果一次没有修复完成，可以多按几次保存； * 也可以通过自动格式化文件后，再保存，触发自动修复
+
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-09-20 01:56" pubdate>
+              2018-09-20
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%A0%BC%E5%BC%8F%E5%8C%96/">格式化</a>
+            
+              <a href="/tags/%E8%87%AA%E5%8A%A8%E4%BF%AE%E5%A4%8D/">自动修复</a>
+            
+              <a href="/tags/eslint/">eslint</a>
+            
+              <a href="/tags/vscode/">vscode</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2018/windows%E4%B8%AD%E5%88%9B%E5%BB%BAredis%E9%9B%86%E7%BE%A4%E6%96%B9%E6%B3%95%E9%99%84redis%E9%9B%86%E7%BE%A4%E4%B8%8B%E8%BD%BD/" target="_self">
+          <img src="/2018/windows%E4%B8%AD%E5%88%9B%E5%BB%BAredis%E9%9B%86%E7%BE%A4%E6%96%B9%E6%B3%95%E9%99%84redis%E9%9B%86%E7%BE%A4%E4%B8%8B%E8%BD%BD/redis-logo.png" srcset="/img/loading.gif" lazyload alt="windows中创建Redis集群方法(附Redis集群下载)">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2018/windows%E4%B8%AD%E5%88%9B%E5%BB%BAredis%E9%9B%86%E7%BE%A4%E6%96%B9%E6%B3%95%E9%99%84redis%E9%9B%86%E7%BE%A4%E4%B8%8B%E8%BD%BD/" target="_self">
+          windows中创建Redis集群方法(附Redis集群下载)
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2018/windows%E4%B8%AD%E5%88%9B%E5%BB%BAredis%E9%9B%86%E7%BE%A4%E6%96%B9%E6%B3%95%E9%99%84redis%E9%9B%86%E7%BE%A4%E4%B8%8B%E8%BD%BD/" target="_self">
+          
+          
+            
+          
+           虽然在windows中安装Redis的机会很少，但是当服务器或者测试环境Redis集群down掉的时候，作为备用开发方案，还是很有必要的。所以这里记录一下我在windows中安装Redis集群的过程和步骤，并附上配置好的集群的下载链接。
+
+下载windows版本的Redis，地址：https://github.com/MicrosoftArchive/redis/releases
+安装Ruby
+
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-09-19 03:30" pubdate>
+              2018-09-19
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E4%B8%8B%E8%BD%BD/">下载</a>
+            
+              <a href="/tags/windows/">windows</a>
+            
+              <a href="/tags/redis%E9%9B%86%E7%BE%A4/">redis集群</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <a class="extend prev" rel="prev" href="/page/5/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/#board">4</a><a class="page-number" href="/page/5/#board">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/#board">7</a><a class="page-number" href="/page/8/#board">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/33/#board">33</a><a class="extend next" rel="next" href="/page/7/#board"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+</body>
+</html>
