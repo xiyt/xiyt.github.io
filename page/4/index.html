@@ -179,6 +179,66 @@
   <div class="row mx-auto index-card">
     
     
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2019/dubbo%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%EF%BC%9Acom-alibaba-dubbo-remoting-remotingexception-fail-to-decode-request-due-to-rpcinvocatio/" target="_self">
+          dubbo错误解决：com.alibaba.dubbo.remoting.RemotingException: Fail to decode request due to: RpcInvocatio
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2019/dubbo%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%EF%BC%9Acom-alibaba-dubbo-remoting-remotingexception-fail-to-decode-request-due-to-rpcinvocatio/" target="_self">
+          
+          
+            
+          
+          
+今天在测试环境遇到了这个错误，大概意思是说服务提供方无法解码请求。遇到这个问题需要从以下一个方面定位：
+
+方法参数、参数对象的属性，是否都实现了序列化接口；
+服务提供方和消费方序列化的方式是否相同：检查双方的serialization配置；
+检查双方的dubbo jar包的版本是否一致；
+检查双方引用的接口jar包是否一致；
+
+我的这次问题，就是因为第4点造成的，服务提供方重新打包部署了，但是消
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-07-17 15:08" pubdate>
+              2019-07-17
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/%E6%8A%80%E6%9C%AF%E7%BC%96%E7%A8%8B/">技术编程</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/dubbo/">dubbo</a>
+            
+              <a href="/tags/%E5%BA%8F%E5%88%97%E5%8C%96/">序列化</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
       <div class="col-12 col-md-4 m-auto index-img">
         <a href="/2019/vue%E4%B8%AD%E5%9B%BE%E7%89%87%E6%96%87%E4%BB%B6%E8%BD%AC%E6%8D%A2%E4%B8%BAbase64%E6%A0%BC%E5%BC%8F%E7%9A%84%E6%96%B9%E6%B3%95/" target="_self">
           <img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2019/vue中图片文件转换为base64格式的方法/logo.png" srcset="/img/loading.gif" lazyload alt="Vue中图片文件转换为Base64格式的方法">
@@ -741,74 +801,6 @@ TeamViewer 14无限自动改ID 解决商业禁用问题
               <a href="/tags/gitnote/">gitnote</a>
             
               <a href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2019/%E5%A6%82%E4%BD%95%E5%88%B6%E4%BD%9C%E4%B8%80%E4%BB%BD%E8%A1%8C%E4%B9%8B%E6%9C%89%E6%95%88%E7%9A%84sprint%E6%91%98%E8%A6%81%E6%96%87%E6%A1%A3%EF%BC%9F/" target="_self">
-          <img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2019/如何制作一份行之有效的sprint摘要文档？/what-is-agile-800x400.jpg" srcset="/img/loading.gif" lazyload alt="如何制作一份行之有效的Sprint摘要文档？">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2019/%E5%A6%82%E4%BD%95%E5%88%B6%E4%BD%9C%E4%B8%80%E4%BB%BD%E8%A1%8C%E4%B9%8B%E6%9C%89%E6%95%88%E7%9A%84sprint%E6%91%98%E8%A6%81%E6%96%87%E6%A1%A3%EF%BC%9F/" target="_self">
-          如何制作一份行之有效的Sprint摘要文档？
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2019/%E5%A6%82%E4%BD%95%E5%88%B6%E4%BD%9C%E4%B8%80%E4%BB%BD%E8%A1%8C%E4%B9%8B%E6%9C%89%E6%95%88%E7%9A%84sprint%E6%91%98%E8%A6%81%E6%96%87%E6%A1%A3%EF%BC%9F/" target="_self">
-          
-          
-            
-          
-          
-一个敏捷sprint或迭代的结束应该是相对轻量级的行为。毕竟，这是一件每个月至少要进行一次的事情。为让团队免除不必要的仪式环节负担，通常一个非常简洁的sprint回顾就足够了。
-那么，这份包含重要信息点的回顾应该怎样生成？回顾的重要性如何体现？回顾中应包含哪些行之有效的内容呢？
-一、Sprint摘要文档
-作为一个CSM，我喜欢生成一个sprint摘要文档。这个简短的文档中记录了sprint期间非
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2019-02-05 16:43" pubdate>
-              2019-02-05
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/%E6%8F%90%E9%AB%98%E7%94%9F%E4%BA%A7%E5%8A%9B/">提高生产力</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/scrum/">scrum</a>
-            
-              <a href="/tags/%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91/">敏捷开发</a>
-            
-              <a href="/tags/sprint/">sprint</a>
-            
-              <a href="/tags/%E5%86%B2%E5%88%BA/">冲刺</a>
-            
-              <a href="/tags/%E8%BF%AD%E4%BB%A3/">迭代</a>
             
           </div>
         

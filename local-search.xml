@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>Git命令代理配置</title>
+    <link href="/2021/Git%E5%91%BD%E4%BB%A4%E4%BB%A3%E7%90%86%E9%85%8D%E7%BD%AE/"/>
+    <url>/2021/Git%E5%91%BD%E4%BB%A4%E4%BB%A3%E7%90%86%E9%85%8D%E7%BD%AE/</url>
+    
+    <content type="html"><![CDATA[<p><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2021/Git%E5%91%BD%E4%BB%A4%E4%BB%A3%E7%90%86%E9%85%8D%E7%BD%AE/git-logo.jpg"><br>在国内使用GitHub的时候往往会出现网络问题，这种情况下不得不通过设定git的代理来解决。git的代理分为全局代理和项目代理两种，而且还分socket和http代理两种模式，下面把具体的设置命令记录如下：</p><h2 id="全局代理"><a href="#全局代理" class="headerlink" title="全局代理"></a>全局代理</h2><figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs verilog"># socket 方式<br>git <span class="hljs-keyword">config</span> --<span class="hljs-keyword">global</span> http<span class="hljs-variable">.proxy</span> socks5:<span class="hljs-comment">//127.0.0.1:1080</span><br>git <span class="hljs-keyword">config</span> --<span class="hljs-keyword">global</span> https<span class="hljs-variable">.proxy</span> socks5:<span class="hljs-comment">//127.0.0.1:1080</span><br># http 方式<br>git <span class="hljs-keyword">config</span> --<span class="hljs-keyword">global</span> https<span class="hljs-variable">.proxy</span> http:<span class="hljs-comment">//127.0.0.1:1080</span><br>git <span class="hljs-keyword">config</span> --<span class="hljs-keyword">global</span> https<span class="hljs-variable">.proxy</span> https:<span class="hljs-comment">//127.0.0.1:1080</span><br></code></pre></td></tr></table></figure><h2 id="取消全局代理"><a href="#取消全局代理" class="headerlink" title="取消全局代理"></a>取消全局代理</h2><figure class="highlight tcl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs tcl">git config --<span class="hljs-keyword">global</span> --<span class="hljs-keyword">unset</span> <span class="hljs-keyword">http</span>.proxy<br>git config --<span class="hljs-keyword">global</span> --<span class="hljs-keyword">unset</span> https.proxy<br></code></pre></td></tr></table></figure><h2 id="项目代理，在项目文件夹中执行："><a href="#项目代理，在项目文件夹中执行：" class="headerlink" title="项目代理，在项目文件夹中执行："></a>项目代理，在项目文件夹中执行：</h2><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs arduino"><span class="hljs-meta"># socket 方式</span><br>git config http.proxy socks5:<span class="hljs-comment">//127.0.0.1:1080</span><br>git config https.proxy socks5:<span class="hljs-comment">//127.0.0.1:1080</span><br><span class="hljs-meta"># http 方式</span><br>git config https.proxy http:<span class="hljs-comment">//127.0.0.1:1080</span><br>git config https.proxy https:<span class="hljs-comment">//127.0.0.1:1080</span><br></code></pre></td></tr></table></figure><h2 id="取消项目代理，在项目文件夹中执行："><a href="#取消项目代理，在项目文件夹中执行：" class="headerlink" title="取消项目代理，在项目文件夹中执行："></a>取消项目代理，在项目文件夹中执行：</h2><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs lua">git <span class="hljs-built_in">config</span> <span class="hljs-comment">--unset http.proxy</span><br>git <span class="hljs-built_in">config</span> <span class="hljs-comment">--unset https.proxy</span><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>软件工具</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>git</tag>
+      
+      <tag>代理</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>全能数据库管理工具DataGrip推荐使用2019.3.5版本</title>
     <link href="/2021/%E5%85%A8%E8%83%BD%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7datagrip%E6%8E%A8%E8%8D%90%E4%BD%BF%E7%94%A82019-3-5%E7%89%88%E6%9C%AC/"/>
     <url>/2021/%E5%85%A8%E8%83%BD%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7datagrip%E6%8E%A8%E8%8D%90%E4%BD%BF%E7%94%A82019-3-5%E7%89%88%E6%9C%AC/</url>
