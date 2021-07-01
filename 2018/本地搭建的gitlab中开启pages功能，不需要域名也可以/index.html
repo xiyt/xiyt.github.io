@@ -228,7 +228,7 @@
             <h1 style="display: none">本地搭建的GitLab中开启Pages功能，不需要域名也可以</h1>
             
             <div class="markdown-body">
-              <p><img src="/2018/%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BA%E7%9A%84gitlab%E4%B8%AD%E5%BC%80%E5%90%AFpages%E5%8A%9F%E8%83%BD%EF%BC%8C%E4%B8%8D%E9%9C%80%E8%A6%81%E5%9F%9F%E5%90%8D%E4%B9%9F%E5%8F%AF%E4%BB%A5/gitlabpage-logo.jpg" srcset="/img/loading.gif" lazyload></p>
+              <p><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2018/%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BA%E7%9A%84gitlab%E4%B8%AD%E5%BC%80%E5%90%AFpages%E5%8A%9F%E8%83%BD%EF%BC%8C%E4%B8%8D%E9%9C%80%E8%A6%81%E5%9F%9F%E5%90%8D%E4%B9%9F%E5%8F%AF%E4%BB%A5/gitlabpage-logo.jpg" srcset="/img/loading.gif" lazyload></p>
 <p>最近在公司内部，我负责搭建了GitLab服务，开启了从SVN逐步转到GIT的路程。目前自建的GitLab运行状态良好，非常好用。但是默认的GitLab并没有开启Pages服务，这样的话在编写项目说明文档时，就很不方便了。于是自己试着在本地搭建的GitLab中开启Pages功能，下面把开启过程和遇到的问题记录下来，分享给大家。</p>
 <h3 id="1、开启GitLab-Pages功能"><a href="#1、开启GitLab-Pages功能" class="headerlink" title="1、开启GitLab Pages功能"></a><strong>1、开启GitLab Pages功能</strong></h3><p>编辑 /etc/gitlab/gitlab.rb文件，修改如下两行</p>
 <p>##! Define to enable GitLab Pages<br>pages_external_url “<a target="_blank" rel="noopener" href="http://r7102/&quot;">http://R7102/&quot;</a><br>gitlab_pages = true</p>
@@ -240,9 +240,9 @@
 <p>安装好之后，就可以通过命令为我们的项目添加runner了，在命令行中输入以下命令，按照提示一步一步完成即可。</p>
 <p>gitlab-runner register</p>
 <p>其中需要填写URL和Token，可以在GitLab项目的settings-&gt;CI/CD-&gt;Runners settings中找到，类似下图：</p>
-<p><img src="/2018/%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BA%E7%9A%84gitlab%E4%B8%AD%E5%BC%80%E5%90%AFpages%E5%8A%9F%E8%83%BD%EF%BC%8C%E4%B8%8D%E9%9C%80%E8%A6%81%E5%9F%9F%E5%90%8D%E4%B9%9F%E5%8F%AF%E4%BB%A5/gitpages-01.png" srcset="/img/loading.gif" lazyload alt="本地搭建的GitLab中开启Pages功能，不需要域名也可以"></p>
+<p><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2018/%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BA%E7%9A%84gitlab%E4%B8%AD%E5%BC%80%E5%90%AFpages%E5%8A%9F%E8%83%BD%EF%BC%8C%E4%B8%8D%E9%9C%80%E8%A6%81%E5%9F%9F%E5%90%8D%E4%B9%9F%E5%8F%AF%E4%BB%A5/gitpages-01.png" srcset="/img/loading.gif" lazyload alt="本地搭建的GitLab中开启Pages功能，不需要域名也可以"></p>
 <h3 id="3、配置Pages服务的CI"><a href="#3、配置Pages服务的CI" class="headerlink" title="3、配置Pages服务的CI"></a>3、配置Pages服务的CI</h3><p>在工程根目录下，创建<a target="_blank" rel="noopener" href="http://10.21.20.76:6868/xiyt/ES-DOC/blob/master/.gitlab-ci.yml" title=".gitlab-ci.yml">.gitlab-ci.yml</a>文件，文件内容可以通过GitLab内置的模板生产，如下图：</p>
-<p><img src="/2018/%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BA%E7%9A%84gitlab%E4%B8%AD%E5%BC%80%E5%90%AFpages%E5%8A%9F%E8%83%BD%EF%BC%8C%E4%B8%8D%E9%9C%80%E8%A6%81%E5%9F%9F%E5%90%8D%E4%B9%9F%E5%8F%AF%E4%BB%A5/gitpages-02.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2018/%E6%9C%AC%E5%9C%B0%E6%90%AD%E5%BB%BA%E7%9A%84gitlab%E4%B8%AD%E5%BC%80%E5%90%AFpages%E5%8A%9F%E8%83%BD%EF%BC%8C%E4%B8%8D%E9%9C%80%E8%A6%81%E5%9F%9F%E5%90%8D%E4%B9%9F%E5%8F%AF%E4%BB%A5/gitpages-02.png" srcset="/img/loading.gif" lazyload></p>
 <p>这里选择HTML为例，就生产了以上代码。其中<strong>cp -r docs/. .public</strong>这句根据需要修改，将docs改为你存放pages页面的路径即可。</p>
 <p>这样，当我们每次执行push动作后，就会触发pages的自动部署。将我们的pages页面发布到GitLab Pages服务中。</p>
 <h3 id="4、如何访问Pages页面呢？"><a href="#4、如何访问Pages页面呢？" class="headerlink" title="4、如何访问Pages页面呢？"></a>4、如何访问Pages页面呢？</h3><p>如果你有在上面配置开启Pages时配置了域名了，那么直接访问：<strong>http://你的Git账号.域名/工程名</strong>，例如：</p>
@@ -276,13 +276,13 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/%E5%9F%9F%E5%90%8D/">域名</a>
-                    
                       <a class="hover-with-bg" href="/tags/gitlab/">gitlab</a>
                     
                       <a class="hover-with-bg" href="/tags/nginx/">nginx</a>
                     
                       <a class="hover-with-bg" href="/tags/pages/">pages</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%9F%9F%E5%90%8D/">域名</a>
                     
                   </div>
                 

@@ -237,13 +237,13 @@
 <p> </p>
 <p>VirtualBox中的桥接网卡模式已经保证了上面提到的第一和第二两点，我们需要在VirtualBox中再配置一个网卡，网络类型选择仅主机模式，具体操作步骤如下：</p>
 <p>1、全局设定中，添加虚拟仅主机模式的网络</p>
-<p><img src="/2017/virtualbox%E4%B8%AD%E9%85%8D%E7%BD%AE%E5%8F%8C%E7%BD%91%E5%8D%A1%EF%BC%8C%E5%AE%9E%E7%8E%B0%E5%8A%A8%E6%80%81ip%E8%AE%BF%E9%97%AE%E5%A4%96%E7%BD%91%EF%BC%8C%E5%9B%BA%E5%AE%9Aip%E6%96%B9%E4%BE%BF/virtualbox-network-01.jpg" srcset="/img/loading.gif" lazyload alt="Virtualbox中配置双网卡，实现动态IP访问外网，固定IP方便内网通过SSH连接"></p>
+<p><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2017/virtualbox%E4%B8%AD%E9%85%8D%E7%BD%AE%E5%8F%8C%E7%BD%91%E5%8D%A1%EF%BC%8C%E5%AE%9E%E7%8E%B0%E5%8A%A8%E6%80%81ip%E8%AE%BF%E9%97%AE%E5%A4%96%E7%BD%91%EF%BC%8C%E5%9B%BA%E5%AE%9Aip%E6%96%B9%E4%BE%BF/virtualbox-network-01.jpg" srcset="/img/loading.gif" lazyload alt="Virtualbox中配置双网卡，实现动态IP访问外网，固定IP方便内网通过SSH连接"></p>
 <p>这里的IP地址网段，最好选一个和公司/家里不重复的。比如公司用的是10.XXX网段，家里用的是192.XXX网段，这里我选择使用172.168网段，这个网段就是用来把我们自己电脑和虚拟机放到一个虚拟网络里。</p>
 <p>2、打开虚拟机配置，在网中启用第二块网卡，连接方式和界面名称分别使用：仅主机网络和我们在第二步中添加的虚拟网络适配器。</p>
-<p><img src="/2017/virtualbox%E4%B8%AD%E9%85%8D%E7%BD%AE%E5%8F%8C%E7%BD%91%E5%8D%A1%EF%BC%8C%E5%AE%9E%E7%8E%B0%E5%8A%A8%E6%80%81ip%E8%AE%BF%E9%97%AE%E5%A4%96%E7%BD%91%EF%BC%8C%E5%9B%BA%E5%AE%9Aip%E6%96%B9%E4%BE%BF/virtualbox-network-02.jpg" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2017/virtualbox%E4%B8%AD%E9%85%8D%E7%BD%AE%E5%8F%8C%E7%BD%91%E5%8D%A1%EF%BC%8C%E5%AE%9E%E7%8E%B0%E5%8A%A8%E6%80%81ip%E8%AE%BF%E9%97%AE%E5%A4%96%E7%BD%91%EF%BC%8C%E5%9B%BA%E5%AE%9Aip%E6%96%B9%E4%BE%BF/virtualbox-network-02.jpg" srcset="/img/loading.gif" lazyload></p>
 <p>3、启动虚拟机，查看网络配置情况：ifconfig，我的结果如下：</p>
 <p> </p>
-<p><img src="/2017/virtualbox%E4%B8%AD%E9%85%8D%E7%BD%AE%E5%8F%8C%E7%BD%91%E5%8D%A1%EF%BC%8C%E5%AE%9E%E7%8E%B0%E5%8A%A8%E6%80%81ip%E8%AE%BF%E9%97%AE%E5%A4%96%E7%BD%91%EF%BC%8C%E5%9B%BA%E5%AE%9Aip%E6%96%B9%E4%BE%BF/virtualbox-network-03.jpg" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2017/virtualbox%E4%B8%AD%E9%85%8D%E7%BD%AE%E5%8F%8C%E7%BD%91%E5%8D%A1%EF%BC%8C%E5%AE%9E%E7%8E%B0%E5%8A%A8%E6%80%81ip%E8%AE%BF%E9%97%AE%E5%A4%96%E7%BD%91%EF%BC%8C%E5%9B%BA%E5%AE%9Aip%E6%96%B9%E4%BE%BF/virtualbox-network-03.jpg" srcset="/img/loading.gif" lazyload></p>
 <p>如果你的结果和我这个截图类似，那么说明已经成功了。不管在什么网络环境下，都可以通过上图中的172.168.200.100地址，ssh了。</p>
 <p>但是，我第一次配置完后，并没有成功，enp0s8这个网卡并没有获得IP，这时候就要进行下面的第四步：</p>
 <p>4、虚拟机中配置网卡</p>
@@ -269,17 +269,17 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
+                      <a class="hover-with-bg" href="/tags/virtualbox/">virtualbox</a>
+                    
                       <a class="hover-with-bg" href="/tags/%E4%BB%85%E4%B8%BB%E6%9C%BA/">仅主机</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%9B%BA%E5%AE%9Aip/">固定ip</a>
                     
                       <a class="hover-with-bg" href="/tags/%E5%A4%96%E7%BD%91/">外网</a>
                     
                       <a class="hover-with-bg" href="/tags/%E6%A1%A5%E6%8E%A5%E7%BD%91%E5%8D%A1/">桥接网卡</a>
                     
                       <a class="hover-with-bg" href="/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/">虚拟机</a>
-                    
-                      <a class="hover-with-bg" href="/tags/virtualbox/">virtualbox</a>
-                    
-                      <a class="hover-with-bg" href="/tags/%E5%9B%BA%E5%AE%9Aip/">固定ip</a>
                     
                   </div>
                 

@@ -228,7 +228,7 @@
             <h1 style="display: none">Swagger中过滤掉任意API接口的方法</h1>
             
             <div class="markdown-body">
-              <p><img src="/2018/swagger%E4%B8%AD%E8%BF%87%E6%BB%A4%E6%8E%89%E4%BB%BB%E6%84%8Fapi%E6%8E%A5%E5%8F%A3%E7%9A%84%E6%96%B9%E6%B3%95/Swagger_UI.png?ext=.png" srcset="/img/loading.gif" lazyload alt="Swagger中过滤掉任意API接口的方法"></p>
+              <p><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2018/swagger%E4%B8%AD%E8%BF%87%E6%BB%A4%E6%8E%89%E4%BB%BB%E6%84%8Fapi%E6%8E%A5%E5%8F%A3%E7%9A%84%E6%96%B9%E6%B3%95/Swagger_UI.png?ext=.png" srcset="/img/loading.gif" lazyload alt="Swagger中过滤掉任意API接口的方法"></p>
 <p>Swagger是目前最受欢迎的REST APIs文档生成工具，同时也是API的在线测试工具。功能强大谁用谁知道。我就不用在这里推广它了。今天要解决的问题是：如果让一些特定的API接口在Swagger中不显示，即从Swagger中过滤掉一些不想展示的接口？</p>
 <p>通常我们使用Swagger都是通过指定要扫描的包或者扫描具有某些注解的Controller，来生成API，那么如果这其中还想过滤掉一些特定API怎么做呢？可以在构建Docket的时候，在apis()方法中传入Predicate<RequestHandler>实例，来进行更加精细的过滤。</p>
 <p>1、先看下Docket的定义，这里在apis方法中，传入Predicate<RequestHandler>列表</p>

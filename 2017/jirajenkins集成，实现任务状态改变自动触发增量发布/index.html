@@ -228,17 +228,17 @@
             <h1 style="display: none">Jira+Jenkins集成，实现任务状态改变自动触发增量发布</h1>
             
             <div class="markdown-body">
-              <p><img src="/2017/jirajenkins%E9%9B%86%E6%88%90%EF%BC%8C%E5%AE%9E%E7%8E%B0%E4%BB%BB%E5%8A%A1%E7%8A%B6%E6%80%81%E6%94%B9%E5%8F%98%E8%87%AA%E5%8A%A8%E8%A7%A6%E5%8F%91%E5%A2%9E%E9%87%8F%E5%8F%91%E5%B8%83/jira-Jenkins00.jpg" srcset="/img/loading.gif" lazyload></p>
+              <p><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2017/jirajenkins%E9%9B%86%E6%88%90%EF%BC%8C%E5%AE%9E%E7%8E%B0%E4%BB%BB%E5%8A%A1%E7%8A%B6%E6%80%81%E6%94%B9%E5%8F%98%E8%87%AA%E5%8A%A8%E8%A7%A6%E5%8F%91%E5%A2%9E%E9%87%8F%E5%8F%91%E5%B8%83/jira-Jenkins00.jpg" srcset="/img/loading.gif" lazyload></p>
 <p>前几天把Jira、Confluence、Fisheye集成环境搭建好了，今天进一步把Jenkins和Jira做了一个集成，目的就是通过Jira通知Jenkins任务已经完成，可以发布了。然后Jenkins获取通知后自动抓取Jira任务单关联的代码清单，完成增量发布。在集成过程中确实有一些关键点有必要记录下来，分享给大家。</p>
 <p><strong>1、首先是Jira任务单和代码的关联</strong></p>
 <p>这一部分是通过Jira和Fisheye的集成实现的，这样在Jira的任务单里就可以看到源码的标签页，列出了这个Jira单关联的代码清单。那么这个任务单和代码清单是怎么关联的呢？这就要求我们在上传代码到SVN的时候，在备注里填写上Jira的单号，这样就通过Fisheye让任务单和代码清单建立的关联。</p>
-<p><img src="/2017/jirajenkins%E9%9B%86%E6%88%90%EF%BC%8C%E5%AE%9E%E7%8E%B0%E4%BB%BB%E5%8A%A1%E7%8A%B6%E6%80%81%E6%94%B9%E5%8F%98%E8%87%AA%E5%8A%A8%E8%A7%A6%E5%8F%91%E5%A2%9E%E9%87%8F%E5%8F%91%E5%B8%83/jira-Jenkins01.jpg" srcset="/img/loading.gif" lazyload alt="Jira+Jenkins集成，实现任务状态改变自动触发增量发布"></p>
+<p><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2017/jirajenkins%E9%9B%86%E6%88%90%EF%BC%8C%E5%AE%9E%E7%8E%B0%E4%BB%BB%E5%8A%A1%E7%8A%B6%E6%80%81%E6%94%B9%E5%8F%98%E8%87%AA%E5%8A%A8%E8%A7%A6%E5%8F%91%E5%A2%9E%E9%87%8F%E5%8F%91%E5%B8%83/jira-Jenkins01.jpg" srcset="/img/loading.gif" lazyload alt="Jira+Jenkins集成，实现任务状态改变自动触发增量发布"></p>
 <p><strong>2、Jira任务改变要通知到Jenkins</strong></p>
 <p>这个功能是通过Jira的网络钩子功能和Jenkins中的Jira插件实现的，具体配置如下：</p>
 <p>①Jenkins中安装<a target="_blank" rel="noopener" href="http://wiki.jenkins-ci.org/display/JENKINS/JIRA+Trigger+Plugin">JIRA Trigger Plugin</a>插件，然后配置Jira的地址和登录信息</p>
-<p><img src="/2017/jirajenkins%E9%9B%86%E6%88%90%EF%BC%8C%E5%AE%9E%E7%8E%B0%E4%BB%BB%E5%8A%A1%E7%8A%B6%E6%80%81%E6%94%B9%E5%8F%98%E8%87%AA%E5%8A%A8%E8%A7%A6%E5%8F%91%E5%A2%9E%E9%87%8F%E5%8F%91%E5%B8%83/jira-Jenkins02.jpg" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2017/jirajenkins%E9%9B%86%E6%88%90%EF%BC%8C%E5%AE%9E%E7%8E%B0%E4%BB%BB%E5%8A%A1%E7%8A%B6%E6%80%81%E6%94%B9%E5%8F%98%E8%87%AA%E5%8A%A8%E8%A7%A6%E5%8F%91%E5%A2%9E%E9%87%8F%E5%8F%91%E5%B8%83/jira-Jenkins02.jpg" srcset="/img/loading.gif" lazyload></p>
 <p>②Jira中创建网络钩子，其中url是：<strong>http://你的Jenkins地址/jira-trigger-webhook-receiver/</strong></p>
-<p><img src="/2017/jirajenkins%E9%9B%86%E6%88%90%EF%BC%8C%E5%AE%9E%E7%8E%B0%E4%BB%BB%E5%8A%A1%E7%8A%B6%E6%80%81%E6%94%B9%E5%8F%98%E8%87%AA%E5%8A%A8%E8%A7%A6%E5%8F%91%E5%A2%9E%E9%87%8F%E5%8F%91%E5%B8%83/jira-Jenkins03.jpg" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2017/jirajenkins%E9%9B%86%E6%88%90%EF%BC%8C%E5%AE%9E%E7%8E%B0%E4%BB%BB%E5%8A%A1%E7%8A%B6%E6%80%81%E6%94%B9%E5%8F%98%E8%87%AA%E5%8A%A8%E8%A7%A6%E5%8F%91%E5%A2%9E%E9%87%8F%E5%8F%91%E5%B8%83/jira-Jenkins03.jpg" srcset="/img/loading.gif" lazyload></p>
 <p>③这样当Jira中任务发生变化后，就会通过网络钩子通知到Jenkins</p>
 <p> </p>
 <p><strong>3、Jenkins中配置触发构建的条件</strong></p>
@@ -248,7 +248,7 @@
 <li>Build when an issue is updated in JIRA</li>
 </ul>
 <p>通过在JIRA任务单中添加备注或者通过检测JIRA任务单的状态变化，来触发Jenkins构建，这里我以第一个为例子进行了配置：</p>
-<p><img src="/2017/jirajenkins%E9%9B%86%E6%88%90%EF%BC%8C%E5%AE%9E%E7%8E%B0%E4%BB%BB%E5%8A%A1%E7%8A%B6%E6%80%81%E6%94%B9%E5%8F%98%E8%87%AA%E5%8A%A8%E8%A7%A6%E5%8F%91%E5%A2%9E%E9%87%8F%E5%8F%91%E5%B8%83/jira-Jenkins04.jpg" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2017/jirajenkins%E9%9B%86%E6%88%90%EF%BC%8C%E5%AE%9E%E7%8E%B0%E4%BB%BB%E5%8A%A1%E7%8A%B6%E6%80%81%E6%94%B9%E5%8F%98%E8%87%AA%E5%8A%A8%E8%A7%A6%E5%8F%91%E5%A2%9E%E9%87%8F%E5%8F%91%E5%B8%83/jira-Jenkins04.jpg" srcset="/img/loading.gif" lazyload></p>
 <p>这里的JIRA_ISSUE_KEY变量，可以在后面的构建shell中使用，通过该变量获取到Jira的key。</p>
 <p><strong>4、编写shell，根据Jira的Key或者Jira任务状态获取到代码清单列表</strong></p>
 <p>这一步我是通过Java代码调用Jira和Fisheye提供的API实现的，API文档如下：</p>
@@ -257,12 +257,12 @@
 <li><a target="_blank" rel="noopener" href="https://docs.atlassian.com/jira/REST/6.3.6/">https://docs.atlassian.com/jira/REST/6.3.6/</a></li>
 </ul>
 <p>然后在shell中获取到Java代码查询到代码清单，进行更新发布。大家可以自行参考这个文档，使用合适的rest API实现。</p>
-<p><img src="/2017/jirajenkins%E9%9B%86%E6%88%90%EF%BC%8C%E5%AE%9E%E7%8E%B0%E4%BB%BB%E5%8A%A1%E7%8A%B6%E6%80%81%E6%94%B9%E5%8F%98%E8%87%AA%E5%8A%A8%E8%A7%A6%E5%8F%91%E5%A2%9E%E9%87%8F%E5%8F%91%E5%B8%83/jira-Jenkins05.jpg" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2017/jirajenkins%E9%9B%86%E6%88%90%EF%BC%8C%E5%AE%9E%E7%8E%B0%E4%BB%BB%E5%8A%A1%E7%8A%B6%E6%80%81%E6%94%B9%E5%8F%98%E8%87%AA%E5%8A%A8%E8%A7%A6%E5%8F%91%E5%A2%9E%E9%87%8F%E5%8F%91%E5%B8%83/jira-Jenkins05.jpg" srcset="/img/loading.gif" lazyload></p>
 <p><strong>5、最后看一下效果</strong></p>
 <p>在Jira任务单中添加备注：请发布，很快就会收到Jenkins反馈的备注信息，提示已经安排发布</p>
-<p><img src="/2017/jirajenkins%E9%9B%86%E6%88%90%EF%BC%8C%E5%AE%9E%E7%8E%B0%E4%BB%BB%E5%8A%A1%E7%8A%B6%E6%80%81%E6%94%B9%E5%8F%98%E8%87%AA%E5%8A%A8%E8%A7%A6%E5%8F%91%E5%A2%9E%E9%87%8F%E5%8F%91%E5%B8%83/jira-Jenkins06.jpg" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2017/jirajenkins%E9%9B%86%E6%88%90%EF%BC%8C%E5%AE%9E%E7%8E%B0%E4%BB%BB%E5%8A%A1%E7%8A%B6%E6%80%81%E6%94%B9%E5%8F%98%E8%87%AA%E5%8A%A8%E8%A7%A6%E5%8F%91%E5%A2%9E%E9%87%8F%E5%8F%91%E5%B8%83/jira-Jenkins06.jpg" srcset="/img/loading.gif" lazyload></p>
 <p>再看看Jenkins中的发布日志，可以看到确实获取到改该任务单的代码清单</p>
-<p><img src="/2017/jirajenkins%E9%9B%86%E6%88%90%EF%BC%8C%E5%AE%9E%E7%8E%B0%E4%BB%BB%E5%8A%A1%E7%8A%B6%E6%80%81%E6%94%B9%E5%8F%98%E8%87%AA%E5%8A%A8%E8%A7%A6%E5%8F%91%E5%A2%9E%E9%87%8F%E5%8F%91%E5%B8%83/jira-Jenkins07.jpg" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2017/jirajenkins%E9%9B%86%E6%88%90%EF%BC%8C%E5%AE%9E%E7%8E%B0%E4%BB%BB%E5%8A%A1%E7%8A%B6%E6%80%81%E6%94%B9%E5%8F%98%E8%87%AA%E5%8A%A8%E8%A7%A6%E5%8F%91%E5%A2%9E%E9%87%8F%E5%8F%91%E5%B8%83/jira-Jenkins07.jpg" srcset="/img/loading.gif" lazyload></p>
 
             </div>
             <hr>
@@ -280,9 +280,9 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/jenkins/">jenkins</a>
-                    
                       <a class="hover-with-bg" href="/tags/jira/">jira</a>
+                    
+                      <a class="hover-with-bg" href="/tags/jenkins/">jenkins</a>
                     
                       <a class="hover-with-bg" href="/tags/%E5%A2%9E%E9%87%8F%E5%8F%91%E5%B8%83/">增量发布</a>
                     

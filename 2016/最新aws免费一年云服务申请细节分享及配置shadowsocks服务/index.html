@@ -229,7 +229,7 @@
             
             <div class="markdown-body">
               <p>AWS对新用户提供免费一年的云主机服务，相比大家早就听说过了。大家可以利用这个免费服务不管是自己搭建学习平台，还是搭建诸如Shadowsocks的工具类服务，都是一个很不错的选择。由于我之前已经在使用Vultr了，所以AWS这个免费资格一直没有使用，知道最近Vultr即将到期，我才在最近成功注册了AWS的免费服务 ，并配置好了Shadowsocks。下面我就把我的注册细节分享给大家。这个流程还是比较复杂的，请大家注意看关键点:-D</p>
-<p><img src="/2016/%E6%9C%80%E6%96%B0aws%E5%85%8D%E8%B4%B9%E4%B8%80%E5%B9%B4%E4%BA%91%E6%9C%8D%E5%8A%A1%E7%94%B3%E8%AF%B7%E7%BB%86%E8%8A%82%E5%88%86%E4%BA%AB%E5%8F%8A%E9%85%8D%E7%BD%AEshadowsocks%E6%9C%8D%E5%8A%A1/aws-free-01.jpg" srcset="/img/loading.gif" lazyload alt="AWS免费一年云服务申请细节分享及配置Shadowsocks服务"></p>
+<p><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2016/%E6%9C%80%E6%96%B0aws%E5%85%8D%E8%B4%B9%E4%B8%80%E5%B9%B4%E4%BA%91%E6%9C%8D%E5%8A%A1%E7%94%B3%E8%AF%B7%E7%BB%86%E8%8A%82%E5%88%86%E4%BA%AB%E5%8F%8A%E9%85%8D%E7%BD%AEshadowsocks%E6%9C%8D%E5%8A%A1/aws-free-01.jpg" srcset="/img/loading.gif" lazyload alt="AWS免费一年云服务申请细节分享及配置Shadowsocks服务"></p>
 <p><strong>1、注册</strong></p>
 <p>注册地址：<a target="_blank" rel="noopener" href="https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct">https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct</a></p>
 <p>通过这个地址打开注册页面，这里填写邮箱地址或手机号，然后<strong>选择我是新用户</strong>，点击登录。接下来就是填写详细的姓名、邮箱、密码等信息。这一步简单，没什么好说的。</p>
@@ -245,7 +245,7 @@
 <li>这时候在手机上输入即可</li>
 </ol>
 <p>我通过这种方式实验了两次都没有成功，总是在输入PIN码时，电话就自动挂断了。当我尝试再次验证的时候已经提示我无法处理我的请求，请联系客服/(ㄒoㄒ)/~~。</p>
-<p><img src="/2016/%E6%9C%80%E6%96%B0aws%E5%85%8D%E8%B4%B9%E4%B8%80%E5%B9%B4%E4%BA%91%E6%9C%8D%E5%8A%A1%E7%94%B3%E8%AF%B7%E7%BB%86%E8%8A%82%E5%88%86%E4%BA%AB%E5%8F%8A%E9%85%8D%E7%BD%AEshadowsocks%E6%9C%8D%E5%8A%A1/aws-error.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2016/%E6%9C%80%E6%96%B0aws%E5%85%8D%E8%B4%B9%E4%B8%80%E5%B9%B4%E4%BA%91%E6%9C%8D%E5%8A%A1%E7%94%B3%E8%AF%B7%E7%BB%86%E8%8A%82%E5%88%86%E4%BA%AB%E5%8F%8A%E9%85%8D%E7%BD%AEshadowsocks%E6%9C%8D%E5%8A%A1/aws-error.png" srcset="/img/loading.gif" lazyload></p>
 <p><strong>4、人工验证（通过）</strong></p>
 <p>如果你和我一样通过步骤3无法验证通过的话，不要急。我们可以根据提示联系客服。直接在支持页面：<a target="_blank" rel="noopener" href="https://console.aws.amazon.com/support/home%EF%BC%8C%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98%EF%BC%8C%E7%82%B9%E5%87%BBCreate">https://console.aws.amazon.com/support/home，创建一个问题，点击Create</a> Case，然后输入问题说明自己无法通过自动电话验证通过，例如我当时是这样写的，并附上了我的截图：</p>
 <blockquote>
@@ -253,7 +253,7 @@
 </blockquote>
 <p>AWS相应还是很快的，不过毕竟还有时差的存在，大概1-2天你就会收到一封邮件，邮件里会有一个OTP号码。请记下这个号码。稍后你就会接到来自AWS的人工客服电话，我接到是来自西雅图的电话，主要意思就是让你把邮件里的OTP号码，读给他听的。他听到你<strong>正确读出OTP号码</strong>后，就OK了。这一步就可以通过了。</p>
 <p>下图就是我当时收到的邮件：</p>
-<p><img src="/2016/%E6%9C%80%E6%96%B0aws%E5%85%8D%E8%B4%B9%E4%B8%80%E5%B9%B4%E4%BA%91%E6%9C%8D%E5%8A%A1%E7%94%B3%E8%AF%B7%E7%BB%86%E8%8A%82%E5%88%86%E4%BA%AB%E5%8F%8A%E9%85%8D%E7%BD%AEshadowsocks%E6%9C%8D%E5%8A%A1/aws-free-02.jpg" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2016/%E6%9C%80%E6%96%B0aws%E5%85%8D%E8%B4%B9%E4%B8%80%E5%B9%B4%E4%BA%91%E6%9C%8D%E5%8A%A1%E7%94%B3%E8%AF%B7%E7%BB%86%E8%8A%82%E5%88%86%E4%BA%AB%E5%8F%8A%E9%85%8D%E7%BD%AEshadowsocks%E6%9C%8D%E5%8A%A1/aws-free-02.jpg" srcset="/img/loading.gif" lazyload></p>
 <p>通过了手机验证这一步，之后就简单了，按照提示进行就行。一般注册全部完成后，24小时之内就可以激活账号，然后就可以创建服务器了。</p>
 <p><strong>5、创建EC2实例</strong></p>
 <p>首先是区域的选择，AWS提供的区域包括这些：</p>
@@ -274,12 +274,12 @@
 <p>大家可以通过这个网站来从自己所在地ping这些不同的区域，看看那个速度最好。</p>
 <p>亚马逊云Ping网站：<a target="_blank" rel="noopener" href="http://www.cloudping.info/">http://www.cloudping.info/</a> 我这里测试是<strong>首尔和东京</strong>的最好，所以选择了东京区域。</p>
 <p>然后就是选择系统镜像，这里我选择的是默认的64位的AMI系统</p>
-<p><img src="/2016/%E6%9C%80%E6%96%B0aws%E5%85%8D%E8%B4%B9%E4%B8%80%E5%B9%B4%E4%BA%91%E6%9C%8D%E5%8A%A1%E7%94%B3%E8%AF%B7%E7%BB%86%E8%8A%82%E5%88%86%E4%BA%AB%E5%8F%8A%E9%85%8D%E7%BD%AEshadowsocks%E6%9C%8D%E5%8A%A1/aws-free-04.jpg" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2016/%E6%9C%80%E6%96%B0aws%E5%85%8D%E8%B4%B9%E4%B8%80%E5%B9%B4%E4%BA%91%E6%9C%8D%E5%8A%A1%E7%94%B3%E8%AF%B7%E7%BB%86%E8%8A%82%E5%88%86%E4%BA%AB%E5%8F%8A%E9%85%8D%E7%BD%AEshadowsocks%E6%9C%8D%E5%8A%A1/aws-free-04.jpg" srcset="/img/loading.gif" lazyload></p>
 <p>在之后的步骤里按照提示安装完成即可。</p>
 <p><strong>6、远程到AWS云主机</strong></p>
 <p>安装好系统后，我们都迫不及待的想通过SSH远程连接到我们的云主机。但是在刚安装好的AWS是无法连接到，甚至无法ping通公开IP。原因是AWS有个<strong>安全组的配置</strong>，这个安全组的配置定义了一些对云主机的入站出站规则，确定哪些IP可以通过哪些端口访问到云主机。默认都是关闭的。所以我们要修改安全组配置。可以查看<a target="_blank" rel="noopener" href="http://jingyan.baidu.com/article/aa6a2c14e8b5080d4c19c4e1.html">这里</a>进行设定。</p>
 <p>AWS的远程连接，我使用的是<strong>xshell工具</strong>，使用其他客户端可能涉及到密钥的转化，比较麻烦。由于AWS使用的是<strong>pem签名文件</strong>，所以在xshell中创建连接时，用户密钥那里要点击浏览，然后导入你再AWS创建实例过程中保存下来的pem文件。<strong>用户名固定是ec2-user</strong>。连接成功后可以自己修改root用户密码，使用root登录。</p>
-<p><img src="/2016/%E6%9C%80%E6%96%B0aws%E5%85%8D%E8%B4%B9%E4%B8%80%E5%B9%B4%E4%BA%91%E6%9C%8D%E5%8A%A1%E7%94%B3%E8%AF%B7%E7%BB%86%E8%8A%82%E5%88%86%E4%BA%AB%E5%8F%8A%E9%85%8D%E7%BD%AEshadowsocks%E6%9C%8D%E5%8A%A1/aws-free-05.jpg" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2016/%E6%9C%80%E6%96%B0aws%E5%85%8D%E8%B4%B9%E4%B8%80%E5%B9%B4%E4%BA%91%E6%9C%8D%E5%8A%A1%E7%94%B3%E8%AF%B7%E7%BB%86%E8%8A%82%E5%88%86%E4%BA%AB%E5%8F%8A%E9%85%8D%E7%BD%AEshadowsocks%E6%9C%8D%E5%8A%A1/aws-free-05.jpg" srcset="/img/loading.gif" lazyload></p>
 <p><strong>7、安装Shadowsocks服务</strong></p>
 <p>远程连接到AWS云主机后，安装Shadowsocks就比较简单了，可以参考我的这篇文章：</p>
 <p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2016/04/17/%E8%AE%B0%E5%BD%95centos6%E4%B8%AD%E5%AE%89%E8%A3%85shadowsocks%E5%92%8Cpptp-vpn/">http://www.daxiblog.com/2016/04/17/%E8%AE%B0%E5%BD%95centos6%E4%B8%AD%E5%AE%89%E8%A3%85shadowsocks%E5%92%8Cpptp-vpn/</a></p>

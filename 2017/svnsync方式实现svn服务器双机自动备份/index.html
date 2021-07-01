@@ -228,7 +228,7 @@
             <h1 style="display: none">svnsync方式实现svn服务器双机自动备份</h1>
             
             <div class="markdown-body">
-              <p><img src="/2017/svnsync%E6%96%B9%E5%BC%8F%E5%AE%9E%E7%8E%B0svn%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%8C%E6%9C%BA%E8%87%AA%E5%8A%A8%E5%A4%87%E4%BB%BD/tortoisesvn.png" srcset="/img/loading.gif" lazyload alt="svnsync方式实现svn服务器双机自动备份"></p>
+              <p><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2017/svnsync%E6%96%B9%E5%BC%8F%E5%AE%9E%E7%8E%B0svn%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%8F%8C%E6%9C%BA%E8%87%AA%E5%8A%A8%E5%A4%87%E4%BB%BD/tortoisesvn.png" srcset="/img/loading.gif" lazyload alt="svnsync方式实现svn服务器双机自动备份"></p>
 <p>今天把项目用svn服务器进行了备份设置，关于svn服务器的备份方案主要有三种svnadmin dump、svnadmin hotcopy和svnsync，这次我选择svnsync这种方式，这样当主svn服务器发生故障时，可以立刻切换到备份服务器继续工作，实现实时双机备份和无缝切换。接下来就把svnsync的配置方法记录如下：</p>
 <p>1、在备份主机上，创建备份用svn库</p>
 <p>svnadmin create svnrepo</p>

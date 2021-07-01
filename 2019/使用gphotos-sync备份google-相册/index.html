@@ -228,7 +228,7 @@
             <h1 style="display: none">使用gphotos-sync备份Google 相册</h1>
             
             <div class="markdown-body">
-              <p><img src="/2019/%E4%BD%BF%E7%94%A8gphotos-sync%E5%A4%87%E4%BB%BDgoogle-%E7%9B%B8%E5%86%8C/u=2915807055,3501928303&fm=26&gp=0.jpg" srcset="/img/loading.gif" lazyload alt="使用gphotos-sync备份Google 相册"></p>
+              <p><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2019/%E4%BD%BF%E7%94%A8gphotos-sync%E5%A4%87%E4%BB%BDgoogle-%E7%9B%B8%E5%86%8C/u=2915807055,3501928303&fm=26&gp=0.jpg" srcset="/img/loading.gif" lazyload alt="使用gphotos-sync备份Google 相册"></p>
 <p>我的照片目前都存储在Google相册中，然后通过Google Drive的同步客户端，保持和电脑同步。但是Google官方宣布自2019年7月10日起自家旗下的两款产品：Google Drive 和 Google 相册之间不再进行同步。原本可以在Google Drive中管理Google 相册中的照片的，现在已经不行了。关键是Google 相册并没有提供可以把照片和本机电脑同步的软件，只能通过网页版Google 相册或者手机客户端使用。这样使用起来很不方便，同时Google的这一宣布，也提醒了我要赶快把数据备份工作做好。于是在我的服务器上配置了gphotos-sync来备份Google相册。下面说一下安装配置的过程：</p>
 <p>1、gphotos-sync是python，所以需要安装Python3以上版本，以及pip工具。安装方法我使用的是一键安装脚本： 在这篇文章中有详细的使用说明：<a target="_blank" rel="noopener" href="https://www.moerats.com/archives/507/">https://www.moerats.com/archives/507/</a></p>
 <p>#CentOS系统<br>wget <a target="_blank" rel="noopener" href="https://www.moerats.com/usr/shell/Python3/CentOS/_Python3.6.sh">https://www.moerats.com/usr/shell/Python3/CentOS\_Python3.6.sh</a> &amp;&amp; sh CentOS_Python3.6.sh<br>#Debian系统<br>wget <a target="_blank" rel="noopener" href="https://www.moerats.com/usr/shell/Python3/Debian/_Python3.6.sh">https://www.moerats.com/usr/shell/Python3/Debian\_Python3.6.sh</a> &amp;&amp; sh Debian_Python3.6.sh</p>
@@ -243,7 +243,7 @@
 <li>在新项目中激活Photos Library API</li>
 <li>点击左侧的Credentials菜单，然后创建类型为OAuth client ID的凭证，然后选择Other点击创建。</li>
 </ul>
-<p><a target="_blank" rel="noopener" href="https://www.daxiblog.com/%e4%bd%bf%e7%94%a8gphotos-sync%e5%a4%87%e4%bb%bdgoogle-%e7%9b%b8%e5%86%8c/gp01/"><img src="/2019/%E4%BD%BF%E7%94%A8gphotos-sync%E5%A4%87%E4%BB%BDgoogle-%E7%9B%B8%E5%86%8C/gp01.png" srcset="/img/loading.gif" lazyload alt="使用gphotos-sync备份Google 相册"></a></p>
+<p><a target="_blank" rel="noopener" href="https://www.daxiblog.com/%e4%bd%bf%e7%94%a8gphotos-sync%e5%a4%87%e4%bb%bdgoogle-%e7%9b%b8%e5%86%8c/gp01/"><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2019/%E4%BD%BF%E7%94%A8gphotos-sync%E5%A4%87%E4%BB%BDgoogle-%E7%9B%B8%E5%86%8C/gp01.png" srcset="/img/loading.gif" lazyload alt="使用gphotos-sync备份Google 相册"></a></p>
 <ul>
 <li>创建好后，点击凭证右侧的下载按钮把json格式的凭证信息下载下来，然后重命名为：client_secret.json</li>
 <li>然后把这个文件安装不同的操作系统类型，放置到不同的目录：<ul>
@@ -279,13 +279,13 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/%E5%A4%87%E4%BB%BD/">备份</a>
-                    
-                      <a class="hover-with-bg" href="/tags/gphotos-sync/">gphotos-sync</a>
-                    
                       <a class="hover-with-bg" href="/tags/google-photo/">google-photo</a>
                     
                       <a class="hover-with-bg" href="/tags/google%E7%9B%B8%E5%86%8C/">google相册</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%A4%87%E4%BB%BD/">备份</a>
+                    
+                      <a class="hover-with-bg" href="/tags/gphotos-sync/">gphotos-sync</a>
                     
                   </div>
                 

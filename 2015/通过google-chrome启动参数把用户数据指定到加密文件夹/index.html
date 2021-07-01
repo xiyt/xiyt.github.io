@@ -230,16 +230,16 @@
             <div class="markdown-body">
               <p>        之前的[这篇文章](http://让Google Chrome更加安全的运行：保护Chrome中的账户资料的两种方法)介绍了如何加密Google Chrome的登陆信息和个人数据，但是使用下来觉得还不是很方便，每次退出时都需要点击<strong>退出并启用childlock功</strong>进行安全退出，如果忘记安全退出，下次启动时就会自动登陆到上次使用的Google账户，无法实现加密运行Chrome的目的。而至于把Google Chrome直接安装到加密盘的做法，虽然能够达到绝对的加密，但是却无法把Google Chrome设定为默认浏览器。那么能不能让Chrome的安装文件和用户数据文件分开存放呢？</p>
 <p>      今天我通过网络查询找到了这个方法：通过Google Chrome的启动命令行把用户数据指定到加密文件，达到只对数据加密的问题，具体做法如下：</p>
-<h2 id="1、在现有的Google-Chrome中断开和google-账户的连接，这样做的目的是删除已经保存的用户数据"><a href="#1、在现有的Google-Chrome中断开和google-账户的连接，这样做的目的是删除已经保存的用户数据" class="headerlink" title="1、在现有的Google Chrome中断开和google 账户的连接，这样做的目的是删除已经保存的用户数据"></a><strong>1、在现有的Google Chrome中断开和google 账户的连接，这样做的目的是删除已经保存的用户数据</strong></h2><p><a target="_blank" rel="noopener" href="http://localhost/old/2015/11/googlechromejiami1.png"><img src="/2015/%E9%80%9A%E8%BF%87google-chrome%E5%90%AF%E5%8A%A8%E5%8F%82%E6%95%B0%E6%8A%8A%E7%94%A8%E6%88%B7%E6%95%B0%E6%8D%AE%E6%8C%87%E5%AE%9A%E5%88%B0%E5%8A%A0%E5%AF%86%E6%96%87%E4%BB%B6%E5%A4%B9/googlechromejiami1.png" srcset="/img/loading.gif" lazyload alt="googlechromejiami1"></a></p>
+<h2 id="1、在现有的Google-Chrome中断开和google-账户的连接，这样做的目的是删除已经保存的用户数据"><a href="#1、在现有的Google-Chrome中断开和google-账户的连接，这样做的目的是删除已经保存的用户数据" class="headerlink" title="1、在现有的Google Chrome中断开和google 账户的连接，这样做的目的是删除已经保存的用户数据"></a><strong>1、在现有的Google Chrome中断开和google 账户的连接，这样做的目的是删除已经保存的用户数据</strong></h2><p><a target="_blank" rel="noopener" href="http://localhost/old/2015/11/googlechromejiami1.png"><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2015/%E9%80%9A%E8%BF%87google-chrome%E5%90%AF%E5%8A%A8%E5%8F%82%E6%95%B0%E6%8A%8A%E7%94%A8%E6%88%B7%E6%95%B0%E6%8D%AE%E6%8C%87%E5%AE%9A%E5%88%B0%E5%8A%A0%E5%AF%86%E6%96%87%E4%BB%B6%E5%A4%B9/googlechromejiami1.png" srcset="/img/loading.gif" lazyload alt="googlechromejiami1"></a></p>
 <h2 id="2、右键点击Google-Chrome的快捷方式，然后在目标输入框后面加上如下的启动参数："><a href="#2、右键点击Google-Chrome的快捷方式，然后在目标输入框后面加上如下的启动参数：" class="headerlink" title="2、右键点击Google Chrome的快捷方式，然后在目标输入框后面加上如下的启动参数："></a><strong>2、右键点击Google Chrome的快捷方式，然后在目标输入框后面加上如下的启动参数</strong>：</h2><p><strong>--user-data-dir=”路径”</strong></p>
 <p>这里的路径可以指定到你的加密磁盘里，如下图是我的设置：</p>
-<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/11/googlechromejiami2.png"><img src="/2015/%E9%80%9A%E8%BF%87google-chrome%E5%90%AF%E5%8A%A8%E5%8F%82%E6%95%B0%E6%8A%8A%E7%94%A8%E6%88%B7%E6%95%B0%E6%8D%AE%E6%8C%87%E5%AE%9A%E5%88%B0%E5%8A%A0%E5%AF%86%E6%96%87%E4%BB%B6%E5%A4%B9/googlechromejiami2.png" srcset="/img/loading.gif" lazyload alt="Chrome启动参数"></a></p>
-<h2 id="3、运行Google-Chrome，再次登录google账户，这样用户数据就是保存到你的加密磁盘了。"><a href="#3、运行Google-Chrome，再次登录google账户，这样用户数据就是保存到你的加密磁盘了。" class="headerlink" title="3、运行Google Chrome，再次登录google账户，这样用户数据就是保存到你的加密磁盘了。"></a><strong>3、运行Google Chrome，再次登录google账户，这样用户数据就是保存到你的加密磁盘了</strong>。</h2><p><a target="_blank" rel="noopener" href="http://localhost/old/2015/11/googlechromejiami3.png"><img src="/2015/%E9%80%9A%E8%BF%87google-chrome%E5%90%AF%E5%8A%A8%E5%8F%82%E6%95%B0%E6%8A%8A%E7%94%A8%E6%88%B7%E6%95%B0%E6%8D%AE%E6%8C%87%E5%AE%9A%E5%88%B0%E5%8A%A0%E5%AF%86%E6%96%87%E4%BB%B6%E5%A4%B9/googlechromejiami3.png" srcset="/img/loading.gif" lazyload alt="googlechromejiami3"></a></p>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/11/googlechromejiami2.png"><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2015/%E9%80%9A%E8%BF%87google-chrome%E5%90%AF%E5%8A%A8%E5%8F%82%E6%95%B0%E6%8A%8A%E7%94%A8%E6%88%B7%E6%95%B0%E6%8D%AE%E6%8C%87%E5%AE%9A%E5%88%B0%E5%8A%A0%E5%AF%86%E6%96%87%E4%BB%B6%E5%A4%B9/googlechromejiami2.png" srcset="/img/loading.gif" lazyload alt="Chrome启动参数"></a></p>
+<h2 id="3、运行Google-Chrome，再次登录google账户，这样用户数据就是保存到你的加密磁盘了。"><a href="#3、运行Google-Chrome，再次登录google账户，这样用户数据就是保存到你的加密磁盘了。" class="headerlink" title="3、运行Google Chrome，再次登录google账户，这样用户数据就是保存到你的加密磁盘了。"></a><strong>3、运行Google Chrome，再次登录google账户，这样用户数据就是保存到你的加密磁盘了</strong>。</h2><p><a target="_blank" rel="noopener" href="http://localhost/old/2015/11/googlechromejiami3.png"><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2015/%E9%80%9A%E8%BF%87google-chrome%E5%90%AF%E5%8A%A8%E5%8F%82%E6%95%B0%E6%8A%8A%E7%94%A8%E6%88%B7%E6%95%B0%E6%8D%AE%E6%8C%87%E5%AE%9A%E5%88%B0%E5%8A%A0%E5%AF%86%E6%96%87%E4%BB%B6%E5%A4%B9/googlechromejiami3.png" srcset="/img/loading.gif" lazyload alt="googlechromejiami3"></a></p>
 <h2 id="4、注意事项："><a href="#4、注意事项：" class="headerlink" title="4、注意事项："></a><strong>4、注意事项：</strong></h2><ul>
 <li>以后只要通过这个快捷方式启动Google Chrome，用户数据就是在加密盘里</li>
 <li>如果加密盘没有解密，那么启动时将看到如下的提示信息，点击确定后，打开全新的Google Chrome，没有任何用户数据记录</li>
 </ul>
-<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/11/googlechromejiami4.png"><img src="/2015/%E9%80%9A%E8%BF%87google-chrome%E5%90%AF%E5%8A%A8%E5%8F%82%E6%95%B0%E6%8A%8A%E7%94%A8%E6%88%B7%E6%95%B0%E6%8D%AE%E6%8C%87%E5%AE%9A%E5%88%B0%E5%8A%A0%E5%AF%86%E6%96%87%E4%BB%B6%E5%A4%B9/googlechromejiami4.png" srcset="/img/loading.gif" lazyload alt="googlechromejiami4"></a></p>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/11/googlechromejiami4.png"><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2015/%E9%80%9A%E8%BF%87google-chrome%E5%90%AF%E5%8A%A8%E5%8F%82%E6%95%B0%E6%8A%8A%E7%94%A8%E6%88%B7%E6%95%B0%E6%8D%AE%E6%8C%87%E5%AE%9A%E5%88%B0%E5%8A%A0%E5%AF%86%E6%96%87%E4%BB%B6%E5%A4%B9/googlechromejiami4.png" srcset="/img/loading.gif" lazyload alt="googlechromejiami4"></a></p>
 <h2 id="5、Google-Chrome的其他启动命令"><a href="#5、Google-Chrome的其他启动命令" class="headerlink" title="5、Google Chrome的其他启动命令"></a><strong>5、Google Chrome的其他启动命令</strong></h2><ul>
 <li>--user-data-dir=”路径” // 指定用户文件夹User Data路径，可以把书签这样的用户数据保存在系统分区以外的分区。</li>
 <li>--disk-cache-dir=”路径” // 指定缓存Cache路径</li>
@@ -290,9 +290,9 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/%E5%8A%A0%E5%AF%86/">加密</a>
+                      <a class="hover-with-bg" href="/tags/google-chrome/">google-chrome</a>
                     
-                      <a class="hover-with-bg" href="/tags/%E8%B4%A6%E6%88%B7%E5%AE%89%E5%85%A8/">账户安全</a>
+                      <a class="hover-with-bg" href="/tags/%E5%8A%A0%E5%AF%86/">加密</a>
                     
                       <a class="hover-with-bg" href="/tags/%E8%B4%A6%E6%88%B7%E6%8E%A7%E5%88%B6/">账户控制</a>
                     
@@ -302,7 +302,7 @@
                     
                       <a class="hover-with-bg" href="/tags/%E7%94%A8%E6%88%B7%E6%95%B0%E6%8D%AE/">用户数据</a>
                     
-                      <a class="hover-with-bg" href="/tags/google-chrome/">google-chrome</a>
+                      <a class="hover-with-bg" href="/tags/%E8%B4%A6%E6%88%B7%E5%AE%89%E5%85%A8/">账户安全</a>
                     
                   </div>
                 

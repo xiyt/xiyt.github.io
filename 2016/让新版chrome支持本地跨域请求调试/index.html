@@ -229,16 +229,16 @@
             
             <div class="markdown-body">
               <p>经常写前端的朋友可能遇到过这样的问题，当在本地编写好一个Ajax请求，需要测试时，发现如果直接打开file://这样路径的HTML，那么其中的Ajax请求是无法运行，会提示关于错误，错误信息类似是这样的：</p>
-<p><img src="/2016/%E8%AE%A9%E6%96%B0%E7%89%88chrome%E6%94%AF%E6%8C%81%E6%9C%AC%E5%9C%B0%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82%E8%B0%83%E8%AF%95/chrome-ajax01.png" srcset="/img/loading.gif" lazyload alt="让新版Chrome支持本地跨域请求调试"></p>
+<p><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2016/%E8%AE%A9%E6%96%B0%E7%89%88chrome%E6%94%AF%E6%8C%81%E6%9C%AC%E5%9C%B0%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82%E8%B0%83%E8%AF%95/chrome-ajax01.png" srcset="/img/loading.gif" lazyload alt="让新版Chrome支持本地跨域请求调试"></p>
 <p>提示无法进行跨域请求。这时候如果解决呢？其实可以通过Chrome的启动参数，来解决这个问题，让我们的本地联调测试更加方便。具体方法是：</p>
 <p><strong>1、创建一个Chrome的启动快捷方式；</strong></p>
 <p><strong>2、右键点击快捷方式属性，然后在目标路径后面，添加以下参数：</strong></p>
 <p> <strong>–disable-web-security  –user-data-dir=”e:\chromedev”</strong></p>
 <p>注意在最新版本的Chrome中，–user-data-dir参数也是必须要添加的，蓝色字体部分可以随便指定到其他路径，这里保存是的Chrome的用户数据的。</p>
-<p><img src="/2016/%E8%AE%A9%E6%96%B0%E7%89%88chrome%E6%94%AF%E6%8C%81%E6%9C%AC%E5%9C%B0%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82%E8%B0%83%E8%AF%95/chrome-ajax02.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2016/%E8%AE%A9%E6%96%B0%E7%89%88chrome%E6%94%AF%E6%8C%81%E6%9C%AC%E5%9C%B0%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82%E8%B0%83%E8%AF%95/chrome-ajax02.png" srcset="/img/loading.gif" lazyload></p>
 <p><strong>3、通过刚才创建的快捷方式打开Chrome</strong></p>
 <p>这种方式打开的Chrome会有一个安全警告，说明我的添加的参数起作用了。这时候再打开我们本地的HTML，其中的Ajax跨域请求就可以正常调试了。</p>
-<p><img src="/2016/%E8%AE%A9%E6%96%B0%E7%89%88chrome%E6%94%AF%E6%8C%81%E6%9C%AC%E5%9C%B0%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82%E8%B0%83%E8%AF%95/chrome-ajax03.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2016/%E8%AE%A9%E6%96%B0%E7%89%88chrome%E6%94%AF%E6%8C%81%E6%9C%AC%E5%9C%B0%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82%E8%B0%83%E8%AF%95/chrome-ajax03.png" srcset="/img/loading.gif" lazyload></p>
 <p>推荐阅读：</p>
 <p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2015/11/19/%e9%80%9a%e8%bf%87google-chrome%e5%90%af%e5%8a%a8%e5%8f%82%e6%95%b0%e6%8a%8a%e7%94%a8%e6%88%b7%e6%95%b0%e6%8d%ae%e6%8c%87%e5%ae%9a%e5%88%b0%e5%8a%a0%e5%af%86%e6%96%87%e4%bb%b6%e5%a4%b9/">搜索 启动参数 通过Google Chrome启动参数把用户数据指定到加密文件夹</a></p>
 <p><a target="_blank" rel="noopener" href="http://www.daxiblog.com/2016/08/06/google-chrome%e7%9a%84%e5%ae%98%e6%96%b9%e7%a6%bb%e7%ba%bf%e5%ae%89%e8%a3%85%e5%8c%85%e4%b8%8b%e8%bd%bd%e5%9c%b0%e5%9d%80/">Google Chrome的官方离线安装包下载地址</a></p>
@@ -260,13 +260,13 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%B7%A8%E5%9F%9F/">浏览器跨域</a>
-                    
                       <a class="hover-with-bg" href="/tags/ajax%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82/">ajax跨域请求</a>
                     
                       <a class="hover-with-bg" href="/tags/chrome%E5%90%AF%E5%8A%A8%E5%8F%82%E6%95%B0/">chrome启动参数</a>
                     
                       <a class="hover-with-bg" href="/tags/google-chrome%E8%B7%A8%E5%9F%9F/">google-chrome跨域</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%B7%A8%E5%9F%9F/">浏览器跨域</a>
                     
                   </div>
                 

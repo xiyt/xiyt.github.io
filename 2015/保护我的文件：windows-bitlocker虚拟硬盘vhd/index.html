@@ -247,29 +247,29 @@
 <p><strong>一、创建VHD虚拟硬盘</strong></p>
 <p>控制面板→管理工具→计算机管理→磁盘管理，打开磁盘管理工具</p>
 <p>从菜单栏选择操作→创建VHD</p>
-<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/10/0024.png"><img src="/2015/%E4%BF%9D%E6%8A%A4%E6%88%91%E7%9A%84%E6%96%87%E4%BB%B6%EF%BC%9Awindows-bitlocker%E8%99%9A%E6%8B%9F%E7%A1%AC%E7%9B%98vhd/0024.png" srcset="/img/loading.gif" lazyload alt="0024"></a></p>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/10/0024.png"><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2015/%E4%BF%9D%E6%8A%A4%E6%88%91%E7%9A%84%E6%96%87%E4%BB%B6%EF%BC%9Awindows-bitlocker%E8%99%9A%E6%8B%9F%E7%A1%AC%E7%9B%98vhd/0024.png" srcset="/img/loading.gif" lazyload alt="0024"></a></p>
 <p>如上图填写相应的磁盘信息后，点击确定，虚拟硬盘就创建好了。</p>
 <p><strong>二、初始化虚拟硬盘，创建卷</strong></p>
 <p>创建好虚拟硬盘文件后，我们还不能使用该硬盘，它还只是以文件的形式放在我们的磁盘上，这时候我们需要：</p>
 <p><strong>1、点击操作→附加 VHD，将虚拟磁盘文件挂载为磁盘</strong></p>
-<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/10/0025.png"><img src="/2015/%E4%BF%9D%E6%8A%A4%E6%88%91%E7%9A%84%E6%96%87%E4%BB%B6%EF%BC%9Awindows-bitlocker%E8%99%9A%E6%8B%9F%E7%A1%AC%E7%9B%98vhd/0025.png" srcset="/img/loading.gif" lazyload alt="0025"></a></p>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/10/0025.png"><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2015/%E4%BF%9D%E6%8A%A4%E6%88%91%E7%9A%84%E6%96%87%E4%BB%B6%EF%BC%9Awindows-bitlocker%E8%99%9A%E6%8B%9F%E7%A1%AC%E7%9B%98vhd/0025.png" srcset="/img/loading.gif" lazyload alt="0025"></a></p>
 <p>添加完成后，我们的磁盘列表里就会多出一个没有初始化的磁盘，如下图：</p>
-<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/10/0026.png"><img src="/2015/%E4%BF%9D%E6%8A%A4%E6%88%91%E7%9A%84%E6%96%87%E4%BB%B6%EF%BC%9Awindows-bitlocker%E8%99%9A%E6%8B%9F%E7%A1%AC%E7%9B%98vhd/0026.png" srcset="/img/loading.gif" lazyload alt="0026"></a></p>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/10/0026.png"><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2015/%E4%BF%9D%E6%8A%A4%E6%88%91%E7%9A%84%E6%96%87%E4%BB%B6%EF%BC%9Awindows-bitlocker%E8%99%9A%E6%8B%9F%E7%A1%AC%E7%9B%98vhd/0026.png" srcset="/img/loading.gif" lazyload alt="0026"></a></p>
 <p><strong>2、上图右键点击磁盘（请在图中所示位置点击右键），我们选择初始化磁盘</strong></p>
 <p>采用默认设置就可以，这时候磁盘的初始化就完成了。接下来，我们就可以为该磁盘创建分卷了，如下图：</p>
-<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/10/0027.png"><img src="/2015/%E4%BF%9D%E6%8A%A4%E6%88%91%E7%9A%84%E6%96%87%E4%BB%B6%EF%BC%9Awindows-bitlocker%E8%99%9A%E6%8B%9F%E7%A1%AC%E7%9B%98vhd/0027.png" srcset="/img/loading.gif" lazyload alt="0027"></a></p>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/10/0027.png"><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2015/%E4%BF%9D%E6%8A%A4%E6%88%91%E7%9A%84%E6%96%87%E4%BB%B6%EF%BC%9Awindows-bitlocker%E8%99%9A%E6%8B%9F%E7%A1%AC%E7%9B%98vhd/0027.png" srcset="/img/loading.gif" lazyload alt="0027"></a></p>
 <p><strong>3、点击新建简单卷，按照默认设置创建卷，设定盘符等信息。</strong></p>
 <p>完成后，我们就可以看到资源管理器中多出一个分区，就是我们刚才创建的虚拟硬盘。</p>
 <p><strong>三、启用BitLocker加密驱动器</strong></p>
 <p>创建好虚拟硬盘后，我们就可以在该分区上开启BitLocker了，如下图：</p>
-<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/10/0028.png"><img src="/2015/%E4%BF%9D%E6%8A%A4%E6%88%91%E7%9A%84%E6%96%87%E4%BB%B6%EF%BC%9Awindows-bitlocker%E8%99%9A%E6%8B%9F%E7%A1%AC%E7%9B%98vhd/0028.png" srcset="/img/loading.gif" lazyload alt="0028"></a></p>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/10/0028.png"><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2015/%E4%BF%9D%E6%8A%A4%E6%88%91%E7%9A%84%E6%96%87%E4%BB%B6%EF%BC%9Awindows-bitlocker%E8%99%9A%E6%8B%9F%E7%A1%AC%E7%9B%98vhd/0028.png" srcset="/img/loading.gif" lazyload alt="0028"></a></p>
 <p><strong>1、设定BitLocker的加密密码</strong></p>
-<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/10/0029.png"><img src="/2015/%E4%BF%9D%E6%8A%A4%E6%88%91%E7%9A%84%E6%96%87%E4%BB%B6%EF%BC%9Awindows-bitlocker%E8%99%9A%E6%8B%9F%E7%A1%AC%E7%9B%98vhd/0029.png" srcset="/img/loading.gif" lazyload alt="0029"></a></p>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/10/0029.png"><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2015/%E4%BF%9D%E6%8A%A4%E6%88%91%E7%9A%84%E6%96%87%E4%BB%B6%EF%BC%9Awindows-bitlocker%E8%99%9A%E6%8B%9F%E7%A1%AC%E7%9B%98vhd/0029.png" srcset="/img/loading.gif" lazyload alt="0029"></a></p>
 <p><strong>2、备份密钥</strong></p>
-<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/10/0030.png"><img src="/2015/%E4%BF%9D%E6%8A%A4%E6%88%91%E7%9A%84%E6%96%87%E4%BB%B6%EF%BC%9Awindows-bitlocker%E8%99%9A%E6%8B%9F%E7%A1%AC%E7%9B%98vhd/0030.png" srcset="/img/loading.gif" lazyload alt="0030"></a></p>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/10/0030.png"><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2015/%E4%BF%9D%E6%8A%A4%E6%88%91%E7%9A%84%E6%96%87%E4%BB%B6%EF%BC%9Awindows-bitlocker%E8%99%9A%E6%8B%9F%E7%A1%AC%E7%9B%98vhd/0030.png" srcset="/img/loading.gif" lazyload alt="0030"></a></p>
 <p>这可以选择将密钥备份到哪里，可以是U盘，文件，打印，或者在线的微软账户中，这里我选择的是保存到文件。</p>
 <p><strong>3、开始加密驱动器</strong></p>
-<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/10/0031.png"><img src="/2015/%E4%BF%9D%E6%8A%A4%E6%88%91%E7%9A%84%E6%96%87%E4%BB%B6%EF%BC%9Awindows-bitlocker%E8%99%9A%E6%8B%9F%E7%A1%AC%E7%9B%98vhd/0031.png" srcset="/img/loading.gif" lazyload alt="0031"></a></p>
+<p><a target="_blank" rel="noopener" href="http://localhost/old/2015/10/0031.png"><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2015/%E4%BF%9D%E6%8A%A4%E6%88%91%E7%9A%84%E6%96%87%E4%BB%B6%EF%BC%9Awindows-bitlocker%E8%99%9A%E6%8B%9F%E7%A1%AC%E7%9B%98vhd/0031.png" srcset="/img/loading.gif" lazyload alt="0031"></a></p>
 <p>点击开始加密，BitLocker就开始加密驱动器了，如果驱动器的空间比较大的话，加密时间可能比较长，请耐心等待。</p>
 <p><strong>四、我把哪些资料放入加密磁盘</strong></p>
 <p>在我工作电脑中，目前我把一下资料保存到我的加密驱动器：</p>
@@ -303,6 +303,12 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
+                      <a class="hover-with-bg" href="/tags/windows/">windows</a>
+                    
+                      <a class="hover-with-bg" href="/tags/bitlocker/">bitlocker</a>
+                    
+                      <a class="hover-with-bg" href="/tags/vhd/">vhd</a>
+                    
                       <a class="hover-with-bg" href="/tags/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/">信息安全</a>
                     
                       <a class="hover-with-bg" href="/tags/%E5%8A%A0%E5%AF%86%E9%A9%B1%E5%8A%A8%E5%99%A8/">加密驱动器</a>
@@ -310,12 +316,6 @@
                       <a class="hover-with-bg" href="/tags/%E6%96%87%E4%BB%B6%E5%8A%A0%E5%AF%86/">文件加密</a>
                     
                       <a class="hover-with-bg" href="/tags/%E8%99%9A%E6%8B%9F%E7%A1%AC%E7%9B%98/">虚拟硬盘</a>
-                    
-                      <a class="hover-with-bg" href="/tags/windows/">windows</a>
-                    
-                      <a class="hover-with-bg" href="/tags/bitlocker/">bitlocker</a>
-                    
-                      <a class="hover-with-bg" href="/tags/vhd/">vhd</a>
                     
                   </div>
                 

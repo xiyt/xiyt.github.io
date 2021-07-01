@@ -228,7 +228,7 @@
             <h1 style="display: none">通用的Java 3DES加密工具类，在线工具验证通过</h1>
             
             <div class="markdown-body">
-              <p><img src="/2018/%E9%80%9A%E7%94%A8%E7%9A%84java-3des%E5%8A%A0%E5%AF%86%E5%B7%A5%E5%85%B7%E7%B1%BB%EF%BC%8C%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7%E9%AA%8C%E8%AF%81%E9%80%9A%E8%BF%87/201805302204_124.png" srcset="/img/loading.gif" lazyload></p>
+              <p><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2018/%E9%80%9A%E7%94%A8%E7%9A%84java-3des%E5%8A%A0%E5%AF%86%E5%B7%A5%E5%85%B7%E7%B1%BB%EF%BC%8C%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7%E9%AA%8C%E8%AF%81%E9%80%9A%E8%BF%87/201805302204_124.png" srcset="/img/loading.gif" lazyload></p>
 <p>前面的<a target="_blank" rel="noopener" href="http://www.daxiblog.com/2018/05/26/%e9%80%9a%e7%94%a8%e7%9a%84java-rsa%e5%8a%a0%e5%af%86%e5%b7%a5%e5%85%b7%e7%b1%bb%ef%bc%8c%e5%8f%af%e5%9c%a8%e7%ba%bf%e9%aa%8c%e8%af%81%e9%80%9a%e8%bf%87/">这篇文章</a>介绍了通用的RSA加密算法，并且是可以在线测试通过的。但是RSA由于性能和效率问题，往往不会用来直接加密大量数据，大部分场合是用来加密密钥的。对于加密数据，可以使用3DES加密算法来完成，3DES的密码使用RSA加密，这样既保证了密钥的安全性，又能够带来高效的加密性能。所以今天把我使用的通用的3DES加密算法分享给大家。该算法通用可以在<a target="_blank" rel="noopener" href="http://tool.chacuo.net/crypt3des">这个网站</a>测试通过。</p>
 <p>/**<br> * 默认值：DESede/CBC/PKCS5Padding<br> * 经验证使用initKeyWithPadding方式生产密钥时，和网站：<a target="_blank" rel="noopener" href="http://tool.chacuo.net/crypt3des%EF%BC%8C%E7%BB%93%E6%9E%9C%E7%9B%B8%E5%90%8C">http://tool.chacuo.net/crypt3des，结果相同</a><br> *<br> * @version 1.0<br> * @since 1.0<br> */<br>public abstract class DESCoder {</p>
 <pre><code>public static final String VI = &quot;01234567&quot;;
@@ -338,9 +338,9 @@ public static void main(String args) throws Exception &#123;
 <p>}</p>
 <p> </p>
 <p>其中main方法运行结果如下：</p>
-<p><img src="/2018/%E9%80%9A%E7%94%A8%E7%9A%84java-3des%E5%8A%A0%E5%AF%86%E5%B7%A5%E5%85%B7%E7%B1%BB%EF%BC%8C%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7%E9%AA%8C%E8%AF%81%E9%80%9A%E8%BF%87/201805302159_87.png" srcset="/img/loading.gif" lazyload alt="通用的Java 3DES加密工具类，在线工具验证通过"></p>
+<p><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2018/%E9%80%9A%E7%94%A8%E7%9A%84java-3des%E5%8A%A0%E5%AF%86%E5%B7%A5%E5%85%B7%E7%B1%BB%EF%BC%8C%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7%E9%AA%8C%E8%AF%81%E9%80%9A%E8%BF%87/201805302159_87.png" srcset="/img/loading.gif" lazyload alt="通用的Java 3DES加密工具类，在线工具验证通过"></p>
 <p>网站测试结果如下：</p>
-<p><img src="/2018/%E9%80%9A%E7%94%A8%E7%9A%84java-3des%E5%8A%A0%E5%AF%86%E5%B7%A5%E5%85%B7%E7%B1%BB%EF%BC%8C%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7%E9%AA%8C%E8%AF%81%E9%80%9A%E8%BF%87/201805302200_621.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2018/%E9%80%9A%E7%94%A8%E7%9A%84java-3des%E5%8A%A0%E5%AF%86%E5%B7%A5%E5%85%B7%E7%B1%BB%EF%BC%8C%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7%E9%AA%8C%E8%AF%81%E9%80%9A%E8%BF%87/201805302200_621.png" srcset="/img/loading.gif" lazyload></p>
 
             </div>
             <hr>

@@ -229,7 +229,7 @@
             
             <div class="markdown-body">
               <p>今天下载了一个新的Vue工程。在npm install的时候，执行到一半就会报fatal: unable to connect to github.com错误。截图如下：</p>
-<p><a target="_blank" rel="noopener" href="https://www.daxiblog.com/npm-install%e8%a7%a3%e5%86%b3fatal-unable-to-connect-to-github-com%e9%97%ae%e9%a2%98/qq%e6%88%aa%e5%9b%be20190920130826/"><img src="/2019/npm-install%E8%A7%A3%E5%86%B3fatal-unable-to-connect-to-github-com%E9%97%AE%E9%A2%98/QQ%E6%88%AA%E5%9B%BE20190920130826.png" srcset="/img/loading.gif" lazyload alt="npm install解决fatal: unable to connect to github.com问题"></a></p>
+<p><a target="_blank" rel="noopener" href="https://www.daxiblog.com/npm-install%e8%a7%a3%e5%86%b3fatal-unable-to-connect-to-github-com%e9%97%ae%e9%a2%98/qq%e6%88%aa%e5%9b%be20190920130826/"><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2019/npm-install%E8%A7%A3%E5%86%B3fatal-unable-to-connect-to-github-com%E9%97%AE%E9%A2%98/QQ%E6%88%AA%E5%9B%BE20190920130826.png" srcset="/img/loading.gif" lazyload alt="npm install解决fatal: unable to connect to github.com问题"></a></p>
 <p>意思是我连接不上github。但是不可能啊，我能够访问github的官网。而且在其他工程里执行npm install都能很顺利执行完成了。看来很有可能是上面截图中eve.git这个库的引用防止有些不太一致造成的。于是在通过在网络上搜寻，找到了原因所在：</p>
 <p>上图中可以看到这个eve.git这个库的引用是通过git写引用的。git协议的默认端口是9418，很有可能是我的网络环境防火墙并没有开放这个端口造成的。解决方法就是，用https替代git协议。配置的命令为：</p>
 <p>git config –global url.”https://“.insteadOf git://</p>

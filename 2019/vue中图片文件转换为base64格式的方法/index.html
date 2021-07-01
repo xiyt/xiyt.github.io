@@ -228,7 +228,7 @@
             <h1 style="display: none">Vue中图片文件转换为Base64格式的方法</h1>
             
             <div class="markdown-body">
-              <p><img src="/2019/vue%E4%B8%AD%E5%9B%BE%E7%89%87%E6%96%87%E4%BB%B6%E8%BD%AC%E6%8D%A2%E4%B8%BAbase64%E6%A0%BC%E5%BC%8F%E7%9A%84%E6%96%B9%E6%B3%95/logo.png" srcset="/img/loading.gif" lazyload alt="Vue中图片文件转换为Base64格式的方法"></p>
+              <p><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2019/vue%E4%B8%AD%E5%9B%BE%E7%89%87%E6%96%87%E4%BB%B6%E8%BD%AC%E6%8D%A2%E4%B8%BAbase64%E6%A0%BC%E5%BC%8F%E7%9A%84%E6%96%B9%E6%B3%95/logo.png" srcset="/img/loading.gif" lazyload alt="Vue中图片文件转换为Base64格式的方法"></p>
 <p>工具方法：</p>
 <p>function convertImgToBase64(imageFile, callback, errorCallback) {<br>  try {<br>    let reader = new FileReader()<br>    reader.readAsDataURL(imageFile)<br>    reader.onload = function(e) {<br>      if (callback) {<br>        let base64Str = e.target.result<br>        callback(base64Str)<br>      }<br>    }<br>  } catch (error) {<br>    console.error(error)<br>    if (errorCallback) {<br>      errorCallback(error)<br>    }<br>  }<br>}</p>
 <p>说明：</p>
@@ -256,11 +256,11 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/%E5%9B%BE%E7%89%87%E8%BD%AC%E6%8D%A2/">图片转换</a>
-                    
                       <a class="hover-with-bg" href="/tags/base64/">base64</a>
                     
                       <a class="hover-with-bg" href="/tags/vue/">vue</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%9B%BE%E7%89%87%E8%BD%AC%E6%8D%A2/">图片转换</a>
                     
                   </div>
                 

@@ -228,7 +228,7 @@
             <h1 style="display: none">jira数据库备份，mysql主从复制配置方法</h1>
             
             <div class="markdown-body">
-              <p><img src="/2017/jira%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%87%E4%BB%BD%EF%BC%8Cmysql%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/jira-mysql-sync.jpg" srcset="/img/loading.gif" lazyload alt="jira数据库备份，mysql主从复制配置方法"><img src="/2017/jira%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%87%E4%BB%BD%EF%BC%8Cmysql%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/Image.jpg" srcset="/img/loading.gif" lazyload></p>
+              <p><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2017/jira%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%87%E4%BB%BD%EF%BC%8Cmysql%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/jira-mysql-sync.jpg" srcset="/img/loading.gif" lazyload alt="jira数据库备份，mysql主从复制配置方法"><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2017/jira%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%87%E4%BB%BD%EF%BC%8Cmysql%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/Image.jpg" srcset="/img/loading.gif" lazyload></p>
 <p>前一段时间安装好的<a target="_blank" rel="noopener" href="http://www.daxiblog.com/2017/01/05/jira%E9%9B%86%E6%88%90%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4%E6%B8%85%E5%8D%95/">Jira+Confluence环境</a>，已经运行一段时间了，一切都很顺利。但是今天忽然想到Jira相关的备份方案还没有认真的考虑，于是参考官方文档把Jira的备份方案阅读了一遍，除了Jira系统设置里的默认的XML备份方案外，官方还强调需要自己对Jira数据库进行相应的备份策略。在安装Jira的时候，由于我选择时MySQL数据库，于是今天把MySQL的主从复制备份进行安装配置，在这里记录和分享一下：</p>
 <p>1、主从服务器上保持相同版本的MySQL，避免版本差异造成的同步问题；</p>
 <p>对于主服务器上已经存在的数据，有两种做法：</p>
@@ -267,7 +267,7 @@
 <blockquote>
 <p>mysql&gt; show slave status\G</p>
 </blockquote>
-<p><img src="/2017/jira%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%87%E4%BB%BD%EF%BC%8Cmysql%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/mysql-sync.jpg" srcset="/img/loading.gif" lazyload><img src="/2017/jira%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%87%E4%BB%BD%EF%BC%8Cmysql%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/Image(1).jpg" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2017/jira%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%87%E4%BB%BD%EF%BC%8Cmysql%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/mysql-sync.jpg" srcset="/img/loading.gif" lazyload><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2017/jira%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%87%E4%BB%BD%EF%BC%8Cmysql%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95/Image(1).jpg" srcset="/img/loading.gif" lazyload></p>
 
             </div>
             <hr>
@@ -287,13 +287,13 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6/">主从复制</a>
-                    
-                      <a class="hover-with-bg" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%90%8C%E6%AD%A5/">数据库同步</a>
-                    
                       <a class="hover-with-bg" href="/tags/jira%E5%A4%87%E4%BB%BD/">jira备份</a>
                     
                       <a class="hover-with-bg" href="/tags/mysql/">mysql</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6/">主从复制</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%90%8C%E6%AD%A5/">数据库同步</a>
                     
                   </div>
                 

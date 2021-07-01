@@ -228,7 +228,7 @@
             <h1 style="display: none">Mysql数据库自动备份脚本</h1>
             
             <div class="markdown-body">
-              <p><img src="/2019/mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E8%87%AA%E5%8A%A8%E5%A4%87%E4%BB%BD%E8%84%9A%E6%9C%AC/mysql-300x207.jpg" srcset="/img/loading.gif" lazyload></p>
+              <p><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2019/mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E8%87%AA%E5%8A%A8%E5%A4%87%E4%BB%BD%E8%84%9A%E6%9C%AC/mysql-300x207.jpg" srcset="/img/loading.gif" lazyload></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-meta">#!/bin/bash</span><br><span class="hljs-comment"># 数据库认证</span><br>username=root<br>password=123456<br>host=localhost<br>db_name=daxiblog<br><span class="hljs-comment"># 备份路径</span><br>backup_dir=/data/backup/mysql<br><span class="hljs-comment"># 日期格式</span><br>date=$(date +<span class="hljs-string">&quot;%Y%m%d&quot;</span>)<br><span class="hljs-comment"># Dump数据库到SQL文件</span><br>mysqldump -h<span class="hljs-variable">$host</span> -u<span class="hljs-variable">$username</span> -p<span class="hljs-variable">$password</span> <span class="hljs-variable">$db_name</span> &gt; <span class="hljs-variable">$backup_dir</span>/<span class="hljs-variable">$db_name</span>-<span class="hljs-variable">$date</span>.sql<br><span class="hljs-comment">#写创建备份日志</span><br><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;create <span class="hljs-variable">$backup_dir</span>/<span class="hljs-variable">$db_name</span>-<span class="hljs-variable">$date</span>.sql&quot;</span> &gt;&gt; <span class="hljs-variable">$backup_dir</span>/log.txt<br><br><span class="hljs-comment"># 备份清理</span><br><span class="hljs-comment"># 删除5天之前的就备份文件</span><br>find <span class="hljs-variable">$backup_dir</span>/* -mtime +5 -<span class="hljs-built_in">exec</span> rm &#123;&#125; \;<br></code></pre></td></tr></table></figure>
 
 <p>将上述内容保存为sh文件，例如：mysql-backup.sh</p>
@@ -251,9 +251,9 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/%E5%A4%87%E4%BB%BD/">备份</a>
-                    
                       <a class="hover-with-bg" href="/tags/mysql/">mysql</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%A4%87%E4%BB%BD/">备份</a>
                     
                   </div>
                 

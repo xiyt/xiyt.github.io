@@ -228,7 +228,7 @@
             <h1 style="display: none">[亲测有效]GitLab禁用自动Nginx避免端口冲突，使用外部Nginx代理</h1>
             
             <div class="markdown-body">
-              <p><img src="/2019/%E4%BA%B2%E6%B5%8B%E6%9C%89%E6%95%88gitlab%E7%A6%81%E7%94%A8%E8%87%AA%E5%8A%A8nginx%E9%81%BF%E5%85%8D%E7%AB%AF%E5%8F%A3%E5%86%B2%E7%AA%81%EF%BC%8C%E4%BD%BF%E7%94%A8%E5%A4%96%E9%83%A8nginx%E4%BB%A3/u=3433947533,2720975807&fm=26&gp=0.jpg" srcset="/img/loading.gif" lazyload alt="[亲测有效]GitLab禁用自动Nginx避免端口冲突，使用外部Nginx代理"></p>
+              <p><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2019/%E4%BA%B2%E6%B5%8B%E6%9C%89%E6%95%88gitlab%E7%A6%81%E7%94%A8%E8%87%AA%E5%8A%A8nginx%E9%81%BF%E5%85%8D%E7%AB%AF%E5%8F%A3%E5%86%B2%E7%AA%81%EF%BC%8C%E4%BD%BF%E7%94%A8%E5%A4%96%E9%83%A8nginx%E4%BB%A3/u=3433947533,2720975807&fm=26&gp=0.jpg" srcset="/img/loading.gif" lazyload alt="[亲测有效]GitLab禁用自动Nginx避免端口冲突，使用外部Nginx代理"></p>
 <p>虽然GitLab内置了Nginx，开箱即用，但是也会发现自带的Nginx默认端口是80，往往会和服务器上的其他Nginx端口冲突，另外为了节省资源，单独起个Nginx也不合算，还是充分利用服务器上统一的Nginx比较好，接下来展示一下如何配置：</p>
 <h4 id="1、GitLab配置"><a href="#1、GitLab配置" class="headerlink" title="1、GitLab配置"></a>1、GitLab配置</h4><p>GitLab的配置都集中在/etc/gitlab/gitlab.rb文件，所以相关配置主要在这个文件中进行：</p>
 <p># 禁用内置NG<br>nginx = false</p>

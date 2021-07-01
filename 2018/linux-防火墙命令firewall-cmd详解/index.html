@@ -228,7 +228,7 @@
             <h1 style="display: none">Linux 防火墙命令firewall-cmd详解</h1>
             
             <div class="markdown-body">
-              <p><img src="/2018/linux-%E9%98%B2%E7%81%AB%E5%A2%99%E5%91%BD%E4%BB%A4firewall-cmd%E8%AF%A6%E8%A7%A3/linux-firewalls_d83b0dd1e94642eca6148ea3ed40ecf9.jpg" srcset="/img/loading.gif" lazyload alt="Linux 防火墙命令firewall-cmd详解"></p>
+              <p><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2018/linux-%E9%98%B2%E7%81%AB%E5%A2%99%E5%91%BD%E4%BB%A4firewall-cmd%E8%AF%A6%E8%A7%A3/linux-firewalls_d83b0dd1e94642eca6148ea3ed40ecf9.jpg" srcset="/img/loading.gif" lazyload alt="Linux 防火墙命令firewall-cmd详解"></p>
 <h2 id="firewall-cmd"><a href="#firewall-cmd" class="headerlink" title="firewall-cmd"></a>firewall-cmd</h2><p>Linux上新用的防火墙软件，跟iptables差不多的工具。补充说明 firewall-cmd 是 firewalld的字符界面管理工具，firewalld是centos7的一大特性，最大的好处有两个：支持动态更新，不用重启服务；第二个就是加入了防火墙的“zone”概念。 firewalld跟iptables比起来至少有两大好处： * firewalld可以动态修改单条规则，而不需要像iptables那样，在修改了规则后必须得全部刷新才可以生效。 * firewalld在使用上要比iptables人性化很多，即使不明白“五张表五条链”而且对TCP/IP协议也不理解也可以实现大部分功能。</p>
 <p>firewalld自身并不具备防火墙的功能，而是和iptables一样需要通过内核的netfilter来实现，也就是说firewalld和 iptables一样，他们的作用都是用于维护规则，而真正使用规则干活的是内核的netfilter，只不过firewalld和iptables的结 构以及使用方法不一样罢了。语法</p>
 <h3 id="安装firewalld"><a href="#安装firewalld" class="headerlink" title="安装firewalld"></a>安装firewalld</h3><figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs gauss">yum install firewalld firewall-config<br>systemctl start firewalld <span class="hljs-meta"># 启动</span><br>systemctl status firewalld <span class="hljs-meta"># 或者 firewall-cmd --state 查看状态</span><br>systemctl <span class="hljs-keyword">disable</span> firewalld <span class="hljs-meta"># 停止</span><br>systemctl <span class="hljs-keyword">stop</span> firewalld <span class="hljs-meta"># 禁用</span><br><br><span class="hljs-meta"># 关闭服务的方法</span><br><span class="hljs-meta"># 你也可以关闭目前还不熟悉的FirewallD防火墙，而使用iptables，命令如下：</span><br>systemctl <span class="hljs-keyword">stop</span> firewalld<br>systemctl <span class="hljs-keyword">disable</span> firewalld<br>yum install iptables-services<br>systemctl start iptables<br>systemctl <span class="hljs-keyword">enable</span> iptables<br></code></pre></td></tr></table></figure>
@@ -270,13 +270,13 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/firewall/">firewall</a>
-                    
-                      <a class="hover-with-bg" href="/tags/%E9%98%B2%E7%81%AB%E5%A2%99/">防火墙</a>
-                    
                       <a class="hover-with-bg" href="/tags/centos/">centos</a>
                     
                       <a class="hover-with-bg" href="/tags/linux/">linux</a>
+                    
+                      <a class="hover-with-bg" href="/tags/firewall/">firewall</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E9%98%B2%E7%81%AB%E5%A2%99/">防火墙</a>
                     
                   </div>
                 
