@@ -180,6 +180,65 @@
     
     
       <div class="col-12 col-md-4 m-auto index-img">
+        <a href="/2021/%E6%89%8B%E5%8A%A8%E6%90%AD%E5%BB%BARedis%E9%9B%86%E7%BE%A4/" target="_self">
+          <img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/common/redis-logo.png" srcset="/img/loading.gif" lazyload alt="Redis集群搭建手动模式">
+        </a>
+      </div>
+    
+    <article class="col-12 col-md-8 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2021/%E6%89%8B%E5%8A%A8%E6%90%AD%E5%BB%BARedis%E9%9B%86%E7%BE%A4/" target="_self">
+          Redis集群搭建手动模式
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2021/%E6%89%8B%E5%8A%A8%E6%90%AD%E5%BB%BARedis%E9%9B%86%E7%BE%A4/" target="_self">
+          
+          
+            
+          
+          
+集群规划Redis集群至少需要3个节点，因为投票容错机制要求超过半数节点认为某个节点挂了该节点才是挂了，所以2个节点无法构成集群。 要保证集群的高可用，需要每个节点都有从节点，也就是备份节点，所以Redis集群至少需要6台服务器。这里选择三台服务器，每台服务器上起两个端口，从而模拟六个节点。
+
+
+
+节点编号
+IP地址
+端口
+节点类型
+从节点
+
+
+
+1
+192.168.1.101
+6379
+主
+4
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-07-05 09:05" pubdate>
+              2021-07-05
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+      <div class="col-12 col-md-4 m-auto index-img">
         <a href="/2021/Git%E5%91%BD%E4%BB%A4%E4%BB%A3%E7%90%86%E9%85%8D%E7%BD%AE/" target="_self">
           <img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2021/Git命令代理配置/git-logo.jpg" srcset="/img/loading.gif" lazyload alt="Git命令代理配置">
         </a>
@@ -713,70 +772,11 @@ Navicat Premium 是一套数据库开发工具，让你从单一应用程序中�
     </article>
   </div>
 
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/2020/v2ray%E5%90%AF%E5%8A%A8%E6%8A%A5codeexited-status218-capabilities%E9%94%99%E8%AF%AF%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" target="_self">
-          <img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/2020/v2ray启动报codeexited-status218-capabilities错误的解决方法/v2ray_1024.png" srcset="/img/loading.gif" lazyload alt="v2ray启动报code=exited, status=218/CAPABILITIES错误的解决方法">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/2020/v2ray%E5%90%AF%E5%8A%A8%E6%8A%A5codeexited-status218-capabilities%E9%94%99%E8%AF%AF%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" target="_self">
-          v2ray启动报code=exited, status=218/CAPABILITIES错误的解决方法
-        </a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/v2ray%E5%90%AF%E5%8A%A8%E6%8A%A5codeexited-status218-capabilities%E9%94%99%E8%AF%AF%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" target="_self">
-          
-          
-            
-          
-          
-今天再一台香港的vps上安装好v2ray后，一键安装脚本在这里：
-bash &lt;(curl -L -s https://install.direct/go.sh)
-安装一起正常，通过service v2ray start命令启动后，也没有提示任何错误。但是通过service v2ray status查看状态后，发现启动失败了，一直报这个错误：code=exited, status=218/C
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-08-07 23:45" pubdate>
-              2020-08-07
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/">软件工具</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/v2ray/">v2ray</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
 
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/#board">2</a><a class="page-number" href="/page/3/#board">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/33/#board">33</a><a class="extend next" rel="next" href="/page/2/#board"><i class="iconfont icon-arrowright"></i></a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/#board">2</a><a class="page-number" href="/page/3/#board">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/34/#board">34</a><a class="extend next" rel="next" href="/page/2/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 
