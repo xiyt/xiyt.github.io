@@ -243,8 +243,7 @@
             <h1 style="display: none">Redis集群搭建手动模式</h1>
             
             <div class="markdown-body">
-              <p><img src="https://daxiblog.oss-cn-hangzhou.aliyuncs.com/common/redis-logo.png" srcset="/img/loading.gif" lazyload></p>
-<h2 id="集群规划"><a href="#集群规划" class="headerlink" title="集群规划"></a>集群规划</h2><p>Redis集群至少需要3个节点，因为投票容错机制要求超过半数节点认为某个节点挂了该节点才是挂了，所以2个节点无法构成集群。 要保证集群的高可用，需要每个节点都有从节点，也就是备份节点，所以Redis集群至少需要6台服务器。这里选择三台服务器，每台服务器上起两个端口，从而模拟六个节点。</p>
+              <h2 id="集群规划"><a href="#集群规划" class="headerlink" title="集群规划"></a>集群规划</h2><p>Redis集群至少需要3个节点，因为投票容错机制要求超过半数节点认为某个节点挂了该节点才是挂了，所以2个节点无法构成集群。 要保证集群的高可用，需要每个节点都有从节点，也就是备份节点，所以Redis集群至少需要6台服务器。这里选择三台服务器，每台服务器上起两个端口，从而模拟六个节点。</p>
 <table>
 <thead>
 <tr>
@@ -327,6 +326,20 @@
             <div>
               <div class="post-metas mb-3">
                 
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E6%8A%80%E6%9C%AF%E7%BC%96%E7%A8%8B/">技术编程</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/redis/">redis</a>
+                    
+                  </div>
                 
               </div>
               
